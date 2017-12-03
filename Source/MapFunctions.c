@@ -80,7 +80,10 @@ int getDeepXY(int x, int y)
 
 	if ((x > Map->MaxX)||(y > Map->MaxY)||(x <= 0)||(y <= 0))
 		return -1;
-	return Map->MapVal[Map->MaxX * (y - 1) + x - 1];
+	// return Map->MapVal[Map->MaxX * (y - 1) + x - 1];
+
+        // NOTE: return the maximum depth to make no collisions with land surface
+        return 4;
 }
 
 int generatePoints(int Radius, int Deep, int NumOfStrat)
