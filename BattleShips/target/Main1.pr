@@ -3290,53 +3290,24 @@ d(17) := call getDistance(MyCenter!x, MyCenter!y, 54, 54);
 d(18) := call getDistance(MyCenter!x, MyCenter!y, 18, 54);
 d(19) := call getDistance(MyCenter!x, MyCenter!y, 6, 66);
 d(20) := call getDistance(MyCenter!x, MyCenter!y, 6, 78);
+
+min := d(0);
 };
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60))*/
 task {/*#E*/ 
  
-for (i:=2,i<=4,i+1){
+for (i:=2,i<=20,i+1){
  if (d(i)<=min) {
    min := d(i);
    count := i; } 
 }
 };
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),308(30,80))*/
-decision /*#E*/ 
-1;
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),332(72,85))*/
-(4):
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),305(60,90))*/
-task {/*#E*/ 
- 
-HeadingTarget !x:= FourthQuaterX;
-HeadingTarget !y:= FourthQuaterY;
-};
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),329(57,90))*/
-(3):
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),299(45,105))*/
-task {/*#E*/ 
- 
-HeadingTarget !x:= ThirdQuaterX;
-HeadingTarget !y:= ThirdQuaterY;
-};
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),326(42,90))*/
-(2):
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),293(30,120))*/
-task {/*#E*/ 
- 
-HeadingTarget !x:= SecondQuaterX;
-HeadingTarget !y:= SecondQuaterY;
-};
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),323(27,90))*/
-(1):
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),287(15,135))*/
+/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),287(30,110))*/
 task {/*#E*/ 
  
 HeadingTarget !x:= xs(count);
 HeadingTarget !y:= ys(count);
 };
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),308(30,80))*/
-enddecision;
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),245(35,150))*/
 return /*#E*/ 
 ;
@@ -3350,31 +3321,146 @@ start /*#E*/
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\SearchHeadingTarget.spd(1),137(55,50))*/
 task {/*#E*/ 
  
-if ((HeadingTarget!x = FirstQuaterX) AND 
-    (HeadingTarget!y = FirstQuaterY)) {
-      HeadingTarget!x :=  SecondQuaterX;
-      HeadingTarget!y :=  SecondQuaterY;
-} 
-else {
-  if ((HeadingTarget!x = SecondQuaterX) AND 
-    (HeadingTarget!y = SecondQuaterY)) {
-      HeadingTarget!x :=  ThirdQuaterX;
-      HeadingTarget!y :=  ThirdQuaterY;
-  } 
-  else { 
-    if ((HeadingTarget!x = ThirdQuaterX) AND 
-        (HeadingTarget!y = ThirdQuaterY)) {
-         HeadingTarget!x :=  FourthQuaterX;
-         HeadingTarget!y :=  FourthQuaterY;
-    }  
-    else 
-     if ((HeadingTarget!x = FourthQuaterX) AND 
-         (HeadingTarget!y = FourthQuaterY)) {
-          HeadingTarget!x :=  FirstQuaterX;
-          HeadingTarget!y :=  FirstQuaterY;
-     }
-  }
+if ((HeadingTarget!x = 18)
+    AND (HeadingTarget!y = 90)) {
+  HeadingTarget!x := 30;
+  HeadingTarget!y := 90;
 }
+else {
+if ((HeadingTarget!x = 30)
+    AND (HeadingTarget!y = 90)) {
+  HeadingTarget!x := 42;
+  HeadingTarget!y := 78;
+}
+else {
+if ((HeadingTarget!x = 42)
+    AND (HeadingTarget!y = 78)) {
+  HeadingTarget!x := 42;
+  HeadingTarget!y := 18;
+}
+else {
+if ((HeadingTarget!x = 42)
+    AND (HeadingTarget!y = 18)) {
+  HeadingTarget!x := 30;
+  HeadingTarget!y := 6;
+}
+else {
+if ((HeadingTarget!x = 30)
+    AND (HeadingTarget!y = 6)) {
+  HeadingTarget!x := 18;
+  HeadingTarget!y := 6;
+}
+else {
+if ((HeadingTarget!x = 18)
+    AND (HeadingTarget!y = 6)) {
+  HeadingTarget!x := 6;
+  HeadingTarget!y := 18;
+}
+else {
+if ((HeadingTarget!x = 6)
+    AND (HeadingTarget!y = 18)) {
+  HeadingTarget!x := 6;
+  HeadingTarget!y := 30;
+}
+else {
+if ((HeadingTarget!x = 6)
+    AND (HeadingTarget!y = 30)) {
+  HeadingTarget!x := 18;
+  HeadingTarget!y := 42;
+}
+else {
+if ((HeadingTarget!x = 18)
+    AND (HeadingTarget!y = 42)) {
+  HeadingTarget!x := 54;
+  HeadingTarget!y := 42;
+}
+else {
+if ((HeadingTarget!x = 54)
+    AND (HeadingTarget!y = 42)) {
+  HeadingTarget!x := 90;
+  HeadingTarget!y := 6;
+}
+else {
+if ((HeadingTarget!x = 90)
+    AND (HeadingTarget!y = 6)) {
+  HeadingTarget!x := 102;
+  HeadingTarget!y := 6;
+}
+else {
+if ((HeadingTarget!x = 102)
+    AND (HeadingTarget!y = 6)) {
+  HeadingTarget!x := 114;
+  HeadingTarget!y := 18;
+}
+else {
+if ((HeadingTarget!x = 114)
+    AND (HeadingTarget!y = 18)) {
+  HeadingTarget!x := 114;
+  HeadingTarget!y := 78;
+}
+else {
+if ((HeadingTarget!x = 114)
+    AND (HeadingTarget!y = 78)) {
+  HeadingTarget!x := 102;
+  HeadingTarget!y := 90;
+}
+else {
+if ((HeadingTarget!x = 102)
+    AND (HeadingTarget!y = 90)) {
+  HeadingTarget!x := 90;
+  HeadingTarget!y := 90;
+}
+else {
+if ((HeadingTarget!x = 90)
+    AND (HeadingTarget!y = 90)) {
+  HeadingTarget!x := 54;
+  HeadingTarget!y := 54;
+}
+else {
+if ((HeadingTarget!x = 54)
+    AND (HeadingTarget!y = 54)) {
+  HeadingTarget!x := 18;
+  HeadingTarget!y := 54;
+}
+else {
+if ((HeadingTarget!x = 18)
+    AND (HeadingTarget!y = 54)) {
+  HeadingTarget!x := 6;
+  HeadingTarget!y := 66;
+}
+else {
+if ((HeadingTarget!x = 6)
+    AND (HeadingTarget!y = 66)) {
+  HeadingTarget!x := 6;
+  HeadingTarget!y := 78;
+}
+else {
+if ((HeadingTarget!x = 6)
+    AND (HeadingTarget!y = 78)) {
+  HeadingTarget!x := 18;
+  HeadingTarget!y := 90;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+
 };
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\SearchHeadingTarget.spd(1),119(60,130))*/
 return /*#E*/ 
