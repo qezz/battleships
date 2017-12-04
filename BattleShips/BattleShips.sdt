@@ -8,14 +8,14 @@ TargetDirectory=target\
 0 11 BasicTypes ..\Packages\BasicTypes.sun 0 1050914734 BasicTypes ""
 1 51 ConfigFile ..\Config\ConfigFile.pr 0 1147706161 ConfigFile ""
 1 19 h2i ..\Packages\h2i.sop 0 1049104912 h2i ""
-1 19 i2h ..\Packages\i2h.sop 8 1049104930 i2h ""
+1 19 i2h ..\Packages\i2h.sop 0 1049104930 i2h ""
 1 19 d2i ..\Packages\d2i.sop 0 1049104942 d2i ""
 1 19 i2d ..\Packages\i2d.sop 0 1049103778 i2d ""
 1 19 nw2i ..\Packages\nw2i.sop 0 1049104956 nw2i ""
 1 19 i2nw ..\Packages\i2nw.sop 0 1049104362 i2nw ""
 1 19 ns2i ..\Packages\ns2i.sop 0 1049104424 ns2i ""
 1 19 i2ns ..\Packages\i2ns.sop 0 1049104556 i2ns ""
-0 1 BattleShips BattleShips.ssy 0 1052557974 BattleShips ""
+0 1 BattleShips BattleShips.ssy 8 1052557974 BattleShips ""
 1 2 Simulator ..\Simulator\Simulator.sbk 0 1053706356 Simulator ""
 2 5 Router ..\Simulator\Router.spr 0 1053764944 Router ""
 3 6 SendOrderSpeedRequest ..\Simulator\SendOrderSpeedRequest.spd 0 1053706276 SendOrderSpeedRequest ""
@@ -93,7 +93,7 @@ TargetDirectory=target\
 5 6 CanShootEnemyCenter Strategy1\CanShootEnemyCenter.spd 0 1050503172 CanShootEnemyCenter ""
 5 6 SortShootList Strategy1\SortShootList.spd 0 1050052454 SortShootList ""
 4 6 OutputOrder Strategy1\OutputOrder.spd 0 1050410414 OutputOrder ""
-4 6 FindStartPoint Strategy1\FindStartPoint.spd 0 1051185186 FindStartPoint ""
+4 6 FindStartPoint Strategy1\FindStartPoint.spd 0 1512349220 FindStartPoint ""
 4 6 FindHeadingTarget Strategy1\SearchHeadingTarget.spd 0 1050136238 FindHeadingTarget ""
 4 6 OnLand Strategy1\OnLand.spd 0 1052222042 OnLand ""
 1 2 Strategy2 Strategy2.sbk 0 1051521388 Strategy2 ""
@@ -101,7 +101,7 @@ TargetDirectory=target\
 3 6 UpdateShipParams2 Strategy2\UpdateShipParams.spd 0 1147714954 UpdateShipParams1 ""
 3 6 EnemyCenter2 Strategy2\EnemyCenter.spd 0 1051523850 EnemyCenter1 ""
 3 6 StrategyStep2 Strategy2\StrategyStep.spd 0 1147633086 StrategyStep1 ""
-4 6 SolveCollision2 Strategy2\SolveCollision.spd 0 1051523962 SolveCollision1 ""
+4 6 SolveCollision2 Strategy2\SolveCollision.spd 0 1512327876 SolveCollision1 ""
 4 6 isCollision2 Strategy2\isCollision.spd 0 1051712974 isCollision1 ""
 4 6 NewHeadingChange2 Strategy2\NewHeading.spd 0 1051713326 NewHeadingChange1 ""
 5 6 CosBetweenVectors2 Strategy2\CosBetweenVectors.spd 0 1053512700 CosBetweenVectors1 ""
@@ -119,6 +119,7 @@ TargetDirectory=target\
 4 6 OnLand2 Strategy2\OnLand.spd 0 1147962308 OnLand2 ""
 4 6 SelectSpy Strategy2\SelectSpy.spd 0 1134138062 SelectSpy ""
 [VIEWOPTIONS]
+Scale=80
 ShowDirectories=True
 ShowLongMenus=True
 [ANALYSEROPTIONS]

@@ -8436,20 +8436,20 @@ extern void yFree_z221J_FindHeadingTarget (void *);
 *     /PROCEDURE FindStartPoint>>
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),137(135,5),1,9)
 ******/
-extern tSDLGArrayInfo ySDL_z221K1_Dist;
+extern tSDLGArrayInfo ySDL_z221K0_Dist;
 
-typedef struct z221K1_Dist_ystruct * z221K1_Dist_yptr;
-typedef struct z221K1_Dist_ystruct {
-  z221K1_Dist_yptr Suc;
+typedef struct z221K0_Dist_ystruct * z221K0_Dist_yptr;
+typedef struct z221K0_Dist_ystruct {
+  z221K0_Dist_yptr Suc;
   SDL_Integer Index;
   SDL_Integer Data;
-} z221K1_Dist_yrec;
+} z221K0_Dist_yrec;
 typedef struct {
-  z221K1_Dist_yptr First;
-  z221K1_Dist_yptr Last;
+  z221K0_Dist_yptr First;
+  z221K0_Dist_yptr Last;
   int IsAssigned;
   SDL_Integer Data;
-} z221K1_Dist;
+} z221K0_Dist;
 
 /*****
 * NEWTYPE Dist  (HEADING section)
@@ -8458,22 +8458,22 @@ typedef struct {
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),137(135,5),1,9)
 ******/
 #ifndef XOPTSORT
-extern XCONST struct xSortIdStruct ySrtR_z221K1_Dist;
-#define ySrtN_z221K1_Dist  (&ySrtR_z221K1_Dist)
+extern XCONST struct xSortIdStruct ySrtR_z221K0_Dist;
+#define ySrtN_z221K0_Dist  (&ySrtR_z221K0_Dist)
 #endif
 
-#define yAss_z221K1_Dist(Addr,Expr,AssName) (void)GenericAssignSort(Addr,Expr,AssName,(tSDLTypeInfo *)&ySDL_z221K1_Dist)
-#define yAssF_z221K1_Dist(V,E,A)  yAss_z221K1_Dist(&(V),E,A)
-#define yEq_z221K1_Dist(Expr1,Expr2) GenericEqualSort((void *)Expr1,(void *)Expr2,(tSDLTypeInfo *)&ySDL_z221K1_Dist)
-#define yEqF_z221K1_Dist(Expr1,Expr2)  yEq_z221K1_Dist(Expr1,Expr2)
-#define yNEqF_z221K1_Dist(Expr1,Expr2)  ( ! yEq_z221K1_Dist(Expr1,Expr2) )
-#define yFree_z221K1_Dist(P) GenericFreeSort((void **)P, (tSDLTypeInfo *)&ySDL_z221K1_Dist)
-#define yExtr_z221K1_Dist(V1,V2) ((SDL_Integer *)GenGArray_Extract((xGArray_Type *)V1,V2,&ySDL_z221K1_Dist))
-#define yAddr_z221K1_Dist(V1,V2) ((SDL_Integer *)GenGArray_Modify((xGArray_Type *)V1,V2,&ySDL_z221K1_Dist))
-#ifndef ANY_z221K1_Dist
-#define ANY_z221K1_Dist(R) (z221K1_Dist *)GenericAnySort(R, (tSDLTypeInfo *)&ySDL_z221K1_Dist)
+#define yAss_z221K0_Dist(Addr,Expr,AssName) (void)GenericAssignSort(Addr,Expr,AssName,(tSDLTypeInfo *)&ySDL_z221K0_Dist)
+#define yAssF_z221K0_Dist(V,E,A)  yAss_z221K0_Dist(&(V),E,A)
+#define yEq_z221K0_Dist(Expr1,Expr2) GenericEqualSort((void *)Expr1,(void *)Expr2,(tSDLTypeInfo *)&ySDL_z221K0_Dist)
+#define yEqF_z221K0_Dist(Expr1,Expr2)  yEq_z221K0_Dist(Expr1,Expr2)
+#define yNEqF_z221K0_Dist(Expr1,Expr2)  ( ! yEq_z221K0_Dist(Expr1,Expr2) )
+#define yFree_z221K0_Dist(P) GenericFreeSort((void **)P, (tSDLTypeInfo *)&ySDL_z221K0_Dist)
+#define yExtr_z221K0_Dist(V1,V2) ((SDL_Integer *)GenGArray_Extract((xGArray_Type *)V1,V2,&ySDL_z221K0_Dist))
+#define yAddr_z221K0_Dist(V1,V2) ((SDL_Integer *)GenGArray_Modify((xGArray_Type *)V1,V2,&ySDL_z221K0_Dist))
+#ifndef ANY_z221K0_Dist
+#define ANY_z221K0_Dist(R) (z221K0_Dist *)GenericAnySort(R, (tSDLTypeInfo *)&ySDL_z221K0_Dist)
 #endif
-#define z221K16_copy(P)  P
+#define z221K06_copy(P)  P
 
 /*****
 * PROCEDURE FindStartPoint
@@ -8484,19 +8484,23 @@ YPRD_PROTOTYPE(z221K_FindStartPoint)
 extern XCONST struct xPrdIdStruct yPrdR_z221K_FindStartPoint;
 #define yPrdN_z221K_FindStartPoint  (&yPrdR_z221K_FindStartPoint)
 #ifdef XBREAKBEFORE
-#define ySym_z221K_FindStartPoint  23
+#define ySym_z221K_FindStartPoint  69
 extern char * yRef_z221K_FindStartPoint (int, xSymbolType *);
 #endif
 typedef struct {
     PROCEDURE_VARS
-                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),2,4) */
-    z221K1_Dist z221K2_d;
-                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,4) */
-    SDL_Integer z221K3_count;
-                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,11) */
-    SDL_Integer z221K4_i;
-                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,14) */
-    SDL_Integer z221K5_min;
+                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),2,4) */
+    z221K0_Dist z221K1_d;
+                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,4) */
+    SDL_Integer z221K2_count;
+                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,11) */
+    SDL_Integer z221K3_i;
+                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,14) */
+    SDL_Integer z221K4_min;
+                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),4,4) */
+    z221K0_Dist z221K5_xs;
+                /* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),4,8) */
+    z221K0_Dist z221K6_ys;
 } yVDef_z221K_FindStartPoint;
 typedef yVDef_z221K_FindStartPoint  *yVDP_z221K_FindStartPoint;
 extern void yFree_z221K_FindStartPoint (void *);
@@ -8505,40 +8509,60 @@ extern void yFree_z221K_FindStartPoint (void *);
 * DCL d
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),2,4)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),2,4)
 ******/
 #ifndef XOPTDCL
-extern XCONST struct xVarIdStruct yVarR_z221K2_d;
+extern XCONST struct xVarIdStruct yVarR_z221K1_d;
 #endif
 
 /*****
 * DCL count
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,4)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,4)
 ******/
 #ifndef XOPTDCL
-extern XCONST struct xVarIdStruct yVarR_z221K3_count;
+extern XCONST struct xVarIdStruct yVarR_z221K2_count;
 #endif
 
 /*****
 * DCL i
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,11)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,11)
 ******/
 #ifndef XOPTDCL
-extern XCONST struct xVarIdStruct yVarR_z221K4_i;
+extern XCONST struct xVarIdStruct yVarR_z221K3_i;
 #endif
 
 /*****
 * DCL min
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,14)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,14)
 ******/
 #ifndef XOPTDCL
-extern XCONST struct xVarIdStruct yVarR_z221K5_min;
+extern XCONST struct xVarIdStruct yVarR_z221K4_min;
+#endif
+
+/*****
+* DCL xs
+* <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
+*     /PROCEDURE FindStartPoint>>
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),4,4)
+******/
+#ifndef XOPTDCL
+extern XCONST struct xVarIdStruct yVarR_z221K5_xs;
+#endif
+
+/*****
+* DCL ys
+* <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
+*     /PROCEDURE FindStartPoint>>
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),4,8)
+******/
+#ifndef XOPTDCL
+extern XCONST struct xVarIdStruct yVarR_z221K6_ys;
 #endif
 
 /*****
@@ -10454,9 +10478,9 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     CALL_PROCEDURE_STARTUP
 #ifdef XBREAKBEFORE
     if (yVarP->ActivePrd != (xPrdNode)0 ) {
-      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 10457)
+      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 10481)
     } else {
-      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 10459)
+      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 10483)
     }
 #endif
   }
@@ -10481,7 +10505,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     yAssF_SDL_Boolean(yVarP->z020Z_spySearching, SDL_True, XASS_MR_ASS_NF);
     GenericDefault((void *)&yVarP->z0212_EnemyShips,
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_14_tStringEnemyShip);
-    XBETWEEN_SYMBOLS(11, 10484)
+    XBETWEEN_SYMBOLS(11, 10508)
 
 /*-----
 * NEXTSTATE Idle
@@ -10501,7 +10525,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     XDEBUG_LABEL(Idle_InitDataComplete)
     XAT_FIRST_SYMBOL(1)
     XOS_TRACE_INPUT("InitDataComplete")
-    XBETWEEN_SYMBOLS(12, 10504)
+    XBETWEEN_SYMBOLS(12, 10528)
 
 /*-----
 * ASSIGNMENT WeaponryCharacter := ...
@@ -10522,7 +10546,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     xMSCEAssign("WeaponryCharacter := ", &(yVarP->z020L_WeaponryCharacter),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0Z_tArrayWeaponryCharacter);
 #endif
-    XBETWEEN_STMTS(13, 10525)
+    XBETWEEN_STMTS(13, 10549)
 
 /*-----
 * ASSIGNMENT ShipsCharacter := ...
@@ -10542,7 +10566,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     xMSCEAssign("ShipsCharacter := ", &(yVarP->z020M_ShipsCharacter),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_10_tArrayShipsCharacter);
 #endif
-    XBETWEEN_SYMBOLS(14, 10545)
+    XBETWEEN_SYMBOLS(14, 10569)
 
 /*-----
 * NEXTSTATE InitComplete
@@ -10576,8 +10600,8 @@ YPAD_FUNCTION(yPAD_z02_Main2)
       ySVarP)->Param2), XASS_AR_ASS_FR);
 #endif
 
-  L_grst48:;
-    XBETWEEN_SYMBOLS(15, 10580)
+  L_grst58:;
+    XBETWEEN_SYMBOLS(15, 10604)
 
 /*-----
 * CALL UpdateShipParams2
@@ -10591,7 +10615,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z0203_UpdateShipParams2, yPrdN_z0203_UpdateShipParams2, 0, 8)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(8, 10594)
+    XBETWEEN_SYMBOLS(8, 10618)
 
 /*-----
 * NEXTSTATE IdleVisShips
@@ -10614,7 +10638,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     yAssF_SDL_Integer(yVarP->z020O_Tick,
       ((yPDef_z_BasicTypes_03_StartSimulation *)ySVarP)->Param1,
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(16, 10617)
+    XBETWEEN_SYMBOLS(16, 10641)
 
 /*-----
 * CALL StrategyStep2
@@ -10630,7 +10654,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
       &(yVarP->z020U_ShipsCurrentState);
     CALL_PROCEDURE(z0201_StrategyStep2, yPrdN_z0201_StrategyStep2, 0, 9)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(9, 10633)
+    XBETWEEN_SYMBOLS(9, 10657)
 
 /*-----
 * OUTPUT FinishSimulation
@@ -10653,7 +10677,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
       yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_04_FinishSimulation),
       "FinishSimulation")
     SIGNAL_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(17, 10656)
+    XBETWEEN_SYMBOLS(17, 10680)
 
 /*-----
 * NEXTSTATE IdleRes
@@ -10683,7 +10707,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     yAssF_z_BasicTypes_14_tStringEnemyShip(yVarP->z0212_EnemyShips, &(
       ((yPDef_z_BasicTypes_0I_VisibleShip *)ySVarP)->Param2), XASS_AR_ASS_FR);
 #endif
-    XBETWEEN_SYMBOLS(18, 10686)
+    XBETWEEN_SYMBOLS(18, 10710)
 
 /*-----
 * CALL EnemyCenter2
@@ -10697,7 +10721,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z0202_EnemyCenter2, yPrdN_z0202_EnemyCenter2, 0, 10)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(10, 10700)
+    XBETWEEN_SYMBOLS(10, 10724)
 
 /*-----
 * NEXTSTATE -
@@ -10732,10 +10756,10 @@ YPAD_FUNCTION(yPAD_z02_Main2)
 #endif
 
 /*-----
-* JOIN grst48
+* JOIN grst58
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\Main.spr(3),551(70,105),1)
 ------*/
-    goto L_grst48;
+    goto L_grst58;
 
 /*-----
 * INPUT OrderSpeedResponse, OrderSpeedReject, OrderTurnResponse, OrderTurnReject, OrderFireResponse, OrderFireReject, DestroyShip
@@ -10745,7 +10769,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
     XDEBUG_LABEL(IdleRes_OrderSpeedResponse)
     XAT_FIRST_SYMBOL(6)
     XOS_TRACE_INPUT("OrderSpeedResponse, OrderSpeedReject, OrderTurnResponse, OrderTurnReject, OrderFireResponse, OrderFireReject, DestroyShip")
-    XBETWEEN_SYMBOLS(19, 10748)
+    XBETWEEN_SYMBOLS(19, 10772)
 
 /*-----
 * NEXTSTATE -
@@ -10779,7 +10803,7 @@ YPAD_FUNCTION(yPAD_z02_Main2)
         ((yPDef_z_BasicTypes_0A_StrategyLose *)ySVarP)->Param1),
         XASS_AR_ASS_FR);
     }
-    XBETWEEN_SYMBOLS(20, 10782)
+    XBETWEEN_SYMBOLS(20, 10806)
 
 /*-----
 * STOP
@@ -11127,7 +11151,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     XAT_FIRST_SYMBOL(0)
     yAssF_SDL_Integer(yPrdVarP->z02010S_index, SDL_INTEGER_LIT(1),
       XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(24, 11130)
+    XBETWEEN_SYMBOLS_PRD(24, 11154)
 
 /*-----
 * DECISION
@@ -11147,7 +11171,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 #else
     if (yEqF_SDL_Integer(yVarP->z0211_NumVisibleShips, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(27, 11150)
+      XBETWEEN_SYMBOLS_PRD(27, 11174)
 
 /*-----
 * DECISION
@@ -11167,7 +11191,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 #else
       if (yVarP->z020Y_firstTact) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(28, 11170)
+        XBETWEEN_SYMBOLS_PRD(28, 11194)
 
 /*-----
 * CALL FindStartPoint2
@@ -11184,7 +11208,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         PROCEDURE_ALLOC_ERROR_END
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(13, 11187)
+      XBETWEEN_SYMBOLS_PRD(13, 11211)
 
 /*-----
 * CALL SelectSpy
@@ -11198,7 +11222,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       PROCEDURE_ALLOC_ERROR
       CALL_PROCEDURE_IN_PRD(z02010P_SelectSpy, yPrdN_z02010P_SelectSpy, 0, 14)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(14, 11201)
+      XBETWEEN_SYMBOLS_PRD(14, 11225)
 
 /*-----
 * DECISION
@@ -11248,7 +11272,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         y, xMinus_SDL_Integer(yVarP->z020T_HeadingTarget.y,
         SDL_INTEGER_LIT(20))))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(29, 11251)
+        XBETWEEN_SYMBOLS_PRD(29, 11275)
 
 /*-----
 * CALL FindHeadingTarget2
@@ -11266,7 +11290,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         PROCEDURE_ALLOC_ERROR_END
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(15, 11269)
+      XBETWEEN_SYMBOLS_PRD(15, 11293)
 
 /*-----
 * DECISION
@@ -11309,7 +11333,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         &(yVarP->z020U_ShipsCurrentState), yVarP->z020X_spyIndex)).Coordinates.
         y, xMinus_SDL_Integer(yVarP->z020N_MyCenter.y, SDL_INTEGER_LIT(10))))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(30, 11312)
+        XBETWEEN_SYMBOLS_PRD(30, 11336)
 
 /*-----
 * ASSIGNMENT spySearching := ...
@@ -11336,7 +11360,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 ------*/
       goto L_Step2;
     } else {
-      XBETWEEN_SYMBOLS_PRD(25, 11339)
+      XBETWEEN_SYMBOLS_PRD(25, 11363)
 
 /*-----
 * IF
@@ -11349,7 +11373,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(26, 11352)
+        XBETWEEN_STMTS_PRD(26, 11376)
 
 /*-----
 * ASSIGNMENT flagFight := ...
@@ -11383,7 +11407,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 
   case 4:
   L_Step1:;
-    XBETWEEN_SYMBOLS_PRD(31, 11386)
+    XBETWEEN_SYMBOLS_PRD(31, 11410)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -11436,7 +11460,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       &((*(yPrdVarP->z020100_ShipsCurrState))), yPrdVarP->z02010S_index)).
       Coordinates.y)), yPrdVarP->xPrdCallRes1_SDL_Integer)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(32, 11439)
+      XBETWEEN_SYMBOLS_PRD(32, 11463)
 
 /*-----
 * CALL OnLand2
@@ -11457,7 +11481,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       CALL_PROCEDURE_IN_PRD(z02010O_OnLand2, yPrdN_z02010O_OnLand2, 0, 17)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(33, 11460)
+      XBETWEEN_SYMBOLS_PRD(33, 11484)
 
 /*-----
 * CALL EnemyFound2
@@ -11478,7 +11502,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         17)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(17, 11481)
+    XBETWEEN_SYMBOLS_PRD(17, 11505)
 
 /*-----
 * CALL isCollision2  (from EXPRESSION in next symbol)
@@ -11516,7 +11540,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     xMSCEAssign("CollisionType := ", &(((yVDef_z0201_StrategyStep2 *)yPrdVarP)->
       z02010T_CollisionType), (tSDLTypeInfo *)&ySDL_z02010R_tCollision);
 #endif
-    XBETWEEN_SYMBOLS_PRD(34, 11519)
+    XBETWEEN_SYMBOLS_PRD(34, 11543)
 
 /*-----
 * DECISION
@@ -11540,7 +11564,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     if (yEqF_z02010R_tCollision(yPrdVarP->z02010T_CollisionType,
       z02010R0_NO_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(35, 11543)
+      XBETWEEN_SYMBOLS_PRD(35, 11567)
 
 /*-----
 * CALL OutputOrder2
@@ -11556,7 +11580,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         0, 19)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(36, 11559)
+      XBETWEEN_SYMBOLS_PRD(36, 11583)
 
 /*-----
 * CALL SolveCollision2
@@ -11572,7 +11596,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         yPrdN_z02010J_SolveCollision2, 0, 19)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(19, 11575)
+    XBETWEEN_SYMBOLS_PRD(19, 11599)
 
 /*-----
 * ASSIGNMENT index := ...
@@ -11592,7 +11616,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     xMSCEAssign("index := ", &(((yVDef_z0201_StrategyStep2 *)yPrdVarP)->
       z02010S_index), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(37, 11595)
+    XBETWEEN_SYMBOLS_PRD(37, 11619)
 
 /*-----
 * DECISION
@@ -11614,7 +11638,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     if (xLE_SDL_Integer(yPrdVarP->z02010S_index, yVarP->z020P_NumMyShips)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(38, 11617)
+      XBETWEEN_SYMBOLS_PRD(38, 11641)
 
 /*-----
 * RETURN
@@ -11634,7 +11658,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 
   case 8:
   L_Step2:;
-    XBETWEEN_SYMBOLS_PRD(39, 11637)
+    XBETWEEN_SYMBOLS_PRD(39, 11661)
 
 /*-----
 * DECISION
@@ -11653,7 +11677,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 #else
     if (yVarP->z020Y_firstTact) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(40, 11656)
+      XBETWEEN_SYMBOLS_PRD(40, 11680)
 
 /*-----
 * ASSIGNMENT firstTact := ...
@@ -11671,7 +11695,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       xMSCEAssign("firstTact := ", &(yVarP->z020Y_firstTact),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(41, 11674)
+      XBETWEEN_STMTS_PRD(41, 11698)
 
 /*-----
 * ASSIGNMENT MyCenter... := ...
@@ -11693,7 +11717,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       xMSCEAssign("MyCenter... := ", &(yVarP->z020N_MyCenter.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(42, 11696)
+      XBETWEEN_STMTS_PRD(42, 11720)
 
 /*-----
 * ASSIGNMENT MyCenter... := ...
@@ -11717,22 +11741,22 @@ YPRD_FUNCTION(z0201_StrategyStep2)
 #endif
 
 /*-----
-* JOIN grst49
+* JOIN grst59
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\StrategyStep.spd(4),2192(100,60),0)
 ------*/
-      goto L_grst49;
+      goto L_grst59;
     } else {
 
 /*-----
-* JOIN grst49
+* JOIN grst59
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\StrategyStep.spd(4),2189(77,55),0)
 ------*/
-      goto L_grst49;
+      goto L_grst59;
     }
 
   case 9:
-  L_grst49:;
-    XBETWEEN_SYMBOLS_PRD(43, 11735)
+  L_grst59:;
+    XBETWEEN_SYMBOLS_PRD(43, 11759)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -11785,7 +11809,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       &((*(yPrdVarP->z020100_ShipsCurrState))), yPrdVarP->z02010S_index)).
       Coordinates.y)), yPrdVarP->xPrdCallRes1_SDL_Integer)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(44, 11788)
+      XBETWEEN_SYMBOLS_PRD(44, 11812)
 
 /*-----
 * CALL OnLand2
@@ -11806,7 +11830,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
       CALL_PROCEDURE_IN_PRD(z02010O_OnLand2, yPrdN_z02010O_OnLand2, 0, 21)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(45, 11809)
+      XBETWEEN_SYMBOLS_PRD(45, 11833)
 
 /*-----
 * CALL EnemyNotFound2
@@ -11827,7 +11851,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         yPrdN_z02010E_EnemyNotFound2, 0, 21)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(21, 11830)
+    XBETWEEN_SYMBOLS_PRD(21, 11854)
 
 /*-----
 * CALL isCollision2  (from EXPRESSION in next symbol)
@@ -11865,7 +11889,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     xMSCEAssign("CollisionType := ", &(((yVDef_z0201_StrategyStep2 *)yPrdVarP)->
       z02010T_CollisionType), (tSDLTypeInfo *)&ySDL_z02010R_tCollision);
 #endif
-    XBETWEEN_SYMBOLS_PRD(46, 11868)
+    XBETWEEN_SYMBOLS_PRD(46, 11892)
 
 /*-----
 * DECISION
@@ -11889,7 +11913,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     if (yEqF_z02010R_tCollision(yPrdVarP->z02010T_CollisionType,
       z02010R0_NO_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(47, 11892)
+      XBETWEEN_SYMBOLS_PRD(47, 11916)
 
 /*-----
 * CALL OutputOrder2
@@ -11905,7 +11929,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         0, 23)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(48, 11908)
+      XBETWEEN_SYMBOLS_PRD(48, 11932)
 
 /*-----
 * CALL SolveCollision2
@@ -11921,7 +11945,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
         yPrdN_z02010J_SolveCollision2, 0, 23)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(23, 11924)
+    XBETWEEN_SYMBOLS_PRD(23, 11948)
 
 /*-----
 * ASSIGNMENT index := ...
@@ -11941,7 +11965,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     xMSCEAssign("index := ", &(((yVDef_z0201_StrategyStep2 *)yPrdVarP)->
       z02010S_index), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(49, 11944)
+    XBETWEEN_SYMBOLS_PRD(49, 11968)
 
 /*-----
 * DECISION
@@ -11963,7 +11987,7 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     if (xLE_SDL_Integer(yPrdVarP->z02010S_index, yVarP->z020P_NumMyShips)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(50, 11966)
+      XBETWEEN_SYMBOLS_PRD(50, 11990)
 
 /*-----
 * RETURN
@@ -11976,10 +12000,10 @@ YPRD_FUNCTION(z0201_StrategyStep2)
     }
 
 /*-----
-* JOIN grst49
+* JOIN grst59
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\StrategyStep.spd(4),2012(70,95),1)
 ------*/
-    goto L_grst49;
+    goto L_grst59;
   }
   XEND_PRD
 }
@@ -12357,7 +12381,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
       (tSDLTypeInfo *)&ySDL_z02010D0E_tStringShootList);
     yAssF_SDL_Boolean(yPrdVarP->z02010D0R_DestroyFlag, SDL_False,
       XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(16, 12360)
+    XBETWEEN_SYMBOLS_PRD(16, 12384)
 
 /*-----
 * DECISION
@@ -12381,7 +12405,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
     if (yEqF_z_BasicTypes_0S_tNameShip((*(yPrdVarP->z02010D00_ShCurrSt)).
       TypeShip, z_BasicTypes_0S4_REPAIR_BOAT)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(17, 12384)
+      XBETWEEN_SYMBOLS_PRD(17, 12408)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -12397,7 +12421,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         yPrdVarP)->z02010D0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(18, 12400)
+        XBETWEEN_STMTS_PRD(18, 12424)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -12411,7 +12435,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(20, 12414)
+        XBETWEEN_STMTS_PRD(20, 12438)
 
 /*-----
 * IF
@@ -12431,7 +12455,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(21, 12434)
+          XBETWEEN_STMTS_PRD(21, 12458)
 
 /*-----
 * ASSIGNMENT DestroyFlag := ...
@@ -12452,7 +12476,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
             yPrdVarP)->z02010D0R_DestroyFlag),
             (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_STMTS_PRD(22, 12455)
+          XBETWEEN_STMTS_PRD(22, 12479)
 
 /*-----
 * BREAK
@@ -12471,7 +12495,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(19, 12474)
+        XBETWEEN_STMTS_PRD(19, 12498)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -12493,7 +12517,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
       xTraceAlg("LOOP test FALSE");
 #endif
       xBreak_17: ;
-      XBETWEEN_SYMBOLS_PRD(23, 12496)
+      XBETWEEN_SYMBOLS_PRD(23, 12520)
 
 /*-----
 * DECISION
@@ -12520,7 +12544,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         yEqF_SDL_Boolean(yPrdVarP->z02010D0R_DestroyFlag, SDL_True)),
         xGT_SDL_Integer(yVarP->z020P_NumMyShips, SDL_INTEGER_LIT(1)))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(24, 12523)
+        XBETWEEN_SYMBOLS_PRD(24, 12547)
 
 /*-----
 * CALL ActivateREPAIR2
@@ -12536,7 +12560,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         CALL_PROCEDURE_IN_PRD(z02010D09_ActivateREPAIR2,
           yPrdN_z02010D09_ActivateREPAIR2, 0, 8)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(8, 12539)
+        XBETWEEN_SYMBOLS_PRD(8, 12563)
 
 /*-----
 * RETURN
@@ -12547,7 +12571,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(25, 12550)
+        XBETWEEN_SYMBOLS_PRD(25, 12574)
 
 /*-----
 * DECISION
@@ -12568,7 +12592,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         if (yEqF_SDL_Integer(yVarP->z020P_NumMyShips, yVarP->
           z020Q_NumRepairShips)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(27, 12571)
+          XBETWEEN_SYMBOLS_PRD(27, 12595)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -12610,7 +12634,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
             (tSDLTypeInfo *)&ySDL_z02010Q_tTurnDirection);
 #endif
         } else {
-          XBETWEEN_SYMBOLS_PRD(26, 12613)
+          XBETWEEN_SYMBOLS_PRD(26, 12637)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -12660,7 +12684,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         goto L_F2;
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(28, 12663)
+      XBETWEEN_SYMBOLS_PRD(28, 12687)
 
 /*-----
 * DECISION
@@ -12681,7 +12705,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #else
       if (yEqF_SDL_Integer(yPrdVarP->z02010D01_k, yVarP->z020X_spyIndex)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(32, 12684)
+        XBETWEEN_SYMBOLS_PRD(32, 12708)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -12729,7 +12753,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 ------*/
         goto L_F2;
       } else {
-        XBETWEEN_SYMBOLS_PRD(29, 12732)
+        XBETWEEN_SYMBOLS_PRD(29, 12756)
 
 /*-----
 * CALL CanShootEnemyCenter2  (from EXPRESSION in next symbol)
@@ -12768,7 +12792,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           &(yPrdVarP->z02010D0L_CanShootWeaponry),
           (tSDLTypeInfo *)&ySDL_z02010D0C_tShootWeaponry);
 #endif
-        XBETWEEN_SYMBOLS_PRD(30, 12771)
+        XBETWEEN_SYMBOLS_PRD(30, 12795)
 
 /*-----
 * DECISION
@@ -12795,7 +12819,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 ------*/
           goto L_F1;
         } else {
-          XBETWEEN_SYMBOLS_PRD(31, 12798)
+          XBETWEEN_SYMBOLS_PRD(31, 12822)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -12848,7 +12872,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 
   case 2:
   L_F3:;
-    XBETWEEN_SYMBOLS_PRD(33, 12851)
+    XBETWEEN_SYMBOLS_PRD(33, 12875)
 
 /*-----
 * DECISION
@@ -12869,7 +12893,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
     if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(34, 12872)
+      XBETWEEN_SYMBOLS_PRD(34, 12896)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -12894,7 +12918,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(35, 12897)
+      XBETWEEN_STMTS_PRD(35, 12921)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -12920,7 +12944,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
     } else if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(36, 12923)
+      XBETWEEN_SYMBOLS_PRD(36, 12947)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -12945,7 +12969,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(37, 12948)
+      XBETWEEN_STMTS_PRD(37, 12972)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -12971,7 +12995,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(38, 12974)
+    XBETWEEN_SYMBOLS_PRD(38, 12998)
 
 /*-----
 * RETURN
@@ -12984,7 +13008,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 
   case 4:
   L_F2:;
-    XBETWEEN_SYMBOLS_PRD(39, 12987)
+    XBETWEEN_SYMBOLS_PRD(39, 13011)
 
 /*-----
 * ASSIGNMENT spySearching := ...
@@ -13002,7 +13026,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
     xMSCEAssign("spySearching := ", &(yVarP->z020Z_spySearching),
       (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_SYMBOLS_PRD(40, 13005)
+    XBETWEEN_SYMBOLS_PRD(40, 13029)
 
 /*-----
 * DECISION
@@ -13023,7 +13047,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
     if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(41, 13026)
+      XBETWEEN_SYMBOLS_PRD(41, 13050)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13048,7 +13072,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(42, 13051)
+      XBETWEEN_STMTS_PRD(42, 13075)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13074,7 +13098,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
     } else if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(43, 13077)
+      XBETWEEN_SYMBOLS_PRD(43, 13101)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13099,7 +13123,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(44, 13102)
+      XBETWEEN_STMTS_PRD(44, 13126)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13124,7 +13148,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(45, 13127)
+      XBETWEEN_SYMBOLS_PRD(45, 13151)
 
 /*-----
 * DECISION
@@ -13149,7 +13173,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         MaxSpeed)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(46, 13152)
+        XBETWEEN_SYMBOLS_PRD(46, 13176)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13174,7 +13198,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(47, 13177)
+        XBETWEEN_STMTS_PRD(47, 13201)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13200,7 +13224,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           z02010D01_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(48, 13203)
+        XBETWEEN_STMTS_PRD(48, 13227)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13225,7 +13249,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(49, 13228)
+      XBETWEEN_SYMBOLS_PRD(49, 13252)
 
 /*-----
 * RETURN
@@ -13236,7 +13260,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
       SDL_RETURN
     }
-    XBETWEEN_SYMBOLS_PRD(50, 13239)
+    XBETWEEN_SYMBOLS_PRD(50, 13263)
 
 /*-----
 * RETURN
@@ -13249,7 +13273,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 
   case 7:
   L_F1:;
-    XBETWEEN_SYMBOLS_PRD(51, 13252)
+    XBETWEEN_SYMBOLS_PRD(51, 13276)
 
 /*-----
 * DECISION
@@ -13271,7 +13295,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
     if (yEqF_SDL_Integer((*(yPrdVarP->z02010D00_ShCurrSt)).Speed,
       SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(56, 13274)
+      XBETWEEN_SYMBOLS_PRD(56, 13298)
 
 /*-----
 * ASSIGNMENT BestWeaponry := ...
@@ -13293,7 +13317,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         yPrdVarP)->z02010D0M_BestWeaponry),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(57, 13296)
+      XBETWEEN_STMTS_PRD(57, 13320)
 
 /*-----
 * IF
@@ -13311,7 +13335,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(58, 13314)
+        XBETWEEN_STMTS_PRD(58, 13338)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -13339,7 +13363,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(59, 13342)
+        XBETWEEN_STMTS_PRD(59, 13366)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -13364,7 +13388,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       }
-      XBETWEEN_STMTS_PRD(60, 13367)
+      XBETWEEN_STMTS_PRD(60, 13391)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -13380,7 +13404,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         yPrdVarP)->z02010D0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(61, 13383)
+        XBETWEEN_STMTS_PRD(61, 13407)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -13394,7 +13418,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(63, 13397)
+        XBETWEEN_STMTS_PRD(63, 13421)
 
 /*-----
 * ASSIGNMENT DistBetweenShips := ...
@@ -13423,7 +13447,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           yPrdVarP)->z02010D0J_DistBetweenShips),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(64, 13426)
+        XBETWEEN_STMTS_PRD(64, 13450)
 
 /*-----
 * IF
@@ -13439,7 +13463,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(65, 13442)
+          XBETWEEN_STMTS_PRD(65, 13466)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -13462,7 +13486,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
             yPrdVarP)->z02010D0N_ShootPoint.SortParam),
             (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-          XBETWEEN_STMTS_PRD(66, 13465)
+          XBETWEEN_STMTS_PRD(66, 13489)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -13484,7 +13508,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
             yPrdVarP)->z02010D0N_ShootPoint.Number),
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-          XBETWEEN_STMTS_PRD(67, 13487)
+          XBETWEEN_STMTS_PRD(67, 13511)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -13516,7 +13540,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(62, 13519)
+        XBETWEEN_STMTS_PRD(62, 13543)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -13537,7 +13561,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(68, 13540)
+      XBETWEEN_STMTS_PRD(68, 13564)
 
 /*-----
 * CALL SortShootList2
@@ -13552,7 +13576,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
       CALL_PROCEDURE_IN_PRD(z02010D0B_SortShootList2,
         yPrdN_z02010D0B_SortShootList2, 0, 14)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_STMTS_PRD(14, 13555)
+      XBETWEEN_STMTS_PRD(14, 13579)
 
 /*-----
 * IF
@@ -13567,7 +13591,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(69, 13570)
+        XBETWEEN_STMTS_PRD(69, 13594)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -13593,7 +13617,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(70, 13596)
+        XBETWEEN_STMTS_PRD(70, 13620)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -13617,7 +13641,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       }
-      XBETWEEN_STMTS_PRD(71, 13620)
+      XBETWEEN_STMTS_PRD(71, 13644)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13642,7 +13666,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(72, 13645)
+      XBETWEEN_STMTS_PRD(72, 13669)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13668,7 +13692,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].Fire.Weapon),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(73, 13671)
+      XBETWEEN_STMTS_PRD(73, 13695)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -13684,7 +13708,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         yPrdVarP)->z02010D0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(74, 13687)
+        XBETWEEN_STMTS_PRD(74, 13711)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -13699,7 +13723,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(76, 13702)
+        XBETWEEN_STMTS_PRD(76, 13726)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -13761,7 +13785,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           yPrdVarP)->z02010D0Q_PointToOrder),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-        XBETWEEN_STMTS_PRD(77, 13764)
+        XBETWEEN_STMTS_PRD(77, 13788)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13791,7 +13815,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
           z02010D01_k - SDL_INTEGER_LIT(1)].Fire.List),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
 #endif
-        XBETWEEN_STMTS_PRD(75, 13794)
+        XBETWEEN_STMTS_PRD(75, 13818)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -13812,7 +13836,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(78, 13815)
+      XBETWEEN_STMTS_PRD(78, 13839)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13836,7 +13860,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(79, 13839)
+      XBETWEEN_SYMBOLS_PRD(79, 13863)
 
 /*-----
 * RETURN
@@ -13847,7 +13871,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(52, 13850)
+      XBETWEEN_SYMBOLS_PRD(52, 13874)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13872,7 +13896,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(53, 13875)
+      XBETWEEN_STMTS_PRD(53, 13899)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13898,7 +13922,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].Accel),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-      XBETWEEN_STMTS_PRD(54, 13901)
+      XBETWEEN_STMTS_PRD(54, 13925)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -13922,7 +13946,7 @@ YPRD_FUNCTION(z02010D_EnemyFound2)
         z02010D01_k - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(55, 13925)
+      XBETWEEN_SYMBOLS_PRD(55, 13949)
 
 /*-----
 * RETURN
@@ -14173,7 +14197,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(9, 14176)
+    XBETWEEN_SYMBOLS_PRD(9, 14200)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -14189,7 +14213,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
       yPrdVarP->StaticFather)->z02010D0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(10, 14192)
+      XBETWEEN_STMTS_PRD(10, 14216)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -14203,7 +14227,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(12, 14206)
+      XBETWEEN_STMTS_PRD(12, 14230)
 
 /*-----
 * ASSIGNMENT DistBetweenShips := ...
@@ -14236,7 +14260,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         yPrdVarP->StaticFather)->z02010D0J_DistBetweenShips),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(13, 14239)
+      XBETWEEN_STMTS_PRD(13, 14263)
 
 /*-----
 * IF
@@ -14261,7 +14285,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(14, 14264)
+        XBETWEEN_STMTS_PRD(14, 14288)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -14292,7 +14316,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           yPrdVarP->StaticFather)->z02010D0N_ShootPoint.SortParam),
           (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(15, 14295)
+        XBETWEEN_STMTS_PRD(15, 14319)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -14315,7 +14339,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           yPrdVarP->StaticFather)->z02010D0N_ShootPoint.Number),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(16, 14318)
+        XBETWEEN_STMTS_PRD(16, 14342)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -14347,7 +14371,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(11, 14350)
+      XBETWEEN_STMTS_PRD(11, 14374)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -14369,7 +14393,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(17, 14372)
+    XBETWEEN_SYMBOLS_PRD(17, 14396)
 
 /*-----
 * DECISION
@@ -14400,7 +14424,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 ------*/
       goto L_R1;
     } else {
-      XBETWEEN_SYMBOLS_PRD(18, 14403)
+      XBETWEEN_SYMBOLS_PRD(18, 14427)
 
 /*-----
 * DECISION
@@ -14423,7 +14447,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
       if (yEqF_SDL_Integer((*(((yVDef_z02010D_EnemyFound2 *)yPrdVarP
         ->StaticFather)->z02010D00_ShCurrSt)).Speed, SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(23, 14426)
+        XBETWEEN_SYMBOLS_PRD(23, 14450)
 
 /*-----
 * CALL SortShootList2
@@ -14439,7 +14463,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         CALL_PROCEDURE_IN_PRD(z02010D0B_SortShootList2,
           yPrdN_z02010D0B_SortShootList2, 1, 5)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(5, 14442)
+        XBETWEEN_SYMBOLS_PRD(5, 14466)
 
 /*-----
 * IF
@@ -14456,7 +14480,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(24, 14459)
+          XBETWEEN_STMTS_PRD(24, 14483)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -14483,7 +14507,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(25, 14486)
+          XBETWEEN_STMTS_PRD(25, 14510)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -14508,7 +14532,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         }
-        XBETWEEN_STMTS_PRD(26, 14511)
+        XBETWEEN_STMTS_PRD(26, 14535)
 
 /*-----
 * IF
@@ -14524,7 +14548,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(27, 14527)
+          XBETWEEN_STMTS_PRD(27, 14551)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -14551,7 +14575,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(28, 14554)
+          XBETWEEN_STMTS_PRD(28, 14578)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -14575,7 +14599,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         }
-        XBETWEEN_STMTS_PRD(29, 14578)
+        XBETWEEN_STMTS_PRD(29, 14602)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14600,7 +14624,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(30, 14603)
+        XBETWEEN_STMTS_PRD(30, 14627)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14625,7 +14649,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].Fire.Weapon),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-        XBETWEEN_STMTS_PRD(31, 14628)
+        XBETWEEN_STMTS_PRD(31, 14652)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -14642,7 +14666,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         while (1) {
-          XBETWEEN_STMTS_PRD(32, 14645)
+          XBETWEEN_STMTS_PRD(32, 14669)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -14657,7 +14681,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
           xTraceAlg("LOOP test TRUE");
 #endif
-          XBETWEEN_STMTS_PRD(34, 14660)
+          XBETWEEN_STMTS_PRD(34, 14684)
 
 /*-----
 * CALL NextShipState2  (from EXPRESSION in next symbol)
@@ -14702,7 +14726,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
             yPrdVarP)->z02010D094_NextShipSt),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0X_tShipCurrentState);
 #endif
-          XBETWEEN_STMTS_PRD(35, 14705)
+          XBETWEEN_STMTS_PRD(35, 14729)
 
 /*-----
 * ASSIGNMENT PointToOrder := ...
@@ -14725,7 +14749,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
             yPrdVarP->StaticFather)->z02010D0Q_PointToOrder),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-          XBETWEEN_STMTS_PRD(36, 14728)
+          XBETWEEN_STMTS_PRD(36, 14752)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14756,7 +14780,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
             z02010D01_k - SDL_INTEGER_LIT(1)].Fire.List),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
 #endif
-          XBETWEEN_STMTS_PRD(33, 14759)
+          XBETWEEN_STMTS_PRD(33, 14783)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -14779,7 +14803,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
         xTraceAlg("LOOP test FALSE");
 #endif
-        XBETWEEN_STMTS_PRD(37, 14782)
+        XBETWEEN_STMTS_PRD(37, 14806)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14810,7 +14834,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 ------*/
         goto L_R2;
       } else {
-        XBETWEEN_SYMBOLS_PRD(19, 14813)
+        XBETWEEN_SYMBOLS_PRD(19, 14837)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14835,7 +14859,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(20, 14838)
+        XBETWEEN_STMTS_PRD(20, 14862)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14861,7 +14885,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(21, 14864)
+        XBETWEEN_STMTS_PRD(21, 14888)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -14885,7 +14909,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].isSet),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(22, 14888)
+        XBETWEEN_SYMBOLS_PRD(22, 14912)
 
 /*-----
 * RETURN
@@ -14900,7 +14924,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 
   case 1:
   L_R2:;
-    XBETWEEN_SYMBOLS_PRD(38, 14903)
+    XBETWEEN_SYMBOLS_PRD(38, 14927)
 
 /*-----
 * RETURN
@@ -14913,7 +14937,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 
   case 2:
   L_R1:;
-    XBETWEEN_SYMBOLS_PRD(39, 14916)
+    XBETWEEN_SYMBOLS_PRD(39, 14940)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -14935,7 +14959,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
       ->StaticFather)->z02010D0P_ShootList),
       (tSDLTypeInfo *)&ySDL_z02010D0E_tStringShootList);
 #endif
-    XBETWEEN_STMTS_PRD(40, 14938)
+    XBETWEEN_STMTS_PRD(40, 14962)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -14951,7 +14975,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
       yPrdVarP->StaticFather)->z02010D0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(41, 14954)
+      XBETWEEN_STMTS_PRD(41, 14978)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -14965,7 +14989,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(43, 14968)
+      XBETWEEN_STMTS_PRD(43, 14992)
 
 /*-----
 * ASSIGNMENT DistBetweenShips := ...
@@ -14998,7 +15022,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         yPrdVarP->StaticFather)->z02010D0J_DistBetweenShips),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(44, 15001)
+      XBETWEEN_STMTS_PRD(44, 15025)
 
 /*-----
 * IF
@@ -15020,7 +15044,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(45, 15023)
+        XBETWEEN_STMTS_PRD(45, 15047)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -15051,7 +15075,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           yPrdVarP->StaticFather)->z02010D0N_ShootPoint.SortParam),
           (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(46, 15054)
+        XBETWEEN_STMTS_PRD(46, 15078)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -15074,7 +15098,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           yPrdVarP->StaticFather)->z02010D0N_ShootPoint.Number),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(47, 15077)
+        XBETWEEN_STMTS_PRD(47, 15101)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -15106,7 +15130,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(42, 15109)
+      XBETWEEN_STMTS_PRD(42, 15133)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -15128,7 +15152,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(48, 15131)
+    XBETWEEN_SYMBOLS_PRD(48, 15155)
 
 /*-----
 * CALL SortShootList2
@@ -15143,7 +15167,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
     CALL_PROCEDURE_IN_PRD(z02010D0B_SortShootList2,
       yPrdN_z02010D0B_SortShootList2, 1, 7)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(7, 15146)
+    XBETWEEN_SYMBOLS_PRD(7, 15170)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -15192,7 +15216,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
       ->StaticFather)->z02010D0K_NextHeading),
       (tSDLTypeInfo *)&ySDL_z02010Q_tTurnDirection);
 #endif
-    XBETWEEN_SYMBOLS_PRD(49, 15195)
+    XBETWEEN_SYMBOLS_PRD(49, 15219)
 
 /*-----
 * DECISION
@@ -15214,7 +15238,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #endif
     if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(50, 15217)
+      XBETWEEN_SYMBOLS_PRD(50, 15241)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15239,7 +15263,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(51, 15242)
+      XBETWEEN_STMTS_PRD(51, 15266)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15265,7 +15289,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 #endif
     } else if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(52, 15268)
+      XBETWEEN_SYMBOLS_PRD(52, 15292)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15290,7 +15314,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(53, 15293)
+      XBETWEEN_STMTS_PRD(53, 15317)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15315,7 +15339,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(54, 15318)
+      XBETWEEN_SYMBOLS_PRD(54, 15342)
 
 /*-----
 * DECISION
@@ -15341,7 +15365,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
         z020M_ShipsCharacter.A[z_BasicTypes_0S4_REPAIR_BOAT].MaxSpeed)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(55, 15344)
+        XBETWEEN_SYMBOLS_PRD(55, 15368)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15366,7 +15390,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(56, 15369)
+        XBETWEEN_STMTS_PRD(56, 15393)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15392,7 +15416,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
           z02010D01_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(57, 15395)
+        XBETWEEN_STMTS_PRD(57, 15419)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -15424,7 +15448,7 @@ YPRD_FUNCTION(z02010D09_ActivateREPAIR2)
 ------*/
       goto L_R2;
     }
-    XBETWEEN_SYMBOLS_PRD(58, 15427)
+    XBETWEEN_SYMBOLS_PRD(58, 15451)
 
 /*-----
 * RETURN
@@ -15594,7 +15618,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 15597)
+    XBETWEEN_SYMBOLS_PRD(1, 15621)
 
 /*-----
 * ASSIGNMENT Dist := ...
@@ -15616,7 +15640,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
     xMSCEAssign("Dist := ", &(yPrdVarP->z02010D0A1_Dist),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 15619)
+    XBETWEEN_SYMBOLS_PRD(2, 15643)
 
 /*-----
 * DECISION
@@ -15644,7 +15668,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
       z020L_WeaponryCharacter.A[z_BasicTypes_0R0_MISSILE].Range,
       yPrdVarP->z02010D0A1_Dist))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 15647)
+      XBETWEEN_SYMBOLS_PRD(3, 15671)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15668,7 +15692,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
         z02010D0A0_Weapon)).TypeWeaponry),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(4, 15671)
+      XBETWEEN_STMTS_PRD(4, 15695)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15689,7 +15713,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
         &((*(((yVDef_z02010D0A_CanShootEnemyCenter2 *)yPrdVarP)->
         z02010D0A0_Weapon)).isWeaponry), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(5, 15692)
+      XBETWEEN_SYMBOLS_PRD(5, 15716)
 
 /*-----
 * RETURN
@@ -15700,7 +15724,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(6, 15703)
+      XBETWEEN_SYMBOLS_PRD(6, 15727)
 
 /*-----
 * DECISION
@@ -15728,7 +15752,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
         z020L_WeaponryCharacter.A[z_BasicTypes_0R1_TORPEDO].Range,
         yPrdVarP->z02010D0A1_Dist))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(7, 15731)
+        XBETWEEN_SYMBOLS_PRD(7, 15755)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15752,7 +15776,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
           z02010D0A0_Weapon)).TypeWeaponry),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-        XBETWEEN_STMTS_PRD(8, 15755)
+        XBETWEEN_STMTS_PRD(8, 15779)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15773,7 +15797,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
           &((*(((yVDef_z02010D0A_CanShootEnemyCenter2 *)yPrdVarP)->
           z02010D0A0_Weapon)).isWeaponry), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 15776)
+        XBETWEEN_SYMBOLS_PRD(9, 15800)
 
 /*-----
 * RETURN
@@ -15784,7 +15808,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(10, 15787)
+        XBETWEEN_SYMBOLS_PRD(10, 15811)
 
 /*-----
 * DECISION
@@ -15812,7 +15836,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
           z020L_WeaponryCharacter.A[z_BasicTypes_0R2_SHELL].Range,
           yPrdVarP->z02010D0A1_Dist))) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(11, 15815)
+          XBETWEEN_SYMBOLS_PRD(11, 15839)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15836,7 +15860,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
             z02010D0A0_Weapon)).TypeWeaponry),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-          XBETWEEN_STMTS_PRD(12, 15839)
+          XBETWEEN_STMTS_PRD(12, 15863)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15858,7 +15882,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
             &((*(((yVDef_z02010D0A_CanShootEnemyCenter2 *)yPrdVarP)->
             z02010D0A0_Weapon)).isWeaponry), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(13, 15861)
+          XBETWEEN_SYMBOLS_PRD(13, 15885)
 
 /*-----
 * RETURN
@@ -15869,7 +15893,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
 #endif
           SDL_RETURN
         } else {
-          XBETWEEN_SYMBOLS_PRD(14, 15872)
+          XBETWEEN_SYMBOLS_PRD(14, 15896)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -15891,7 +15915,7 @@ YPRD_FUNCTION(z02010D0A_CanShootEnemyCenter2)
             &((*(((yVDef_z02010D0A_CanShootEnemyCenter2 *)yPrdVarP)->
             z02010D0A0_Weapon)).isWeaponry), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(15, 15894)
+          XBETWEEN_SYMBOLS_PRD(15, 15918)
 
 /*-----
 * RETURN
@@ -16042,7 +16066,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 16045)
+    XBETWEEN_SYMBOLS_PRD(1, 16069)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -16058,7 +16082,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
       yPrdVarP->StaticFather)->z02010D0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(2, 16061)
+      XBETWEEN_STMTS_PRD(2, 16085)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -16075,7 +16099,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(4, 16078)
+      XBETWEEN_STMTS_PRD(4, 16102)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -16094,7 +16118,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(5, 16097)
+        XBETWEEN_STMTS_PRD(5, 16121)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -16110,7 +16134,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(7, 16113)
+        XBETWEEN_STMTS_PRD(7, 16137)
 
 /*-----
 * IF
@@ -16130,7 +16154,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(8, 16133)
+          XBETWEEN_STMTS_PRD(8, 16157)
 
 /*-----
 * ASSIGNMENT Temp := ...
@@ -16155,7 +16179,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
             ->StaticFather)->z02010D0O_Temp),
             (tSDLTypeInfo *)&ySDL_z02010D0D_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(9, 16158)
+          XBETWEEN_STMTS_PRD(9, 16182)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -16190,7 +16214,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
             ->StaticFather)->z02010D0I_j, SDL_INTEGER_LIT(1))))),
             (tSDLTypeInfo *)&ySDL_z02010D0D_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(10, 16193)
+          XBETWEEN_STMTS_PRD(10, 16217)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -16225,7 +16249,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(6, 16228)
+        XBETWEEN_STMTS_PRD(6, 16252)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -16248,7 +16272,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(11, 16251)
+      XBETWEEN_STMTS_PRD(11, 16275)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -16266,7 +16290,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(12, 16269)
+        XBETWEEN_STMTS_PRD(12, 16293)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -16283,7 +16307,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(14, 16286)
+        XBETWEEN_STMTS_PRD(14, 16310)
 
 /*-----
 * IF
@@ -16303,7 +16327,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(15, 16306)
+          XBETWEEN_STMTS_PRD(15, 16330)
 
 /*-----
 * ASSIGNMENT Temp := ...
@@ -16328,7 +16352,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
             ->StaticFather)->z02010D0O_Temp),
             (tSDLTypeInfo *)&ySDL_z02010D0D_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(16, 16331)
+          XBETWEEN_STMTS_PRD(16, 16355)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -16363,7 +16387,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
             ->StaticFather)->z02010D0I_j, SDL_INTEGER_LIT(1))))),
             (tSDLTypeInfo *)&ySDL_z02010D0D_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(17, 16366)
+          XBETWEEN_STMTS_PRD(17, 16390)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -16398,7 +16422,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(13, 16401)
+        XBETWEEN_STMTS_PRD(13, 16425)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -16421,7 +16445,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(3, 16424)
+      XBETWEEN_STMTS_PRD(3, 16448)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -16443,7 +16467,7 @@ YPRD_FUNCTION(z02010D0B_SortShootList2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(18, 16446)
+    XBETWEEN_SYMBOLS_PRD(18, 16470)
 
 /*-----
 * RETURN
@@ -16857,7 +16881,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(7, 16860)
+    XBETWEEN_SYMBOLS_PRD(7, 16884)
 
 /*-----
 * DECISION
@@ -16877,7 +16901,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #else
     if (yEqF_SDL_Integer(yPrdVarP->z02010E1_k, yVarP->z020X_spyIndex)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 16880)
+      XBETWEEN_SYMBOLS_PRD(8, 16904)
 
 /*-----
 * DECISION
@@ -16897,7 +16921,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #else
       if (yVarP->z020Z_spySearching) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 16900)
+        XBETWEEN_SYMBOLS_PRD(9, 16924)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -16942,7 +16966,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           yPrdVarP)->z02010E6_ChangeDirection),
           (tSDLTypeInfo *)&ySDL_z02010Q_tTurnDirection);
 #endif
-        XBETWEEN_STMTS_PRD(10, 16945)
+        XBETWEEN_STMTS_PRD(10, 16969)
 
 /*-----
 * ASSIGNMENT ShipName := ...
@@ -16964,7 +16988,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           yPrdVarP)->z02010E7_ShipName),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-        XBETWEEN_SYMBOLS_PRD(11, 16967)
+        XBETWEEN_SYMBOLS_PRD(11, 16991)
 
 /*-----
 * DECISION
@@ -16985,7 +17009,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #endif
         if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
               z02010Q2_RIGHT)) {
-          XBETWEEN_SYMBOLS_PRD(12, 16988)
+          XBETWEEN_SYMBOLS_PRD(12, 17012)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17007,7 +17031,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
             [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].OrderType),
             (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-          XBETWEEN_STMTS_PRD(13, 17010)
+          XBETWEEN_STMTS_PRD(13, 17034)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17029,7 +17053,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
             [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].isSet),
             (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(14, 17032)
+          XBETWEEN_SYMBOLS_PRD(14, 17056)
 
 /*-----
 * RETURN
@@ -17041,7 +17065,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           SDL_RETURN
         } else if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
               z02010Q1_LEFT)) {
-          XBETWEEN_SYMBOLS_PRD(15, 17044)
+          XBETWEEN_SYMBOLS_PRD(15, 17068)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17063,7 +17087,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
             [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].OrderType),
             (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-          XBETWEEN_STMTS_PRD(16, 17066)
+          XBETWEEN_STMTS_PRD(16, 17090)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17085,7 +17109,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
             [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].isSet),
             (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(17, 17088)
+          XBETWEEN_SYMBOLS_PRD(17, 17112)
 
 /*-----
 * RETURN
@@ -17096,7 +17120,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #endif
           SDL_RETURN
         } else {
-          XBETWEEN_SYMBOLS_PRD(18, 17099)
+          XBETWEEN_SYMBOLS_PRD(18, 17123)
 
 /*-----
 * IF
@@ -17112,7 +17136,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #ifdef XTRACE
             xTraceAlg("IF (true)");
 #endif
-            XBETWEEN_STMTS_PRD(19, 17115)
+            XBETWEEN_STMTS_PRD(19, 17139)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17134,7 +17158,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
               [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].OrderType),
               (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-            XBETWEEN_STMTS_PRD(20, 17137)
+            XBETWEEN_STMTS_PRD(20, 17161)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17158,7 +17182,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
               [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].Accel),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-            XBETWEEN_STMTS_PRD(21, 17161)
+            XBETWEEN_STMTS_PRD(21, 17185)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17184,7 +17208,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #ifdef XTRACE
             xTraceAlg("IF (false)");
 #endif
-            XBETWEEN_STMTS_PRD(22, 17187)
+            XBETWEEN_STMTS_PRD(22, 17211)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17206,7 +17230,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
               [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].OrderType),
               (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-            XBETWEEN_STMTS_PRD(23, 17209)
+            XBETWEEN_STMTS_PRD(23, 17233)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17230,7 +17254,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
               [yVarP->z020X_spyIndex - SDL_INTEGER_LIT(1)].Accel),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-            XBETWEEN_STMTS_PRD(24, 17233)
+            XBETWEEN_STMTS_PRD(24, 17257)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17253,7 +17277,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
               (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
           }
-          XBETWEEN_SYMBOLS_PRD(25, 17256)
+          XBETWEEN_SYMBOLS_PRD(25, 17280)
 
 /*-----
 * RETURN
@@ -17265,7 +17289,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           SDL_RETURN
         }
       } else {
-        XBETWEEN_SYMBOLS_PRD(26, 17268)
+        XBETWEEN_SYMBOLS_PRD(26, 17292)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -17324,7 +17348,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 
   case 1:
   L_F2:;
-    XBETWEEN_SYMBOLS_PRD(27, 17327)
+    XBETWEEN_SYMBOLS_PRD(27, 17351)
 
 /*-----
 * DECISION
@@ -17345,7 +17369,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #endif
     if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(28, 17348)
+      XBETWEEN_SYMBOLS_PRD(28, 17372)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17370,7 +17394,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
         z02010E1_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(29, 17373)
+      XBETWEEN_STMTS_PRD(29, 17397)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17396,7 +17420,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #endif
     } else if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
           z02010Q2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(30, 17399)
+      XBETWEEN_SYMBOLS_PRD(30, 17423)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17421,7 +17445,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
         z02010E1_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(31, 17424)
+      XBETWEEN_STMTS_PRD(31, 17448)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17446,7 +17470,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(32, 17449)
+      XBETWEEN_SYMBOLS_PRD(32, 17473)
 
 /*-----
 * DECISION
@@ -17471,7 +17495,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
         MaxSpeed)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(33, 17474)
+        XBETWEEN_SYMBOLS_PRD(33, 17498)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17496,7 +17520,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           z02010E1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(34, 17499)
+        XBETWEEN_STMTS_PRD(34, 17523)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17522,7 +17546,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           z02010E1_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(35, 17525)
+        XBETWEEN_STMTS_PRD(35, 17549)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -17547,7 +17571,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(36, 17550)
+      XBETWEEN_SYMBOLS_PRD(36, 17574)
 
 /*-----
 * RETURN
@@ -17558,7 +17582,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 #endif
       SDL_RETURN
     }
-    XBETWEEN_SYMBOLS_PRD(37, 17561)
+    XBETWEEN_SYMBOLS_PRD(37, 17585)
 
 /*-----
 * RETURN
@@ -17571,7 +17595,7 @@ YPRD_FUNCTION(z02010E_EnemyNotFound2)
 
   case 4:
   L_Dislocate:;
-    XBETWEEN_SYMBOLS_PRD(38, 17574)
+    XBETWEEN_SYMBOLS_PRD(38, 17598)
 
 /*-----
 * RETURN
@@ -17831,7 +17855,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
     yAssF_SDL_Real(yPrdVarP->z02010FC_flag, SDL_REAL_LIT(1.0, 1, 0),
       XASS_MR_ASS_NF);
     yAssF_SDL_Integer(yPrdVarP->z02010FD_i, SDL_INTEGER_LIT(1), XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(5, 17834)
+    XBETWEEN_SYMBOLS_PRD(5, 17858)
 
 /*-----
 * DECISION
@@ -17852,7 +17876,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P0_NORTH)) {
-      XBETWEEN_SYMBOLS_PRD(6, 17855)
+      XBETWEEN_SYMBOLS_PRD(6, 17879)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -17871,7 +17895,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(7, 17874)
+      XBETWEEN_STMTS_PRD(7, 17898)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -17892,7 +17916,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P7_NORTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(8, 17895)
+      XBETWEEN_SYMBOLS_PRD(8, 17919)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -17912,7 +17936,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(9, 17915)
+      XBETWEEN_STMTS_PRD(9, 17939)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -17931,7 +17955,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(10, 17934)
+      XBETWEEN_STMTS_PRD(10, 17958)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -17952,7 +17976,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P2_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(11, 17955)
+      XBETWEEN_SYMBOLS_PRD(11, 17979)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -17971,7 +17995,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(12, 17974)
+      XBETWEEN_STMTS_PRD(12, 17998)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -17992,7 +18016,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P5_SOUTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(13, 17995)
+      XBETWEEN_SYMBOLS_PRD(13, 18019)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -18012,7 +18036,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(14, 18015)
+      XBETWEEN_STMTS_PRD(14, 18039)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -18032,7 +18056,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(15, 18035)
+      XBETWEEN_STMTS_PRD(15, 18059)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -18053,7 +18077,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P6_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(16, 18056)
+      XBETWEEN_SYMBOLS_PRD(16, 18080)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -18073,7 +18097,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(17, 18076)
+      XBETWEEN_STMTS_PRD(17, 18100)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -18094,7 +18118,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P1_NORTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(18, 18097)
+      XBETWEEN_SYMBOLS_PRD(18, 18121)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -18113,7 +18137,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(19, 18116)
+      XBETWEEN_STMTS_PRD(19, 18140)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -18132,7 +18156,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(20, 18135)
+      XBETWEEN_STMTS_PRD(20, 18159)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -18153,7 +18177,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P4_SOUTH)) {
-      XBETWEEN_SYMBOLS_PRD(21, 18156)
+      XBETWEEN_SYMBOLS_PRD(21, 18180)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -18172,7 +18196,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(22, 18175)
+      XBETWEEN_STMTS_PRD(22, 18199)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -18194,7 +18218,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P3_SOUTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(23, 18197)
+      XBETWEEN_SYMBOLS_PRD(23, 18221)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -18213,7 +18237,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(24, 18216)
+      XBETWEEN_STMTS_PRD(24, 18240)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -18233,7 +18257,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
         z02010F9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(25, 18236)
+      XBETWEEN_STMTS_PRD(25, 18260)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -18260,7 +18284,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(26, 18263)
+    XBETWEEN_SYMBOLS_PRD(26, 18287)
 
 /*-----
 * ASSIGNMENT onLand := ...
@@ -18279,7 +18303,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
     xMSCEAssign("onLand := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
       z02010FE_onLand), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(27, 18282)
+    XBETWEEN_STMTS_PRD(27, 18306)
 
 /*-----
 * ASSIGNMENT NextPos := ...
@@ -18299,7 +18323,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
     xMSCEAssign("NextPos := ", &((*(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
       z02010F4_NextPos))), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(28, 18302)
+    XBETWEEN_STMTS_PRD(28, 18326)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -18338,7 +18362,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
     xMSCEAssign("maxDeep := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
       z02010FB_maxDeep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(29, 18341)
+    XBETWEEN_STMTS_PRD(29, 18365)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -18361,7 +18385,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
     xMSCEAssign("Deep := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
       z02010FA_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(30, 18364)
+    XBETWEEN_STMTS_PRD(30, 18388)
 
 /*-----
 * IF
@@ -18376,7 +18400,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(31, 18379)
+      XBETWEEN_STMTS_PRD(31, 18403)
 
 /*-----
 * ASSIGNMENT onLand := ...
@@ -18403,8 +18427,8 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
 
   case 2:
-  L_grst55:;
-    XBETWEEN_SYMBOLS_PRD(32, 18407)
+  L_grst65:;
+    XBETWEEN_SYMBOLS_PRD(32, 18431)
 
 /*-----
 * DECISION
@@ -18427,7 +18451,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
       xDiv_SDL_Real(xFloat_SDL_Integer(yPrdVarP->z02010F2_Speed),
       yPrdVarP->z02010FC_flag)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(33, 18430)
+      XBETWEEN_SYMBOLS_PRD(33, 18454)
 
 /*-----
 * DECISION
@@ -18470,8 +18494,8 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
 
       case 3:
-      L_grst56:;
-        XBETWEEN_SYMBOLS_PRD(34, 18474)
+      L_grst66:;
+        XBETWEEN_SYMBOLS_PRD(34, 18498)
 
 /*-----
 * RETURN
@@ -18482,7 +18506,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(35, 18485)
+        XBETWEEN_SYMBOLS_PRD(35, 18509)
 
 /*-----
 * ASSIGNMENT NextPos... := ...
@@ -18506,7 +18530,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
           yPrdVarP)->z02010F4_NextPos)).x),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(36, 18509)
+        XBETWEEN_STMTS_PRD(36, 18533)
 
 /*-----
 * ASSIGNMENT NextPos... := ...
@@ -18530,7 +18554,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
           yPrdVarP)->z02010F4_NextPos)).y),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(37, 18533)
+        XBETWEEN_STMTS_PRD(37, 18557)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -18553,7 +18577,7 @@ YPRD_FUNCTION(z02010F_NextPosition2)
         xMSCEAssign("Deep := ", &(((yVDef_z02010F_NextPosition2 *)yPrdVarP)->
           z02010FA_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(38, 18556)
+        XBETWEEN_SYMBOLS_PRD(38, 18580)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -18575,18 +18599,18 @@ YPRD_FUNCTION(z02010F_NextPosition2)
 #endif
 
 /*-----
-* JOIN grst55
+* JOIN grst65
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\NextPosition.spd(1),626(70,135),1)
 ------*/
-        goto L_grst55;
+        goto L_grst65;
       }
     } else {
 
 /*-----
-* JOIN grst56
+* JOIN grst66
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\NextPosition.spd(1),449(45,160),1)
 ------*/
-      goto L_grst56;
+      goto L_grst66;
     }
   }
   XEND_PRD
@@ -18887,7 +18911,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 18890)
+    XBETWEEN_SYMBOLS_PRD(4, 18914)
 
 /*-----
 * OPERATOR CALL h2i  (from EXPRESSION in next symbol)
@@ -18926,7 +18950,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
     xMSCEAssign("Numbr := ", &(((yVDef_z02010G_NextDirection2 *)yPrdVarP)->
       z02010G4_Numbr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(5, 18929)
+    XBETWEEN_SYMBOLS_PRD(5, 18953)
 
 /*-----
 * DECISION
@@ -18947,7 +18971,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
 #endif
     if (yEqF_z_BasicTypes_0T_tHeadingChange(yPrdVarP->yDcn_z_BasicTypes_0T_tHeadingChange,
           z_BasicTypes_0T1_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(6, 18950)
+      XBETWEEN_SYMBOLS_PRD(6, 18974)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -18967,7 +18991,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
       xMSCEAssign("Numbr := ", &(((yVDef_z02010G_NextDirection2 *)yPrdVarP)->
         z02010G4_Numbr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(7, 18970)
+      XBETWEEN_STMTS_PRD(7, 18994)
 
 /*-----
 * IF
@@ -18981,7 +19005,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(8, 18984)
+        XBETWEEN_STMTS_PRD(8, 19008)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -19008,7 +19032,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
 #endif
     } else if (yEqF_z_BasicTypes_0T_tHeadingChange(yPrdVarP->yDcn_z_BasicTypes_0T_tHeadingChange,
           z_BasicTypes_0T0_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(9, 19011)
+      XBETWEEN_SYMBOLS_PRD(9, 19035)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -19028,7 +19052,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
       xMSCEAssign("Numbr := ", &(((yVDef_z02010G_NextDirection2 *)yPrdVarP)->
         z02010G4_Numbr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(10, 19031)
+      XBETWEEN_STMTS_PRD(10, 19055)
 
 /*-----
 * IF
@@ -19042,7 +19066,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(11, 19045)
+        XBETWEEN_STMTS_PRD(11, 19069)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -19075,7 +19099,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(12, 19078)
+    XBETWEEN_SYMBOLS_PRD(12, 19102)
 
 /*-----
 * OPERATOR CALL i2h  (from EXPRESSION in next symbol)
@@ -19117,7 +19141,7 @@ YPRD_FUNCTION(z02010G_NextDirection2)
       yPrdVarP)->z02010G2_NewHeading))),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_SYMBOLS_PRD(13, 19120)
+    XBETWEEN_SYMBOLS_PRD(13, 19144)
 
 /*-----
 * RETURN
@@ -19414,7 +19438,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
     XAT_FIRST_SYMBOL(0)
     GenericDefault((void *)&yPrdVarP->z02010HC_Cos,
       (tSDLTypeInfo *)&ySDL_z02010H4_tCos);
-    XBETWEEN_SYMBOLS_PRD(9, 19417)
+    XBETWEEN_SYMBOLS_PRD(9, 19441)
 
 /*-----
 * ASSIGNMENT CurrSpeed := ...
@@ -19437,7 +19461,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010HD_CurrSpeed),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(10, 19440)
+    XBETWEEN_STMTS_PRD(10, 19464)
 
 /*-----
 * IF
@@ -19451,7 +19475,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(11, 19454)
+      XBETWEEN_STMTS_PRD(11, 19478)
 
 /*-----
 * ASSIGNMENT CurrSpeed := ...
@@ -19480,7 +19504,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       xTraceAlg("IF (false)");
     }
 #endif
-    XBETWEEN_STMTS_PRD(12, 19483)
+    XBETWEEN_STMTS_PRD(12, 19507)
 
 /*-----
 * CALL NextDirection2  (from EXPRESSION in next symbol)
@@ -19524,7 +19548,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010H5_NextHding),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(13, 19527)
+    XBETWEEN_STMTS_PRD(13, 19551)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -19575,7 +19599,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010H6_RightPoint),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(14, 19578)
+    XBETWEEN_STMTS_PRD(14, 19602)
 
 /*-----
 * CALL NextDirection2  (from EXPRESSION in next symbol)
@@ -19619,7 +19643,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010H5_NextHding),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(15, 19622)
+    XBETWEEN_STMTS_PRD(15, 19646)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -19670,7 +19694,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010H7_LeftPoint),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(16, 19673)
+    XBETWEEN_STMTS_PRD(16, 19697)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -19721,7 +19745,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010H8_StraightPoint),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_SYMBOLS_PRD(17, 19724)
+    XBETWEEN_SYMBOLS_PRD(17, 19748)
 
 /*-----
 * CALL CosBetweenVectors2  (from EXPRESSION in next symbol)
@@ -19772,7 +19796,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U6.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(18, 19775)
+    XBETWEEN_STMTS_PRD(18, 19799)
 
 /*-----
 * CALL CosBetweenVectors2  (from EXPRESSION in next symbol)
@@ -19823,7 +19847,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U7.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(19, 19826)
+    XBETWEEN_STMTS_PRD(19, 19850)
 
 /*-----
 * CALL CosBetweenVectors2  (from EXPRESSION in next symbol)
@@ -19874,7 +19898,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U8.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_SYMBOLS_PRD(20, 19877)
+    XBETWEEN_SYMBOLS_PRD(20, 19901)
 
 /*-----
 * ASSIGNMENT min := ...
@@ -19895,7 +19919,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
     xMSCEAssign("min := ", &(((yVDef_z02010H_NewHeadingChange2 *)yPrdVarP)->
       z02010HB_min), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(21, 19898)
+    XBETWEEN_STMTS_PRD(21, 19922)
 
 /*-----
 * ASSIGNMENT indx := ...
@@ -19914,7 +19938,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
     xMSCEAssign("indx := ", &(((yVDef_z02010H_NewHeadingChange2 *)yPrdVarP)->
       z02010HA_indx), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(22, 19917)
+    XBETWEEN_STMTS_PRD(22, 19941)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -19930,7 +19954,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
       yPrdVarP)->z02010H9_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(23, 19933)
+      XBETWEEN_STMTS_PRD(23, 19957)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -19944,7 +19968,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(25, 19947)
+      XBETWEEN_STMTS_PRD(25, 19971)
 
 /*-----
 * IF
@@ -19960,7 +19984,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(26, 19963)
+        XBETWEEN_STMTS_PRD(26, 19987)
 
 /*-----
 * ASSIGNMENT min := ...
@@ -19982,7 +20006,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
         xMSCEAssign("min := ", &(((yVDef_z02010H_NewHeadingChange2 *)yPrdVarP)->
           z02010HB_min), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(27, 19985)
+        XBETWEEN_STMTS_PRD(27, 20009)
 
 /*-----
 * ASSIGNMENT indx := ...
@@ -20008,7 +20032,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(24, 20011)
+      XBETWEEN_STMTS_PRD(24, 20035)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -20030,7 +20054,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(28, 20033)
+    XBETWEEN_SYMBOLS_PRD(28, 20057)
 
 /*-----
 * IF
@@ -20044,7 +20068,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(29, 20047)
+      XBETWEEN_STMTS_PRD(29, 20071)
 
 /*-----
 * ASSIGNMENT ReturnDirect := ...
@@ -20069,7 +20093,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
       xTraceAlg("IF (false)");
 #endif
-      XBETWEEN_STMTS_PRD(30, 20072)
+      XBETWEEN_STMTS_PRD(30, 20096)
 
 /*-----
 * IF
@@ -20083,7 +20107,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(31, 20086)
+        XBETWEEN_STMTS_PRD(31, 20110)
 
 /*-----
 * ASSIGNMENT ReturnDirect := ...
@@ -20110,7 +20134,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(32, 20113)
+        XBETWEEN_STMTS_PRD(32, 20137)
 
 /*-----
 * ASSIGNMENT ReturnDirect := ...
@@ -20136,7 +20160,7 @@ YPRD_FUNCTION(z02010H_NewHeadingChange2)
 #endif
       }
     }
-    XBETWEEN_SYMBOLS_PRD(33, 20139)
+    XBETWEEN_SYMBOLS_PRD(33, 20163)
 
 /*-----
 * RETURN
@@ -20291,7 +20315,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 20294)
+    XBETWEEN_SYMBOLS_PRD(2, 20318)
 
 /*-----
 * DECISION
@@ -20317,7 +20341,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
       yEqF_z_BasicTypes_0U_tCoordinates(&(yPrdVarP->z02010H30_StartPoint),
       &(yPrdVarP->z02010H32_EndPoint2)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 20320)
+      XBETWEEN_SYMBOLS_PRD(3, 20344)
 
 /*-----
 * ASSIGNMENT Cos := ...
@@ -20337,7 +20361,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
       xMSCEAssign("Cos := ", &((*(((yVDef_z02010H3_CosBetweenVectors2 *)
         yPrdVarP)->z02010H33_Cos))), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 20340)
+      XBETWEEN_SYMBOLS_PRD(4, 20364)
 
 /*-----
 * RETURN
@@ -20348,7 +20372,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(5, 20351)
+      XBETWEEN_SYMBOLS_PRD(5, 20375)
 
 /*-----
 * DECISION
@@ -20384,7 +20408,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
         yPrdVarP->z02010H30_StartPoint.y)), SDL_INTEGER_LIT(0)))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(6, 20387)
+        XBETWEEN_SYMBOLS_PRD(6, 20411)
 
 /*-----
 * DECISION
@@ -20420,7 +20444,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
           yPrdVarP->z02010H30_StartPoint.x)), SDL_INTEGER_LIT(0)))) {
 #endif
         } else {
-          XBETWEEN_SYMBOLS_PRD(7, 20423)
+          XBETWEEN_SYMBOLS_PRD(7, 20447)
 
 /*-----
 * DECISION
@@ -20493,7 +20517,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
             yPrdVarP->z02010H30_StartPoint.y)), SDL_INTEGER_LIT(0))))) {
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(8, 20496)
+            XBETWEEN_SYMBOLS_PRD(8, 20520)
 
 /*-----
 * ASSIGNMENT Cos := ...
@@ -20541,7 +20565,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
             xMSCEAssign("Cos := ", &((*(((yVDef_z02010H3_CosBetweenVectors2 *)
               yPrdVarP)->z02010H33_Cos))), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-            XBETWEEN_SYMBOLS_PRD(9, 20544)
+            XBETWEEN_SYMBOLS_PRD(9, 20568)
 
 /*-----
 * RETURN
@@ -20554,7 +20578,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
           }
         }
       }
-      XBETWEEN_SYMBOLS_PRD(10, 20557)
+      XBETWEEN_SYMBOLS_PRD(10, 20581)
 
 /*-----
 * ASSIGNMENT Cos := ...
@@ -20573,7 +20597,7 @@ YPRD_FUNCTION(z02010H3_CosBetweenVectors2)
       xMSCEAssign("Cos := ", &((*(((yVDef_z02010H3_CosBetweenVectors2 *)
         yPrdVarP)->z02010H33_Cos))), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 20576)
+      XBETWEEN_SYMBOLS_PRD(11, 20600)
 
 /*-----
 * RETURN
@@ -21033,7 +21057,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
     XAT_FIRST_SYMBOL(0)
     yAssF_SDL_Real(yPrdVarP->z02010I0K_flag, SDL_REAL_LIT(1.0, 1, 0),
       XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(15, 21036)
+    XBETWEEN_SYMBOLS_PRD(15, 21060)
 
 /*-----
 * CALL NextShipState2  (from EXPRESSION in next symbol)
@@ -21076,7 +21100,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       yPrdVarP)->z02010I0B_MyShipNextState),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0X_tShipCurrentState);
 #endif
-    XBETWEEN_STMTS_PRD(16, 21079)
+    XBETWEEN_STMTS_PRD(16, 21103)
 
 /*-----
 * ASSIGNMENT NextHead := ...
@@ -21096,7 +21120,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
     xMSCEAssign("NextHead := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
       z02010I0E_NextHead), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(17, 21099)
+    XBETWEEN_STMTS_PRD(17, 21123)
 
 /*-----
 * ASSIGNMENT MyShipType := ...
@@ -21118,7 +21142,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
     xMSCEAssign("MyShipType := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
       z02010I0L_MyShipType), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(18, 21121)
+    XBETWEEN_SYMBOLS_PRD(18, 21145)
 
 /*-----
 * DECISION
@@ -21139,7 +21163,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P0_NORTH)) {
-      XBETWEEN_SYMBOLS_PRD(19, 21142)
+      XBETWEEN_SYMBOLS_PRD(19, 21166)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21158,7 +21182,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(20, 21161)
+      XBETWEEN_STMTS_PRD(20, 21185)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21179,7 +21203,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P7_NORTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(21, 21182)
+      XBETWEEN_SYMBOLS_PRD(21, 21206)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21199,7 +21223,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(22, 21202)
+      XBETWEEN_STMTS_PRD(22, 21226)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21218,7 +21242,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(23, 21221)
+      XBETWEEN_STMTS_PRD(23, 21245)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -21239,7 +21263,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P2_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(24, 21242)
+      XBETWEEN_SYMBOLS_PRD(24, 21266)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21258,7 +21282,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(25, 21261)
+      XBETWEEN_STMTS_PRD(25, 21285)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21279,7 +21303,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P5_SOUTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(26, 21282)
+      XBETWEEN_SYMBOLS_PRD(26, 21306)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21299,7 +21323,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(27, 21302)
+      XBETWEEN_STMTS_PRD(27, 21326)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21319,7 +21343,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(28, 21322)
+      XBETWEEN_STMTS_PRD(28, 21346)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -21340,7 +21364,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P6_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(29, 21343)
+      XBETWEEN_SYMBOLS_PRD(29, 21367)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21360,7 +21384,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(30, 21363)
+      XBETWEEN_STMTS_PRD(30, 21387)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21381,7 +21405,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P1_NORTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(31, 21384)
+      XBETWEEN_SYMBOLS_PRD(31, 21408)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21400,7 +21424,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(32, 21403)
+      XBETWEEN_STMTS_PRD(32, 21427)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21419,7 +21443,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(33, 21422)
+      XBETWEEN_STMTS_PRD(33, 21446)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -21440,7 +21464,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P4_SOUTH)) {
-      XBETWEEN_SYMBOLS_PRD(34, 21443)
+      XBETWEEN_SYMBOLS_PRD(34, 21467)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21459,7 +21483,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(35, 21462)
+      XBETWEEN_STMTS_PRD(35, 21486)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21481,7 +21505,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P3_SOUTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(36, 21484)
+      XBETWEEN_SYMBOLS_PRD(36, 21508)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -21500,7 +21524,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncX := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(37, 21503)
+      XBETWEEN_STMTS_PRD(37, 21527)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -21520,7 +21544,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       xMSCEAssign("IncY := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
         z02010I0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(38, 21523)
+      XBETWEEN_STMTS_PRD(38, 21547)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -21547,7 +21571,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(39, 21550)
+    XBETWEEN_SYMBOLS_PRD(39, 21574)
 
 /*-----
 * ASSIGNMENT NextPoint := ...
@@ -21570,7 +21594,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
     xMSCEAssign("NextPoint := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
       z02010I0D_NextPoint), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(40, 21573)
+    XBETWEEN_STMTS_PRD(40, 21597)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -21589,7 +21613,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
     xMSCEAssign("i := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
       z02010I0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(41, 21592)
+    XBETWEEN_STMTS_PRD(41, 21616)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -21630,8 +21654,8 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
 
   case 2:
-  L_grst50:;
-    XBETWEEN_SYMBOLS_PRD(42, 21634)
+  L_grst60:;
+    XBETWEEN_SYMBOLS_PRD(42, 21658)
 
 /*-----
 * DECISION
@@ -21656,7 +21680,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       yPrdVarP->z02010I0B_MyShipNextState.Speed)),
       yPrdVarP->z02010I0K_flag)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(43, 21659)
+      XBETWEEN_SYMBOLS_PRD(43, 21683)
 
 /*-----
 * DECISION
@@ -21693,7 +21717,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
 
       case 3:
-      L_grst51:;
+      L_grst61:;
 
 /*-----
 * JOIN P1
@@ -21701,7 +21725,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
 ------*/
         goto L_P1;
       } else {
-        XBETWEEN_SYMBOLS_PRD(44, 21704)
+        XBETWEEN_SYMBOLS_PRD(44, 21728)
 
 /*-----
 * ASSIGNMENT NextPoint... := ...
@@ -21725,7 +21749,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
           yPrdVarP)->z02010I0D_NextPoint.x),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(45, 21728)
+        XBETWEEN_STMTS_PRD(45, 21752)
 
 /*-----
 * ASSIGNMENT NextPoint... := ...
@@ -21749,7 +21773,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
           yPrdVarP)->z02010I0D_NextPoint.y),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(46, 21752)
+        XBETWEEN_STMTS_PRD(46, 21776)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -21772,7 +21796,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
         xMSCEAssign("Deep := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
           z02010I0I_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(47, 21775)
+        XBETWEEN_SYMBOLS_PRD(47, 21799)
 
 /*-----
 * DECISION
@@ -21794,7 +21818,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
         if (xLT_SDL_Integer(yPrdVarP->z02010I0I_Deep,
           yPrdVarP->z02010I0J_maxDeep)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(48, 21797)
+          XBETWEEN_SYMBOLS_PRD(48, 21821)
 
 /*-----
 * RETURN
@@ -21807,7 +21831,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
             z02010R1_LAND_COLLISION, XASS_MR_ASS_FR);
           SDL_RETURN
         } else {
-          XBETWEEN_SYMBOLS_PRD(49, 21810)
+          XBETWEEN_SYMBOLS_PRD(49, 21834)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -21830,23 +21854,23 @@ YPRD_FUNCTION(z02010I_isCollision2)
         }
 
 /*-----
-* JOIN grst50
+* JOIN grst60
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\isCollision.spd(1),2012(75,140),1)
 ------*/
-        goto L_grst50;
+        goto L_grst60;
       }
     } else {
 
 /*-----
-* JOIN grst51
+* JOIN grst61
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\isCollision.spd(1),1709(45,165),1)
 ------*/
-      goto L_grst51;
+      goto L_grst61;
     }
 
   case 5:
   L_P1:;
-    XBETWEEN_SYMBOLS_PRD(50, 21849)
+    XBETWEEN_SYMBOLS_PRD(50, 21873)
 
 /*-----
 * DECISION
@@ -21868,12 +21892,12 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
 
 /*-----
-* JOIN grst53
+* JOIN grst63
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\isCollision.spd(2),1919(70,115),1)
 ------*/
-      goto L_grst53;
+      goto L_grst63;
     } else {
-      XBETWEEN_SYMBOLS_PRD(51, 21876)
+      XBETWEEN_SYMBOLS_PRD(51, 21900)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -21894,8 +21918,8 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
 
     case 6:
-    L_grst52:;
-      XBETWEEN_SYMBOLS_PRD(52, 21898)
+    L_grst62:;
+      XBETWEEN_SYMBOLS_PRD(52, 21922)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -21950,7 +21974,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
         z02010I0D_NextPoint),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-      XBETWEEN_SYMBOLS_PRD(53, 21953)
+      XBETWEEN_SYMBOLS_PRD(53, 21977)
 
 /*-----
 * DECISION
@@ -21972,7 +21996,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
       if (yEqF_z_BasicTypes_0U_tCoordinates(&(yPrdVarP->z02010I0D_NextPoint),
         &(yPrdVarP->z02010I0B_MyShipNextState.Coordinates))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(54, 21975)
+        XBETWEEN_SYMBOLS_PRD(54, 21999)
 
 /*-----
 * RETURN
@@ -21985,7 +22009,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
           z02010R2_ENEMY_SHIP_COLLISION, XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(55, 21988)
+        XBETWEEN_SYMBOLS_PRD(55, 22012)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -22005,7 +22029,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
         xMSCEAssign("i := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
           z02010I0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(56, 22008)
+        XBETWEEN_SYMBOLS_PRD(56, 22032)
 
 /*-----
 * DECISION
@@ -22029,15 +22053,15 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
 
 /*-----
-* JOIN grst52
+* JOIN grst62
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\isCollision.spd(2),533(70,50),1)
 ------*/
-          goto L_grst52;
+          goto L_grst62;
         } else {
 
         case 7:
-        L_grst53:;
-          XBETWEEN_SYMBOLS_PRD(57, 22040)
+        L_grst63:;
+          XBETWEEN_SYMBOLS_PRD(57, 22064)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -22058,8 +22082,8 @@ YPRD_FUNCTION(z02010I_isCollision2)
 #endif
 
         case 8:
-        L_grst54:;
-          XBETWEEN_SYMBOLS_PRD(58, 22062)
+        L_grst64:;
+          XBETWEEN_SYMBOLS_PRD(58, 22086)
 
 /*-----
 * DECISION
@@ -22084,7 +22108,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
             ->StaticFather)->z02010S_index, yPrdVarP->z02010I0H_i)) {
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(59, 22087)
+            XBETWEEN_SYMBOLS_PRD(59, 22111)
 
 /*-----
 * CALL NextShipState2  (from EXPRESSION in next symbol)
@@ -22130,7 +22154,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
               z02010I0C_OtherShipNextState),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_0X_tShipCurrentState);
 #endif
-            XBETWEEN_SYMBOLS_PRD(60, 22133)
+            XBETWEEN_SYMBOLS_PRD(60, 22157)
 
 /*-----
 * DECISION
@@ -22156,7 +22180,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
               Coordinates), &(yPrdVarP->z02010I0B_MyShipNextState.
               Coordinates))) {
 #endif
-              XBETWEEN_SYMBOLS_PRD(61, 22159)
+              XBETWEEN_SYMBOLS_PRD(61, 22183)
 
 /*-----
 * RETURN
@@ -22171,7 +22195,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
             } else {
             }
           }
-          XBETWEEN_SYMBOLS_PRD(62, 22174)
+          XBETWEEN_SYMBOLS_PRD(62, 22198)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -22191,7 +22215,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
           xMSCEAssign("i := ", &(((yVDef_z02010I_isCollision2 *)yPrdVarP)->
             z02010I0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-          XBETWEEN_SYMBOLS_PRD(63, 22194)
+          XBETWEEN_SYMBOLS_PRD(63, 22218)
 
 /*-----
 * DECISION
@@ -22214,7 +22238,7 @@ YPRD_FUNCTION(z02010I_isCollision2)
           if (xLE_SDL_Integer(yPrdVarP->z02010I0H_i, yVarP->z020P_NumMyShips)) {
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(64, 22217)
+            XBETWEEN_SYMBOLS_PRD(64, 22241)
 
 /*-----
 * RETURN
@@ -22229,10 +22253,10 @@ YPRD_FUNCTION(z02010I_isCollision2)
           }
 
 /*-----
-* JOIN grst54
+* JOIN grst64
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\isCollision.spd(2),1916(70,130),1)
 ------*/
-          goto L_grst54;
+          goto L_grst64;
         }
       }
     }
@@ -22508,7 +22532,7 @@ extern char * yRef_z02010J_SolveCollision2 (int SymbolNo, xSymbolType *SymbolTyp
     case 0: *SymbolType = xsStart;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),116(75,15),1)";
     case 1: *SymbolType = xsLabel;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),596(72,62),0)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),596(67,65),0)";
     case 2: *SymbolType = xsLabel;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),617(72,85),0)";
     case 3: *SymbolType = xsLabel;
@@ -22522,7 +22546,7 @@ extern char * yRef_z02010J_SolveCollision2 (int SymbolNo, xSymbolType *SymbolTyp
     case 7: *SymbolType = xsDecision;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),125(75,35),2,1)";
     case 8: *SymbolType = xsDecision;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),137(60,50),2,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),137(55,50),2,1)";
     case 9: *SymbolType = xsReturn;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy2\\SolveCollision.spd(1),155(45,65),1,1)";
     case 10: *SymbolType = xsDecision;
@@ -22604,7 +22628,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(7, 22607)
+    XBETWEEN_SYMBOLS_PRD(7, 22631)
 
 /*-----
 * DECISION
@@ -22629,11 +22653,11 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
     if (yEqF_z02010R_tCollision(((yVDef_z0201_StrategyStep2 *)yPrdVarP
       ->StaticFather)->z02010T_CollisionType, z02010R2_ENEMY_SHIP_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 22632)
+      XBETWEEN_SYMBOLS_PRD(8, 22656)
 
 /*-----
 * DECISION
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\SolveCollision.spd(1),137(60,50),2,1)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\SolveCollision.spd(1),137(55,50),2,1)
 ------*/
 #ifdef XCASELABELS
     case 8:
@@ -22687,7 +22711,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         ->StaticFather)->z02010S_index)).Ammunition.A[z_BasicTypes_0R3_REPAIR],
         SDL_INTEGER_LIT(0)))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 22690)
+        XBETWEEN_SYMBOLS_PRD(9, 22714)
 
 /*-----
 * RETURN
@@ -22701,7 +22725,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       }
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(10, 22704)
+    XBETWEEN_SYMBOLS_PRD(10, 22728)
 
 /*-----
 * DECISION
@@ -22737,7 +22761,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       yPrdVarP->StaticFather)->z02010S_index - SDL_INTEGER_LIT(1)].Accel,
       SDL_REAL_LIT(0.0, 0, 0)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 22740)
+      XBETWEEN_SYMBOLS_PRD(11, 22764)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -22761,7 +22785,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         z02010S_index - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(12, 22764)
+      XBETWEEN_STMTS_PRD(12, 22788)
 
 /*-----
 * CALL isCollision2  (from EXPRESSION in next symbol)
@@ -22800,7 +22824,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         ->StaticFather)->z02010T_CollisionType),
         (tSDLTypeInfo *)&ySDL_z02010R_tCollision);
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 22803)
+      XBETWEEN_SYMBOLS_PRD(13, 22827)
 
 /*-----
 * DECISION
@@ -22823,7 +22847,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       if (yEqF_z02010R_tCollision(((yVDef_z0201_StrategyStep2 *)yPrdVarP
         ->StaticFather)->z02010T_CollisionType, z02010R0_NO_COLLISION)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(14, 22826)
+        XBETWEEN_SYMBOLS_PRD(14, 22850)
 
 /*-----
 * RETURN
@@ -22846,7 +22870,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
 
   case 3:
   L_Solv1:;
-    XBETWEEN_SYMBOLS_PRD(15, 22849)
+    XBETWEEN_SYMBOLS_PRD(15, 22873)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -22871,7 +22895,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       z02010S_index - SDL_INTEGER_LIT(1)].OrderType),
       (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-    XBETWEEN_STMTS_PRD(16, 22874)
+    XBETWEEN_STMTS_PRD(16, 22898)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -22895,7 +22919,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       z02010S_index - SDL_INTEGER_LIT(1)].isSet),
       (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(17, 22898)
+    XBETWEEN_STMTS_PRD(17, 22922)
 
 /*-----
 * CALL isCollision2  (from EXPRESSION in next symbol)
@@ -22934,7 +22958,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       ->StaticFather)->z02010T_CollisionType),
       (tSDLTypeInfo *)&ySDL_z02010R_tCollision);
 #endif
-    XBETWEEN_SYMBOLS_PRD(18, 22937)
+    XBETWEEN_SYMBOLS_PRD(18, 22961)
 
 /*-----
 * DECISION
@@ -22957,7 +22981,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
     if (yEqF_z02010R_tCollision(((yVDef_z0201_StrategyStep2 *)yPrdVarP
       ->StaticFather)->z02010T_CollisionType, z02010R0_NO_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(19, 22960)
+      XBETWEEN_SYMBOLS_PRD(19, 22984)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -22985,7 +23009,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         TO_PROCESS(Router, yPrsN_z19_Router),
         sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(20, 22988)
+      XBETWEEN_SYMBOLS_PRD(20, 23012)
 
 /*-----
 * RETURN
@@ -22996,7 +23020,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(21, 22999)
+      XBETWEEN_SYMBOLS_PRD(21, 23023)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -23021,7 +23045,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         z02010S_index - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(22, 23024)
+      XBETWEEN_STMTS_PRD(22, 23048)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -23045,7 +23069,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         z02010S_index - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(23, 23048)
+      XBETWEEN_STMTS_PRD(23, 23072)
 
 /*-----
 * CALL isCollision2  (from EXPRESSION in next symbol)
@@ -23084,7 +23108,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
         ->StaticFather)->z02010T_CollisionType),
         (tSDLTypeInfo *)&ySDL_z02010R_tCollision);
 #endif
-      XBETWEEN_SYMBOLS_PRD(24, 23087)
+      XBETWEEN_SYMBOLS_PRD(24, 23111)
 
 /*-----
 * DECISION
@@ -23107,7 +23131,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
       if (yEqF_z02010R_tCollision(((yVDef_z0201_StrategyStep2 *)yPrdVarP
         ->StaticFather)->z02010T_CollisionType, z02010R0_NO_COLLISION)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(25, 23110)
+        XBETWEEN_SYMBOLS_PRD(25, 23134)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -23135,7 +23159,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(26, 23138)
+        XBETWEEN_SYMBOLS_PRD(26, 23162)
 
 /*-----
 * RETURN
@@ -23146,7 +23170,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(27, 23149)
+        XBETWEEN_SYMBOLS_PRD(27, 23173)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -23171,7 +23195,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
           z02010S_index - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(28, 23174)
+        XBETWEEN_STMTS_PRD(28, 23198)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -23197,7 +23221,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
           z02010S_index - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(29, 23200)
+        XBETWEEN_STMTS_PRD(29, 23224)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -23221,7 +23245,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
           z02010S_index - SDL_INTEGER_LIT(1)].isSet),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(30, 23224)
+        XBETWEEN_SYMBOLS_PRD(30, 23248)
 
 /*-----
 * OUTPUT OrderSpeedRequest
@@ -23250,7 +23274,7 @@ YPRD_FUNCTION(z02010J_SolveCollision2)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_05_OrderSpeedRequest), "OrderSpeedRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(31, 23253)
+        XBETWEEN_SYMBOLS_PRD(31, 23277)
 
 /*-----
 * RETURN
@@ -23433,7 +23457,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(9, 23436)
+    XBETWEEN_SYMBOLS_PRD(9, 23460)
 
 /*-----
 * ASSIGNMENT OldSpeed := ...
@@ -23456,7 +23480,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
     xMSCEAssign("OldSpeed := ", &(((yVDef_z02010K_NextShipState2 *)yPrdVarP)->
       z02010K4_OldSpeed), (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(10, 23459)
+    XBETWEEN_STMTS_PRD(10, 23483)
 
 /*-----
 * ASSIGNMENT OldHeading := ...
@@ -23479,7 +23503,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
     xMSCEAssign("OldHeading := ", &(((yVDef_z02010K_NextShipState2 *)yPrdVarP)->
       z02010K5_OldHeading), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(11, 23482)
+    XBETWEEN_STMTS_PRD(11, 23506)
 
 /*-----
 * ASSIGNMENT OldCoords := ...
@@ -23502,7 +23526,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
     xMSCEAssign("OldCoords := ", &(((yVDef_z02010K_NextShipState2 *)yPrdVarP)->
       z02010K6_OldCoords), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(12, 23505)
+    XBETWEEN_STMTS_PRD(12, 23529)
 
 /*-----
 * ASSIGNMENT TypeShp := ...
@@ -23524,7 +23548,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
     xMSCEAssign("TypeShp := ", &(((yVDef_z02010K_NextShipState2 *)yPrdVarP)->
       z02010K7_TypeShp), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(13, 23527)
+    XBETWEEN_SYMBOLS_PRD(13, 23551)
 
 /*-----
 * DECISION
@@ -23546,7 +23570,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
     if (yVarP->z020V_CommandToShip.A
       [yPrdVarP->z02010K0_ShipIndex - SDL_INTEGER_LIT(1)].isSet) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(14, 23549)
+      XBETWEEN_SYMBOLS_PRD(14, 23573)
 
 /*-----
 * DECISION
@@ -23569,7 +23593,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #endif
       if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
         z02043__ACCEL)) {
-        XBETWEEN_SYMBOLS_PRD(15, 23572)
+        XBETWEEN_SYMBOLS_PRD(15, 23596)
 
 /*-----
 * ASSIGNMENT TempSpeed := ...
@@ -23594,7 +23618,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
         xMSCEAssign("TempSpeed := ", &(((yVDef_z02010K_NextShipState2 *)
           yPrdVarP)->z02010K8_TempSpeed), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(16, 23597)
+        XBETWEEN_STMTS_PRD(16, 23621)
 
 /*-----
 * IF
@@ -23608,7 +23632,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(17, 23611)
+          XBETWEEN_STMTS_PRD(17, 23635)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -23639,7 +23663,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(18, 23642)
+        XBETWEEN_STMTS_PRD(18, 23666)
 
 /*-----
 * IF
@@ -23655,7 +23679,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(19, 23658)
+          XBETWEEN_STMTS_PRD(19, 23682)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -23687,7 +23711,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(20, 23690)
+        XBETWEEN_STMTS_PRD(20, 23714)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -23712,7 +23736,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(21, 23715)
+        XBETWEEN_STMTS_PRD(21, 23739)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -23768,8 +23792,8 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #endif
 
       case 1:
-      L_grst57:;
-        XBETWEEN_SYMBOLS_PRD(22, 23772)
+      L_grst67:;
+        XBETWEEN_SYMBOLS_PRD(22, 23796)
 
 /*-----
 * RETURN
@@ -23781,7 +23805,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
         SDL_RETURN
       } else if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
             z02040__RIGHT)) {
-        XBETWEEN_SYMBOLS_PRD(23, 23784)
+        XBETWEEN_SYMBOLS_PRD(23, 23808)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -23806,7 +23830,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(24, 23809)
+        XBETWEEN_STMTS_PRD(24, 23833)
 
 /*-----
 * CALL NextDirection2  (from EXPRESSION in next symbol)
@@ -23852,7 +23876,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(25, 23855)
+        XBETWEEN_STMTS_PRD(25, 23879)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -23908,13 +23932,13 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #endif
 
 /*-----
-* JOIN grst57
+* JOIN grst67
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\NextShipState.spd(1),215(80,205),1)
 ------*/
-        goto L_grst57;
+        goto L_grst67;
       } else if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
             z02041__LEFT)) {
-        XBETWEEN_SYMBOLS_PRD(26, 23917)
+        XBETWEEN_SYMBOLS_PRD(26, 23941)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -23939,7 +23963,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(27, 23942)
+        XBETWEEN_STMTS_PRD(27, 23966)
 
 /*-----
 * CALL NextDirection2  (from EXPRESSION in next symbol)
@@ -23985,7 +24009,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(28, 23988)
+        XBETWEEN_STMTS_PRD(28, 24012)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -24041,15 +24065,15 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #endif
 
 /*-----
-* JOIN grst57
+* JOIN grst67
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\NextShipState.spd(1),215(80,205),1)
 ------*/
-        goto L_grst57;
+        goto L_grst67;
       } else {
 
       case 2:
-      L_grst58:;
-        XBETWEEN_SYMBOLS_PRD(29, 24052)
+      L_grst68:;
+        XBETWEEN_SYMBOLS_PRD(29, 24076)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -24074,7 +24098,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(30, 24077)
+        XBETWEEN_STMTS_PRD(30, 24101)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -24099,7 +24123,7 @@ YPRD_FUNCTION(z02010K_NextShipState2)
           z02010K1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(31, 24102)
+        XBETWEEN_STMTS_PRD(31, 24126)
 
 /*-----
 * CALL NextPosition2  (from EXPRESSION in next symbol)
@@ -24155,18 +24179,18 @@ YPRD_FUNCTION(z02010K_NextShipState2)
 #endif
 
 /*-----
-* JOIN grst57
+* JOIN grst67
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\NextShipState.spd(1),215(80,205),1)
 ------*/
-        goto L_grst57;
+        goto L_grst67;
       }
     } else {
 
 /*-----
-* JOIN grst58
+* JOIN grst68
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy2\NextShipState.spd(1),125(30,185),1)
 ------*/
-      goto L_grst58;
+      goto L_grst68;
     }
   }
   XEND_PRD
@@ -24405,7 +24429,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 24408)
+    XBETWEEN_SYMBOLS_PRD(1, 24432)
 
 /*-----
 * DECISION
@@ -24427,7 +24451,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
     if (yVarP->z020V_CommandToShip.A[((yVDef_z0201_StrategyStep2 *)yPrdVarP
       ->StaticFather)->z02010S_index - SDL_INTEGER_LIT(1)].isSet) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 24430)
+      XBETWEEN_SYMBOLS_PRD(3, 24454)
 
 /*-----
 * DECISION
@@ -24450,7 +24474,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
 #endif
       if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
         z02041__LEFT)) {
-        XBETWEEN_SYMBOLS_PRD(4, 24453)
+        XBETWEEN_SYMBOLS_PRD(4, 24477)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -24478,7 +24502,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(5, 24481)
+        XBETWEEN_SYMBOLS_PRD(5, 24505)
 
 /*-----
 * RETURN
@@ -24490,7 +24514,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
         SDL_RETURN
       } else if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
             z02040__RIGHT)) {
-        XBETWEEN_SYMBOLS_PRD(6, 24493)
+        XBETWEEN_SYMBOLS_PRD(6, 24517)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -24518,7 +24542,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(7, 24521)
+        XBETWEEN_SYMBOLS_PRD(7, 24545)
 
 /*-----
 * RETURN
@@ -24530,7 +24554,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
         SDL_RETURN
       } else if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
             z02043__ACCEL)) {
-        XBETWEEN_SYMBOLS_PRD(8, 24533)
+        XBETWEEN_SYMBOLS_PRD(8, 24557)
 
 /*-----
 * OUTPUT OrderSpeedRequest
@@ -24560,7 +24584,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_05_OrderSpeedRequest), "OrderSpeedRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(9, 24563)
+        XBETWEEN_SYMBOLS_PRD(9, 24587)
 
 /*-----
 * RETURN
@@ -24572,7 +24596,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
         SDL_RETURN
       } else if (yEqF_z0204_tOrderType(yPrdVarP->yDcn_z0204_tOrderType,
             z02042__FIRE)) {
-        XBETWEEN_SYMBOLS_PRD(10, 24575)
+        XBETWEEN_SYMBOLS_PRD(10, 24599)
 
 /*-----
 * OUTPUT OrderFireRequest
@@ -24606,7 +24630,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_07_OrderFireRequest), "OrderFireRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(11, 24609)
+        XBETWEEN_SYMBOLS_PRD(11, 24633)
 
 /*-----
 * RETURN
@@ -24625,7 +24649,7 @@ YPRD_FUNCTION(z02010L_OutputOrder2)
       }
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(2, 24628)
+      XBETWEEN_SYMBOLS_PRD(2, 24652)
 
 /*-----
 * RETURN
@@ -24745,7 +24769,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 24748)
+    XBETWEEN_SYMBOLS_PRD(1, 24772)
 
 /*-----
 * IF
@@ -24760,7 +24784,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(2, 24763)
+      XBETWEEN_STMTS_PRD(2, 24787)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24779,7 +24803,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
       xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(3, 24782)
+      XBETWEEN_STMTS_PRD(3, 24806)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24802,7 +24826,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
       xTraceAlg("IF (false)");
 #endif
-      XBETWEEN_STMTS_PRD(4, 24805)
+      XBETWEEN_STMTS_PRD(4, 24829)
 
 /*-----
 * IF
@@ -24817,7 +24841,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(5, 24820)
+        XBETWEEN_STMTS_PRD(5, 24844)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24837,7 +24861,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
         xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(6, 24840)
+        XBETWEEN_STMTS_PRD(6, 24864)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24861,7 +24885,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(7, 24864)
+        XBETWEEN_STMTS_PRD(7, 24888)
 
 /*-----
 * IF
@@ -24876,7 +24900,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(8, 24879)
+          XBETWEEN_STMTS_PRD(8, 24903)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24896,7 +24920,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
           xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-          XBETWEEN_STMTS_PRD(9, 24899)
+          XBETWEEN_STMTS_PRD(9, 24923)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24920,7 +24944,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(10, 24923)
+          XBETWEEN_STMTS_PRD(10, 24947)
 
 /*-----
 * IF
@@ -24935,7 +24959,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
 #ifdef XTRACE
             xTraceAlg("IF (true)");
 #endif
-            XBETWEEN_STMTS_PRD(11, 24938)
+            XBETWEEN_STMTS_PRD(11, 24962)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24955,7 +24979,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
             xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.
               x), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-            XBETWEEN_STMTS_PRD(12, 24958)
+            XBETWEEN_STMTS_PRD(12, 24982)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -24984,7 +25008,7 @@ YPRD_FUNCTION(z02010M_FindHeadingTarget2)
         }
       }
     }
-    XBETWEEN_SYMBOLS_PRD(13, 24987)
+    XBETWEEN_SYMBOLS_PRD(13, 25011)
 
 /*-----
 * RETURN
@@ -25157,7 +25181,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
     XAT_FIRST_SYMBOL(0)
     GenericDefault((void *)&yPrdVarP->z02010N2_d,
       (tSDLTypeInfo *)&ySDL_z02010N1_Dist);
-    XBETWEEN_SYMBOLS_PRD(2, 25160)
+    XBETWEEN_SYMBOLS_PRD(2, 25184)
 
 /*-----
 * ASSIGNMENT d... := ...
@@ -25183,7 +25207,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U2.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(3, 25186)
+    XBETWEEN_STMTS_PRD(3, 25210)
 
 /*-----
 * ASSIGNMENT d... := ...
@@ -25209,7 +25233,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U3.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 25212)
+    XBETWEEN_STMTS_PRD(4, 25236)
 
 /*-----
 * ASSIGNMENT d... := ...
@@ -25235,7 +25259,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U4.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(5, 25238)
+    XBETWEEN_STMTS_PRD(5, 25262)
 
 /*-----
 * ASSIGNMENT d... := ...
@@ -25261,7 +25285,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U5.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(6, 25264)
+    XBETWEEN_STMTS_PRD(6, 25288)
 
 /*-----
 * ASSIGNMENT min := ...
@@ -25283,7 +25307,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
     xMSCEAssign("min := ", &(((yVDef_z02010N_FindStartPoint2 *)yPrdVarP)->
       z02010N5_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(7, 25286)
+    XBETWEEN_STMTS_PRD(7, 25310)
 
 /*-----
 * ASSIGNMENT count := ...
@@ -25302,7 +25326,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
     xMSCEAssign("count := ", &(((yVDef_z02010N_FindStartPoint2 *)yPrdVarP)->
       z02010N3_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(8, 25305)
+    XBETWEEN_SYMBOLS_PRD(8, 25329)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -25318,7 +25342,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       yPrdVarP)->z02010N4_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(9, 25321)
+      XBETWEEN_STMTS_PRD(9, 25345)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -25332,7 +25356,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(11, 25335)
+      XBETWEEN_STMTS_PRD(11, 25359)
 
 /*-----
 * IF
@@ -25348,7 +25372,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(12, 25351)
+        XBETWEEN_STMTS_PRD(12, 25375)
 
 /*-----
 * ASSIGNMENT min := ...
@@ -25370,7 +25394,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
         xMSCEAssign("min := ", &(((yVDef_z02010N_FindStartPoint2 *)yPrdVarP)->
           z02010N5_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(13, 25373)
+        XBETWEEN_STMTS_PRD(13, 25397)
 
 /*-----
 * ASSIGNMENT count := ...
@@ -25396,7 +25420,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(10, 25399)
+      XBETWEEN_STMTS_PRD(10, 25423)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -25417,7 +25441,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(14, 25420)
+    XBETWEEN_SYMBOLS_PRD(14, 25444)
 
 /*-----
 * DECISION
@@ -25435,7 +25459,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(4))) {
-      XBETWEEN_SYMBOLS_PRD(15, 25438)
+      XBETWEEN_SYMBOLS_PRD(15, 25462)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25455,7 +25479,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(16, 25458)
+      XBETWEEN_STMTS_PRD(16, 25482)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25476,7 +25500,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(3))) {
-      XBETWEEN_SYMBOLS_PRD(17, 25479)
+      XBETWEEN_SYMBOLS_PRD(17, 25503)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25495,7 +25519,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(18, 25498)
+      XBETWEEN_STMTS_PRD(18, 25522)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25515,7 +25539,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(19, 25518)
+      XBETWEEN_SYMBOLS_PRD(19, 25542)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25535,7 +25559,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(20, 25538)
+      XBETWEEN_STMTS_PRD(20, 25562)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25556,7 +25580,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(21, 25559)
+      XBETWEEN_SYMBOLS_PRD(21, 25583)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25575,7 +25599,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       xMSCEAssign("HeadingTarget... := ", &(yVarP->z020T_HeadingTarget.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(22, 25578)
+      XBETWEEN_STMTS_PRD(22, 25602)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -25601,7 +25625,7 @@ YPRD_FUNCTION(z02010N_FindStartPoint2)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(23, 25604)
+    XBETWEEN_SYMBOLS_PRD(23, 25628)
 
 /*-----
 * RETURN
@@ -25807,7 +25831,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 25810)
+    XBETWEEN_SYMBOLS_PRD(4, 25834)
 
 /*-----
 * ASSIGNMENT flagPath := ...
@@ -25826,7 +25850,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
     xMSCEAssign("flagPath := ", &(((yVDef_z02010O_OnLand2 *)yPrdVarP)->
       z02010O7_flagPath), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(5, 25829)
+    XBETWEEN_STMTS_PRD(5, 25853)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -25843,7 +25867,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
       yPrdVarP)->z02010O3_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(6, 25846)
+      XBETWEEN_STMTS_PRD(6, 25870)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -25858,7 +25882,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(8, 25861)
+      XBETWEEN_STMTS_PRD(8, 25885)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -25875,7 +25899,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
         yPrdVarP)->z02010O4_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(9, 25878)
+        XBETWEEN_STMTS_PRD(9, 25902)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -25891,7 +25915,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(11, 25894)
+        XBETWEEN_STMTS_PRD(11, 25918)
 
 /*-----
 * IF
@@ -25910,7 +25934,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(12, 25913)
+          XBETWEEN_STMTS_PRD(12, 25937)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -25947,7 +25971,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #ifdef XTRACE
             xTraceAlg("IF (true)");
 #endif
-            XBETWEEN_STMTS_PRD(13, 25950)
+            XBETWEEN_STMTS_PRD(13, 25974)
 
 /*-----
 * ASSIGNMENT PathCoord... := ...
@@ -25970,7 +25994,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
               yPrdVarP)->z02010O5_PathCoord.x),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-            XBETWEEN_STMTS_PRD(14, 25973)
+            XBETWEEN_STMTS_PRD(14, 25997)
 
 /*-----
 * ASSIGNMENT PathCoord... := ...
@@ -25993,7 +26017,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
               yPrdVarP)->z02010O5_PathCoord.y),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-            XBETWEEN_STMTS_PRD(15, 25996)
+            XBETWEEN_STMTS_PRD(15, 26020)
 
 /*-----
 * ASSIGNMENT flagPath := ...
@@ -26012,7 +26036,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
             xMSCEAssign("flagPath := ", &(((yVDef_z02010O_OnLand2 *)yPrdVarP)->
               z02010O7_flagPath), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-            XBETWEEN_STMTS_PRD(16, 26015)
+            XBETWEEN_STMTS_PRD(16, 26039)
 
 /*-----
 * BREAK
@@ -26037,7 +26061,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(10, 26040)
+        XBETWEEN_STMTS_PRD(10, 26064)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -26059,7 +26083,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
       xTraceAlg("LOOP test FALSE");
 #endif
       xBreak_8: ;
-      XBETWEEN_STMTS_PRD(17, 26062)
+      XBETWEEN_STMTS_PRD(17, 26086)
 
 /*-----
 * IF
@@ -26073,7 +26097,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(18, 26076)
+        XBETWEEN_STMTS_PRD(18, 26100)
 
 /*-----
 * BREAK
@@ -26092,7 +26116,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(7, 26095)
+      XBETWEEN_STMTS_PRD(7, 26119)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -26114,7 +26138,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
     xTraceAlg("LOOP test FALSE");
 #endif
     xBreak_5: ;
-    XBETWEEN_SYMBOLS_PRD(19, 26117)
+    XBETWEEN_SYMBOLS_PRD(19, 26141)
 
 /*-----
 * DECISION
@@ -26134,7 +26158,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #else
     if (yPrdVarP->z02010O7_flagPath) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(21, 26137)
+      XBETWEEN_SYMBOLS_PRD(21, 26161)
 
 /*-----
 * CALL NewHeadingChange2  (from EXPRESSION in next symbol)
@@ -26178,7 +26202,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
       xMSCEAssign("Direct := ", &(((yVDef_z02010O_OnLand2 *)yPrdVarP)->
         z02010O6_Direct), (tSDLTypeInfo *)&ySDL_z02010Q_tTurnDirection);
 #endif
-      XBETWEEN_SYMBOLS_PRD(22, 26181)
+      XBETWEEN_SYMBOLS_PRD(22, 26205)
 
 /*-----
 * DECISION
@@ -26199,7 +26223,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #endif
       if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
             z02010Q1_LEFT)) {
-        XBETWEEN_SYMBOLS_PRD(23, 26202)
+        XBETWEEN_SYMBOLS_PRD(23, 26226)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26224,7 +26248,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           z02010O1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(24, 26227)
+        XBETWEEN_STMTS_PRD(24, 26251)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26250,7 +26274,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #endif
       } else if (yEqF_z02010Q_tTurnDirection(yPrdVarP->yDcn_z02010Q_tTurnDirection,
             z02010Q2_RIGHT)) {
-        XBETWEEN_SYMBOLS_PRD(25, 26253)
+        XBETWEEN_SYMBOLS_PRD(25, 26277)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26275,7 +26299,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           z02010O1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(26, 26278)
+        XBETWEEN_STMTS_PRD(26, 26302)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26300,7 +26324,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(27, 26303)
+        XBETWEEN_SYMBOLS_PRD(27, 26327)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26325,7 +26349,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           z02010O1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z0204_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(28, 26328)
+        XBETWEEN_STMTS_PRD(28, 26352)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -26347,7 +26371,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
         xMSCEAssign("factorAccel := ", &(((yVDef_z02010O_OnLand2 *)yPrdVarP)->
           z02010O8_factorAccel), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(29, 26350)
+        XBETWEEN_STMTS_PRD(29, 26374)
 
 /*-----
 * IF
@@ -26361,7 +26385,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(30, 26364)
+          XBETWEEN_STMTS_PRD(30, 26388)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -26386,7 +26410,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(31, 26389)
+        XBETWEEN_STMTS_PRD(31, 26413)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26412,7 +26436,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           z02010O1_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(32, 26415)
+        XBETWEEN_STMTS_PRD(32, 26439)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -26437,7 +26461,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(33, 26440)
+      XBETWEEN_SYMBOLS_PRD(33, 26464)
 
 /*-----
 * RETURN
@@ -26448,7 +26472,7 @@ YPRD_FUNCTION(z02010O_OnLand2)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(20, 26451)
+      XBETWEEN_SYMBOLS_PRD(20, 26475)
 
 /*-----
 * RETURN
@@ -26741,7 +26765,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 26744)
+    XBETWEEN_SYMBOLS_PRD(1, 26768)
 
 /*-----
 * ASSIGNMENT spyIndex := ...
@@ -26760,7 +26784,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
     xMSCEAssign("spyIndex := ", &(yVarP->z020X_spyIndex),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(2, 26763)
+    XBETWEEN_STMTS_PRD(2, 26787)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -26776,7 +26800,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
       yPrdVarP)->z02010P0_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(3, 26779)
+      XBETWEEN_STMTS_PRD(3, 26803)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -26790,7 +26814,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(5, 26793)
+      XBETWEEN_STMTS_PRD(5, 26817)
 
 /*-----
 * IF
@@ -26805,7 +26829,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(6, 26808)
+        XBETWEEN_STMTS_PRD(6, 26832)
 
 /*-----
 * ASSIGNMENT spyIndex := ...
@@ -26830,7 +26854,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(4, 26833)
+      XBETWEEN_STMTS_PRD(4, 26857)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -26851,7 +26875,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_STMTS_PRD(7, 26854)
+    XBETWEEN_STMTS_PRD(7, 26878)
 
 /*-----
 * IF
@@ -26864,7 +26888,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(8, 26867)
+      XBETWEEN_STMTS_PRD(8, 26891)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -26880,7 +26904,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
         yPrdVarP)->z02010P0_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(9, 26883)
+        XBETWEEN_STMTS_PRD(9, 26907)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -26894,7 +26918,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(11, 26897)
+        XBETWEEN_STMTS_PRD(11, 26921)
 
 /*-----
 * IF
@@ -26909,7 +26933,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(12, 26912)
+          XBETWEEN_STMTS_PRD(12, 26936)
 
 /*-----
 * ASSIGNMENT spyIndex := ...
@@ -26934,7 +26958,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(10, 26937)
+        XBETWEEN_STMTS_PRD(10, 26961)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -26961,7 +26985,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
       xTraceAlg("IF (false)");
     }
 #endif
-    XBETWEEN_STMTS_PRD(13, 26964)
+    XBETWEEN_STMTS_PRD(13, 26988)
 
 /*-----
 * IF
@@ -26974,7 +26998,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(14, 26977)
+      XBETWEEN_STMTS_PRD(14, 27001)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -26990,7 +27014,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
         yPrdVarP)->z02010P0_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(15, 26993)
+        XBETWEEN_STMTS_PRD(15, 27017)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -27004,7 +27028,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(17, 27007)
+        XBETWEEN_STMTS_PRD(17, 27031)
 
 /*-----
 * IF
@@ -27019,7 +27043,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(18, 27022)
+          XBETWEEN_STMTS_PRD(18, 27046)
 
 /*-----
 * ASSIGNMENT spyIndex := ...
@@ -27044,7 +27068,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(16, 27047)
+        XBETWEEN_STMTS_PRD(16, 27071)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -27071,7 +27095,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
       xTraceAlg("IF (false)");
     }
 #endif
-    XBETWEEN_STMTS_PRD(19, 27074)
+    XBETWEEN_STMTS_PRD(19, 27098)
 
 /*-----
 * IF
@@ -27084,7 +27108,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(20, 27087)
+      XBETWEEN_STMTS_PRD(20, 27111)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -27100,7 +27124,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
         yPrdVarP)->z02010P0_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(21, 27103)
+        XBETWEEN_STMTS_PRD(21, 27127)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -27114,7 +27138,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(23, 27117)
+        XBETWEEN_STMTS_PRD(23, 27141)
 
 /*-----
 * IF
@@ -27129,7 +27153,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(24, 27132)
+          XBETWEEN_STMTS_PRD(24, 27156)
 
 /*-----
 * ASSIGNMENT spyIndex := ...
@@ -27154,7 +27178,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(22, 27157)
+        XBETWEEN_STMTS_PRD(22, 27181)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -27181,7 +27205,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
       xTraceAlg("IF (false)");
     }
 #endif
-    XBETWEEN_STMTS_PRD(25, 27184)
+    XBETWEEN_STMTS_PRD(25, 27208)
 
 /*-----
 * IF
@@ -27194,7 +27218,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(26, 27197)
+      XBETWEEN_STMTS_PRD(26, 27221)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -27210,7 +27234,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
         yPrdVarP)->z02010P0_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(27, 27213)
+        XBETWEEN_STMTS_PRD(27, 27237)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -27224,7 +27248,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(29, 27227)
+        XBETWEEN_STMTS_PRD(29, 27251)
 
 /*-----
 * IF
@@ -27239,7 +27263,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(30, 27242)
+          XBETWEEN_STMTS_PRD(30, 27266)
 
 /*-----
 * ASSIGNMENT spyIndex := ...
@@ -27264,7 +27288,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(28, 27267)
+        XBETWEEN_STMTS_PRD(28, 27291)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -27291,7 +27315,7 @@ YPRD_FUNCTION(z02010P_SelectSpy)
       xTraceAlg("IF (false)");
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(31, 27294)
+    XBETWEEN_SYMBOLS_PRD(31, 27318)
 
 /*-----
 * RETURN
@@ -27469,7 +27493,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 27472)
+    XBETWEEN_SYMBOLS_PRD(1, 27496)
 
 /*-----
 * ASSIGNMENT TempCenterX := ...
@@ -27488,7 +27512,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
     xMSCEAssign("TempCenterX := ", &(((yVDef_z0202_EnemyCenter2 *)yPrdVarP)->
       z02020_TempCenterX), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(2, 27491)
+    XBETWEEN_STMTS_PRD(2, 27515)
 
 /*-----
 * ASSIGNMENT TempCenterY := ...
@@ -27507,7 +27531,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
     xMSCEAssign("TempCenterY := ", &(((yVDef_z0202_EnemyCenter2 *)yPrdVarP)->
       z02021_TempCenterY), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(3, 27510)
+    XBETWEEN_STMTS_PRD(3, 27534)
 
 /*-----
 * ASSIGNMENT NumVisibleShips := ...
@@ -27527,7 +27551,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
     xMSCEAssign("NumVisibleShips := ", &(yVarP->z0211_NumVisibleShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 27530)
+    XBETWEEN_STMTS_PRD(4, 27554)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -27543,7 +27567,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
       yPrdVarP)->z02022_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(5, 27546)
+      XBETWEEN_STMTS_PRD(5, 27570)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -27557,7 +27581,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(7, 27560)
+      XBETWEEN_STMTS_PRD(7, 27584)
 
 /*-----
 * ASSIGNMENT TempCenterX := ...
@@ -27580,7 +27604,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
       xMSCEAssign("TempCenterX := ", &(((yVDef_z0202_EnemyCenter2 *)yPrdVarP)->
         z02020_TempCenterX), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_STMTS_PRD(8, 27583)
+      XBETWEEN_STMTS_PRD(8, 27607)
 
 /*-----
 * ASSIGNMENT TempCenterY := ...
@@ -27603,7 +27627,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
       xMSCEAssign("TempCenterY := ", &(((yVDef_z0202_EnemyCenter2 *)yPrdVarP)->
         z02021_TempCenterY), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_STMTS_PRD(6, 27606)
+      XBETWEEN_STMTS_PRD(6, 27630)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -27624,7 +27648,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_STMTS_PRD(9, 27627)
+    XBETWEEN_STMTS_PRD(9, 27651)
 
 /*-----
 * ASSIGNMENT EnemyCenter... := ...
@@ -27645,7 +27669,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
     xMSCEAssign("EnemyCenter... := ", &(yVarP->z0210_EnemyCenter.x),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-    XBETWEEN_STMTS_PRD(10, 27648)
+    XBETWEEN_STMTS_PRD(10, 27672)
 
 /*-----
 * ASSIGNMENT EnemyCenter... := ...
@@ -27666,7 +27690,7 @@ YPRD_FUNCTION(z0202_EnemyCenter2)
     xMSCEAssign("EnemyCenter... := ", &(yVarP->z0210_EnemyCenter.y),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-    XBETWEEN_SYMBOLS_PRD(11, 27669)
+    XBETWEEN_SYMBOLS_PRD(11, 27693)
 
 /*-----
 * RETURN
@@ -27815,7 +27839,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 27818)
+    XBETWEEN_SYMBOLS_PRD(1, 27842)
 
 /*-----
 * ASSIGNMENT NumVisibleShips := ...
@@ -27834,7 +27858,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
     xMSCEAssign("NumVisibleShips := ", &(yVarP->z0211_NumVisibleShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(2, 27837)
+    XBETWEEN_STMTS_PRD(2, 27861)
 
 /*-----
 * ASSIGNMENT NumMyShips := ...
@@ -27854,7 +27878,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
     xMSCEAssign("NumMyShips := ", &(yVarP->z020P_NumMyShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(3, 27857)
+    XBETWEEN_STMTS_PRD(3, 27881)
 
 /*-----
 * ASSIGNMENT NumRepairShips := ...
@@ -27873,7 +27897,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
     xMSCEAssign("NumRepairShips := ", &(yVarP->z020Q_NumRepairShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 27876)
+    XBETWEEN_STMTS_PRD(4, 27900)
 
 /*-----
 * ASSIGNMENT minSpeed := ...
@@ -27894,7 +27918,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
     xMSCEAssign("minSpeed := ", &(yVarP->z020R_minSpeed),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(5, 27897)
+    XBETWEEN_STMTS_PRD(5, 27921)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -27910,7 +27934,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
       yPrdVarP)->z02030_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(6, 27913)
+      XBETWEEN_STMTS_PRD(6, 27937)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -27924,7 +27948,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(8, 27927)
+      XBETWEEN_STMTS_PRD(8, 27951)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -27948,7 +27972,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
         z02030_i - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(9, 27951)
+      XBETWEEN_STMTS_PRD(9, 27975)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -27973,7 +27997,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
         z02030_i - SDL_INTEGER_LIT(1)].Fire.List),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
 #endif
-      XBETWEEN_STMTS_PRD(10, 27976)
+      XBETWEEN_STMTS_PRD(10, 28000)
 
 /*-----
 * IF
@@ -27988,7 +28012,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(11, 27991)
+        XBETWEEN_STMTS_PRD(11, 28015)
 
 /*-----
 * ASSIGNMENT NumRepairShips := ...
@@ -28013,7 +28037,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(7, 28016)
+      XBETWEEN_STMTS_PRD(7, 28040)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -28034,7 +28058,7 @@ YPRD_FUNCTION(z0203_UpdateShipParams2)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(12, 28037)
+    XBETWEEN_SYMBOLS_PRD(12, 28061)
 
 /*-----
 * RETURN
@@ -28873,9 +28897,9 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE_STARTUP
 #ifdef XBREAKBEFORE
     if (yVarP->ActivePrd != (xPrdNode)0 ) {
-      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 28876)
+      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 28900)
     } else {
-      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 28878)
+      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 28902)
     }
 #endif
   }
@@ -28897,7 +28921,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_13_tStringShipCurrentState);
     GenericDefault((void *)&yVarP->z19T_rStringShotsList,
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
-    XBETWEEN_SYMBOLS(33, 28900)
+    XBETWEEN_SYMBOLS(33, 28924)
 
 /*-----
 * NEXTSTATE Wait
@@ -28920,7 +28944,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     yAssF_SDL_Integer(yVarP->z19K_rTime,
       ((yPDef_z_BasicTypes_03_StartSimulation *)ySVarP)->Param1,
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(34, 28923)
+    XBETWEEN_SYMBOLS(34, 28947)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -28939,7 +28963,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS(35, 28942)
+    XBETWEEN_SYMBOLS(35, 28966)
 
 /*-----
 * DECISION
@@ -28959,7 +28983,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
 #else
     if (yVarP->z19U_rASI.A[SDL_INTEGER_LIT(1) - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS(36, 28962)
+      XBETWEEN_SYMBOLS(36, 28986)
 
 /*-----
 * OUTPUT StartSimulation
@@ -28985,7 +29009,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS(37, 28988)
+    XBETWEEN_SYMBOLS(37, 29012)
 
 /*-----
 * DECISION
@@ -29005,7 +29029,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
 #else
     if (yVarP->z19U_rASI.A[SDL_INTEGER_LIT(2) - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS(38, 29008)
+      XBETWEEN_SYMBOLS(38, 29032)
 
 /*-----
 * OUTPUT StartSimulation
@@ -29031,7 +29055,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS(39, 29034)
+    XBETWEEN_SYMBOLS(39, 29058)
 
 /*-----
 * NEXTSTATE -
@@ -29051,7 +29075,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     XDEBUG_LABEL(Wait_InitDataComplete)
     XAT_FIRST_SYMBOL(2)
     XOS_TRACE_INPUT("InitDataComplete")
-    XBETWEEN_SYMBOLS(40, 29054)
+    XBETWEEN_SYMBOLS(40, 29078)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -29070,7 +29094,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS(41, 29073)
+    XBETWEEN_SYMBOLS(41, 29097)
 
 /*-----
 * DECISION
@@ -29090,7 +29114,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
 #else
     if (yVarP->z19U_rASI.A[SDL_INTEGER_LIT(1) - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS(42, 29093)
+      XBETWEEN_SYMBOLS(42, 29117)
 
 /*-----
 * OUTPUT InitDataComplete
@@ -29112,7 +29136,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS(43, 29115)
+    XBETWEEN_SYMBOLS(43, 29139)
 
 /*-----
 * DECISION
@@ -29132,7 +29156,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
 #else
     if (yVarP->z19U_rASI.A[SDL_INTEGER_LIT(2) - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS(44, 29135)
+      XBETWEEN_SYMBOLS(44, 29159)
 
 /*-----
 * OUTPUT InitDataComplete
@@ -29154,7 +29178,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS(45, 29157)
+    XBETWEEN_SYMBOLS(45, 29181)
 
 /*-----
 * NEXTSTATE -
@@ -29184,7 +29208,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     yAssF_z_BasicTypes_14_tStringEnemyShip(yVarP->z19O_rStringEnemyShip, &(
       ((yPDef_z_BasicTypes_0I_VisibleShip *)ySVarP)->Param2), XASS_AR_ASS_FR);
 #endif
-    XBETWEEN_SYMBOLS(46, 29187)
+    XBETWEEN_SYMBOLS(46, 29211)
 
 /*-----
 * CALL SendVisibleShip
@@ -29198,7 +29222,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z19B_SendVisibleShip, yPrdN_z19B_SendVisibleShip, 0, 18)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(18, 29201)
+    XBETWEEN_SYMBOLS(18, 29225)
 
 /*-----
 * NEXTSTATE -
@@ -29226,7 +29250,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       ySVarP)->Param2), XASS_AR_ASS_FR);
     yAssF_z_BasicTypes_0S_tNameShip(yVarP->z19N_rNameShip,
       ((yPDef_z_BasicTypes_08_DestroyShip *)ySVarP)->Param3, XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(47, 29229)
+    XBETWEEN_SYMBOLS(47, 29253)
 
 /*-----
 * CALL SendDestroyShip
@@ -29240,7 +29264,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z19A_SendDestroyShip, yPrdN_z19A_SendDestroyShip, 0, 19)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(19, 29243)
+    XBETWEEN_SYMBOLS(19, 29267)
 
 /*-----
 * NEXTSTATE -
@@ -29275,7 +29299,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       ((yPDef_z_BasicTypes_0H_ShipsCurrentState *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
 #endif
-    XBETWEEN_SYMBOLS(48, 29278)
+    XBETWEEN_SYMBOLS(48, 29302)
 
 /*-----
 * CALL SendShipsCurrentState
@@ -29291,7 +29315,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z19D_SendShipsCurrentState,
       yPrdN_z19D_SendShipsCurrentState, 0, 20)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(20, 29294)
+    XBETWEEN_SYMBOLS(20, 29318)
 
 /*-----
 * NEXTSTATE -
@@ -29315,7 +29339,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_09_StrategyVictory *)ySVarP)->Param1),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(49, 29318)
+    XBETWEEN_SYMBOLS(49, 29342)
 
 /*-----
 * CALL SendStrategyVictory
@@ -29330,7 +29354,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z19F_SendStrategyVictory, yPrdN_z19F_SendStrategyVictory, 0,
       21)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(21, 29333)
+    XBETWEEN_SYMBOLS(21, 29357)
 
 /*-----
 * NEXTSTATE -
@@ -29353,7 +29377,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     yAssF_z_BasicTypes_1J_tStrategyId(yVarP->z19M_rStrategyId,
       yTstA_z_BasicTypes_1J_tStrategyId(((yPDef_z_BasicTypes_0A_StrategyLose *)
       ySVarP)->Param1), XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(50, 29356)
+    XBETWEEN_SYMBOLS(50, 29380)
 
 /*-----
 * CALL SendStrategyLose
@@ -29367,7 +29391,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z19H_SendStrategyLose, yPrdN_z19H_SendStrategyLose, 0, 22)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(22, 29370)
+    XBETWEEN_SYMBOLS(22, 29394)
 
 /*-----
 * NEXTSTATE -
@@ -29394,7 +29418,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_04_FinishSimulation *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(51, 29397)
+    XBETWEEN_SYMBOLS(51, 29421)
 
 /*-----
 * CALL SendFinishSimulation
@@ -29409,7 +29433,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z19I_SendFinishSimulation, yPrdN_z19I_SendFinishSimulation,
       0, 23)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(23, 29412)
+    XBETWEEN_SYMBOLS(23, 29436)
 
 /*-----
 * NEXTSTATE -
@@ -29440,7 +29464,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1H_tFactorAcceleration(
       ((yPDef_z_BasicTypes_05_OrderSpeedRequest *)ySVarP)->Param3),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(52, 29443)
+    XBETWEEN_SYMBOLS(52, 29467)
 
 /*-----
 * CALL SendOrderSpeedRequest
@@ -29456,7 +29480,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z19C_SendOrderSpeedRequest,
       yPrdN_z19C_SendOrderSpeedRequest, 0, 24)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(24, 29459)
+    XBETWEEN_SYMBOLS(24, 29483)
 
 /*-----
 * NEXTSTATE -
@@ -29484,7 +29508,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_0B_OrderSpeedResponse *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(53, 29487)
+    XBETWEEN_SYMBOLS(53, 29511)
 
 /*-----
 * CALL SendOrderSpeedResponse
@@ -29500,7 +29524,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z194_SendOrderSpeedResponse,
       yPrdN_z194_SendOrderSpeedResponse, 0, 25)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(25, 29503)
+    XBETWEEN_SYMBOLS(25, 29527)
 
 /*-----
 * NEXTSTATE -
@@ -29527,7 +29551,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_0C_OrderSpeedReject *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(54, 29530)
+    XBETWEEN_SYMBOLS(54, 29554)
 
 /*-----
 * CALL SendOrderSpeedReject
@@ -29542,7 +29566,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z195_SendOrderSpeedReject, yPrdN_z195_SendOrderSpeedReject,
       0, 26)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(26, 29545)
+    XBETWEEN_SYMBOLS(26, 29569)
 
 /*-----
 * NEXTSTATE -
@@ -29572,7 +29596,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     yAssF_z_BasicTypes_0T_tHeadingChange(yVarP->z19R_rHeadingChange,
       ((yPDef_z_BasicTypes_06_OrderTurnRequest *)ySVarP)->Param3,
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(55, 29575)
+    XBETWEEN_SYMBOLS(55, 29599)
 
 /*-----
 * CALL SendOrderTurnRequest
@@ -29587,7 +29611,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z19E_SendOrderTurnRequest, yPrdN_z19E_SendOrderTurnRequest,
       0, 27)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(27, 29590)
+    XBETWEEN_SYMBOLS(27, 29614)
 
 /*-----
 * NEXTSTATE -
@@ -29614,7 +29638,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_0D_OrderTurnResponse *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(56, 29617)
+    XBETWEEN_SYMBOLS(56, 29641)
 
 /*-----
 * CALL SendOrderTurnResponse
@@ -29630,7 +29654,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z196_SendOrderTurnResponse,
       yPrdN_z196_SendOrderTurnResponse, 0, 28)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(28, 29633)
+    XBETWEEN_SYMBOLS(28, 29657)
 
 /*-----
 * NEXTSTATE -
@@ -29657,7 +29681,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_0E_OrderTurnReject *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(57, 29660)
+    XBETWEEN_SYMBOLS(57, 29684)
 
 /*-----
 * CALL SendOrderTurnReject
@@ -29672,7 +29696,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z197_SendOrderTurnReject, yPrdN_z197_SendOrderTurnReject, 0,
       29)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(29, 29675)
+    XBETWEEN_SYMBOLS(29, 29699)
 
 /*-----
 * NEXTSTATE -
@@ -29711,7 +29735,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       ((yPDef_z_BasicTypes_07_OrderFireRequest *)ySVarP)->Param4),
       XASS_AR_ASS_FR);
 #endif
-    XBETWEEN_SYMBOLS(58, 29714)
+    XBETWEEN_SYMBOLS(58, 29738)
 
 /*-----
 * CALL SendOrderFireRequest
@@ -29726,7 +29750,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z19G_SendOrderFireRequest, yPrdN_z19G_SendOrderFireRequest,
       0, 30)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(30, 29729)
+    XBETWEEN_SYMBOLS(30, 29753)
 
 /*-----
 * NEXTSTATE -
@@ -29753,7 +29777,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_0F_OrderFireResponse *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(59, 29756)
+    XBETWEEN_SYMBOLS(59, 29780)
 
 /*-----
 * CALL SendOrderFireResponse
@@ -29769,7 +29793,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z198_SendOrderFireResponse,
       yPrdN_z198_SendOrderFireResponse, 0, 31)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(31, 29772)
+    XBETWEEN_SYMBOLS(31, 29796)
 
 /*-----
 * NEXTSTATE -
@@ -29796,7 +29820,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_0G_OrderFireReject *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(60, 29799)
+    XBETWEEN_SYMBOLS(60, 29823)
 
 /*-----
 * CALL SendOrderFireReject
@@ -29811,7 +29835,7 @@ YPAD_FUNCTION(yPAD_z19_Router)
     CALL_PROCEDURE(z199_SendOrderFireReject, yPrdN_z199_SendOrderFireReject, 0,
       32)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(32, 29814)
+    XBETWEEN_SYMBOLS(32, 29838)
 
 /*-----
 * NEXTSTATE -
@@ -29930,7 +29954,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 29933)
+    XBETWEEN_SYMBOLS_PRD(1, 29957)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -29949,7 +29973,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 29952)
+    XBETWEEN_SYMBOLS_PRD(2, 29976)
 
 /*-----
 * DECISION
@@ -29969,7 +29993,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 29972)
+      XBETWEEN_SYMBOLS_PRD(3, 29996)
 
 /*-----
 * OUTPUT OrderSpeedResponse
@@ -29996,7 +30020,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0B_OrderSpeedResponse),
         "OrderSpeedResponse")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 29999)
+      XBETWEEN_SYMBOLS_PRD(4, 30023)
 
 /*-----
 * RETURN
@@ -30007,7 +30031,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 30010)
+      XBETWEEN_SYMBOLS_PRD(5, 30034)
 
 /*-----
 * OUTPUT OrderSpeedResponse
@@ -30034,7 +30058,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0B_OrderSpeedResponse),
         "OrderSpeedResponse")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 30037)
+      XBETWEEN_SYMBOLS_PRD(6, 30061)
 
 /*-----
 * RETURN
@@ -30045,7 +30069,7 @@ YPRD_FUNCTION(z194_SendOrderSpeedResponse)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 30048)
+      XBETWEEN_SYMBOLS_PRD(7, 30072)
 
 /*-----
 * RETURN
@@ -30145,7 +30169,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 30148)
+    XBETWEEN_SYMBOLS_PRD(1, 30172)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -30164,7 +30188,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 30167)
+    XBETWEEN_SYMBOLS_PRD(2, 30191)
 
 /*-----
 * DECISION
@@ -30184,7 +30208,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 30187)
+      XBETWEEN_SYMBOLS_PRD(3, 30211)
 
 /*-----
 * OUTPUT OrderSpeedReject
@@ -30211,7 +30235,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0C_OrderSpeedReject),
         "OrderSpeedReject")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 30214)
+      XBETWEEN_SYMBOLS_PRD(4, 30238)
 
 /*-----
 * RETURN
@@ -30222,7 +30246,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 30225)
+      XBETWEEN_SYMBOLS_PRD(5, 30249)
 
 /*-----
 * OUTPUT OrderSpeedReject
@@ -30249,7 +30273,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0C_OrderSpeedReject),
         "OrderSpeedReject")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 30252)
+      XBETWEEN_SYMBOLS_PRD(6, 30276)
 
 /*-----
 * RETURN
@@ -30260,7 +30284,7 @@ YPRD_FUNCTION(z195_SendOrderSpeedReject)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 30263)
+      XBETWEEN_SYMBOLS_PRD(7, 30287)
 
 /*-----
 * RETURN
@@ -30360,7 +30384,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 30363)
+    XBETWEEN_SYMBOLS_PRD(1, 30387)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -30379,7 +30403,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 30382)
+    XBETWEEN_SYMBOLS_PRD(2, 30406)
 
 /*-----
 * DECISION
@@ -30399,7 +30423,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 30402)
+      XBETWEEN_SYMBOLS_PRD(3, 30426)
 
 /*-----
 * OUTPUT OrderTurnResponse
@@ -30426,7 +30450,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0D_OrderTurnResponse),
         "OrderTurnResponse")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 30429)
+      XBETWEEN_SYMBOLS_PRD(4, 30453)
 
 /*-----
 * RETURN
@@ -30437,7 +30461,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 30440)
+      XBETWEEN_SYMBOLS_PRD(5, 30464)
 
 /*-----
 * OUTPUT OrderTurnResponse
@@ -30464,7 +30488,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0D_OrderTurnResponse),
         "OrderTurnResponse")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 30467)
+      XBETWEEN_SYMBOLS_PRD(6, 30491)
 
 /*-----
 * RETURN
@@ -30475,7 +30499,7 @@ YPRD_FUNCTION(z196_SendOrderTurnResponse)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 30478)
+      XBETWEEN_SYMBOLS_PRD(7, 30502)
 
 /*-----
 * RETURN
@@ -30575,7 +30599,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 30578)
+    XBETWEEN_SYMBOLS_PRD(1, 30602)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -30594,7 +30618,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 30597)
+    XBETWEEN_SYMBOLS_PRD(2, 30621)
 
 /*-----
 * DECISION
@@ -30614,7 +30638,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 30617)
+      XBETWEEN_SYMBOLS_PRD(3, 30641)
 
 /*-----
 * OUTPUT OrderTurnReject
@@ -30641,7 +30665,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0E_OrderTurnReject),
         "OrderTurnReject")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 30644)
+      XBETWEEN_SYMBOLS_PRD(4, 30668)
 
 /*-----
 * RETURN
@@ -30652,7 +30676,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 30655)
+      XBETWEEN_SYMBOLS_PRD(5, 30679)
 
 /*-----
 * OUTPUT OrderTurnReject
@@ -30679,7 +30703,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0E_OrderTurnReject),
         "OrderTurnReject")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 30682)
+      XBETWEEN_SYMBOLS_PRD(6, 30706)
 
 /*-----
 * RETURN
@@ -30690,7 +30714,7 @@ YPRD_FUNCTION(z197_SendOrderTurnReject)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 30693)
+      XBETWEEN_SYMBOLS_PRD(7, 30717)
 
 /*-----
 * RETURN
@@ -30790,7 +30814,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 30793)
+    XBETWEEN_SYMBOLS_PRD(1, 30817)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -30809,7 +30833,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 30812)
+    XBETWEEN_SYMBOLS_PRD(2, 30836)
 
 /*-----
 * DECISION
@@ -30829,7 +30853,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 30832)
+      XBETWEEN_SYMBOLS_PRD(3, 30856)
 
 /*-----
 * OUTPUT OrderFireResponse
@@ -30856,7 +30880,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0F_OrderFireResponse),
         "OrderFireResponse")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 30859)
+      XBETWEEN_SYMBOLS_PRD(4, 30883)
 
 /*-----
 * RETURN
@@ -30867,7 +30891,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 30870)
+      XBETWEEN_SYMBOLS_PRD(5, 30894)
 
 /*-----
 * OUTPUT OrderFireResponse
@@ -30894,7 +30918,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0F_OrderFireResponse),
         "OrderFireResponse")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 30897)
+      XBETWEEN_SYMBOLS_PRD(6, 30921)
 
 /*-----
 * RETURN
@@ -30905,7 +30929,7 @@ YPRD_FUNCTION(z198_SendOrderFireResponse)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 30908)
+      XBETWEEN_SYMBOLS_PRD(7, 30932)
 
 /*-----
 * RETURN
@@ -31005,7 +31029,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 31008)
+    XBETWEEN_SYMBOLS_PRD(1, 31032)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -31024,7 +31048,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 31027)
+    XBETWEEN_SYMBOLS_PRD(2, 31051)
 
 /*-----
 * DECISION
@@ -31044,7 +31068,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 31047)
+      XBETWEEN_SYMBOLS_PRD(3, 31071)
 
 /*-----
 * OUTPUT OrderFireReject
@@ -31071,7 +31095,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0G_OrderFireReject),
         "OrderFireReject")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 31074)
+      XBETWEEN_SYMBOLS_PRD(4, 31098)
 
 /*-----
 * RETURN
@@ -31082,7 +31106,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 31085)
+      XBETWEEN_SYMBOLS_PRD(5, 31109)
 
 /*-----
 * OUTPUT OrderFireReject
@@ -31109,7 +31133,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0G_OrderFireReject),
         "OrderFireReject")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 31112)
+      XBETWEEN_SYMBOLS_PRD(6, 31136)
 
 /*-----
 * RETURN
@@ -31120,7 +31144,7 @@ YPRD_FUNCTION(z199_SendOrderFireReject)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 31123)
+      XBETWEEN_SYMBOLS_PRD(7, 31147)
 
 /*-----
 * RETURN
@@ -31217,7 +31241,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 31220)
+    XBETWEEN_SYMBOLS_PRD(1, 31244)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -31236,7 +31260,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 31239)
+    XBETWEEN_SYMBOLS_PRD(2, 31263)
 
 /*-----
 * DECISION
@@ -31256,7 +31280,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 31259)
+      XBETWEEN_SYMBOLS_PRD(3, 31283)
 
 /*-----
 * OUTPUT VisibleShip
@@ -31281,7 +31305,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
         ySigN_z_BasicTypes_0I_VisibleShip, TO_PROCESS(Main1, yPrsN_z22_Main1),
         sizeof(yPDef_z_BasicTypes_0I_VisibleShip), "VisibleShip")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 31284)
+      XBETWEEN_SYMBOLS_PRD(4, 31308)
 
 /*-----
 * RETURN
@@ -31292,7 +31316,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 31295)
+      XBETWEEN_SYMBOLS_PRD(5, 31319)
 
 /*-----
 * OUTPUT VisibleShip
@@ -31317,7 +31341,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
         ySigN_z_BasicTypes_0I_VisibleShip, TO_PROCESS(Main2, yPrsN_z02_Main2),
         sizeof(yPDef_z_BasicTypes_0I_VisibleShip), "VisibleShip")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 31320)
+      XBETWEEN_SYMBOLS_PRD(6, 31344)
 
 /*-----
 * RETURN
@@ -31328,7 +31352,7 @@ YPRD_FUNCTION(z19A_SendDestroyShip)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 31331)
+      XBETWEEN_SYMBOLS_PRD(7, 31355)
 
 /*-----
 * RETURN
@@ -31425,7 +31449,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 31428)
+    XBETWEEN_SYMBOLS_PRD(1, 31452)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -31444,7 +31468,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 31447)
+    XBETWEEN_SYMBOLS_PRD(2, 31471)
 
 /*-----
 * DECISION
@@ -31464,7 +31488,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 31467)
+      XBETWEEN_SYMBOLS_PRD(3, 31491)
 
 /*-----
 * OUTPUT VisibleShip
@@ -31489,7 +31513,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
         ySigN_z_BasicTypes_0I_VisibleShip, TO_PROCESS(Main1, yPrsN_z22_Main1),
         sizeof(yPDef_z_BasicTypes_0I_VisibleShip), "VisibleShip")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 31492)
+      XBETWEEN_SYMBOLS_PRD(4, 31516)
 
 /*-----
 * RETURN
@@ -31500,7 +31524,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 31503)
+      XBETWEEN_SYMBOLS_PRD(5, 31527)
 
 /*-----
 * OUTPUT VisibleShip
@@ -31525,7 +31549,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
         ySigN_z_BasicTypes_0I_VisibleShip, TO_PROCESS(Main2, yPrsN_z02_Main2),
         sizeof(yPDef_z_BasicTypes_0I_VisibleShip), "VisibleShip")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 31528)
+      XBETWEEN_SYMBOLS_PRD(6, 31552)
 
 /*-----
 * RETURN
@@ -31536,7 +31560,7 @@ YPRD_FUNCTION(z19B_SendVisibleShip)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 31539)
+      XBETWEEN_SYMBOLS_PRD(7, 31563)
 
 /*-----
 * RETURN
@@ -31634,7 +31658,7 @@ YPRD_FUNCTION(z19C_SendOrderSpeedRequest)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 31637)
+    XBETWEEN_SYMBOLS_PRD(2, 31661)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -31653,7 +31677,7 @@ YPRD_FUNCTION(z19C_SendOrderSpeedRequest)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(3, 31656)
+    XBETWEEN_SYMBOLS_PRD(3, 31680)
 
 /*-----
 * DECISION
@@ -31673,7 +31697,7 @@ YPRD_FUNCTION(z19C_SendOrderSpeedRequest)
 #else
     if (yVarP->z19U_rASI.A[yVarP->z19M_rStrategyId - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 31676)
+      XBETWEEN_SYMBOLS_PRD(4, 31700)
 
 /*-----
 * OUTPUT OrderSpeedRequest
@@ -31705,7 +31729,7 @@ YPRD_FUNCTION(z19C_SendOrderSpeedRequest)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(5, 31708)
+    XBETWEEN_SYMBOLS_PRD(5, 31732)
 
 /*-----
 * RETURN
@@ -31804,7 +31828,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 31807)
+    XBETWEEN_SYMBOLS_PRD(1, 31831)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -31823,7 +31847,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 31826)
+    XBETWEEN_SYMBOLS_PRD(2, 31850)
 
 /*-----
 * DECISION
@@ -31843,7 +31867,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 31846)
+      XBETWEEN_SYMBOLS_PRD(3, 31870)
 
 /*-----
 * OUTPUT ShipsCurrentState
@@ -31870,7 +31894,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_0H_ShipsCurrentState),
         "ShipsCurrentState")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 31873)
+      XBETWEEN_SYMBOLS_PRD(4, 31897)
 
 /*-----
 * RETURN
@@ -31881,7 +31905,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 31884)
+      XBETWEEN_SYMBOLS_PRD(5, 31908)
 
 /*-----
 * OUTPUT ShipsCurrentState
@@ -31908,7 +31932,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_0H_ShipsCurrentState),
         "ShipsCurrentState")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 31911)
+      XBETWEEN_SYMBOLS_PRD(6, 31935)
 
 /*-----
 * RETURN
@@ -31919,7 +31943,7 @@ YPRD_FUNCTION(z19D_SendShipsCurrentState)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 31922)
+      XBETWEEN_SYMBOLS_PRD(7, 31946)
 
 /*-----
 * RETURN
@@ -32017,7 +32041,7 @@ YPRD_FUNCTION(z19E_SendOrderTurnRequest)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 32020)
+    XBETWEEN_SYMBOLS_PRD(2, 32044)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -32036,7 +32060,7 @@ YPRD_FUNCTION(z19E_SendOrderTurnRequest)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(3, 32039)
+    XBETWEEN_SYMBOLS_PRD(3, 32063)
 
 /*-----
 * DECISION
@@ -32056,7 +32080,7 @@ YPRD_FUNCTION(z19E_SendOrderTurnRequest)
 #else
     if (yVarP->z19U_rASI.A[yVarP->z19M_rStrategyId - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 32059)
+      XBETWEEN_SYMBOLS_PRD(4, 32083)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -32087,7 +32111,7 @@ YPRD_FUNCTION(z19E_SendOrderTurnRequest)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(5, 32090)
+    XBETWEEN_SYMBOLS_PRD(5, 32114)
 
 /*-----
 * RETURN
@@ -32186,7 +32210,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 32189)
+    XBETWEEN_SYMBOLS_PRD(1, 32213)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -32205,7 +32229,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 32208)
+    XBETWEEN_SYMBOLS_PRD(2, 32232)
 
 /*-----
 * DECISION
@@ -32225,7 +32249,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 32228)
+      XBETWEEN_SYMBOLS_PRD(3, 32252)
 
 /*-----
 * OUTPUT StrategyVictory
@@ -32250,7 +32274,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
         yPrsN_z22_Main1), sizeof(yPDef_z_BasicTypes_09_StrategyVictory),
         "StrategyVictory")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 32253)
+      XBETWEEN_SYMBOLS_PRD(4, 32277)
 
 /*-----
 * RETURN
@@ -32261,7 +32285,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 32264)
+      XBETWEEN_SYMBOLS_PRD(5, 32288)
 
 /*-----
 * OUTPUT StrategyVictory
@@ -32286,7 +32310,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
         yPrsN_z02_Main2), sizeof(yPDef_z_BasicTypes_09_StrategyVictory),
         "StrategyVictory")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 32289)
+      XBETWEEN_SYMBOLS_PRD(6, 32313)
 
 /*-----
 * RETURN
@@ -32297,7 +32321,7 @@ YPRD_FUNCTION(z19F_SendStrategyVictory)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 32300)
+      XBETWEEN_SYMBOLS_PRD(7, 32324)
 
 /*-----
 * RETURN
@@ -32395,7 +32419,7 @@ YPRD_FUNCTION(z19G_SendOrderFireRequest)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 32398)
+    XBETWEEN_SYMBOLS_PRD(2, 32422)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -32414,7 +32438,7 @@ YPRD_FUNCTION(z19G_SendOrderFireRequest)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(3, 32417)
+    XBETWEEN_SYMBOLS_PRD(3, 32441)
 
 /*-----
 * DECISION
@@ -32434,7 +32458,7 @@ YPRD_FUNCTION(z19G_SendOrderFireRequest)
 #else
     if (yVarP->z19U_rASI.A[yVarP->z19M_rStrategyId - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 32437)
+      XBETWEEN_SYMBOLS_PRD(4, 32461)
 
 /*-----
 * OUTPUT OrderFireRequest
@@ -32467,7 +32491,7 @@ YPRD_FUNCTION(z19G_SendOrderFireRequest)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(5, 32470)
+    XBETWEEN_SYMBOLS_PRD(5, 32494)
 
 /*-----
 * RETURN
@@ -32563,7 +32587,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 32566)
+    XBETWEEN_SYMBOLS_PRD(1, 32590)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -32582,7 +32606,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 32585)
+    XBETWEEN_SYMBOLS_PRD(2, 32609)
 
 /*-----
 * DECISION
@@ -32602,7 +32626,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(3, 32605)
+      XBETWEEN_SYMBOLS_PRD(3, 32629)
 
 /*-----
 * OUTPUT StrategyLose
@@ -32625,7 +32649,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
         ySigN_z_BasicTypes_0A_StrategyLose, TO_PROCESS(Main1, yPrsN_z22_Main1),
         sizeof(yPDef_z_BasicTypes_0A_StrategyLose), "StrategyLose")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 32628)
+      XBETWEEN_SYMBOLS_PRD(4, 32652)
 
 /*-----
 * RETURN
@@ -32636,7 +32660,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
 #endif
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(5, 32639)
+      XBETWEEN_SYMBOLS_PRD(5, 32663)
 
 /*-----
 * OUTPUT StrategyLose
@@ -32659,7 +32683,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
         ySigN_z_BasicTypes_0A_StrategyLose, TO_PROCESS(Main2, yPrsN_z02_Main2),
         sizeof(yPDef_z_BasicTypes_0A_StrategyLose), "StrategyLose")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(6, 32662)
+      XBETWEEN_SYMBOLS_PRD(6, 32686)
 
 /*-----
 * RETURN
@@ -32670,7 +32694,7 @@ YPRD_FUNCTION(z19H_SendStrategyLose)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 32673)
+      XBETWEEN_SYMBOLS_PRD(7, 32697)
 
 /*-----
 * RETURN
@@ -32768,7 +32792,7 @@ YPRD_FUNCTION(z19I_SendFinishSimulation)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 32771)
+    XBETWEEN_SYMBOLS_PRD(2, 32795)
 
 /*-----
 * ASSIGNMENT rASI := ...
@@ -32787,7 +32811,7 @@ YPRD_FUNCTION(z19I_SendFinishSimulation)
     xMSCEAssign("rASI := ", &(yVarP->z19U_rASI),
       (tSDLTypeInfo *)&ySDL_z1R_tArraySI);
 #endif
-    XBETWEEN_SYMBOLS_PRD(3, 32790)
+    XBETWEEN_SYMBOLS_PRD(3, 32814)
 
 /*-----
 * DECISION
@@ -32807,7 +32831,7 @@ YPRD_FUNCTION(z19I_SendFinishSimulation)
 #else
     if (yVarP->z19U_rASI.A[yVarP->z19M_rStrategyId - SDL_INTEGER_LIT(1)]) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 32810)
+      XBETWEEN_SYMBOLS_PRD(4, 32834)
 
 /*-----
 * OUTPUT FinishSimulation
@@ -32836,7 +32860,7 @@ YPRD_FUNCTION(z19I_SendFinishSimulation)
       SIGNAL_ALLOC_ERROR_END
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(5, 32839)
+    XBETWEEN_SYMBOLS_PRD(5, 32863)
 
 /*-----
 * RETURN
@@ -33353,9 +33377,9 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     CALL_PROCEDURE_STARTUP
 #ifdef XBREAKBEFORE
     if (yVarP->ActivePrd != (xPrdNode)0 ) {
-      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 33356)
+      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 33380)
     } else {
-      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 33358)
+      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 33382)
     }
 #endif
   }
@@ -33375,7 +33399,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
     GenericDefault((void *)&yVarP->z1A0R_gShots,
       (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
-    XBETWEEN_SYMBOLS(25, 33378)
+    XBETWEEN_SYMBOLS(25, 33402)
 
 /*-----
 * CALL SetSI  (from EXPRESSION in next symbol)
@@ -33409,7 +33433,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_STMTS(26, 33412)
+    XBETWEEN_STMTS(26, 33436)
 
 /*-----
 * EXPORT gASI
@@ -33423,7 +33447,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #endif
     yAssF_z1R_tArraySI(yVarP->yExp_z1A0S_gASI, &(yVarP->z1A0S_gASI),
       XASS_MR_ASS_FR);
-    XBETWEEN_SYMBOLS(27, 33426)
+    XBETWEEN_SYMBOLS(27, 33450)
 
 /*-----
 * OUTPUT messageLog
@@ -33442,7 +33466,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
       sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
     SIGNAL_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(28, 33445)
+    XBETWEEN_SYMBOLS(28, 33469)
 
 /*-----
 * CALL InitDataShipsWeaponry  (from EXPRESSION in next symbol)
@@ -33479,7 +33503,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_SYMBOLS(29, 33482)
+    XBETWEEN_SYMBOLS(29, 33506)
 
 /*-----
 * DECISION
@@ -33501,7 +33525,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #else
     if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-      XBETWEEN_SYMBOLS(30, 33504)
+      XBETWEEN_SYMBOLS(30, 33528)
 
 /*-----
 * EXPORT gWeaponryCharacter, gShipsCharacter
@@ -33517,7 +33541,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         &(yVarP->z1A0O_gWeaponryCharacter), XASS_MR_ASS_FR);
       yAssF_z_BasicTypes_10_tArrayShipsCharacter(yVarP->yExp_z1A0P_gShipsCharacter,
         &(yVarP->z1A0P_gShipsCharacter), XASS_MR_ASS_FR);
-      XBETWEEN_SYMBOLS(31, 33520)
+      XBETWEEN_SYMBOLS(31, 33544)
 
 /*-----
 * OUTPUT messageLog
@@ -33536,7 +33560,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
         sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS(32, 33539)
+      XBETWEEN_SYMBOLS(32, 33563)
 
 /*-----
 * CALL InitStrategyFleet  (from EXPRESSION in next symbol)
@@ -33572,7 +33596,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
         (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-      XBETWEEN_SYMBOLS(33, 33575)
+      XBETWEEN_SYMBOLS(33, 33599)
 
 /*-----
 * DECISION
@@ -33594,7 +33618,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #else
       if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-        XBETWEEN_SYMBOLS(34, 33597)
+        XBETWEEN_SYMBOLS(34, 33621)
 
 /*-----
 * EXPORT gShips, gShots
@@ -33610,7 +33634,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
           &(yVarP->z1A0Q_gShips), XASS_MR_ASS_FR);
         yAssF_z1P_tStringShotParameters(yVarP->yExp_z1A0R_gShots,
           &(yVarP->z1A0R_gShots), XASS_MR_ASS_FR);
-        XBETWEEN_SYMBOLS(35, 33613)
+        XBETWEEN_SYMBOLS(35, 33637)
 
 /*-----
 * OUTPUT InitDataComplete
@@ -33633,7 +33657,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 ------*/
         goto L_PM1;
       } else {
-        XBETWEEN_SYMBOLS(36, 33636)
+        XBETWEEN_SYMBOLS(36, 33660)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -33675,7 +33699,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         goto L_QUIT;
       }
     } else {
-      XBETWEEN_SYMBOLS(37, 33678)
+      XBETWEEN_SYMBOLS(37, 33702)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -33727,7 +33751,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     XOS_TRACE_INPUT("InitSocketComplete")
     yAssF_z1Q_tErrorCode(yVarP->z1A0T_errcode, ((yPDef_z1F_InitSocketComplete *)
       ySVarP)->Param1, XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(38, 33730)
+    XBETWEEN_SYMBOLS(38, 33754)
 
 /*-----
 * DECISION
@@ -33749,7 +33773,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #else
     if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-      XBETWEEN_SYMBOLS(39, 33752)
+      XBETWEEN_SYMBOLS(39, 33776)
 
 /*-----
 * OUTPUT messageLog
@@ -33770,7 +33794,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
         sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS(40, 33773)
+      XBETWEEN_SYMBOLS(40, 33797)
 
 /*-----
 * CALL SendCurrentState
@@ -33785,7 +33809,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       CALL_PROCEDURE(z1A09_SendCurrentState, yPrdN_z1A09_SendCurrentState, 0,
         11)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_STMTS(11, 33788)
+      XBETWEEN_STMTS(11, 33812)
 
 /*-----
 * CALL SetVisibility
@@ -33799,7 +33823,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       PROCEDURE_ALLOC_ERROR
       CALL_PROCEDURE(z1A08_SetVisibility, yPrdN_z1A08_SetVisibility, 0, 12)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_STMTS(12, 33802)
+      XBETWEEN_STMTS(12, 33826)
 
 /*-----
 * CALL SendVisibleShips
@@ -33814,7 +33838,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       CALL_PROCEDURE(z1A0A_SendVisibleShips, yPrdN_z1A0A_SendVisibleShips, 0,
         13)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_STMTS(13, 33817)
+      XBETWEEN_STMTS(13, 33841)
 
 /*-----
 * EXPORT gShips, gShots
@@ -33830,7 +33854,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         &(yVarP->z1A0Q_gShips), XASS_MR_ASS_FR);
       yAssF_z1P_tStringShotParameters(yVarP->yExp_z1A0R_gShots,
         &(yVarP->z1A0R_gShots), XASS_MR_ASS_FR);
-      XBETWEEN_SYMBOLS(41, 33833)
+      XBETWEEN_SYMBOLS(41, 33857)
 
 /*-----
 * OUTPUT SendData
@@ -33846,7 +33870,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         ySigN_z1C_SendData, TO_PROCESS(DataSender, yPrsN_z1B_DataSender), 0,
         "SendData")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS(42, 33849)
+      XBETWEEN_SYMBOLS(42, 33873)
 
 /*-----
 * NEXTSTATE WaitSendData1
@@ -33858,7 +33882,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       XAT_LAST_SYMBOL
       SDL_NEXTSTATE(WaitSendData1, z1A0I_WaitSendData1, "WaitSendData1")
     } else {
-      XBETWEEN_SYMBOLS(43, 33861)
+      XBETWEEN_SYMBOLS(43, 33885)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -33877,7 +33901,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS(44, 33880)
+      XBETWEEN_SYMBOLS(44, 33904)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -33929,7 +33953,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     XOS_TRACE_INPUT("SendDataComplete")
     yAssF_z1Q_tErrorCode(yVarP->z1A0T_errcode, ((yPDef_z1E_SendDataComplete *)
       ySVarP)->Param1, XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(45, 33932)
+    XBETWEEN_SYMBOLS(45, 33956)
 
 /*-----
 * DECISION
@@ -33951,7 +33975,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #else
     if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-      XBETWEEN_SYMBOLS(46, 33954)
+      XBETWEEN_SYMBOLS(46, 33978)
 
 /*-----
 * ASSIGNMENT simtime := ...
@@ -33970,7 +33994,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       xMSCEAssign("simtime := ", &(yVarP->z1A0V_simtime),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS(47, 33973)
+      XBETWEEN_STMTS(47, 33997)
 
 /*-----
 * ASSIGNMENT victory := ...
@@ -33988,7 +34012,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       xMSCEAssign("victory := ", &(yVarP->z1A0W_victory),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS(48, 33991)
+      XBETWEEN_SYMBOLS(48, 34015)
 
 /*-----
 * OUTPUT messageLog
@@ -34014,7 +34038,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 ------*/
       goto L_PM2;
     } else {
-      XBETWEEN_SYMBOLS(49, 34017)
+      XBETWEEN_SYMBOLS(49, 34041)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -34033,7 +34057,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS(50, 34036)
+      XBETWEEN_SYMBOLS(50, 34060)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -34086,7 +34110,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #ifdef XRELEASE_SIGNAL_PARS
     XRELEASE_SIGNAL_PARS
 #endif
-    XBETWEEN_SYMBOLS(53, 34089)
+    XBETWEEN_SYMBOLS(53, 34113)
 
 /*-----
 * NEXTSTATE -
@@ -34108,7 +34132,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     XOS_TRACE_INPUT("SendDataComplete")
     yAssF_z1Q_tErrorCode(yVarP->z1A0T_errcode, ((yPDef_z1E_SendDataComplete *)
       ySVarP)->Param1, XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(54, 34111)
+    XBETWEEN_SYMBOLS(54, 34135)
 
 /*-----
 * DECISION
@@ -34129,12 +34153,12 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #endif
 
 /*-----
-* JOIN grst0
+* JOIN grst10
 * #SDTREF(SDL,C:\Battleships\Simulator\Main.spr(4),1889(60,145),0)
 ------*/
-      goto L_grst0;
+      goto L_grst10;
     } else {
-      XBETWEEN_SYMBOLS(55, 34137)
+      XBETWEEN_SYMBOLS(55, 34161)
 
 /*-----
 * DECISION
@@ -34156,7 +34180,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #else
       if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-        XBETWEEN_SYMBOLS(56, 34159)
+        XBETWEEN_SYMBOLS(56, 34183)
 
 /*-----
 * OUTPUT messageLog
@@ -34177,7 +34201,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
           ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
           sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS(57, 34180)
+        XBETWEEN_SYMBOLS(57, 34204)
 
 /*-----
 * CALL SendCurrentState
@@ -34192,7 +34216,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         CALL_PROCEDURE(z1A09_SendCurrentState, yPrdN_z1A09_SendCurrentState, 0,
           16)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_STMTS(16, 34195)
+        XBETWEEN_STMTS(16, 34219)
 
 /*-----
 * CALL SetVisibility
@@ -34206,7 +34230,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         PROCEDURE_ALLOC_ERROR
         CALL_PROCEDURE(z1A08_SetVisibility, yPrdN_z1A08_SetVisibility, 0, 17)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_STMTS(17, 34209)
+        XBETWEEN_STMTS(17, 34233)
 
 /*-----
 * CALL SendVisibleShips
@@ -34221,7 +34245,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         CALL_PROCEDURE(z1A0A_SendVisibleShips, yPrdN_z1A0A_SendVisibleShips, 0,
           18)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_STMTS(18, 34224)
+        XBETWEEN_STMTS(18, 34248)
 
 /*-----
 * EXPORT gShips, gShots
@@ -34244,7 +34268,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 ------*/
         goto L_PM3;
       } else {
-        XBETWEEN_SYMBOLS(58, 34247)
+        XBETWEEN_SYMBOLS(58, 34271)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -34263,7 +34287,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS(59, 34266)
+        XBETWEEN_SYMBOLS(59, 34290)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -34306,8 +34330,8 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       }
     }
 
-  L_grst0:;
-    XBETWEEN_SYMBOLS(60, 34310)
+  L_grst10:;
+    XBETWEEN_SYMBOLS(60, 34334)
 
 /*-----
 * CALL FreeAll
@@ -34323,7 +34347,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     xMSCETask("CALL EXTERNAL FreeAll");
 #endif
     FreeAll();
-    XBETWEEN_SYMBOLS(20, 34326)
+    XBETWEEN_SYMBOLS(20, 34350)
 
 /*-----
 * NEXTSTATE FIN
@@ -34353,7 +34377,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     goto L_QUIT;
 
   L_PM1:;
-    XBETWEEN_SYMBOLS(51, 34356)
+    XBETWEEN_SYMBOLS(51, 34380)
 
 /*-----
 * OUTPUT InitSocket
@@ -34369,7 +34393,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       ySigN_z1D_InitSocket, TO_PROCESS(DataSender, yPrsN_z1B_DataSender), 0,
       "InitSocket")
     SIGNAL_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(52, 34372)
+    XBETWEEN_SYMBOLS(52, 34396)
 
 /*-----
 * NEXTSTATE WaitSocketInit
@@ -34382,7 +34406,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     SDL_NEXTSTATE(WaitSocketInit, z1A0H_WaitSocketInit, "WaitSocketInit")
 
   L_PM2:;
-    XBETWEEN_SYMBOLS(61, 34385)
+    XBETWEEN_SYMBOLS(61, 34409)
 
 /*-----
 * OUTPUT StartSimulation
@@ -34402,7 +34426,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_03_StartSimulation),
       "StartSimulation")
     SIGNAL_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(62, 34405)
+    XBETWEEN_SYMBOLS(62, 34429)
 
 /*-----
 * CALL SimIteration  (from EXPRESSION in next symbol)
@@ -34437,7 +34461,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_STMTS(63, 34440)
+    XBETWEEN_STMTS(63, 34464)
 
 /*-----
 * EXPORT gASI
@@ -34451,7 +34475,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #endif
     yAssF_z1R_tArraySI(yVarP->yExp_z1A0S_gASI, &(yVarP->z1A0S_gASI),
       XASS_MR_ASS_FR);
-    XBETWEEN_SYMBOLS(64, 34454)
+    XBETWEEN_SYMBOLS(64, 34478)
 
 /*-----
 * DECISION
@@ -34473,7 +34497,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 #else
     if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-      XBETWEEN_SYMBOLS(65, 34476)
+      XBETWEEN_SYMBOLS(65, 34500)
 
 /*-----
 * EXPORT gShips, gShots
@@ -34489,7 +34513,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         &(yVarP->z1A0Q_gShips), XASS_MR_ASS_FR);
       yAssF_z1P_tStringShotParameters(yVarP->yExp_z1A0R_gShots,
         &(yVarP->z1A0R_gShots), XASS_MR_ASS_FR);
-      XBETWEEN_STMTS(66, 34492)
+      XBETWEEN_STMTS(66, 34516)
 
 /*-----
 * ASSIGNMENT simtime := ...
@@ -34508,7 +34532,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       xMSCEAssign("simtime := ", &(yVarP->z1A0V_simtime),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS(67, 34511)
+      XBETWEEN_SYMBOLS(67, 34535)
 
 /*-----
 * OUTPUT SendData
@@ -34524,7 +34548,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         ySigN_z1C_SendData, TO_PROCESS(DataSender, yPrsN_z1B_DataSender), 0,
         "SendData")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS(68, 34527)
+      XBETWEEN_SYMBOLS(68, 34551)
 
 /*-----
 * NEXTSTATE WaitSendData2
@@ -34536,7 +34560,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       XAT_LAST_SYMBOL
       SDL_NEXTSTATE(WaitSendData2, z1A0K_WaitSendData2, "WaitSendData2")
     } else {
-      XBETWEEN_SYMBOLS(69, 34539)
+      XBETWEEN_SYMBOLS(69, 34563)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -34579,7 +34603,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     }
 
   L_QUIT:;
-    XBETWEEN_SYMBOLS(70, 34582)
+    XBETWEEN_SYMBOLS(70, 34606)
 
 /*-----
 * CALL KillStrategy  (from EXPRESSION in next symbol)
@@ -34614,7 +34638,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_STMTS(71, 34617)
+    XBETWEEN_STMTS(71, 34641)
 
 /*-----
 * EXPORT gASI
@@ -34630,13 +34654,13 @@ YPAD_FUNCTION(yPAD_z1A_Main)
       XASS_MR_ASS_FR);
 
 /*-----
-* JOIN grst0
+* JOIN grst10
 * #SDTREF(SDL,C:\Battleships\Simulator\Main.spr(4),1820(5,160),1)
 ------*/
-    goto L_grst0;
+    goto L_grst10;
 
   L_PM3:;
-    XBETWEEN_SYMBOLS(72, 34639)
+    XBETWEEN_SYMBOLS(72, 34663)
 
 /*-----
 * CALL IsWeaponry  (from EXPRESSION in next symbol)
@@ -34683,7 +34707,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
 ------*/
       goto L_PM2;
     } else {
-      XBETWEEN_SYMBOLS(73, 34686)
+      XBETWEEN_SYMBOLS(73, 34710)
 
 /*-----
 * OUTPUT messageLog
@@ -34701,7 +34725,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
         sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS(74, 34704)
+      XBETWEEN_SYMBOLS(74, 34728)
 
 /*-----
 * OUTPUT SendData
@@ -34717,7 +34741,7 @@ YPAD_FUNCTION(yPAD_z1A_Main)
         ySigN_z1C_SendData, TO_PROCESS(DataSender, yPrsN_z1B_DataSender), 0,
         "SendData")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS(75, 34720)
+      XBETWEEN_SYMBOLS(75, 34744)
 
 /*-----
 * NEXTSTATE WaitSendData3
@@ -35076,7 +35100,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(7, 35079)
+    XBETWEEN_SYMBOLS_PRD(7, 35103)
 
 /*-----
 * ASSIGNMENT srcFile := ...
@@ -35097,7 +35121,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
     xMSCEAssign("srcFile := ", &(((yVDef_z1A06_InitDataShipsWeaponry *)
       yPrdVarP)->z1A062_srcFile), (tSDLTypeInfo *)&ySDL_TextFile);
 #endif
-    XBETWEEN_SYMBOLS_PRD(8, 35100)
+    XBETWEEN_SYMBOLS_PRD(8, 35124)
 
 /*-----
 * DECISION
@@ -35117,7 +35141,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
 #else
     if (yEqF_TextFile(yPrdVarP->z1A062_srcFile, TextFileNull())) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(9, 35120)
+      XBETWEEN_SYMBOLS_PRD(9, 35144)
 
 /*-----
 * ASSIGNMENT srcFile := ...
@@ -35137,7 +35161,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       xMSCEAssign("srcFile := ", &(((yVDef_z1A06_InitDataShipsWeaponry *)
         yPrdVarP)->z1A062_srcFile), (tSDLTypeInfo *)&ySDL_TextFile);
 #endif
-      XBETWEEN_STMTS_PRD(10, 35140)
+      XBETWEEN_STMTS_PRD(10, 35164)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -35156,7 +35180,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 35159)
+      XBETWEEN_SYMBOLS_PRD(11, 35183)
 
 /*-----
 * RETURN
@@ -35169,7 +35193,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(12, 35172)
+      XBETWEEN_SYMBOLS_PRD(12, 35196)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35193,7 +35217,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R0_MISSILE].Power),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1A_tWCPower);
 #endif
-      XBETWEEN_STMTS_PRD(13, 35196)
+      XBETWEEN_STMTS_PRD(13, 35220)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35217,7 +35241,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R0_MISSILE].Range),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1B_tWCRange);
 #endif
-      XBETWEEN_STMTS_PRD(14, 35220)
+      XBETWEEN_STMTS_PRD(14, 35244)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35241,7 +35265,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R0_MISSILE].Speed),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1C_tWCSpeed);
 #endif
-      XBETWEEN_STMTS_PRD(15, 35244)
+      XBETWEEN_STMTS_PRD(15, 35268)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35265,7 +35289,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R1_TORPEDO].Power),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1A_tWCPower);
 #endif
-      XBETWEEN_STMTS_PRD(16, 35268)
+      XBETWEEN_STMTS_PRD(16, 35292)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35289,7 +35313,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R1_TORPEDO].Range),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1B_tWCRange);
 #endif
-      XBETWEEN_STMTS_PRD(17, 35292)
+      XBETWEEN_STMTS_PRD(17, 35316)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35313,7 +35337,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R1_TORPEDO].Speed),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1C_tWCSpeed);
 #endif
-      XBETWEEN_STMTS_PRD(18, 35316)
+      XBETWEEN_STMTS_PRD(18, 35340)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35337,7 +35361,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R2_SHELL].Power),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1A_tWCPower);
 #endif
-      XBETWEEN_STMTS_PRD(19, 35340)
+      XBETWEEN_STMTS_PRD(19, 35364)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35361,7 +35385,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R2_SHELL].Range),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1B_tWCRange);
 #endif
-      XBETWEEN_STMTS_PRD(20, 35364)
+      XBETWEEN_STMTS_PRD(20, 35388)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35385,7 +35409,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R2_SHELL].Speed),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1C_tWCSpeed);
 #endif
-      XBETWEEN_STMTS_PRD(21, 35388)
+      XBETWEEN_STMTS_PRD(21, 35412)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35409,7 +35433,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R3_REPAIR].Power),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1A_tWCPower);
 #endif
-      XBETWEEN_STMTS_PRD(22, 35412)
+      XBETWEEN_STMTS_PRD(22, 35436)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35433,7 +35457,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R3_REPAIR].Range),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1B_tWCRange);
 #endif
-      XBETWEEN_STMTS_PRD(23, 35436)
+      XBETWEEN_STMTS_PRD(23, 35460)
 
 /*-----
 * ASSIGNMENT gWeaponryCharacter... := ...
@@ -35457,7 +35481,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         z1A0O_gWeaponryCharacter.A[z_BasicTypes_0R3_REPAIR].Speed),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1C_tWCSpeed);
 #endif
-      XBETWEEN_SYMBOLS_PRD(24, 35460)
+      XBETWEEN_SYMBOLS_PRD(24, 35484)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35481,7 +35505,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].Range),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_16_tSCRange);
 #endif
-      XBETWEEN_STMTS_PRD(25, 35484)
+      XBETWEEN_STMTS_PRD(25, 35508)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35505,7 +35529,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].MaxSpeed),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-      XBETWEEN_STMTS_PRD(26, 35508)
+      XBETWEEN_STMTS_PRD(26, 35532)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35530,7 +35554,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].MaxAcceleration),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_18_tSCMaxAcceleration);
 #endif
-      XBETWEEN_STMTS_PRD(27, 35533)
+      XBETWEEN_STMTS_PRD(27, 35557)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35555,7 +35579,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].MaxResource),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-      XBETWEEN_STMTS_PRD(28, 35558)
+      XBETWEEN_STMTS_PRD(28, 35582)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35582,7 +35606,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0R0_MISSILE]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(29, 35585)
+      XBETWEEN_STMTS_PRD(29, 35609)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35609,7 +35633,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0R1_TORPEDO]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(30, 35612)
+      XBETWEEN_STMTS_PRD(30, 35636)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35633,7 +35657,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].MaxAmmunition.A[z_BasicTypes_0R2_SHELL]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(31, 35636)
+      XBETWEEN_STMTS_PRD(31, 35660)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35659,7 +35683,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0R3_REPAIR]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(32, 35662)
+      XBETWEEN_STMTS_PRD(32, 35686)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35686,7 +35710,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0R0_MISSILE]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(33, 35689)
+      XBETWEEN_STMTS_PRD(33, 35713)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35713,7 +35737,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0R1_TORPEDO]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(34, 35716)
+      XBETWEEN_STMTS_PRD(34, 35740)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35737,7 +35761,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].MaxLaunchUnit.A[z_BasicTypes_0R2_SHELL]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(35, 35740)
+      XBETWEEN_STMTS_PRD(35, 35764)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35763,7 +35787,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0R3_REPAIR]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(36, 35766)
+      XBETWEEN_STMTS_PRD(36, 35790)
 
 /*-----
 * OPERATOR CALL i2d  (from EXPRESSION in next symbol)
@@ -35805,7 +35829,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S0_BATTLESHIP].MaxDeep),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0Q_tDeep);
 #endif
-      XBETWEEN_STMTS_PRD(37, 35808)
+      XBETWEEN_STMTS_PRD(37, 35832)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35829,7 +35853,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].Range),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_16_tSCRange);
 #endif
-      XBETWEEN_STMTS_PRD(38, 35832)
+      XBETWEEN_STMTS_PRD(38, 35856)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35853,7 +35877,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxSpeed),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-      XBETWEEN_STMTS_PRD(39, 35856)
+      XBETWEEN_STMTS_PRD(39, 35880)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35878,7 +35902,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxAcceleration),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_18_tSCMaxAcceleration);
 #endif
-      XBETWEEN_STMTS_PRD(40, 35881)
+      XBETWEEN_STMTS_PRD(40, 35905)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35903,7 +35927,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxResource),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-      XBETWEEN_STMTS_PRD(41, 35906)
+      XBETWEEN_STMTS_PRD(41, 35930)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35927,7 +35951,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxAmmunition.A[z_BasicTypes_0R0_MISSILE]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(42, 35930)
+      XBETWEEN_STMTS_PRD(42, 35954)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35951,7 +35975,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxAmmunition.A[z_BasicTypes_0R1_TORPEDO]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(43, 35954)
+      XBETWEEN_STMTS_PRD(43, 35978)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35975,7 +35999,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxAmmunition.A[z_BasicTypes_0R2_SHELL]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(44, 35978)
+      XBETWEEN_STMTS_PRD(44, 36002)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -35999,7 +36023,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxAmmunition.A[z_BasicTypes_0R3_REPAIR]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(45, 36002)
+      XBETWEEN_STMTS_PRD(45, 36026)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36023,7 +36047,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxLaunchUnit.A[z_BasicTypes_0R0_MISSILE]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(46, 36026)
+      XBETWEEN_STMTS_PRD(46, 36050)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36047,7 +36071,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxLaunchUnit.A[z_BasicTypes_0R1_TORPEDO]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(47, 36050)
+      XBETWEEN_STMTS_PRD(47, 36074)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36071,7 +36095,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxLaunchUnit.A[z_BasicTypes_0R2_SHELL]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(48, 36074)
+      XBETWEEN_STMTS_PRD(48, 36098)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36095,7 +36119,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
         [z_BasicTypes_0S1_CRUISER].MaxLaunchUnit.A[z_BasicTypes_0R3_REPAIR]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(49, 36098)
+      XBETWEEN_STMTS_PRD(49, 36122)
 
 /*-----
 * OPERATOR CALL i2d  (from EXPRESSION in next symbol)
@@ -36147,7 +36171,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
 
   case 1:
   L_L1:;
-    XBETWEEN_SYMBOLS_PRD(50, 36150)
+    XBETWEEN_SYMBOLS_PRD(50, 36174)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36171,7 +36195,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].Range),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_16_tSCRange);
 #endif
-    XBETWEEN_STMTS_PRD(51, 36174)
+    XBETWEEN_STMTS_PRD(51, 36198)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36195,7 +36219,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxSpeed),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(52, 36198)
+    XBETWEEN_STMTS_PRD(52, 36222)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36220,7 +36244,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxAcceleration),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_18_tSCMaxAcceleration);
 #endif
-    XBETWEEN_STMTS_PRD(53, 36223)
+    XBETWEEN_STMTS_PRD(53, 36247)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36244,7 +36268,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxResource),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-    XBETWEEN_STMTS_PRD(54, 36247)
+    XBETWEEN_STMTS_PRD(54, 36271)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36268,7 +36292,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxAmmunition.A[z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(55, 36271)
+    XBETWEEN_STMTS_PRD(55, 36295)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36292,7 +36316,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxAmmunition.A[z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(56, 36295)
+    XBETWEEN_STMTS_PRD(56, 36319)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36316,7 +36340,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxAmmunition.A[z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(57, 36319)
+    XBETWEEN_STMTS_PRD(57, 36343)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36340,7 +36364,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxAmmunition.A[z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(58, 36343)
+    XBETWEEN_STMTS_PRD(58, 36367)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36364,7 +36388,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxLaunchUnit.A[z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(59, 36367)
+    XBETWEEN_STMTS_PRD(59, 36391)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36388,7 +36412,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxLaunchUnit.A[z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(60, 36391)
+    XBETWEEN_STMTS_PRD(60, 36415)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36412,7 +36436,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxLaunchUnit.A[z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(61, 36415)
+    XBETWEEN_STMTS_PRD(61, 36439)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36436,7 +36460,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxLaunchUnit.A[z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(62, 36439)
+    XBETWEEN_STMTS_PRD(62, 36463)
 
 /*-----
 * OPERATOR CALL i2d  (from EXPRESSION in next symbol)
@@ -36478,7 +36502,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S2_DESTROYER].MaxDeep),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0Q_tDeep);
 #endif
-    XBETWEEN_STMTS_PRD(63, 36481)
+    XBETWEEN_STMTS_PRD(63, 36505)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36502,7 +36526,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S3_MISSILE_CUTTER].Range),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_16_tSCRange);
 #endif
-    XBETWEEN_STMTS_PRD(64, 36505)
+    XBETWEEN_STMTS_PRD(64, 36529)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36526,7 +36550,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S3_MISSILE_CUTTER].MaxSpeed),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(65, 36529)
+    XBETWEEN_STMTS_PRD(65, 36553)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36551,7 +36575,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S3_MISSILE_CUTTER].MaxAcceleration),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_18_tSCMaxAcceleration);
 #endif
-    XBETWEEN_STMTS_PRD(66, 36554)
+    XBETWEEN_STMTS_PRD(66, 36578)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36575,7 +36599,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S3_MISSILE_CUTTER].MaxResource),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-    XBETWEEN_STMTS_PRD(67, 36578)
+    XBETWEEN_STMTS_PRD(67, 36602)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36602,7 +36626,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(68, 36605)
+    XBETWEEN_STMTS_PRD(68, 36629)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36629,7 +36653,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(69, 36632)
+    XBETWEEN_STMTS_PRD(69, 36656)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36656,7 +36680,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(70, 36659)
+    XBETWEEN_STMTS_PRD(70, 36683)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36683,7 +36707,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(71, 36686)
+    XBETWEEN_STMTS_PRD(71, 36710)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36710,7 +36734,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(72, 36713)
+    XBETWEEN_STMTS_PRD(72, 36737)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36737,7 +36761,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(73, 36740)
+    XBETWEEN_STMTS_PRD(73, 36764)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36764,7 +36788,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(74, 36767)
+    XBETWEEN_STMTS_PRD(74, 36791)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36791,7 +36815,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(75, 36794)
+    XBETWEEN_STMTS_PRD(75, 36818)
 
 /*-----
 * OPERATOR CALL i2d  (from EXPRESSION in next symbol)
@@ -36833,7 +36857,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S3_MISSILE_CUTTER].MaxDeep),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0Q_tDeep);
 #endif
-    XBETWEEN_STMTS_PRD(76, 36836)
+    XBETWEEN_STMTS_PRD(76, 36860)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36857,7 +36881,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].Range),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_16_tSCRange);
 #endif
-    XBETWEEN_STMTS_PRD(77, 36860)
+    XBETWEEN_STMTS_PRD(77, 36884)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36881,7 +36905,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxSpeed),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(78, 36884)
+    XBETWEEN_STMTS_PRD(78, 36908)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36906,7 +36930,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxAcceleration),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_18_tSCMaxAcceleration);
 #endif
-    XBETWEEN_STMTS_PRD(79, 36909)
+    XBETWEEN_STMTS_PRD(79, 36933)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36930,7 +36954,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxResource),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-    XBETWEEN_STMTS_PRD(80, 36933)
+    XBETWEEN_STMTS_PRD(80, 36957)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36956,7 +36980,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(81, 36959)
+    XBETWEEN_STMTS_PRD(81, 36983)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -36982,7 +37006,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(82, 36985)
+    XBETWEEN_STMTS_PRD(82, 37009)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -37006,7 +37030,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxAmmunition.A[z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(83, 37009)
+    XBETWEEN_STMTS_PRD(83, 37033)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -37030,7 +37054,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxAmmunition.A[z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(84, 37033)
+    XBETWEEN_STMTS_PRD(84, 37057)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -37056,7 +37080,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(85, 37059)
+    XBETWEEN_STMTS_PRD(85, 37083)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -37082,7 +37106,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(86, 37085)
+    XBETWEEN_STMTS_PRD(86, 37109)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -37106,7 +37130,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxLaunchUnit.A[z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(87, 37109)
+    XBETWEEN_STMTS_PRD(87, 37133)
 
 /*-----
 * ASSIGNMENT gShipsCharacter... := ...
@@ -37130,7 +37154,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxLaunchUnit.A[z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1E_tLUWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(88, 37133)
+    XBETWEEN_STMTS_PRD(88, 37157)
 
 /*-----
 * OPERATOR CALL i2d  (from EXPRESSION in next symbol)
@@ -37172,7 +37196,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
       [z_BasicTypes_0S4_REPAIR_BOAT].MaxDeep),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0Q_tDeep);
 #endif
-    XBETWEEN_SYMBOLS_PRD(89, 37175)
+    XBETWEEN_SYMBOLS_PRD(89, 37199)
 
 /*-----
 * ASSIGNMENT srcFile := ...
@@ -37192,7 +37216,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
     xMSCEAssign("srcFile := ", &(((yVDef_z1A06_InitDataShipsWeaponry *)
       yPrdVarP)->z1A062_srcFile), (tSDLTypeInfo *)&ySDL_TextFile);
 #endif
-    XBETWEEN_STMTS_PRD(90, 37195)
+    XBETWEEN_STMTS_PRD(90, 37219)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -37210,7 +37234,7 @@ YPRD_FUNCTION(z1A06_InitDataShipsWeaponry)
     xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
       (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-    XBETWEEN_SYMBOLS_PRD(91, 37213)
+    XBETWEEN_SYMBOLS_PRD(91, 37237)
 
 /*-----
 * RETURN
@@ -37471,7 +37495,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(13, 37474)
+    XBETWEEN_SYMBOLS_PRD(13, 37498)
 
 /*-----
 * DECISION
@@ -37490,7 +37514,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 #else
     if (yEqF_SDL_Integer(checkMap(), SDL_INTEGER_LIT(1))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(14, 37493)
+      XBETWEEN_SYMBOLS_PRD(14, 37517)
 
 /*-----
 * CALL InitRD  (from EXPRESSION in next symbol)
@@ -37525,7 +37549,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
         (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-      XBETWEEN_SYMBOLS_PRD(15, 37528)
+      XBETWEEN_SYMBOLS_PRD(15, 37552)
 
 /*-----
 * DECISION
@@ -37548,7 +37572,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         yPrdVarP->z1A07J_Deep, z_BasicTypes_20_AmountStrategy),
         SDL_INTEGER_LIT(1))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(16, 37551)
+        XBETWEEN_SYMBOLS_PRD(16, 37575)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -37571,7 +37595,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
           yPrdVarP)->z1A07B_shipParam.Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(17, 37574)
+        XBETWEEN_STMTS_PRD(17, 37598)
 
 /*-----
 * ASSIGNMENT shipId := ...
@@ -37590,7 +37614,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         xMSCEAssign("shipId := ", &(((yVDef_z1A07_InitStrategyFleet *)
           yPrdVarP)->z1A07D_shipId), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(18, 37593)
+        XBETWEEN_STMTS_PRD(18, 37617)
 
 /*-----
 * ASSIGNMENT nAS := ...
@@ -37611,12 +37635,12 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 #endif
 
 /*-----
-* JOIN grst1
+* JOIN grst11
 * #SDTREF(SDL,C:\Battleships\Simulator\InitStrategyFleet.spd(1),236(95,100),0)
 ------*/
-        goto L_grst1;
+        goto L_grst11;
       } else {
-        XBETWEEN_SYMBOLS_PRD(19, 37619)
+        XBETWEEN_SYMBOLS_PRD(19, 37643)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -37635,7 +37659,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS_PRD(20, 37638)
+        XBETWEEN_SYMBOLS_PRD(20, 37662)
 
 /*-----
 * RETURN
@@ -37649,7 +37673,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         SDL_RETURN
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(21, 37652)
+      XBETWEEN_SYMBOLS_PRD(21, 37676)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -37668,7 +37692,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(22, 37671)
+      XBETWEEN_SYMBOLS_PRD(22, 37695)
 
 /*-----
 * RETURN
@@ -37683,8 +37707,8 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
     }
 
   case 1:
-  L_grst1:;
-    XBETWEEN_SYMBOLS_PRD(23, 37687)
+  L_grst11:;
+    XBETWEEN_SYMBOLS_PRD(23, 37711)
 
 /*-----
 * DECISION
@@ -37704,7 +37728,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A07E_nAS, z_BasicTypes_20_AmountStrategy)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(26, 37707)
+      XBETWEEN_SYMBOLS_PRD(26, 37731)
 
 /*-----
 * OUTPUT messageLog
@@ -37723,7 +37747,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
         sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(27, 37726)
+      XBETWEEN_SYMBOLS_PRD(27, 37750)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -37746,7 +37770,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         yPrdVarP)->z1A07B_shipParam.StrategyId),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1J_tStrategyId);
 #endif
-      XBETWEEN_STMTS_PRD(28, 37749)
+      XBETWEEN_STMTS_PRD(28, 37773)
 
 /*-----
 * ASSIGNMENT nST := ...
@@ -37765,7 +37789,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       xMSCEAssign("nST := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP)->
         z1A07F_nST), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(29, 37768)
+      XBETWEEN_SYMBOLS_PRD(29, 37792)
 
 /*-----
 * ASSIGNMENT pX := ...
@@ -37785,7 +37809,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       xMSCEAssign("pX := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP)->
         z1A07K_pX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(30, 37788)
+      XBETWEEN_STMTS_PRD(30, 37812)
 
 /*-----
 * ASSIGNMENT pY := ...
@@ -37812,7 +37836,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 ------*/
       goto L_ISF1;
     } else {
-      XBETWEEN_SYMBOLS_PRD(24, 37815)
+      XBETWEEN_SYMBOLS_PRD(24, 37839)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -37831,7 +37855,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(25, 37834)
+      XBETWEEN_SYMBOLS_PRD(25, 37858)
 
 /*-----
 * RETURN
@@ -37847,7 +37871,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 
   case 2:
   L_ISF1:;
-    XBETWEEN_SYMBOLS_PRD(31, 37850)
+    XBETWEEN_SYMBOLS_PRD(31, 37874)
 
 /*-----
 * DECISION
@@ -37874,7 +37898,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 ------*/
       goto L_ISF2;
     } else {
-      XBETWEEN_SYMBOLS_PRD(32, 37877)
+      XBETWEEN_SYMBOLS_PRD(32, 37901)
 
 /*-----
 * ASSIGNMENT nAS := ...
@@ -37897,14 +37921,14 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
     }
 
 /*-----
-* JOIN grst1
+* JOIN grst11
 * #SDTREF(SDL,C:\Battleships\Simulator\InitStrategyFleet.spd(1),248(95,130),1)
 ------*/
-    goto L_grst1;
+    goto L_grst11;
 
   case 4:
   L_ISF2:;
-    XBETWEEN_SYMBOLS_PRD(33, 37907)
+    XBETWEEN_SYMBOLS_PRD(33, 37931)
 
 /*-----
 * OPERATOR CALL i2ns  (from EXPRESSION in next symbol)
@@ -37943,7 +37967,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
     xMSCEAssign("shipType := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP)->
       z1A07C_shipType), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(34, 37946)
+    XBETWEEN_SYMBOLS_PRD(34, 37970)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -37965,7 +37989,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       yPrdVarP)->z1A07B_shipParam.TypeShip),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_STMTS_PRD(35, 37968)
+    XBETWEEN_STMTS_PRD(35, 37992)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -37989,7 +38013,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       yPrdVarP)->z1A07B_shipParam.Resource),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-    XBETWEEN_STMTS_PRD(36, 37992)
+    XBETWEEN_STMTS_PRD(36, 38016)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -38013,7 +38037,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       yPrdVarP)->z1A07B_shipParam.Ammunition.A[z_BasicTypes_0R0_MISSILE]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(37, 38016)
+    XBETWEEN_STMTS_PRD(37, 38040)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -38037,7 +38061,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       yPrdVarP)->z1A07B_shipParam.Ammunition.A[z_BasicTypes_0R1_TORPEDO]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(38, 38040)
+    XBETWEEN_STMTS_PRD(38, 38064)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -38061,7 +38085,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       yPrdVarP)->z1A07B_shipParam.Ammunition.A[z_BasicTypes_0R2_SHELL]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(39, 38064)
+    XBETWEEN_STMTS_PRD(39, 38088)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -38085,7 +38109,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       yPrdVarP)->z1A07B_shipParam.Ammunition.A[z_BasicTypes_0R3_REPAIR]),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-    XBETWEEN_STMTS_PRD(40, 38088)
+    XBETWEEN_STMTS_PRD(40, 38112)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -38124,7 +38148,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
     xMSCEAssign("Deep := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP)->
       z1A07J_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(41, 38127)
+    XBETWEEN_STMTS_PRD(41, 38151)
 
 /*-----
 * CALL GetMaxShips  (from EXPRESSION in next symbol)
@@ -38162,7 +38186,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
     xMSCEAssign("maxShips := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP)->
       z1A07H_maxShips), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(42, 38165)
+    XBETWEEN_STMTS_PRD(42, 38189)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -38183,8 +38207,8 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 #endif
 
   case 5:
-  L_grst2:;
-    XBETWEEN_SYMBOLS_PRD(43, 38187)
+  L_grst12:;
+    XBETWEEN_SYMBOLS_PRD(43, 38211)
 
 /*-----
 * DECISION
@@ -38204,7 +38228,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A07G_i, yPrdVarP->z1A07H_maxShips)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(45, 38207)
+      XBETWEEN_SYMBOLS_PRD(45, 38231)
 
 /*-----
 * ASSIGNMENT shipParam... := ...
@@ -38227,7 +38251,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         yPrdVarP)->z1A07B_shipParam.ShipId),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1I_tShipId);
 #endif
-      XBETWEEN_STMTS_PRD(46, 38230)
+      XBETWEEN_STMTS_PRD(46, 38254)
 
 /*-----
 * OPERATOR CALL i2h  (from EXPRESSION in next symbol)
@@ -38268,7 +38292,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         yPrdVarP)->z1A07B_shipParam.Heading),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-      XBETWEEN_STMTS_PRD(47, 38271)
+      XBETWEEN_STMTS_PRD(47, 38295)
 
 /*-----
 * CALL GetCoordinate  (from EXPRESSION in next symbol)
@@ -38307,7 +38331,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
       xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
         (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-      XBETWEEN_SYMBOLS_PRD(48, 38310)
+      XBETWEEN_SYMBOLS_PRD(48, 38334)
 
 /*-----
 * DECISION
@@ -38329,7 +38353,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
 #else
       if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(49, 38332)
+        XBETWEEN_SYMBOLS_PRD(49, 38356)
 
 /*-----
 * ASSIGNMENT gShips := ...
@@ -38351,7 +38375,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         xMSCEAssign("gShips := ", &(yVarP->z1A0Q_gShips),
           (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-        XBETWEEN_STMTS_PRD(50, 38354)
+        XBETWEEN_STMTS_PRD(50, 38378)
 
 /*-----
 * ASSIGNMENT shipId := ...
@@ -38371,7 +38395,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         xMSCEAssign("shipId := ", &(((yVDef_z1A07_InitStrategyFleet *)
           yPrdVarP)->z1A07D_shipId), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(51, 38374)
+        XBETWEEN_STMTS_PRD(51, 38398)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -38392,7 +38416,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
           z1A07G_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(52, 38395)
+        XBETWEEN_SYMBOLS_PRD(52, 38419)
 
 /*-----
 * RETURN
@@ -38406,7 +38430,7 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
         SDL_RETURN
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(44, 38409)
+      XBETWEEN_SYMBOLS_PRD(44, 38433)
 
 /*-----
 * ASSIGNMENT nST := ...
@@ -38435,10 +38459,10 @@ YPRD_FUNCTION(z1A07_InitStrategyFleet)
     }
 
 /*-----
-* JOIN grst2
+* JOIN grst12
 * #SDTREF(SDL,C:\Battleships\Simulator\InitStrategyFleet.spd(2),476(35,115),1)
 ------*/
-    goto L_grst2;
+    goto L_grst12;
   }
   XEND_PRD
 }
@@ -38560,7 +38584,7 @@ YPRD_FUNCTION(z1A077_InitRD)
       z_BasicTypes_1W_MaxTypeCruiser), z_BasicTypes_1X_MaxTypeDestroyer),
       z_BasicTypes_1Y_MaxTypeMissileCutter),
       z_BasicTypes_1Z_MaxTypeRepairBoat), XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(7, 38563)
+    XBETWEEN_SYMBOLS_PRD(7, 38587)
 
 /*-----
 * ASSIGNMENT nST := ...
@@ -38579,7 +38603,7 @@ YPRD_FUNCTION(z1A077_InitRD)
     xMSCEAssign("nST := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP
       ->StaticFather)->z1A07F_nST), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(8, 38582)
+    XBETWEEN_STMTS_PRD(8, 38606)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -38600,8 +38624,8 @@ YPRD_FUNCTION(z1A077_InitRD)
 #endif
 
   case 1:
-  L_grst3:;
-    XBETWEEN_SYMBOLS_PRD(9, 38604)
+  L_grst13:;
+    XBETWEEN_SYMBOLS_PRD(9, 38628)
 
 /*-----
 * DECISION
@@ -38623,7 +38647,7 @@ YPRD_FUNCTION(z1A077_InitRD)
     if (xLE_SDL_Integer(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP
       ->StaticFather)->z1A07F_nST, z1A0M_NAMESHIP_NUM)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 38626)
+      XBETWEEN_SYMBOLS_PRD(13, 38650)
 
 /*-----
 * OPERATOR CALL i2ns  (from EXPRESSION in next symbol)
@@ -38665,7 +38689,7 @@ YPRD_FUNCTION(z1A077_InitRD)
         ->StaticFather)->z1A07C_shipType),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-      XBETWEEN_SYMBOLS_PRD(14, 38668)
+      XBETWEEN_SYMBOLS_PRD(14, 38692)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -38708,7 +38732,7 @@ YPRD_FUNCTION(z1A077_InitRD)
       if (xLT_SDL_Integer(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP
         ->StaticFather)->z1A07J_Deep, yPrdVarP->xPrdCallRes1_SDL_Integer)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(15, 38711)
+        XBETWEEN_SYMBOLS_PRD(15, 38735)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -38750,7 +38774,7 @@ YPRD_FUNCTION(z1A077_InitRD)
 #endif
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(16, 38753)
+      XBETWEEN_SYMBOLS_PRD(16, 38777)
 
 /*-----
 * ASSIGNMENT nST := ...
@@ -38772,7 +38796,7 @@ YPRD_FUNCTION(z1A077_InitRD)
         ->StaticFather)->z1A07F_nST), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(10, 38775)
+      XBETWEEN_SYMBOLS_PRD(10, 38799)
 
 /*-----
 * ASSIGNMENT Radius := ...
@@ -38794,7 +38818,7 @@ YPRD_FUNCTION(z1A077_InitRD)
       xMSCEAssign("Radius := ", &(((yVDef_z1A07_InitStrategyFleet *)yPrdVarP
         ->StaticFather)->z1A07I_Radius), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 38797)
+      XBETWEEN_SYMBOLS_PRD(11, 38821)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -38813,7 +38837,7 @@ YPRD_FUNCTION(z1A077_InitRD)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(12, 38816)
+      XBETWEEN_SYMBOLS_PRD(12, 38840)
 
 /*-----
 * RETURN
@@ -38828,10 +38852,10 @@ YPRD_FUNCTION(z1A077_InitRD)
     }
 
 /*-----
-* JOIN grst3
+* JOIN grst13
 * #SDTREF(SDL,C:\Battleships\Simulator\InitRD.spd(1),134(85,60),1)
 ------*/
-    goto L_grst3;
+    goto L_grst13;
   }
   XEND_PRD
 }
@@ -38964,7 +38988,7 @@ YPRD_FUNCTION(z1A078_GetMaxShips)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 38967)
+    XBETWEEN_SYMBOLS_PRD(1, 38991)
 
 /*-----
 * DECISION
@@ -38985,7 +39009,7 @@ YPRD_FUNCTION(z1A078_GetMaxShips)
 #endif
     if (yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
           z_BasicTypes_0S3_MISSILE_CUTTER)) {
-      XBETWEEN_SYMBOLS_PRD(2, 38988)
+      XBETWEEN_SYMBOLS_PRD(2, 39012)
 
 /*-----
 * RETURN
@@ -38999,7 +39023,7 @@ YPRD_FUNCTION(z1A078_GetMaxShips)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
           z_BasicTypes_0S0_BATTLESHIP)) {
-      XBETWEEN_SYMBOLS_PRD(3, 39002)
+      XBETWEEN_SYMBOLS_PRD(3, 39026)
 
 /*-----
 * RETURN
@@ -39013,7 +39037,7 @@ YPRD_FUNCTION(z1A078_GetMaxShips)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
           z_BasicTypes_0S1_CRUISER)) {
-      XBETWEEN_SYMBOLS_PRD(4, 39016)
+      XBETWEEN_SYMBOLS_PRD(4, 39040)
 
 /*-----
 * RETURN
@@ -39027,7 +39051,7 @@ YPRD_FUNCTION(z1A078_GetMaxShips)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
           z_BasicTypes_0S4_REPAIR_BOAT)) {
-      XBETWEEN_SYMBOLS_PRD(5, 39030)
+      XBETWEEN_SYMBOLS_PRD(5, 39054)
 
 /*-----
 * RETURN
@@ -39041,7 +39065,7 @@ YPRD_FUNCTION(z1A078_GetMaxShips)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
           z_BasicTypes_0S2_DESTROYER)) {
-      XBETWEEN_SYMBOLS_PRD(6, 39044)
+      XBETWEEN_SYMBOLS_PRD(6, 39068)
 
 /*-----
 * RETURN
@@ -39256,7 +39280,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(10, 39259)
+    XBETWEEN_SYMBOLS_PRD(10, 39283)
 
 /*-----
 * ASSIGNMENT xMax := ...
@@ -39277,7 +39301,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("xMax := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079D_xMax), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(11, 39280)
+    XBETWEEN_STMTS_PRD(11, 39304)
 
 /*-----
 * ASSIGNMENT xMin := ...
@@ -39298,7 +39322,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("xMin := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079E_xMin), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(12, 39301)
+    XBETWEEN_STMTS_PRD(12, 39325)
 
 /*-----
 * ASSIGNMENT yMax := ...
@@ -39319,7 +39343,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("yMax := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079F_yMax), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(13, 39322)
+    XBETWEEN_STMTS_PRD(13, 39346)
 
 /*-----
 * ASSIGNMENT yMin := ...
@@ -39340,7 +39364,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("yMin := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079G_yMin), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(14, 39343)
+    XBETWEEN_SYMBOLS_PRD(14, 39367)
 
 /*-----
 * DECISION
@@ -39360,7 +39384,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A079E_xMin, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(15, 39363)
+      XBETWEEN_SYMBOLS_PRD(15, 39387)
 
 /*-----
 * ASSIGNMENT xMin := ...
@@ -39381,7 +39405,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #endif
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(16, 39384)
+    XBETWEEN_SYMBOLS_PRD(16, 39408)
 
 /*-----
 * DECISION
@@ -39401,7 +39425,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A079G_yMin, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(17, 39404)
+      XBETWEEN_SYMBOLS_PRD(17, 39428)
 
 /*-----
 * ASSIGNMENT yMin := ...
@@ -39422,7 +39446,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #endif
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(18, 39425)
+    XBETWEEN_SYMBOLS_PRD(18, 39449)
 
 /*-----
 * DECISION
@@ -39443,7 +39467,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     if (xGT_SDL_Integer(yPrdVarP->z1A079D_xMax,
       z_BasicTypes_1K_MaxXCoordinate)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(19, 39446)
+      XBETWEEN_SYMBOLS_PRD(19, 39470)
 
 /*-----
 * ASSIGNMENT xMax := ...
@@ -39464,7 +39488,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #endif
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(20, 39467)
+    XBETWEEN_SYMBOLS_PRD(20, 39491)
 
 /*-----
 * DECISION
@@ -39485,7 +39509,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     if (xGT_SDL_Integer(yPrdVarP->z1A079F_yMax,
       z_BasicTypes_1L_MaxYCoordinate)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(21, 39488)
+      XBETWEEN_SYMBOLS_PRD(21, 39512)
 
 /*-----
 * ASSIGNMENT yMax := ...
@@ -39506,7 +39530,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #endif
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(22, 39509)
+    XBETWEEN_SYMBOLS_PRD(22, 39533)
 
 /*-----
 * ASSIGNMENT IsCoord := ...
@@ -39525,7 +39549,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("IsCoord := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079H_IsCoord), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(23, 39528)
+    XBETWEEN_STMTS_PRD(23, 39552)
 
 /*-----
 * ASSIGNMENT cCoord... := ...
@@ -39546,7 +39570,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("cCoord... := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079C_cCoord.x), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-    XBETWEEN_STMTS_PRD(24, 39549)
+    XBETWEEN_STMTS_PRD(24, 39573)
 
 /*-----
 * ASSIGNMENT cCoord... := ...
@@ -39567,7 +39591,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     xMSCEAssign("cCoord... := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
       z1A079C_cCoord.y), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-    XBETWEEN_STMTS_PRD(25, 39570)
+    XBETWEEN_STMTS_PRD(25, 39594)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -39614,7 +39638,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 
   case 5:
   L_GC1:;
-    XBETWEEN_SYMBOLS_PRD(26, 39617)
+    XBETWEEN_SYMBOLS_PRD(26, 39641)
 
 /*-----
 * DECISION
@@ -39637,12 +39661,12 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #endif
 
 /*-----
-* JOIN grst4
+* JOIN grst14
 * #SDTREF(SDL,C:\Battleships\Simulator\GetCoordinate.spd(2),1316(102,57),0)
 ------*/
-      goto L_grst4;
+      goto L_grst14;
     } else {
-      XBETWEEN_SYMBOLS_PRD(27, 39645)
+      XBETWEEN_SYMBOLS_PRD(27, 39669)
 
 /*-----
 * DECISION
@@ -39662,7 +39686,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #else
       if (yPrdVarP->z1A079H_IsCoord) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(28, 39665)
+        XBETWEEN_SYMBOLS_PRD(28, 39689)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -39681,7 +39705,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS_PRD(29, 39684)
+        XBETWEEN_SYMBOLS_PRD(29, 39708)
 
 /*-----
 * RETURN
@@ -39694,7 +39718,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
           XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(30, 39697)
+        XBETWEEN_SYMBOLS_PRD(30, 39721)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -39713,7 +39737,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS_PRD(31, 39716)
+        XBETWEEN_SYMBOLS_PRD(31, 39740)
 
 /*-----
 * RETURN
@@ -39729,8 +39753,8 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
     }
 
   case 6:
-  L_grst4:;
-    XBETWEEN_SYMBOLS_PRD(32, 39733)
+  L_grst14:;
+    XBETWEEN_SYMBOLS_PRD(32, 39757)
 
 /*-----
 * DECISION
@@ -39751,7 +39775,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A079C_cCoord.x, yPrdVarP->z1A079D_xMax)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(35, 39754)
+      XBETWEEN_SYMBOLS_PRD(35, 39778)
 
 /*-----
 * CALL IsBusyPoint  (from EXPRESSION in next symbol)
@@ -39789,7 +39813,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
       if (yPrdVarP->xPrdCallRes1_SDL_Boolean) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(36, 39792)
+        XBETWEEN_SYMBOLS_PRD(36, 39816)
 
 /*-----
 * ASSIGNMENT tDeep := ...
@@ -39810,7 +39834,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
         xMSCEAssign("tDeep := ", &(yPrdVarP->z1A079B_tDeep),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(37, 39813)
+        XBETWEEN_SYMBOLS_PRD(37, 39837)
 
 /*-----
 * DECISION
@@ -39836,7 +39860,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
           z1A07J_Deep), xLE_SDL_Integer(yPrdVarP->z1A079B_tDeep,
           yPrdVarP->z1A079A_cDeep))) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(38, 39839)
+          XBETWEEN_SYMBOLS_PRD(38, 39863)
 
 /*-----
 * ASSIGNMENT cDeep := ...
@@ -39856,7 +39880,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
           xMSCEAssign("cDeep := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
             z1A079A_cDeep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-          XBETWEEN_STMTS_PRD(39, 39859)
+          XBETWEEN_STMTS_PRD(39, 39883)
 
 /*-----
 * ASSIGNMENT coord := ...
@@ -39878,7 +39902,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
             yPrdVarP)->z1A0790_coord))),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-          XBETWEEN_STMTS_PRD(40, 39881)
+          XBETWEEN_STMTS_PRD(40, 39905)
 
 /*-----
 * ASSIGNMENT IsCoord := ...
@@ -39900,7 +39924,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
         } else {
         }
       }
-      XBETWEEN_SYMBOLS_PRD(41, 39903)
+      XBETWEEN_SYMBOLS_PRD(41, 39927)
 
 /*-----
 * ASSIGNMENT cCoord... := ...
@@ -39922,12 +39946,12 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
 #endif
 
 /*-----
-* JOIN grst4
+* JOIN grst14
 * #SDTREF(SDL,C:\Battleships\Simulator\GetCoordinate.spd(2),1325(90,65),1)
 ------*/
-      goto L_grst4;
+      goto L_grst14;
     } else {
-      XBETWEEN_SYMBOLS_PRD(33, 39930)
+      XBETWEEN_SYMBOLS_PRD(33, 39954)
 
 /*-----
 * ASSIGNMENT cCoord... := ...
@@ -39948,7 +39972,7 @@ YPRD_FUNCTION(z1A079_GetCoordinate)
       xMSCEAssign("cCoord... := ", &(((yVDef_z1A079_GetCoordinate *)yPrdVarP)->
         z1A079C_cCoord.x), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(34, 39951)
+      XBETWEEN_STMTS_PRD(34, 39975)
 
 /*-----
 * ASSIGNMENT cCoord... := ...
@@ -40096,7 +40120,7 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 40099)
+    XBETWEEN_SYMBOLS_PRD(3, 40123)
 
 /*-----
 * ASSIGNMENT length := ...
@@ -40116,7 +40140,7 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
     xMSCEAssign("length := ", &(((yVDef_z1A0799_IsBusyPoint *)yPrdVarP)->
       z1A07994_length), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 40119)
+    XBETWEEN_STMTS_PRD(4, 40143)
 
 /*-----
 * ASSIGNMENT iBP := ...
@@ -40137,8 +40161,8 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
 #endif
 
   case 1:
-  L_grst5:;
-    XBETWEEN_SYMBOLS_PRD(5, 40141)
+  L_grst15:;
+    XBETWEEN_SYMBOLS_PRD(5, 40165)
 
 /*-----
 * DECISION
@@ -40158,7 +40182,7 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
 #else
     if (xGT_SDL_Integer(yPrdVarP->z1A07993_iBP, yPrdVarP->z1A07994_length)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 40161)
+      XBETWEEN_SYMBOLS_PRD(6, 40185)
 
 /*-----
 * RETURN
@@ -40171,7 +40195,7 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(7, 40174)
+      XBETWEEN_SYMBOLS_PRD(7, 40198)
 
 /*-----
 * DECISION
@@ -40197,7 +40221,7 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
         &(((yVDef_z1A079_GetCoordinate *)yPrdVarP->StaticFather)->
         z1A079C_cCoord))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(8, 40200)
+        XBETWEEN_SYMBOLS_PRD(8, 40224)
 
 /*-----
 * RETURN
@@ -40210,7 +40234,7 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
           XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(9, 40213)
+        XBETWEEN_SYMBOLS_PRD(9, 40237)
 
 /*-----
 * ASSIGNMENT iBP := ...
@@ -40234,10 +40258,10 @@ YPRD_FUNCTION(z1A0799_IsBusyPoint)
     }
 
 /*-----
-* JOIN grst5
+* JOIN grst15
 * #SDTREF(SDL,C:\Battleships\Simulator\IsBusyPoint.spd(1),269(60,55),1)
 ------*/
-    goto L_grst5;
+    goto L_grst15;
   }
   XEND_PRD
 }
@@ -40753,7 +40777,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(6, 40756)
+    XBETWEEN_SYMBOLS_PRD(6, 40780)
 
 /*-----
 * CALL zeroizeVisibility
@@ -40768,7 +40792,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
     CALL_PROCEDURE_IN_PRD(z1A084_zeroizeVisibility,
       yPrdN_z1A084_zeroizeVisibility, 0, 5)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(5, 40771)
+    XBETWEEN_SYMBOLS_PRD(5, 40795)
 
 /*-----
 * ASSIGNMENT n := ...
@@ -40788,7 +40812,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
     xMSCEAssign("n := ", &(((yVDef_z1A08_SetVisibility *)yPrdVarP)->z1A085_n),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(7, 40791)
+    XBETWEEN_STMTS_PRD(7, 40815)
 
 /*-----
 * ASSIGNMENT ins := ...
@@ -40809,8 +40833,8 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 #endif
 
   case 1:
-  L_grst6:;
-    XBETWEEN_SYMBOLS_PRD(8, 40813)
+  L_grst16:;
+    XBETWEEN_SYMBOLS_PRD(8, 40837)
 
 /*-----
 * DECISION
@@ -40830,7 +40854,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A086_ins, yPrdVarP->z1A085_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(10, 40833)
+      XBETWEEN_SYMBOLS_PRD(10, 40857)
 
 /*-----
 * ASSIGNMENT jns := ...
@@ -40852,12 +40876,12 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 #endif
 
 /*-----
-* JOIN grst7
+* JOIN grst17
 * #SDTREF(SDL,C:\Battleships\Simulator\SetVisibility.spd(1),470(85,75),0)
 ------*/
-      goto L_grst7;
+      goto L_grst17;
     } else {
-      XBETWEEN_SYMBOLS_PRD(9, 40860)
+      XBETWEEN_SYMBOLS_PRD(9, 40884)
 
 /*-----
 * RETURN
@@ -40870,8 +40894,8 @@ YPRD_FUNCTION(z1A08_SetVisibility)
     }
 
   case 2:
-  L_grst7:;
-    XBETWEEN_SYMBOLS_PRD(11, 40874)
+  L_grst17:;
+    XBETWEEN_SYMBOLS_PRD(11, 40898)
 
 /*-----
 * DECISION
@@ -40891,7 +40915,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A087_jns, yPrdVarP->z1A085_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 40894)
+      XBETWEEN_SYMBOLS_PRD(13, 40918)
 
 /*-----
 * ASSIGNMENT r := ...
@@ -40916,7 +40940,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
       xMSCEAssign("r := ", &(yPrdVarP->z1A088_r),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(14, 40919)
+      XBETWEEN_SYMBOLS_PRD(14, 40943)
 
 /*-----
 * DECISION
@@ -40940,7 +40964,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
         [(*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
         yPrdVarP->z1A086_ins)).TypeShip].Range)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(16, 40943)
+        XBETWEEN_SYMBOLS_PRD(16, 40967)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -40969,7 +40993,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(15, 40972)
+        XBETWEEN_SYMBOLS_PRD(15, 40996)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -40998,7 +41022,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(17, 41001)
+      XBETWEEN_SYMBOLS_PRD(17, 41025)
 
 /*-----
 * DECISION
@@ -41022,7 +41046,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
         [(*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
         yPrdVarP->z1A087_jns)).TypeShip].Range)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(19, 41025)
+        XBETWEEN_SYMBOLS_PRD(19, 41049)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -41051,7 +41075,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(18, 41054)
+        XBETWEEN_SYMBOLS_PRD(18, 41078)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -41080,7 +41104,7 @@ YPRD_FUNCTION(z1A08_SetVisibility)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(20, 41083)
+      XBETWEEN_SYMBOLS_PRD(20, 41107)
 
 /*-----
 * ASSIGNMENT jns := ...
@@ -41102,12 +41126,12 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 #endif
 
 /*-----
-* JOIN grst7
+* JOIN grst17
 * #SDTREF(SDL,C:\Battleships\Simulator\SetVisibility.spd(1),482(85,90),1)
 ------*/
-      goto L_grst7;
+      goto L_grst17;
     } else {
-      XBETWEEN_SYMBOLS_PRD(12, 41110)
+      XBETWEEN_SYMBOLS_PRD(12, 41134)
 
 /*-----
 * ASSIGNMENT ins := ...
@@ -41129,10 +41153,10 @@ YPRD_FUNCTION(z1A08_SetVisibility)
 #endif
 
 /*-----
-* JOIN grst6
+* JOIN grst16
 * #SDTREF(SDL,C:\Battleships\Simulator\SetVisibility.spd(1),155(85,55),1)
 ------*/
-      goto L_grst6;
+      goto L_grst16;
     }
   }
   XEND_PRD
@@ -41229,7 +41253,7 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 41232)
+    XBETWEEN_SYMBOLS_PRD(3, 41256)
 
 /*-----
 * ASSIGNMENT n := ...
@@ -41249,7 +41273,7 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
     xMSCEAssign("n := ", &(((yVDef_z1A08_SetVisibility *)yPrdVarP
       ->StaticFather)->z1A085_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 41252)
+    XBETWEEN_STMTS_PRD(4, 41276)
 
 /*-----
 * ASSIGNMENT ins := ...
@@ -41270,8 +41294,8 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
 #endif
 
   case 1:
-  L_grst8:;
-    XBETWEEN_SYMBOLS_PRD(5, 41274)
+  L_grst18:;
+    XBETWEEN_SYMBOLS_PRD(5, 41298)
 
 /*-----
 * DECISION
@@ -41295,7 +41319,7 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
       z1A086_ins, ((yVDef_z1A08_SetVisibility *)yPrdVarP->StaticFather)->
       z1A085_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(7, 41298)
+      XBETWEEN_SYMBOLS_PRD(7, 41322)
 
 /*-----
 * ASSIGNMENT jns := ...
@@ -41316,12 +41340,12 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
 #endif
 
 /*-----
-* JOIN grst9
+* JOIN grst19
 * #SDTREF(SDL,C:\Battleships\Simulator\zeroizeVisibility.spd(1),155(65,80),0)
 ------*/
-      goto L_grst9;
+      goto L_grst19;
     } else {
-      XBETWEEN_SYMBOLS_PRD(6, 41324)
+      XBETWEEN_SYMBOLS_PRD(6, 41348)
 
 /*-----
 * RETURN
@@ -41334,8 +41358,8 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
     }
 
   case 2:
-  L_grst9:;
-    XBETWEEN_SYMBOLS_PRD(8, 41338)
+  L_grst19:;
+    XBETWEEN_SYMBOLS_PRD(8, 41362)
 
 /*-----
 * DECISION
@@ -41357,7 +41381,7 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
     if (xLE_SDL_Integer(((yVDef_z1A08_SetVisibility *)yPrdVarP->StaticFather)->
       z1A087_jns, z_BasicTypes_20_AmountStrategy)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(10, 41360)
+      XBETWEEN_SYMBOLS_PRD(10, 41384)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -41385,7 +41409,7 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
         [((yVDef_z1A08_SetVisibility *)yPrdVarP->StaticFather)->
         z1A087_jns - SDL_INTEGER_LIT(1)]), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(11, 41388)
+      XBETWEEN_STMTS_PRD(11, 41412)
 
 /*-----
 * ASSIGNMENT jns := ...
@@ -41407,12 +41431,12 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
 #endif
 
 /*-----
-* JOIN grst9
+* JOIN grst19
 * #SDTREF(SDL,C:\Battleships\Simulator\zeroizeVisibility.spd(1),143(65,95),1)
 ------*/
-      goto L_grst9;
+      goto L_grst19;
     } else {
-      XBETWEEN_SYMBOLS_PRD(9, 41415)
+      XBETWEEN_SYMBOLS_PRD(9, 41439)
 
 /*-----
 * ASSIGNMENT ins := ...
@@ -41434,10 +41458,10 @@ YPRD_FUNCTION(z1A084_zeroizeVisibility)
 #endif
 
 /*-----
-* JOIN grst8
+* JOIN grst18
 * #SDTREF(SDL,C:\Battleships\Simulator\zeroizeVisibility.spd(1),137(65,60),1)
 ------*/
-      goto L_grst8;
+      goto L_grst18;
     }
   }
   XEND_PRD
@@ -41612,7 +41636,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
     XAT_FIRST_SYMBOL(0)
     GenericDefault((void *)&yPrdVarP->z1A096_shSCS,
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_13_tStringShipCurrentState);
-    XBETWEEN_SYMBOLS_PRD(3, 41615)
+    XBETWEEN_SYMBOLS_PRD(3, 41639)
 
 /*-----
 * ASSIGNMENT n := ...
@@ -41632,7 +41656,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
     xMSCEAssign("n := ", &(((yVDef_z1A09_SendCurrentState *)yPrdVarP)->
       z1A093_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 41635)
+    XBETWEEN_STMTS_PRD(4, 41659)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -41653,8 +41677,8 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
 #endif
 
   case 1:
-  L_grst10:;
-    XBETWEEN_SYMBOLS_PRD(5, 41657)
+  L_grst20:;
+    XBETWEEN_SYMBOLS_PRD(5, 41681)
 
 /*-----
 * DECISION
@@ -41674,7 +41698,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A092_i, yPrdVarP->z1A093_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(7, 41677)
+      XBETWEEN_SYMBOLS_PRD(7, 41701)
 
 /*-----
 * ASSIGNMENT shSCS := ...
@@ -41696,7 +41720,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
         z1A096_shSCS),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_13_tStringShipCurrentState);
 #endif
-      XBETWEEN_STMTS_PRD(8, 41699)
+      XBETWEEN_STMTS_PRD(8, 41723)
 
 /*-----
 * ASSIGNMENT strId := ...
@@ -41718,7 +41742,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       xMSCEAssign("strId := ", &(((yVDef_z1A09_SendCurrentState *)yPrdVarP)->
         z1A094_strId), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1J_tStrategyId);
 #endif
-      XBETWEEN_STMTS_PRD(9, 41721)
+      XBETWEEN_STMTS_PRD(9, 41745)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41744,12 +41768,12 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
 #endif
 
 /*-----
-* JOIN grst11
+* JOIN grst21
 * #SDTREF(SDL,C:\Battleships\Simulator\SendCurrentState.spd(1),137(90,80),0)
 ------*/
-      goto L_grst11;
+      goto L_grst21;
     } else {
-      XBETWEEN_SYMBOLS_PRD(6, 41752)
+      XBETWEEN_SYMBOLS_PRD(6, 41776)
 
 /*-----
 * RETURN
@@ -41762,8 +41786,8 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
     }
 
   case 2:
-  L_grst11:;
-    XBETWEEN_SYMBOLS_PRD(10, 41766)
+  L_grst21:;
+    XBETWEEN_SYMBOLS_PRD(10, 41790)
 
 /*-----
 * DECISION
@@ -41789,7 +41813,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       (*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
       yPrdVarP->z1A092_i)).StrategyId))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(12, 41792)
+      XBETWEEN_SYMBOLS_PRD(12, 41816)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41811,7 +41835,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       xMSCEAssign("shCS... := ", &(((yVDef_z1A09_SendCurrentState *)yPrdVarP)->
         z1A095_shCS.ShipId), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1I_tShipId);
 #endif
-      XBETWEEN_STMTS_PRD(13, 41814)
+      XBETWEEN_STMTS_PRD(13, 41838)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41832,7 +41856,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       xMSCEAssign("shCS... := ", &(((yVDef_z1A09_SendCurrentState *)yPrdVarP)->
         z1A095_shCS.TypeShip), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-      XBETWEEN_STMTS_PRD(14, 41835)
+      XBETWEEN_STMTS_PRD(14, 41859)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41854,7 +41878,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       xMSCEAssign("shCS... := ", &(((yVDef_z1A09_SendCurrentState *)yPrdVarP)->
         z1A095_shCS.Speed), (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-      XBETWEEN_STMTS_PRD(15, 41857)
+      XBETWEEN_STMTS_PRD(15, 41881)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41875,7 +41899,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       xMSCEAssign("shCS... := ", &(((yVDef_z1A09_SendCurrentState *)yPrdVarP)->
         z1A095_shCS.Heading), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-      XBETWEEN_STMTS_PRD(16, 41878)
+      XBETWEEN_STMTS_PRD(16, 41902)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41899,7 +41923,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
         z1A095_shCS.Resource),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
-      XBETWEEN_STMTS_PRD(17, 41902)
+      XBETWEEN_STMTS_PRD(17, 41926)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41922,7 +41946,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
         z1A095_shCS.Coordinates),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-      XBETWEEN_STMTS_PRD(18, 41925)
+      XBETWEEN_STMTS_PRD(18, 41949)
 
 /*-----
 * ASSIGNMENT shCS... := ...
@@ -41945,7 +41969,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
         z1A095_shCS.Ammunition),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_11_tArrayAmountAmmunition);
 #endif
-      XBETWEEN_STMTS_PRD(19, 41948)
+      XBETWEEN_STMTS_PRD(19, 41972)
 
 /*-----
 * ASSIGNMENT shSCS := ...
@@ -41971,7 +41995,7 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
         z1A096_shSCS),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_13_tStringShipCurrentState);
 #endif
-      XBETWEEN_STMTS_PRD(20, 41974)
+      XBETWEEN_STMTS_PRD(20, 41998)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -41993,12 +42017,12 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
 #endif
 
 /*-----
-* JOIN grst11
+* JOIN grst21
 * #SDTREF(SDL,C:\Battleships\Simulator\SendCurrentState.spd(1),131(90,110),1)
 ------*/
-      goto L_grst11;
+      goto L_grst21;
     } else {
-      XBETWEEN_SYMBOLS_PRD(11, 42001)
+      XBETWEEN_SYMBOLS_PRD(11, 42025)
 
 /*-----
 * OUTPUT ShipsCurrentState
@@ -42023,10 +42047,10 @@ YPRD_FUNCTION(z1A09_SendCurrentState)
       SIGNAL_ALLOC_ERROR_END
 
 /*-----
-* JOIN grst10
+* JOIN grst20
 * #SDTREF(SDL,C:\Battleships\Simulator\SendCurrentState.spd(1),143(90,60),1)
 ------*/
-      goto L_grst10;
+      goto L_grst20;
     }
   }
   XEND_PRD
@@ -42224,7 +42248,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
     XAT_FIRST_SYMBOL(0)
     GenericDefault((void *)&yPrdVarP->z1A0A8_shSES,
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_14_tStringEnemyShip);
-    XBETWEEN_SYMBOLS_PRD(5, 42227)
+    XBETWEEN_SYMBOLS_PRD(5, 42251)
 
 /*-----
 * ASSIGNMENT n := ...
@@ -42244,7 +42268,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
     xMSCEAssign("n := ", &(((yVDef_z1A0A_SendVisibleShips *)yPrdVarP)->
       z1A0A6_n), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(6, 42247)
+    XBETWEEN_STMTS_PRD(6, 42271)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -42265,8 +42289,8 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #endif
 
   case 1:
-  L_grst12:;
-    XBETWEEN_SYMBOLS_PRD(7, 42269)
+  L_grst22:;
+    XBETWEEN_SYMBOLS_PRD(7, 42293)
 
 /*-----
 * DECISION
@@ -42286,7 +42310,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0A5_j, z_BasicTypes_20_AmountStrategy)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(9, 42289)
+      XBETWEEN_SYMBOLS_PRD(9, 42313)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -42305,7 +42329,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
       xMSCEAssign("i := ", &(((yVDef_z1A0A_SendVisibleShips *)yPrdVarP)->
         z1A0A4_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(10, 42308)
+      XBETWEEN_STMTS_PRD(10, 42332)
 
 /*-----
 * ASSIGNMENT shSES := ...
@@ -42327,12 +42351,12 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #endif
 
 /*-----
-* JOIN grst13
+* JOIN grst23
 * #SDTREF(SDL,C:\Battleships\Simulator\SendVisibleShips.spd(1),140(75,75),0)
 ------*/
-      goto L_grst13;
+      goto L_grst23;
     } else {
-      XBETWEEN_SYMBOLS_PRD(8, 42335)
+      XBETWEEN_SYMBOLS_PRD(8, 42359)
 
 /*-----
 * RETURN
@@ -42345,8 +42369,8 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
     }
 
   case 2:
-  L_grst13:;
-    XBETWEEN_SYMBOLS_PRD(11, 42349)
+  L_grst23:;
+    XBETWEEN_SYMBOLS_PRD(11, 42373)
 
 /*-----
 * DECISION
@@ -42366,7 +42390,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0A4_i, yPrdVarP->z1A0A6_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(12, 42369)
+      XBETWEEN_SYMBOLS_PRD(12, 42393)
 
 /*-----
 * DECISION
@@ -42395,7 +42419,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
         yNEqF_SDL_Integer((*yExtr_z1O_tStringShipParameters(&(yVarP->
         z1A0Q_gShips), yPrdVarP->z1A0A4_i)).StrategyId, yPrdVarP->z1A0A5_j))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(13, 42398)
+        XBETWEEN_SYMBOLS_PRD(13, 42422)
 
 /*-----
 * ASSIGNMENT shES... := ...
@@ -42419,7 +42443,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
           yPrdVarP)->z1A0A7_shES.ShipId),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1I_tShipId);
 #endif
-        XBETWEEN_STMTS_PRD(14, 42422)
+        XBETWEEN_STMTS_PRD(14, 42446)
 
 /*-----
 * ASSIGNMENT shES... := ...
@@ -42443,7 +42467,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
           yPrdVarP)->z1A0A7_shES.StrategyId),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1J_tStrategyId);
 #endif
-        XBETWEEN_STMTS_PRD(15, 42446)
+        XBETWEEN_STMTS_PRD(15, 42470)
 
 /*-----
 * ASSIGNMENT shES... := ...
@@ -42466,7 +42490,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
           yPrdVarP)->z1A0A7_shES.TypeShip),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-        XBETWEEN_STMTS_PRD(16, 42469)
+        XBETWEEN_STMTS_PRD(16, 42493)
 
 /*-----
 * ASSIGNMENT shES... := ...
@@ -42490,7 +42514,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
           yPrdVarP)->z1A0A7_shES.Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(17, 42493)
+        XBETWEEN_STMTS_PRD(17, 42517)
 
 /*-----
 * ASSIGNMENT shES... := ...
@@ -42513,7 +42537,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
           yPrdVarP)->z1A0A7_shES.Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(18, 42516)
+        XBETWEEN_STMTS_PRD(18, 42540)
 
 /*-----
 * ASSIGNMENT shES... := ...
@@ -42537,7 +42561,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
           yPrdVarP)->z1A0A7_shES.Coordinates),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-        XBETWEEN_STMTS_PRD(19, 42540)
+        XBETWEEN_STMTS_PRD(19, 42564)
 
 /*-----
 * ASSIGNMENT shSES := ...
@@ -42564,7 +42588,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #endif
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(20, 42567)
+      XBETWEEN_SYMBOLS_PRD(20, 42591)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -42586,12 +42610,12 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #endif
 
 /*-----
-* JOIN grst13
+* JOIN grst23
 * #SDTREF(SDL,C:\Battleships\Simulator\SendVisibleShips.spd(1),152(75,90),1)
 ------*/
-      goto L_grst13;
+      goto L_grst23;
     } else {
-      XBETWEEN_SYMBOLS_PRD(21, 42594)
+      XBETWEEN_SYMBOLS_PRD(21, 42618)
 
 /*-----
 * DECISION
@@ -42613,7 +42637,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
       if (xGT_SDL_Integer(yLength_z_BasicTypes_14_tStringEnemyShip(
         &(yPrdVarP->z1A0A8_shSES)), SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(22, 42616)
+        XBETWEEN_SYMBOLS_PRD(22, 42640)
 
 /*-----
 * OUTPUT VisibleShip
@@ -42638,7 +42662,7 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
         SIGNAL_ALLOC_ERROR_END
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(23, 42641)
+      XBETWEEN_SYMBOLS_PRD(23, 42665)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -42660,10 +42684,10 @@ YPRD_FUNCTION(z1A0A_SendVisibleShips)
 #endif
 
 /*-----
-* JOIN grst12
+* JOIN grst22
 * #SDTREF(SDL,C:\Battleships\Simulator\SendVisibleShips.spd(1),134(75,55),1)
 ------*/
-      goto L_grst12;
+      goto L_grst22;
     }
   }
   XEND_PRD
@@ -42820,7 +42844,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 42823)
+    XBETWEEN_SYMBOLS_PRD(1, 42847)
 
 /*-----
 * DECISION
@@ -42841,7 +42865,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
 #endif
     if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G8_EN_GEN_POINTS_FAULT)) {
-      XBETWEEN_SYMBOLS_PRD(2, 42844)
+      XBETWEEN_SYMBOLS_PRD(2, 42868)
 
 /*-----
 * RETURN
@@ -42856,7 +42880,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G0_EN_OK)) {
-      XBETWEEN_SYMBOLS_PRD(3, 42859)
+      XBETWEEN_SYMBOLS_PRD(3, 42883)
 
 /*-----
 * RETURN
@@ -42871,7 +42895,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G7_EN_WRONG_MAP)) {
-      XBETWEEN_SYMBOLS_PRD(4, 42874)
+      XBETWEEN_SYMBOLS_PRD(4, 42898)
 
 /*-----
 * RETURN
@@ -42885,7 +42909,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G1_EN_COULD_NOT_OPEN_FILE)) {
-      XBETWEEN_SYMBOLS_PRD(5, 42888)
+      XBETWEEN_SYMBOLS_PRD(5, 42912)
 
 /*-----
 * RETURN
@@ -42899,7 +42923,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G2_EN_SHIP_NOT_FOUND)) {
-      XBETWEEN_SYMBOLS_PRD(6, 42902)
+      XBETWEEN_SYMBOLS_PRD(6, 42926)
 
 /*-----
 * RETURN
@@ -42913,7 +42937,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G3_EN_ERROR_PROPERTY)) {
-      XBETWEEN_SYMBOLS_PRD(7, 42916)
+      XBETWEEN_SYMBOLS_PRD(7, 42940)
 
 /*-----
 * RETURN
@@ -42928,7 +42952,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G4_EN_NOT_ENOUGH_AMMO)) {
-      XBETWEEN_SYMBOLS_PRD(8, 42931)
+      XBETWEEN_SYMBOLS_PRD(8, 42955)
 
 /*-----
 * RETURN
@@ -42942,7 +42966,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G5_EN_INIT_SOCKET_FAULT)) {
-      XBETWEEN_SYMBOLS_PRD(9, 42945)
+      XBETWEEN_SYMBOLS_PRD(9, 42969)
 
 /*-----
 * RETURN
@@ -42957,7 +42981,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G6_EN_SEND_DATA_FAULT)) {
-      XBETWEEN_SYMBOLS_PRD(10, 42960)
+      XBETWEEN_SYMBOLS_PRD(10, 42984)
 
 /*-----
 * RETURN
@@ -42971,7 +42995,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
       SDL_RETURN
     } else if (yEqF_z1A0G_tErrorName(yPrdVarP->yDcn_z1A0G_tErrorName,
           z1A0G9_EN_GET_COORD_FAULT)) {
-      XBETWEEN_SYMBOLS_PRD(11, 42974)
+      XBETWEEN_SYMBOLS_PRD(11, 42998)
 
 /*-----
 * RETURN
@@ -42985,7 +43009,7 @@ YPRD_FUNCTION(z1A0B_Err2Str)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(12, 42988)
+      XBETWEEN_SYMBOLS_PRD(12, 43012)
 
 /*-----
 * RETURN
@@ -43372,7 +43396,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
     GenericDefault((void *)&yPrdVarP->z1A0C0X_shipOrders,
       (tSDLTypeInfo *)&ySDL_z1A0C0M_tArrayOrder);
-    XBETWEEN_SYMBOLS_PRD(26, 43375)
+    XBETWEEN_SYMBOLS_PRD(26, 43399)
 
 /*-----
 * CALL NullingSI  (from EXPRESSION in next symbol)
@@ -43407,7 +43431,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_STMTS_PRD(27, 43410)
+    XBETWEEN_STMTS_PRD(27, 43434)
 
 /*-----
 * CALL NullingShipOrders  (from EXPRESSION in next symbol)
@@ -43443,7 +43467,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_SYMBOLS_PRD(28, 43446)
+    XBETWEEN_SYMBOLS_PRD(28, 43470)
 
 /*-----
 * NEXTSTATE idle
@@ -43474,7 +43498,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       yTstA_z_BasicTypes_1H_tFactorAcceleration(
       ((yPDef_z_BasicTypes_05_OrderSpeedRequest *)ySVarP)->Param3),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS_PRD(29, 43477)
+    XBETWEEN_SYMBOLS_PRD(29, 43501)
 
 /*-----
 * DECISION
@@ -43497,7 +43521,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     if (yEqF_SDL_Boolean(yPrdVarP->z1A0C0X_shipOrders.A
       [yPrdVarP->z1A0C0Q_shId - SDL_INTEGER_LIT(1)].IsOrder, SDL_False)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(30, 43500)
+      XBETWEEN_SYMBOLS_PRD(30, 43524)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43522,7 +43546,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
         z1A0C0Q_shId - SDL_INTEGER_LIT(1)].Order),
         (tSDLTypeInfo *)&ySDL_z1A0C0K_tLiteralsOrder);
 #endif
-      XBETWEEN_STMTS_PRD(31, 43525)
+      XBETWEEN_STMTS_PRD(31, 43549)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43557,15 +43581,15 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     } else {
 
 /*-----
-* JOIN grst14
+* JOIN grst24
 * #SDTREF(SDL,C:\Battleships\Simulator\SimIteration.spd(2),1187(45,90),0)
 ------*/
-      goto L_grst14;
+      goto L_grst24;
     }
 
   case 2:
-  L_grst14:;
-    XBETWEEN_SYMBOLS_PRD(32, 43568)
+  L_grst24:;
+    XBETWEEN_SYMBOLS_PRD(32, 43592)
 
 /*-----
 * NEXTSTATE -
@@ -43595,7 +43619,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     yAssF_z_BasicTypes_0T_tHeadingChange(yPrdVarP->z1A0C0T_shHC,
       ((yPDef_z_BasicTypes_06_OrderTurnRequest *)ySVarP)->Param3,
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS_PRD(33, 43598)
+    XBETWEEN_SYMBOLS_PRD(33, 43622)
 
 /*-----
 * DECISION
@@ -43618,7 +43642,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     if (yEqF_SDL_Boolean(yPrdVarP->z1A0C0X_shipOrders.A
       [yPrdVarP->z1A0C0Q_shId - SDL_INTEGER_LIT(1)].IsOrder, SDL_False)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(34, 43621)
+      XBETWEEN_SYMBOLS_PRD(34, 43645)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43643,7 +43667,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
         z1A0C0Q_shId - SDL_INTEGER_LIT(1)].Order),
         (tSDLTypeInfo *)&ySDL_z1A0C0K_tLiteralsOrder);
 #endif
-      XBETWEEN_STMTS_PRD(35, 43646)
+      XBETWEEN_STMTS_PRD(35, 43670)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43678,10 +43702,10 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     }
 
 /*-----
-* JOIN grst14
+* JOIN grst24
 * #SDTREF(SDL,C:\Battleships\Simulator\SimIteration.spd(2),1181(80,120),1)
 ------*/
-    goto L_grst14;
+    goto L_grst24;
 
 /*-----
 * INPUT OrderFireRequest
@@ -43710,7 +43734,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       ((yPDef_z_BasicTypes_07_OrderFireRequest *)ySVarP)->Param4),
       XASS_AR_ASS_FR);
 #endif
-    XBETWEEN_SYMBOLS_PRD(36, 43713)
+    XBETWEEN_SYMBOLS_PRD(36, 43737)
 
 /*-----
 * DECISION
@@ -43733,7 +43757,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     if (yEqF_SDL_Boolean(yPrdVarP->z1A0C0X_shipOrders.A
       [yPrdVarP->z1A0C0Q_shId - SDL_INTEGER_LIT(1)].IsOrder, SDL_False)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(37, 43736)
+      XBETWEEN_SYMBOLS_PRD(37, 43760)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43758,7 +43782,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
         z1A0C0Q_shId - SDL_INTEGER_LIT(1)].Order),
         (tSDLTypeInfo *)&ySDL_z1A0C0K_tLiteralsOrder);
 #endif
-      XBETWEEN_STMTS_PRD(38, 43761)
+      XBETWEEN_STMTS_PRD(38, 43785)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43783,7 +43807,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
         z1A0C0Q_shId - SDL_INTEGER_LIT(1)].WN),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(39, 43786)
+      XBETWEEN_STMTS_PRD(39, 43810)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43818,10 +43842,10 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     }
 
 /*-----
-* JOIN grst14
+* JOIN grst24
 * #SDTREF(SDL,C:\Battleships\Simulator\SimIteration.spd(2),1181(80,120),1)
 ------*/
-    goto L_grst14;
+    goto L_grst24;
 
 /*-----
 * INPUT FinishSimulation
@@ -43838,7 +43862,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       yTstA_z_BasicTypes_1J_tStrategyId(
       ((yPDef_z_BasicTypes_04_FinishSimulation *)ySVarP)->Param2),
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS_PRD(40, 43841)
+    XBETWEEN_SYMBOLS_PRD(40, 43865)
 
 /*-----
 * ASSIGNMENT strASI... := ...
@@ -43860,7 +43884,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       z1A0C0W_strASI.A[((yVDef_z1A0C_SimIteration *)yPrdVarP)->
       z1A0C0R_strId - SDL_INTEGER_LIT(1)]), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_SYMBOLS_PRD(41, 43863)
+    XBETWEEN_SYMBOLS_PRD(41, 43887)
 
 /*-----
 * CALL IsASIComplete  (from EXPRESSION in next symbol)
@@ -43907,14 +43931,14 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     }
 
 /*-----
-* JOIN grst14
+* JOIN grst24
 * #SDTREF(SDL,C:\Battleships\Simulator\SimIteration.spd(2),1181(80,120),1)
 ------*/
-    goto L_grst14;
+    goto L_grst24;
 
   case 9:
   L_SI2:;
-    XBETWEEN_SYMBOLS_PRD(42, 43917)
+    XBETWEEN_SYMBOLS_PRD(42, 43941)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43938,7 +43962,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       z1A0C0Q_shId - SDL_INTEGER_LIT(1)].IsOrder),
       (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(43, 43941)
+    XBETWEEN_STMTS_PRD(43, 43965)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -43964,7 +43988,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       z1A0C0Q_shId - SDL_INTEGER_LIT(1)].StrId),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1J_tStrategyId);
 #endif
-    XBETWEEN_SYMBOLS_PRD(44, 43967)
+    XBETWEEN_SYMBOLS_PRD(44, 43991)
 
 /*-----
 * DECISION
@@ -43986,7 +44010,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
 #endif
     if (yEqF_z1A0C0K_tLiteralsOrder(yPrdVarP->yDcn_z1A0C0K_tLiteralsOrder,
           z1A0C0K0_SPEED)) {
-      XBETWEEN_SYMBOLS_PRD(45, 43989)
+      XBETWEEN_SYMBOLS_PRD(45, 44013)
 
 /*-----
 * CALL OrderSpeed  (from EXPRESSION in next symbol)
@@ -44028,7 +44052,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
 #endif
     } else if (yEqF_z1A0C0K_tLiteralsOrder(yPrdVarP->yDcn_z1A0C0K_tLiteralsOrder,
           z1A0C0K1_TURN)) {
-      XBETWEEN_SYMBOLS_PRD(46, 44031)
+      XBETWEEN_SYMBOLS_PRD(46, 44055)
 
 /*-----
 * CALL OrderTurn  (from EXPRESSION in next symbol)
@@ -44070,7 +44094,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
 #endif
     } else if (yEqF_z1A0C0K_tLiteralsOrder(yPrdVarP->yDcn_z1A0C0K_tLiteralsOrder,
           z1A0C0K2_FIRE)) {
-      XBETWEEN_SYMBOLS_PRD(47, 44073)
+      XBETWEEN_SYMBOLS_PRD(47, 44097)
 
 /*-----
 * CALL OrderFire  (from EXPRESSION in next symbol)
@@ -44121,7 +44145,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(48, 44124)
+    XBETWEEN_SYMBOLS_PRD(48, 44148)
 
 /*-----
 * DECISION
@@ -44143,7 +44167,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
 #else
     if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(49, 44146)
+      XBETWEEN_SYMBOLS_PRD(49, 44170)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -44166,7 +44190,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(50, 44169)
+      XBETWEEN_SYMBOLS_PRD(50, 44193)
 
 /*-----
 * CALL Err2Str  (from EXPRESSION in next symbol)
@@ -44201,7 +44225,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
         sizeof(yPDef_z_BasicTypes_0K_messageError), "messageError")
       SIGNAL_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(51, 44204)
+    XBETWEEN_SYMBOLS_PRD(51, 44228)
 
 /*-----
 * NEXTSTATE -
@@ -44215,7 +44239,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
 
   case 12:
   L_SI3:;
-    XBETWEEN_SYMBOLS_PRD(52, 44218)
+    XBETWEEN_SYMBOLS_PRD(52, 44242)
 
 /*-----
 * CALL SendResposeOnOrders  (from EXPRESSION in next symbol)
@@ -44252,7 +44276,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_SYMBOLS_PRD(53, 44255)
+    XBETWEEN_SYMBOLS_PRD(53, 44279)
 
 /*-----
 * CALL ChangeCoordinate
@@ -44267,7 +44291,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     CALL_PROCEDURE_IN_PRD(z1A0C0H_ChangeCoordinate,
       yPrdN_z1A0C0H_ChangeCoordinate, 0, 21)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_STMTS_PRD(21, 44270)
+    XBETWEEN_STMTS_PRD(21, 44294)
 
 /*-----
 * CALL CollisionShip
@@ -44282,7 +44306,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     CALL_PROCEDURE_IN_PRD(z1A0C0I_CollisionShip, yPrdN_z1A0C0I_CollisionShip,
       0, 22)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_STMTS_PRD(22, 44285)
+    XBETWEEN_STMTS_PRD(22, 44309)
 
 /*-----
 * CALL UpdateShots
@@ -44296,7 +44320,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE_IN_PRD(z1A0C0J_UpdateShots, yPrdN_z1A0C0J_UpdateShots, 0, 23)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(23, 44299)
+    XBETWEEN_SYMBOLS_PRD(23, 44323)
 
 /*-----
 * OUTPUT messageLog
@@ -44315,7 +44339,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
       ySigN_z_BasicTypes_0J_messageLog, TO_PROCESS(Env, &yEnvR_env),
       sizeof(yPDef_z_BasicTypes_0J_messageLog), "messageLog")
     SIGNAL_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(54, 44318)
+    XBETWEEN_SYMBOLS_PRD(54, 44342)
 
 /*-----
 * CALL NullingSI  (from EXPRESSION in next symbol)
@@ -44350,7 +44374,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_STMTS_PRD(55, 44353)
+    XBETWEEN_STMTS_PRD(55, 44377)
 
 /*-----
 * CALL CheckStrategies  (from EXPRESSION in next symbol)
@@ -44386,7 +44410,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_SYMBOLS_PRD(56, 44389)
+    XBETWEEN_SYMBOLS_PRD(56, 44413)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -44404,7 +44428,7 @@ YPRD_FUNCTION(z1A0C_SimIteration)
     xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
       (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-    XBETWEEN_SYMBOLS_PRD(57, 44407)
+    XBETWEEN_SYMBOLS_PRD(57, 44431)
 
 /*-----
 * RETURN
@@ -44535,7 +44559,7 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 44538)
+    XBETWEEN_SYMBOLS_PRD(3, 44562)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -44555,8 +44579,8 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
 #endif
 
   case 1:
-  L_grst15:;
-    XBETWEEN_SYMBOLS_PRD(4, 44559)
+  L_grst25:;
+    XBETWEEN_SYMBOLS_PRD(4, 44583)
 
 /*-----
 * DECISION
@@ -44576,7 +44600,7 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C093_i, z_BasicTypes_20_AmountStrategy)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(7, 44579)
+      XBETWEEN_SYMBOLS_PRD(7, 44603)
 
 /*-----
 * ASSIGNMENT strASI... := ...
@@ -44600,7 +44624,7 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
         yPrdVarP)->z1A0C093_i - SDL_INTEGER_LIT(1)]),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(8, 44603)
+      XBETWEEN_STMTS_PRD(8, 44627)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -44621,7 +44645,7 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
         z1A0C093_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(5, 44624)
+      XBETWEEN_SYMBOLS_PRD(5, 44648)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -44640,7 +44664,7 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 44643)
+      XBETWEEN_SYMBOLS_PRD(6, 44667)
 
 /*-----
 * RETURN
@@ -44655,10 +44679,10 @@ YPRD_FUNCTION(z1A0C09_NullingSI)
     }
 
 /*-----
-* JOIN grst15
+* JOIN grst25
 * #SDTREF(SDL,C:\Battleships\Simulator\NullingSI.spd(1),128(85,60),1)
 ------*/
-    goto L_grst15;
+    goto L_grst25;
   }
   XEND_PRD
 }
@@ -44775,7 +44799,7 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 44778)
+    XBETWEEN_SYMBOLS_PRD(3, 44802)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -44795,8 +44819,8 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
 #endif
 
   case 1:
-  L_grst16:;
-    XBETWEEN_SYMBOLS_PRD(4, 44799)
+  L_grst26:;
+    XBETWEEN_SYMBOLS_PRD(4, 44823)
 
 /*-----
 * DECISION
@@ -44820,7 +44844,7 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
       z_BasicTypes_20_AmountStrategy), yEqF_SDL_Boolean(yVarP->z1A0S_gASI.A
       [yPrdVarP->z1A0C0A3_i - SDL_INTEGER_LIT(1)], SDL_True))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 44823)
+      XBETWEEN_SYMBOLS_PRD(6, 44847)
 
 /*-----
 * DECISION
@@ -44844,7 +44868,7 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
         ->StaticFather)->z1A0C0W_strASI.A
         [yPrdVarP->z1A0C0A3_i - SDL_INTEGER_LIT(1)], SDL_True)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(8, 44847)
+        XBETWEEN_SYMBOLS_PRD(8, 44871)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -44865,7 +44889,7 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(7, 44868)
+        XBETWEEN_SYMBOLS_PRD(7, 44892)
 
 /*-----
 * RETURN
@@ -44879,7 +44903,7 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
         SDL_RETURN
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(5, 44882)
+      XBETWEEN_SYMBOLS_PRD(5, 44906)
 
 /*-----
 * RETURN
@@ -44894,10 +44918,10 @@ YPRD_FUNCTION(z1A0C0A_IsASIComplete)
     }
 
 /*-----
-* JOIN grst16
+* JOIN grst26
 * #SDTREF(SDL,C:\Battleships\Simulator\IsASIComplete.spd(1),137(70,60),1)
 ------*/
-    goto L_grst16;
+    goto L_grst26;
   }
   XEND_PRD
 }
@@ -45069,7 +45093,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(7, 45072)
+    XBETWEEN_SYMBOLS_PRD(7, 45096)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -45088,7 +45112,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
     xMSCEAssign("i := ", &(((yVDef_z1A0C0B_CheckStrategies *)yPrdVarP)->
       z1A0C0B7_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(8, 45091)
+    XBETWEEN_STMTS_PRD(8, 45115)
 
 /*-----
 * ASSIGNMENT n := ...
@@ -45110,8 +45134,8 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
 #endif
 
   case 1:
-  L_grst17:;
-    XBETWEEN_SYMBOLS_PRD(9, 45114)
+  L_grst27:;
+    XBETWEEN_SYMBOLS_PRD(9, 45138)
 
 /*-----
 * DECISION
@@ -45131,7 +45155,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0B7_i, yPrdVarP->z1A0C0B9_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(21, 45134)
+      XBETWEEN_SYMBOLS_PRD(21, 45158)
 
 /*-----
 * ASSIGNMENT strASI... := ...
@@ -45159,7 +45183,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
         z1A0C0B7_i)).StrategyId - SDL_INTEGER_LIT(1)]),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(22, 45162)
+      XBETWEEN_STMTS_PRD(22, 45186)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -45181,12 +45205,12 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
 #endif
 
 /*-----
-* JOIN grst17
+* JOIN grst27
 * #SDTREF(SDL,C:\Battleships\Simulator\CheckStrategies.spd(1),128(80,60),1)
 ------*/
-      goto L_grst17;
+      goto L_grst27;
     } else {
-      XBETWEEN_SYMBOLS_PRD(10, 45189)
+      XBETWEEN_SYMBOLS_PRD(10, 45213)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -45205,7 +45229,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
       xMSCEAssign("i := ", &(((yVDef_z1A0C0B_CheckStrategies *)yPrdVarP)->
         z1A0C0B7_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(11, 45208)
+      XBETWEEN_STMTS_PRD(11, 45232)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -45224,7 +45248,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
       xMSCEAssign("j := ", &(((yVDef_z1A0C0B_CheckStrategies *)yPrdVarP)->
         z1A0C0B8_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(12, 45227)
+      XBETWEEN_STMTS_PRD(12, 45251)
 
 /*-----
 * ASSIGNMENT ns := ...
@@ -45245,8 +45269,8 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
 #endif
 
     case 2:
-    L_grst18:;
-      XBETWEEN_SYMBOLS_PRD(13, 45249)
+    L_grst28:;
+      XBETWEEN_SYMBOLS_PRD(13, 45273)
 
 /*-----
 * DECISION
@@ -45267,7 +45291,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
       if (xLE_SDL_Integer(yPrdVarP->z1A0C0B7_i,
         z_BasicTypes_20_AmountStrategy)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(14, 45270)
+        XBETWEEN_SYMBOLS_PRD(14, 45294)
 
 /*-----
 * DECISION
@@ -45289,7 +45313,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
         if (yEqF_SDL_Boolean(yVarP->z1A0S_gASI.A
           [yPrdVarP->z1A0C0B7_i - SDL_INTEGER_LIT(1)], SDL_True)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(15, 45292)
+          XBETWEEN_SYMBOLS_PRD(15, 45316)
 
 /*-----
 * DECISION
@@ -45315,7 +45339,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
             ->StaticFather)->z1A0C0W_strASI.A
             [yPrdVarP->z1A0C0B7_i - SDL_INTEGER_LIT(1)], SDL_False)) {
 #endif
-            XBETWEEN_SYMBOLS_PRD(18, 45318)
+            XBETWEEN_SYMBOLS_PRD(18, 45342)
 
 /*-----
 * OUTPUT StrategyLose
@@ -45336,7 +45360,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
               TO_PROCESS(Router, yPrsN_z19_Router),
               sizeof(yPDef_z_BasicTypes_0A_StrategyLose), "StrategyLose")
             SIGNAL_ALLOC_ERROR_END
-            XBETWEEN_SYMBOLS_PRD(19, 45339)
+            XBETWEEN_SYMBOLS_PRD(19, 45363)
 
 /*-----
 * ASSIGNMENT gASI... := ...
@@ -45359,7 +45383,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
               (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(16, 45362)
+            XBETWEEN_SYMBOLS_PRD(16, 45386)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -45379,7 +45403,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
             xMSCEAssign("j := ", &(((yVDef_z1A0C0B_CheckStrategies *)yPrdVarP)->
               z1A0C0B8_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-            XBETWEEN_STMTS_PRD(17, 45382)
+            XBETWEEN_STMTS_PRD(17, 45406)
 
 /*-----
 * ASSIGNMENT ns := ...
@@ -45402,7 +45426,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
           }
         } else {
         }
-        XBETWEEN_SYMBOLS_PRD(20, 45405)
+        XBETWEEN_SYMBOLS_PRD(20, 45429)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -45432,15 +45456,15 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
       }
 
 /*-----
-* JOIN grst18
+* JOIN grst28
 * #SDTREF(SDL,C:\Battleships\Simulator\CheckStrategies.spd(1),203(80,100),1)
 ------*/
-      goto L_grst18;
+      goto L_grst28;
     }
 
   case 5:
   L_CS1:;
-    XBETWEEN_SYMBOLS_PRD(23, 45443)
+    XBETWEEN_SYMBOLS_PRD(23, 45467)
 
 /*-----
 * DECISION
@@ -45460,7 +45484,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
 #else
     if (yEqF_SDL_Integer(yPrdVarP->z1A0C0B8_j, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(27, 45463)
+      XBETWEEN_SYMBOLS_PRD(27, 45487)
 
 /*-----
 * ASSIGNMENT gShots := ...
@@ -45479,7 +45503,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
       xMSCEAssign("gShots := ", &(yVarP->z1A0R_gShots),
         (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
 #endif
-      XBETWEEN_SYMBOLS_PRD(28, 45482)
+      XBETWEEN_SYMBOLS_PRD(28, 45506)
 
 /*-----
 * ASSIGNMENT victory := ...
@@ -45498,7 +45522,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(24, 45501)
+      XBETWEEN_SYMBOLS_PRD(24, 45525)
 
 /*-----
 * DECISION
@@ -45522,7 +45546,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
         SDL_INTEGER_LIT(1)), yEqF_z1P_tStringShotParameters(&(yVarP->
         z1A0R_gShots), z1P0_empty(&yUVar.U24.Result1)))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(25, 45525)
+        XBETWEEN_SYMBOLS_PRD(25, 45549)
 
 /*-----
 * ASSIGNMENT victory := ...
@@ -45540,7 +45564,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
         xMSCEAssign("victory := ", &(yVarP->z1A0W_victory),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(26, 45543)
+        XBETWEEN_SYMBOLS_PRD(26, 45567)
 
 /*-----
 * OUTPUT StrategyVictory
@@ -45564,7 +45588,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
       } else {
       }
     }
-    XBETWEEN_SYMBOLS_PRD(29, 45567)
+    XBETWEEN_SYMBOLS_PRD(29, 45591)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -45582,7 +45606,7 @@ YPRD_FUNCTION(z1A0C0B_CheckStrategies)
     xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
       (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-    XBETWEEN_SYMBOLS_PRD(30, 45585)
+    XBETWEEN_SYMBOLS_PRD(30, 45609)
 
 /*-----
 * RETURN
@@ -45761,7 +45785,7 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 45764)
+    XBETWEEN_SYMBOLS_PRD(3, 45788)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -45781,8 +45805,8 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
 #endif
 
   case 1:
-  L_grst19:;
-    XBETWEEN_SYMBOLS_PRD(4, 45785)
+  L_grst29:;
+    XBETWEEN_SYMBOLS_PRD(4, 45809)
 
 /*-----
 * DECISION
@@ -45802,7 +45826,7 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0C3_i, z1A0C0O_MAX_SHIP_ID)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(7, 45805)
+      XBETWEEN_SYMBOLS_PRD(7, 45829)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -45828,7 +45852,7 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
         z1A0C0C3_i - SDL_INTEGER_LIT(1)].IsOrder),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(8, 45831)
+      XBETWEEN_STMTS_PRD(8, 45855)
 
 /*-----
 * ASSIGNMENT shipOrders... := ...
@@ -45855,7 +45879,7 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
         z1A0C0C3_i - SDL_INTEGER_LIT(1)].IsOrderPass),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(9, 45858)
+      XBETWEEN_STMTS_PRD(9, 45882)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -45876,7 +45900,7 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
         z1A0C0C3_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(5, 45879)
+      XBETWEEN_SYMBOLS_PRD(5, 45903)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -45895,7 +45919,7 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 45898)
+      XBETWEEN_SYMBOLS_PRD(6, 45922)
 
 /*-----
 * RETURN
@@ -45910,10 +45934,10 @@ YPRD_FUNCTION(z1A0C0C_NullingShipOrders)
     }
 
 /*-----
-* JOIN grst19
+* JOIN grst29
 * #SDTREF(SDL,C:\Battleships\Simulator\NullingShipOrders.spd(1),128(70,60),1)
 ------*/
-    goto L_grst19;
+    goto L_grst29;
   }
   XEND_PRD
 }
@@ -46056,7 +46080,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 46059)
+    XBETWEEN_SYMBOLS_PRD(4, 46083)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -46076,8 +46100,8 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
 #endif
 
   case 1:
-  L_grst20:;
-    XBETWEEN_SYMBOLS_PRD(5, 46080)
+  L_grst30:;
+    XBETWEEN_SYMBOLS_PRD(5, 46104)
 
 /*-----
 * DECISION
@@ -46097,7 +46121,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0D4_i, z1A0C0O_MAX_SHIP_ID)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 46100)
+      XBETWEEN_SYMBOLS_PRD(6, 46124)
 
 /*-----
 * DECISION
@@ -46120,7 +46144,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
         z1A0C0X_shipOrders.A[yPrdVarP->z1A0C0D4_i - SDL_INTEGER_LIT(1)].
         IsOrder) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(7, 46123)
+        XBETWEEN_SYMBOLS_PRD(7, 46147)
 
 /*-----
 * DECISION
@@ -46143,7 +46167,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
 #endif
         if (yEqF_z1A0C0K_tLiteralsOrder(yPrdVarP->yDcn_z1A0C0K_tLiteralsOrder,
               z1A0C0K0_SPEED)) {
-          XBETWEEN_SYMBOLS_PRD(8, 46146)
+          XBETWEEN_SYMBOLS_PRD(8, 46170)
 
 /*-----
 * DECISION
@@ -46168,7 +46192,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
             z1A0C0X_shipOrders.A[yPrdVarP->z1A0C0D4_i - SDL_INTEGER_LIT(1)].
             IsOrderPass) {
 #endif
-            XBETWEEN_SYMBOLS_PRD(10, 46171)
+            XBETWEEN_SYMBOLS_PRD(10, 46195)
 
 /*-----
 * OUTPUT OrderSpeedResponse
@@ -46196,7 +46220,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
               "OrderSpeedResponse")
             SIGNAL_ALLOC_ERROR_END
           } else {
-            XBETWEEN_SYMBOLS_PRD(9, 46199)
+            XBETWEEN_SYMBOLS_PRD(9, 46223)
 
 /*-----
 * OUTPUT OrderSpeedReject
@@ -46226,7 +46250,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
           }
         } else if (yEqF_z1A0C0K_tLiteralsOrder(yPrdVarP->yDcn_z1A0C0K_tLiteralsOrder,
               z1A0C0K1_TURN)) {
-          XBETWEEN_SYMBOLS_PRD(11, 46229)
+          XBETWEEN_SYMBOLS_PRD(11, 46253)
 
 /*-----
 * DECISION
@@ -46251,7 +46275,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
             z1A0C0X_shipOrders.A[yPrdVarP->z1A0C0D4_i - SDL_INTEGER_LIT(1)].
             IsOrderPass) {
 #endif
-            XBETWEEN_SYMBOLS_PRD(13, 46254)
+            XBETWEEN_SYMBOLS_PRD(13, 46278)
 
 /*-----
 * OUTPUT OrderTurnResponse
@@ -46279,7 +46303,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
               "OrderTurnResponse")
             SIGNAL_ALLOC_ERROR_END
           } else {
-            XBETWEEN_SYMBOLS_PRD(12, 46282)
+            XBETWEEN_SYMBOLS_PRD(12, 46306)
 
 /*-----
 * OUTPUT OrderTurnReject
@@ -46308,7 +46332,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
           }
         } else if (yEqF_z1A0C0K_tLiteralsOrder(yPrdVarP->yDcn_z1A0C0K_tLiteralsOrder,
               z1A0C0K2_FIRE)) {
-          XBETWEEN_SYMBOLS_PRD(14, 46311)
+          XBETWEEN_SYMBOLS_PRD(14, 46335)
 
 /*-----
 * DECISION
@@ -46333,7 +46357,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
             z1A0C0X_shipOrders.A[yPrdVarP->z1A0C0D4_i - SDL_INTEGER_LIT(1)].
             IsOrderPass) {
 #endif
-            XBETWEEN_SYMBOLS_PRD(16, 46336)
+            XBETWEEN_SYMBOLS_PRD(16, 46360)
 
 /*-----
 * OUTPUT OrderFireResponse
@@ -46361,7 +46385,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
               "OrderFireResponse")
             SIGNAL_ALLOC_ERROR_END
           } else {
-            XBETWEEN_SYMBOLS_PRD(15, 46364)
+            XBETWEEN_SYMBOLS_PRD(15, 46388)
 
 /*-----
 * OUTPUT OrderFireReject
@@ -46398,7 +46422,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
 #endif
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(17, 46401)
+      XBETWEEN_SYMBOLS_PRD(17, 46425)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -46419,7 +46443,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(18, 46422)
+      XBETWEEN_SYMBOLS_PRD(18, 46446)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -46438,7 +46462,7 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(19, 46441)
+      XBETWEEN_SYMBOLS_PRD(19, 46465)
 
 /*-----
 * RETURN
@@ -46453,10 +46477,10 @@ YPRD_FUNCTION(z1A0C0D_SendResposeOnOrders)
     }
 
 /*-----
-* JOIN grst20
+* JOIN grst30
 * #SDTREF(SDL,C:\Battleships\Simulator\SendResposeOnOrders.spd(1),152(85,45),1)
 ------*/
-    goto L_grst20;
+    goto L_grst30;
   }
   XEND_PRD
 }
@@ -46652,7 +46676,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(9, 46655)
+    XBETWEEN_SYMBOLS_PRD(9, 46679)
 
 /*-----
 * ASSIGNMENT countershot := ...
@@ -46673,7 +46697,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     xMSCEAssign("countershot := ", &(((yVDef_z1A0C0E_OrderFire *)yPrdVarP)->
       z1A0C0ED_countershot), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(10, 46676)
+    XBETWEEN_STMTS_PRD(10, 46700)
 
 /*-----
 * ASSIGNMENT leng := ...
@@ -46693,7 +46717,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     xMSCEAssign("leng := ", &(((yVDef_z1A0C0E_OrderFire *)yPrdVarP)->
       z1A0C0EE_leng), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(11, 46696)
+    XBETWEEN_STMTS_PRD(11, 46720)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -46712,7 +46736,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     xMSCEAssign("i := ", &(((yVDef_z1A0C0E_OrderFire *)yPrdVarP)->z1A0C0EC_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(12, 46715)
+    XBETWEEN_STMTS_PRD(12, 46739)
 
 /*-----
 * CALL GetProperty  (from EXPRESSION in next symbol)
@@ -46751,7 +46775,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     xMSCEAssign("bool := ", &(((yVDef_z1A0C0E_OrderFire *)yPrdVarP)->
       z1A0C0EH_bool), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(13, 46754)
+    XBETWEEN_STMTS_PRD(13, 46778)
 
 /*-----
 * CALL GetNumberShip  (from EXPRESSION in next symbol)
@@ -46792,7 +46816,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
       (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-    XBETWEEN_STMTS_PRD(14, 46795)
+    XBETWEEN_STMTS_PRD(14, 46819)
 
 /*-----
 * CALL GetLenghtShot
@@ -46811,7 +46835,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     CALL_PROCEDURE_IN_PRD(z1A0C0EA_GetLenghtShot, yPrdN_z1A0C0EA_GetLenghtShot,
       0, 5)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(5, 46814)
+    XBETWEEN_SYMBOLS_PRD(5, 46838)
 
 /*-----
 * DECISION
@@ -46831,7 +46855,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 #else
     if (yEqF_SDL_Boolean(yPrdVarP->z1A0C0EH_bool, SDL_True)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(15, 46834)
+      XBETWEEN_SYMBOLS_PRD(15, 46858)
 
 /*-----
 * DECISION
@@ -46858,7 +46882,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 ------*/
         goto L_L3;
       } else {
-        XBETWEEN_SYMBOLS_PRD(16, 46861)
+        XBETWEEN_SYMBOLS_PRD(16, 46885)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -46877,7 +46901,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS_PRD(17, 46880)
+        XBETWEEN_SYMBOLS_PRD(17, 46904)
 
 /*-----
 * RETURN
@@ -46891,7 +46915,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
         SDL_RETURN
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(18, 46894)
+      XBETWEEN_SYMBOLS_PRD(18, 46918)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -46910,7 +46934,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(19, 46913)
+      XBETWEEN_SYMBOLS_PRD(19, 46937)
 
 /*-----
 * RETURN
@@ -46926,7 +46950,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 
   case 1:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(20, 46929)
+    XBETWEEN_SYMBOLS_PRD(20, 46953)
 
 /*-----
 * CALL GetAmmunition  (from EXPRESSION in next symbol)
@@ -46964,7 +46988,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
     xMSCEAssign("bool := ", &(((yVDef_z1A0C0E_OrderFire *)yPrdVarP)->
       z1A0C0EH_bool), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_SYMBOLS_PRD(21, 46967)
+    XBETWEEN_SYMBOLS_PRD(21, 46991)
 
 /*-----
 * DECISION
@@ -46991,7 +47015,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 ------*/
       goto L_L2;
     } else {
-      XBETWEEN_SYMBOLS_PRD(22, 46994)
+      XBETWEEN_SYMBOLS_PRD(22, 47018)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -47010,7 +47034,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(23, 47013)
+      XBETWEEN_SYMBOLS_PRD(23, 47037)
 
 /*-----
 * RETURN
@@ -47026,7 +47050,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 
   case 2:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(24, 47029)
+    XBETWEEN_SYMBOLS_PRD(24, 47053)
 
 /*-----
 * DECISION
@@ -47046,7 +47070,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0EC_i, yPrdVarP->z1A0C0ED_countershot)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(27, 47049)
+      XBETWEEN_SYMBOLS_PRD(27, 47073)
 
 /*-----
 * CALL GetCurrentCoordinate  (from EXPRESSION in next symbol)
@@ -47088,7 +47112,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
       xMSCEAssign("errcode := ", &(yVarP->z1A0T_errcode),
         (tSDLTypeInfo *)&ySDL_z1Q_tErrorCode);
 #endif
-      XBETWEEN_SYMBOLS_PRD(28, 47091)
+      XBETWEEN_SYMBOLS_PRD(28, 47115)
 
 /*-----
 * DECISION
@@ -47108,7 +47132,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 #else
       if (yEqF_z1Q_tErrorCode(yVarP->z1A0T_errcode, z1Q0_EC_OK)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(29, 47111)
+        XBETWEEN_SYMBOLS_PRD(29, 47135)
 
 /*-----
 * ASSIGNMENT ShotParam... := ...
@@ -47131,7 +47155,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
           yPrdVarP)->z1A0C0EF_ShotParam.TypeWeaponry),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-        XBETWEEN_STMTS_PRD(30, 47134)
+        XBETWEEN_STMTS_PRD(30, 47158)
 
 /*-----
 * ASSIGNMENT ShotParam... := ...
@@ -47154,7 +47178,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
           yPrdVarP)->z1A0C0EF_ShotParam.CurrentCoordinates),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-        XBETWEEN_STMTS_PRD(31, 47157)
+        XBETWEEN_STMTS_PRD(31, 47181)
 
 /*-----
 * CALL GetFinishCoordinate  (from EXPRESSION in next symbol)
@@ -47202,7 +47226,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
           yPrdVarP)->z1A0C0EF_ShotParam.FinishCoordinates),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-        XBETWEEN_SYMBOLS_PRD(32, 47205)
+        XBETWEEN_SYMBOLS_PRD(32, 47229)
 
 /*-----
 * ASSIGNMENT gShots := ...
@@ -47224,7 +47248,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
         xMSCEAssign("gShots := ", &(yVarP->z1A0R_gShots),
           (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
 #endif
-        XBETWEEN_STMTS_PRD(33, 47227)
+        XBETWEEN_STMTS_PRD(33, 47251)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -47244,7 +47268,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
         xMSCEAssign("i := ", &(((yVDef_z1A0C0E_OrderFire *)yPrdVarP)->
           z1A0C0EC_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(34, 47247)
+        XBETWEEN_SYMBOLS_PRD(34, 47271)
 
 /*-----
 * OUTPUT messageLog
@@ -47269,7 +47293,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
 ------*/
         goto L_L3;
       } else {
-        XBETWEEN_SYMBOLS_PRD(35, 47272)
+        XBETWEEN_SYMBOLS_PRD(35, 47296)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -47288,7 +47312,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS_PRD(36, 47291)
+        XBETWEEN_SYMBOLS_PRD(36, 47315)
 
 /*-----
 * RETURN
@@ -47302,7 +47326,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
         SDL_RETURN
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(25, 47305)
+      XBETWEEN_SYMBOLS_PRD(25, 47329)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -47321,7 +47345,7 @@ YPRD_FUNCTION(z1A0C0E_OrderFire)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(26, 47324)
+      XBETWEEN_SYMBOLS_PRD(26, 47348)
 
 /*-----
 * RETURN
@@ -47496,7 +47520,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 47499)
+    XBETWEEN_SYMBOLS_PRD(3, 47523)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -47515,7 +47539,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
     xMSCEAssign("i := ", &(yPrdVarP->z1A0C0E65_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(4, 47518)
+    XBETWEEN_SYMBOLS_PRD(4, 47542)
 
 /*-----
 * ASSIGNMENT leng := ...
@@ -47537,8 +47561,8 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
 #endif
 
   case 1:
-  L_grst21:;
-    XBETWEEN_SYMBOLS_PRD(5, 47541)
+  L_grst31:;
+    XBETWEEN_SYMBOLS_PRD(5, 47565)
 
 /*-----
 * DECISION
@@ -47558,7 +47582,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0E65_i, yPrdVarP->z1A0C0E66_leng)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 47561)
+      XBETWEEN_SYMBOLS_PRD(6, 47585)
 
 /*-----
 * DECISION
@@ -47582,7 +47606,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
         (*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
         yPrdVarP->z1A0C0E65_i)).ShipId)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(8, 47585)
+        XBETWEEN_SYMBOLS_PRD(8, 47609)
 
 /*-----
 * ASSIGNMENT CurCoor := ...
@@ -47602,7 +47626,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
         xMSCEAssign("CurCoor := ", &((*(yPrdVarP->z1A0C0E61_CurCoor))),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 47605)
+        XBETWEEN_SYMBOLS_PRD(9, 47629)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -47621,7 +47645,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
         xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
           (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-        XBETWEEN_SYMBOLS_PRD(10, 47624)
+        XBETWEEN_SYMBOLS_PRD(10, 47648)
 
 /*-----
 * RETURN
@@ -47634,7 +47658,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
           XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(7, 47637)
+        XBETWEEN_SYMBOLS_PRD(7, 47661)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -47656,7 +47680,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
 #endif
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(11, 47659)
+      XBETWEEN_SYMBOLS_PRD(11, 47683)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -47675,7 +47699,7 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(12, 47678)
+      XBETWEEN_SYMBOLS_PRD(12, 47702)
 
 /*-----
 * RETURN
@@ -47690,10 +47714,10 @@ YPRD_FUNCTION(z1A0C0E6_GetCurrentCoordinate)
     }
 
 /*-----
-* JOIN grst21
+* JOIN grst31
 * #SDTREF(SDL,C:\Battleships\Simulator\GetCurrentCoordinate.spd(1),317(60,95),1)
 ------*/
-    goto L_grst21;
+    goto L_grst31;
   }
   XEND_PRD
 }
@@ -47889,7 +47913,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(5, 47892)
+    XBETWEEN_SYMBOLS_PRD(5, 47916)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -47908,7 +47932,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
     xMSCEAssign("i := ", &(yPrdVarP->z1A0C0E77_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(6, 47911)
+    XBETWEEN_SYMBOLS_PRD(6, 47935)
 
 /*-----
 * ASSIGNMENT leng := ...
@@ -47930,8 +47954,8 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
 #endif
 
   case 1:
-  L_grst22:;
-    XBETWEEN_SYMBOLS_PRD(7, 47934)
+  L_grst32:;
+    XBETWEEN_SYMBOLS_PRD(7, 47958)
 
 /*-----
 * DECISION
@@ -47951,7 +47975,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0E77_i, yPrdVarP->z1A0C0E76_leng)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 47954)
+      XBETWEEN_SYMBOLS_PRD(8, 47978)
 
 /*-----
 * DECISION
@@ -47975,7 +47999,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
         (*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
         yPrdVarP->z1A0C0E77_i)).ShipId)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 47978)
+        XBETWEEN_SYMBOLS_PRD(9, 48002)
 
 /*-----
 * DECISION
@@ -47997,7 +48021,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
 #endif
         if (yEqF_z_BasicTypes_0R_tNameWeaponry(yPrdVarP->yDcn_z_BasicTypes_0R_tNameWeaponry,
               z_BasicTypes_0R0_MISSILE)) {
-          XBETWEEN_SYMBOLS_PRD(10, 48000)
+          XBETWEEN_SYMBOLS_PRD(10, 48024)
 
 /*-----
 * DECISION
@@ -48021,7 +48045,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
                 z_BasicTypes_0S2_DESTROYER) ||
               yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
                 z_BasicTypes_0S4_REPAIR_BOAT)) {
-            XBETWEEN_SYMBOLS_PRD(11, 48024)
+            XBETWEEN_SYMBOLS_PRD(11, 48048)
 
 /*-----
 * RETURN
@@ -48034,7 +48058,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
               XASS_MR_ASS_FR);
             SDL_RETURN
           } else {
-            XBETWEEN_SYMBOLS_PRD(12, 48037)
+            XBETWEEN_SYMBOLS_PRD(12, 48061)
 
 /*-----
 * RETURN
@@ -48065,7 +48089,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
           goto L_L2;
         } else if (yEqF_z_BasicTypes_0R_tNameWeaponry(yPrdVarP->yDcn_z_BasicTypes_0R_tNameWeaponry,
               z_BasicTypes_0R1_TORPEDO)) {
-          XBETWEEN_SYMBOLS_PRD(13, 48068)
+          XBETWEEN_SYMBOLS_PRD(13, 48092)
 
 /*-----
 * DECISION
@@ -48089,7 +48113,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
                 z_BasicTypes_0S3_MISSILE_CUTTER) ||
               yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
                 z_BasicTypes_0S4_REPAIR_BOAT)) {
-            XBETWEEN_SYMBOLS_PRD(14, 48092)
+            XBETWEEN_SYMBOLS_PRD(14, 48116)
 
 /*-----
 * RETURN
@@ -48102,7 +48126,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
               XASS_MR_ASS_FR);
             SDL_RETURN
           } else {
-            XBETWEEN_SYMBOLS_PRD(15, 48105)
+            XBETWEEN_SYMBOLS_PRD(15, 48129)
 
 /*-----
 * RETURN
@@ -48124,7 +48148,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
         }
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(16, 48127)
+        XBETWEEN_SYMBOLS_PRD(16, 48151)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -48146,7 +48170,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
 #endif
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(17, 48149)
+      XBETWEEN_SYMBOLS_PRD(17, 48173)
 
 /*-----
 * RETURN
@@ -48161,14 +48185,14 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
     }
 
 /*-----
-* JOIN grst22
+* JOIN grst32
 * #SDTREF(SDL,C:\Battleships\Simulator\GetProperty.spd(1),137(70,70),1)
 ------*/
-    goto L_grst22;
+    goto L_grst32;
 
   case 3:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(18, 48171)
+    XBETWEEN_SYMBOLS_PRD(18, 48195)
 
 /*-----
 * DECISION
@@ -48192,7 +48216,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
           z_BasicTypes_0S3_MISSILE_CUTTER) ||
         yEqF_z_BasicTypes_0S_tNameShip(yPrdVarP->yDcn_z_BasicTypes_0S_tNameShip,
           z_BasicTypes_0S4_REPAIR_BOAT)) {
-      XBETWEEN_SYMBOLS_PRD(19, 48195)
+      XBETWEEN_SYMBOLS_PRD(19, 48219)
 
 /*-----
 * RETURN
@@ -48205,7 +48229,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(20, 48208)
+      XBETWEEN_SYMBOLS_PRD(20, 48232)
 
 /*-----
 * RETURN
@@ -48221,7 +48245,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
 
   case 4:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(21, 48224)
+    XBETWEEN_SYMBOLS_PRD(21, 48248)
 
 /*-----
 * DECISION
@@ -48247,7 +48271,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
       &(yVarP->z1A0Q_gShips), yPrdVarP->z1A0C0E77_i)).TypeShip,
       z_BasicTypes_0S4_REPAIR_BOAT)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(22, 48250)
+      XBETWEEN_SYMBOLS_PRD(22, 48274)
 
 /*-----
 * RETURN
@@ -48260,7 +48284,7 @@ YPRD_FUNCTION(z1A0C0E7_GetProperty)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(23, 48263)
+      XBETWEEN_SYMBOLS_PRD(23, 48287)
 
 /*-----
 * RETURN
@@ -48453,7 +48477,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 48456)
+    XBETWEEN_SYMBOLS_PRD(3, 48480)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -48472,7 +48496,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
     xMSCEAssign("i := ", &(yPrdVarP->z1A0C0E85_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(4, 48475)
+    XBETWEEN_SYMBOLS_PRD(4, 48499)
 
 /*-----
 * ASSIGNMENT leng := ...
@@ -48494,8 +48518,8 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
 #endif
 
   case 1:
-  L_grst23:;
-    XBETWEEN_SYMBOLS_PRD(5, 48498)
+  L_grst33:;
+    XBETWEEN_SYMBOLS_PRD(5, 48522)
 
 /*-----
 * DECISION
@@ -48517,7 +48541,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0E85_i, ((yVDef_z1A0C0E_OrderFire *)
       yPrdVarP->StaticFather)->z1A0C0EE_leng)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 48520)
+      XBETWEEN_SYMBOLS_PRD(6, 48544)
 
 /*-----
 * DECISION
@@ -48541,7 +48565,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
         (*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
         yPrdVarP->z1A0C0E85_i)).ShipId)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(8, 48544)
+        XBETWEEN_SYMBOLS_PRD(8, 48568)
 
 /*-----
 * ASSIGNMENT Number := ...
@@ -48560,7 +48584,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
         xMSCEAssign("Number := ", &((*(yPrdVarP->z1A0C0E80_Number))),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 48563)
+        XBETWEEN_SYMBOLS_PRD(9, 48587)
 
 /*-----
 * RETURN
@@ -48573,7 +48597,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
           XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(7, 48576)
+        XBETWEEN_SYMBOLS_PRD(7, 48600)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -48595,7 +48619,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
 #endif
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(10, 48598)
+      XBETWEEN_SYMBOLS_PRD(10, 48622)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -48614,7 +48638,7 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 48617)
+      XBETWEEN_SYMBOLS_PRD(11, 48641)
 
 /*-----
 * RETURN
@@ -48629,10 +48653,10 @@ YPRD_FUNCTION(z1A0C0E8_GetNumberShip)
     }
 
 /*-----
-* JOIN grst23
+* JOIN grst33
 * #SDTREF(SDL,C:\Battleships\Simulator\GetNumberShip.spd(1),140(65,90),1)
 ------*/
-    goto L_grst23;
+    goto L_grst33;
   }
   XEND_PRD
 }
@@ -48773,7 +48797,7 @@ YPRD_FUNCTION(z1A0C0E9_GetAmmunition)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 48776)
+    XBETWEEN_SYMBOLS_PRD(1, 48800)
 
 /*-----
 * DECISION
@@ -48799,7 +48823,7 @@ YPRD_FUNCTION(z1A0C0E9_GetAmmunition)
       [((yVDef_z1A0C0E_OrderFire *)yPrdVarP->StaticFather)->
       z1A0C0E1_NameWeaponry], SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(2, 48802)
+      XBETWEEN_SYMBOLS_PRD(2, 48826)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -48830,7 +48854,7 @@ YPRD_FUNCTION(z1A0C0E9_GetAmmunition)
         z1A0C0E1_NameWeaponry]),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1D_tAAWeaponry);
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 48833)
+      XBETWEEN_SYMBOLS_PRD(3, 48857)
 
 /*-----
 * RETURN
@@ -48843,7 +48867,7 @@ YPRD_FUNCTION(z1A0C0E9_GetAmmunition)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(4, 48846)
+      XBETWEEN_SYMBOLS_PRD(4, 48870)
 
 /*-----
 * RETURN
@@ -48968,7 +48992,7 @@ YPRD_FUNCTION(z1A0C0EA_GetLenghtShot)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 48971)
+    XBETWEEN_SYMBOLS_PRD(2, 48995)
 
 /*-----
 * ASSIGNMENT shipname := ...
@@ -48988,7 +49012,7 @@ YPRD_FUNCTION(z1A0C0EA_GetLenghtShot)
     xMSCEAssign("shipname := ", &(yPrdVarP->z1A0C0EA3_shipname),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(3, 48991)
+    XBETWEEN_SYMBOLS_PRD(3, 49015)
 
 /*-----
 * DECISION
@@ -49014,7 +49038,7 @@ YPRD_FUNCTION(z1A0C0EA_GetLenghtShot)
       [((yVDef_z1A0C0E_OrderFire *)yPrdVarP->StaticFather)->
       z1A0C0E1_NameWeaponry])) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 49017)
+      XBETWEEN_SYMBOLS_PRD(4, 49041)
 
 /*-----
 * ASSIGNMENT lenght := ...
@@ -49037,7 +49061,7 @@ YPRD_FUNCTION(z1A0C0EA_GetLenghtShot)
 #endif
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(5, 49040)
+    XBETWEEN_SYMBOLS_PRD(5, 49064)
 
 /*-----
 * RETURN
@@ -49193,7 +49217,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 49196)
+    XBETWEEN_SYMBOLS_PRD(2, 49220)
 
 /*-----
 * ASSIGNMENT cX := ...
@@ -49213,7 +49237,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
     xMSCEAssign("cX := ", &(((yVDef_z1A0C0EB_GetFinishCoordinate *)yPrdVarP)->
       z1A0C0EB5_cX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(3, 49216)
+    XBETWEEN_STMTS_PRD(3, 49240)
 
 /*-----
 * ASSIGNMENT cY := ...
@@ -49233,7 +49257,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
     xMSCEAssign("cY := ", &(((yVDef_z1A0C0EB_GetFinishCoordinate *)yPrdVarP)->
       z1A0C0EB6_cY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 49236)
+    XBETWEEN_STMTS_PRD(4, 49260)
 
 /*-----
 * ASSIGNMENT fX := ...
@@ -49253,7 +49277,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
     xMSCEAssign("fX := ", &(((yVDef_z1A0C0EB_GetFinishCoordinate *)yPrdVarP)->
       z1A0C0EB7_fX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(5, 49256)
+    XBETWEEN_STMTS_PRD(5, 49280)
 
 /*-----
 * ASSIGNMENT fY := ...
@@ -49273,7 +49297,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
     xMSCEAssign("fY := ", &(((yVDef_z1A0C0EB_GetFinishCoordinate *)yPrdVarP)->
       z1A0C0EB8_fY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(6, 49276)
+    XBETWEEN_SYMBOLS_PRD(6, 49300)
 
 /*-----
 * ASSIGNMENT Range := ...
@@ -49293,7 +49317,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
     xMSCEAssign("Range := ", &(yPrdVarP->z1A0C0EB4_Range),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(7, 49296)
+    XBETWEEN_SYMBOLS_PRD(7, 49320)
 
 /*-----
 * DECISION
@@ -49317,7 +49341,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
       z1A0O_gWeaponryCharacter.A[((yVDef_z1A0C0E_OrderFire *)yPrdVarP
       ->StaticFather)->z1A0C0E1_NameWeaponry].Range)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(9, 49320)
+      XBETWEEN_SYMBOLS_PRD(9, 49344)
 
 /*-----
 * ASSIGNMENT Range := ...
@@ -49348,7 +49372,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
       xMSCEAssign("Range := ", &(((yVDef_z1A0C0EB_GetFinishCoordinate *)
         yPrdVarP)->z1A0C0EB4_Range), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(10, 49351)
+      XBETWEEN_STMTS_PRD(10, 49375)
 
 /*-----
 * ASSIGNMENT Coor... := ...
@@ -49379,7 +49403,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
         yPrdVarP)->z1A0C0EB9_Coor.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(11, 49382)
+      XBETWEEN_STMTS_PRD(11, 49406)
 
 /*-----
 * ASSIGNMENT Coor... := ...
@@ -49411,7 +49435,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(8, 49414)
+      XBETWEEN_SYMBOLS_PRD(8, 49438)
 
 /*-----
 * ASSIGNMENT Coor := ...
@@ -49431,7 +49455,7 @@ YPRD_FUNCTION(z1A0C0EB_GetFinishCoordinate)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(12, 49434)
+    XBETWEEN_SYMBOLS_PRD(12, 49458)
 
 /*-----
 * RETURN
@@ -49831,7 +49855,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(8, 49834)
+    XBETWEEN_SYMBOLS_PRD(8, 49858)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -49850,7 +49874,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
     xMSCEAssign("i := ", &(((yVDef_z1A0C0F_OrderTurn *)yPrdVarP)->z1A0C0F9_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(9, 49853)
+    XBETWEEN_STMTS_PRD(9, 49877)
 
 /*-----
 * ASSIGNMENT leng := ...
@@ -49872,8 +49896,8 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 #endif
 
   case 1:
-  L_grst24:;
-    XBETWEEN_SYMBOLS_PRD(10, 49876)
+  L_grst34:;
+    XBETWEEN_SYMBOLS_PRD(10, 49900)
 
 /*-----
 * DECISION
@@ -49893,7 +49917,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0F9_i, yPrdVarP->z1A0C0FA_leng)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 49896)
+      XBETWEEN_SYMBOLS_PRD(13, 49920)
 
 /*-----
 * DECISION
@@ -49917,7 +49941,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
         z1A0Q_gShips), yPrdVarP->z1A0C0F9_i)).ShipId,
         yPrdVarP->z1A0C0F0_Shipid)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(14, 49920)
+        XBETWEEN_SYMBOLS_PRD(14, 49944)
 
 /*-----
 * ASSIGNMENT head := ...
@@ -49937,7 +49961,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
         xMSCEAssign("head := ", &(yPrdVarP->z1A0C0F8_head),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_SYMBOLS_PRD(15, 49940)
+        XBETWEEN_SYMBOLS_PRD(15, 49964)
 
 /*-----
 * OPERATOR CALL h2i  (from EXPRESSION in next symbol)
@@ -49975,7 +49999,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
         xMSCEAssign("number := ", &(((yVDef_z1A0C0F_OrderTurn *)yPrdVarP)->
           z1A0C0FB_number), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(16, 49978)
+        XBETWEEN_SYMBOLS_PRD(16, 50002)
 
 /*-----
 * DECISION
@@ -49997,7 +50021,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
         if (yEqF_z_BasicTypes_0T_tHeadingChange(yPrdVarP->z1A0C0F1_Heading,
           z_BasicTypes_0T0_LEFT)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(18, 50000)
+          XBETWEEN_SYMBOLS_PRD(18, 50024)
 
 /*-----
 * ASSIGNMENT number := ...
@@ -50018,7 +50042,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         } else {
-          XBETWEEN_SYMBOLS_PRD(17, 50021)
+          XBETWEEN_SYMBOLS_PRD(17, 50045)
 
 /*-----
 * ASSIGNMENT number := ...
@@ -50046,7 +50070,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 ------*/
         goto L_L2;
       } else {
-        XBETWEEN_SYMBOLS_PRD(19, 50049)
+        XBETWEEN_SYMBOLS_PRD(19, 50073)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -50068,7 +50092,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 #endif
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(11, 50071)
+      XBETWEEN_SYMBOLS_PRD(11, 50095)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -50087,7 +50111,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(12, 50090)
+      XBETWEEN_SYMBOLS_PRD(12, 50114)
 
 /*-----
 * RETURN
@@ -50102,14 +50126,14 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
     }
 
 /*-----
-* JOIN grst24
+* JOIN grst34
 * #SDTREF(SDL,C:\Battleships\Simulator\OrderTurn.spd(1),134(65,70),1)
 ------*/
-    goto L_grst24;
+    goto L_grst34;
 
   case 4:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(20, 50112)
+    XBETWEEN_SYMBOLS_PRD(20, 50136)
 
 /*-----
 * DECISION
@@ -50130,7 +50154,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0FB_number, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(21, 50133)
+      XBETWEEN_SYMBOLS_PRD(21, 50157)
 
 /*-----
 * ASSIGNMENT number := ...
@@ -50150,7 +50174,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
         z1A0C0FB_number), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(22, 50153)
+      XBETWEEN_SYMBOLS_PRD(22, 50177)
 
 /*-----
 * DECISION
@@ -50171,7 +50195,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
 #else
       if (xGT_SDL_Integer(yPrdVarP->z1A0C0FB_number, SDL_INTEGER_LIT(7))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(23, 50174)
+        XBETWEEN_SYMBOLS_PRD(23, 50198)
 
 /*-----
 * ASSIGNMENT number := ...
@@ -50193,7 +50217,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
       } else {
       }
     }
-    XBETWEEN_SYMBOLS_PRD(24, 50196)
+    XBETWEEN_SYMBOLS_PRD(24, 50220)
 
 /*-----
 * OPERATOR CALL i2h  (from EXPRESSION in next symbol)
@@ -50231,7 +50255,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
     xMSCEAssign("head := ", &(yPrdVarP->z1A0C0F8_head),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_SYMBOLS_PRD(25, 50234)
+    XBETWEEN_SYMBOLS_PRD(25, 50258)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -50254,7 +50278,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
       z1A0Q_gShips), ((yVDef_z1A0C0F_OrderTurn *)yPrdVarP)->z1A0C0F9_i)).
       Heading), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_SYMBOLS_PRD(26, 50257)
+    XBETWEEN_SYMBOLS_PRD(26, 50281)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -50272,7 +50296,7 @@ YPRD_FUNCTION(z1A0C0F_OrderTurn)
     xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
       (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-    XBETWEEN_SYMBOLS_PRD(27, 50275)
+    XBETWEEN_SYMBOLS_PRD(27, 50299)
 
 /*-----
 * RETURN
@@ -50528,7 +50552,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(5, 50531)
+    XBETWEEN_SYMBOLS_PRD(5, 50555)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -50546,7 +50570,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
     xMSCEAssign("i := ", &(yPrdVarP->z1A0C0G8_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(6, 50549)
+    XBETWEEN_SYMBOLS_PRD(6, 50573)
 
 /*-----
 * ASSIGNMENT leng := ...
@@ -50568,8 +50592,8 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
 #endif
 
   case 1:
-  L_grst25:;
-    XBETWEEN_SYMBOLS_PRD(7, 50572)
+  L_grst35:;
+    XBETWEEN_SYMBOLS_PRD(7, 50596)
 
 /*-----
 * DECISION
@@ -50589,7 +50613,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0G8_i, yPrdVarP->z1A0C0G9_leng)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 50592)
+      XBETWEEN_SYMBOLS_PRD(8, 50616)
 
 /*-----
 * DECISION
@@ -50613,7 +50637,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
         z1A0Q_gShips), yPrdVarP->z1A0C0G8_i)).ShipId,
         yPrdVarP->z1A0C0G0_shipid)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(10, 50616)
+        XBETWEEN_SYMBOLS_PRD(10, 50640)
 
 /*-----
 * ASSIGNMENT speed := ...
@@ -50637,7 +50661,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
         xMSCEAssign("speed := ", &(yPrdVarP->z1A0C0G7_speed),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(11, 50640)
+        XBETWEEN_SYMBOLS_PRD(11, 50664)
 
 /*-----
 * DECISION
@@ -50662,7 +50686,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
           z1A0P_gShipsCharacter.A[(*yExtr_z1O_tStringShipParameters(&(yVarP->
           z1A0Q_gShips), yPrdVarP->z1A0C0G8_i)).TypeShip].MaxSpeed)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(12, 50665)
+          XBETWEEN_SYMBOLS_PRD(12, 50689)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -50686,7 +50710,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
             &(yVarP->z1A0Q_gShips), yPrdVarP->z1A0C0G8_i)).Speed),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-          XBETWEEN_SYMBOLS_PRD(13, 50689)
+          XBETWEEN_SYMBOLS_PRD(13, 50713)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -50705,7 +50729,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
           xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
             (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-          XBETWEEN_SYMBOLS_PRD(14, 50708)
+          XBETWEEN_SYMBOLS_PRD(14, 50732)
 
 /*-----
 * RETURN
@@ -50718,7 +50742,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
             XASS_MR_ASS_FR);
           SDL_RETURN
         } else {
-          XBETWEEN_SYMBOLS_PRD(15, 50721)
+          XBETWEEN_SYMBOLS_PRD(15, 50745)
 
 /*-----
 * DECISION
@@ -50756,7 +50780,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
           }
         }
       } else {
-        XBETWEEN_SYMBOLS_PRD(9, 50759)
+        XBETWEEN_SYMBOLS_PRD(9, 50783)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -50778,7 +50802,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
 #endif
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(16, 50781)
+      XBETWEEN_SYMBOLS_PRD(16, 50805)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -50797,7 +50821,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(17, 50800)
+      XBETWEEN_SYMBOLS_PRD(17, 50824)
 
 /*-----
 * RETURN
@@ -50812,14 +50836,14 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
     }
 
 /*-----
-* JOIN grst25
+* JOIN grst35
 * #SDTREF(SDL,C:\Battleships\Simulator\OrderSpeed.spd(1),134(85,75),1)
 ------*/
-    goto L_grst25;
+    goto L_grst35;
 
   case 3:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(18, 50822)
+    XBETWEEN_SYMBOLS_PRD(18, 50846)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -50841,7 +50865,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
       z1A0Q_gShips), yPrdVarP->z1A0C0G8_i)).Speed),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_SYMBOLS_PRD(19, 50844)
+    XBETWEEN_SYMBOLS_PRD(19, 50868)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -50859,7 +50883,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
     xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
       (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-    XBETWEEN_SYMBOLS_PRD(20, 50862)
+    XBETWEEN_SYMBOLS_PRD(20, 50886)
 
 /*-----
 * RETURN
@@ -50874,7 +50898,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
 
   case 4:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(21, 50877)
+    XBETWEEN_SYMBOLS_PRD(21, 50901)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -50897,7 +50921,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
       z1A0Q_gShips), yPrdVarP->z1A0C0G8_i)).Speed),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_SYMBOLS_PRD(22, 50900)
+    XBETWEEN_SYMBOLS_PRD(22, 50924)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -50915,7 +50939,7 @@ YPRD_FUNCTION(z1A0C0G_OrderSpeed)
     xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
       (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-    XBETWEEN_SYMBOLS_PRD(23, 50918)
+    XBETWEEN_SYMBOLS_PRD(23, 50942)
 
 /*-----
 * RETURN
@@ -51146,7 +51170,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
     XAT_FIRST_SYMBOL(0)
     GenericDefault((void *)&yPrdVarP->z1A0C0H8_St,
       (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
-    XBETWEEN_SYMBOLS_PRD(5, 51149)
+    XBETWEEN_SYMBOLS_PRD(5, 51173)
 
 /*-----
 * ASSIGNMENT len := ...
@@ -51166,7 +51190,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
     xMSCEAssign("len := ", &(((yVDef_z1A0C0H_ChangeCoordinate *)yPrdVarP)->
       z1A0C0H6_len), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(6, 51169)
+    XBETWEEN_STMTS_PRD(6, 51193)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -51187,8 +51211,8 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #endif
 
   case 1:
-  L_grst26:;
-    XBETWEEN_SYMBOLS_PRD(7, 51191)
+  L_grst36:;
+    XBETWEEN_SYMBOLS_PRD(7, 51215)
 
 /*-----
 * DECISION
@@ -51208,7 +51232,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0H4_i, yPrdVarP->z1A0C0H6_len)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(9, 51211)
+      XBETWEEN_SYMBOLS_PRD(9, 51235)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -51227,7 +51251,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
       xMSCEAssign("j := ", &(yPrdVarP->z1A0C0H5_j),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(10, 51230)
+      XBETWEEN_SYMBOLS_PRD(10, 51254)
 
 /*-----
 * DECISION
@@ -51255,7 +51279,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
             z_BasicTypes_0P4_SOUTH) ||
           yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
             z_BasicTypes_0P6_WEST)) {
-        XBETWEEN_SYMBOLS_PRD(11, 51258)
+        XBETWEEN_SYMBOLS_PRD(11, 51282)
 
 /*-----
 * ASSIGNMENT speed := ...
@@ -51277,12 +51301,12 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #endif
 
 /*-----
-* JOIN grst27
+* JOIN grst37
 * #SDTREF(SDL,C:\Battleships\Simulator\ChangeCoordinate.spd(1),392(10,105),0)
 ------*/
-        goto L_grst27;
+        goto L_grst37;
       } else {
-        XBETWEEN_SYMBOLS_PRD(12, 51285)
+        XBETWEEN_SYMBOLS_PRD(12, 51309)
 
 /*-----
 * ASSIGNMENT speed := ...
@@ -51305,13 +51329,13 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #endif
 
 /*-----
-* JOIN grst27
+* JOIN grst37
 * #SDTREF(SDL,C:\Battleships\Simulator\ChangeCoordinate.spd(1),389(80,105),0)
 ------*/
-        goto L_grst27;
+        goto L_grst37;
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(8, 51314)
+      XBETWEEN_SYMBOLS_PRD(8, 51338)
 
 /*-----
 * RETURN
@@ -51324,8 +51348,8 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
     }
 
   case 2:
-  L_grst27:;
-    XBETWEEN_SYMBOLS_PRD(13, 51328)
+  L_grst37:;
+    XBETWEEN_SYMBOLS_PRD(13, 51352)
 
 /*-----
 * DECISION
@@ -51345,7 +51369,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0H5_j, yPrdVarP->z1A0C0H7_speed)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(15, 51348)
+      XBETWEEN_SYMBOLS_PRD(15, 51372)
 
 /*-----
 * CALL ReadHeading
@@ -51363,7 +51387,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
       CALL_PROCEDURE_IN_PRD(z1A0C0H3_ReadHeading, yPrdN_z1A0C0H3_ReadHeading,
         0, 4)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(4, 51366)
+      XBETWEEN_SYMBOLS_PRD(4, 51390)
 
 /*-----
 * DECISION
@@ -51386,7 +51410,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
       if (yEqF_SDL_Integer((*yExtr_z1O_tStringShipParameters(&(yVarP->
         z1A0Q_gShips), yPrdVarP->z1A0C0H4_i)).Resource, SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(17, 51389)
+        XBETWEEN_SYMBOLS_PRD(17, 51413)
 
 /*-----
 * OUTPUT DestroyShip
@@ -51415,7 +51439,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
           yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_08_DestroyShip),
           "DestroyShip")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(18, 51418)
+        XBETWEEN_SYMBOLS_PRD(18, 51442)
 
 /*-----
 * ASSIGNMENT St := ...
@@ -51439,7 +51463,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
         xMSCEAssign("St := ", &(((yVDef_z1A0C0H_ChangeCoordinate *)yPrdVarP)->
           z1A0C0H8_St), (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-        XBETWEEN_STMTS_PRD(19, 51442)
+        XBETWEEN_STMTS_PRD(19, 51466)
 
 /*-----
 * ASSIGNMENT gShips := ...
@@ -51461,7 +51485,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
         xMSCEAssign("gShips := ", &(yVarP->z1A0Q_gShips),
           (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-        XBETWEEN_STMTS_PRD(20, 51464)
+        XBETWEEN_STMTS_PRD(20, 51488)
 
 /*-----
 * ASSIGNMENT gShips := ...
@@ -51482,7 +51506,7 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
         xMSCEAssign("gShips := ", &(yVarP->z1A0Q_gShips),
           (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-        XBETWEEN_STMTS_PRD(21, 51485)
+        XBETWEEN_STMTS_PRD(21, 51509)
 
 /*-----
 * ASSIGNMENT len := ...
@@ -51504,12 +51528,12 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #endif
 
 /*-----
-* JOIN grst28
+* JOIN grst38
 * #SDTREF(SDL,C:\Battleships\Simulator\ChangeCoordinate.spd(1),677(150,40),1)
 ------*/
-        goto L_grst28;
+        goto L_grst38;
       } else {
-        XBETWEEN_SYMBOLS_PRD(16, 51512)
+        XBETWEEN_SYMBOLS_PRD(16, 51536)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -51531,16 +51555,16 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #endif
 
 /*-----
-* JOIN grst27
+* JOIN grst37
 * #SDTREF(SDL,C:\Battleships\Simulator\ChangeCoordinate.spd(1),164(80,120),1)
 ------*/
-        goto L_grst27;
+        goto L_grst37;
       }
     } else {
 
     case 3:
-    L_grst28:;
-      XBETWEEN_SYMBOLS_PRD(14, 51543)
+    L_grst38:;
+      XBETWEEN_SYMBOLS_PRD(14, 51567)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -51562,10 +51586,10 @@ YPRD_FUNCTION(z1A0C0H_ChangeCoordinate)
 #endif
 
 /*-----
-* JOIN grst26
+* JOIN grst36
 * #SDTREF(SDL,C:\Battleships\Simulator\ChangeCoordinate.spd(1),146(80,55),1)
 ------*/
-      goto L_grst26;
+      goto L_grst36;
     }
   }
   XEND_PRD
@@ -51689,7 +51713,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(7, 51692)
+    XBETWEEN_SYMBOLS_PRD(7, 51716)
 
 /*-----
 * CALL StepCoor
@@ -51703,7 +51727,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE_IN_PRD(z1A0C0H33_StepCoor, yPrdN_z1A0C0H33_StepCoor, 0, 3)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(3, 51706)
+    XBETWEEN_SYMBOLS_PRD(3, 51730)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -51742,7 +51766,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
     xMSCEAssign("Deep := ", &(((yVDef_z1A0C0H3_ReadHeading *)yPrdVarP)->
       z1A0C0H35_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(8, 51745)
+    XBETWEEN_STMTS_PRD(8, 51769)
 
 /*-----
 * ASSIGNMENT PointDeep := ...
@@ -51765,7 +51789,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
     xMSCEAssign("PointDeep := ", &(((yVDef_z1A0C0H3_ReadHeading *)yPrdVarP)->
       z1A0C0H36_PointDeep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(9, 51768)
+    XBETWEEN_STMTS_PRD(9, 51792)
 
 /*-----
 * ASSIGNMENT PointDeep2 := ...
@@ -51788,7 +51812,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
     xMSCEAssign("PointDeep2 := ", &(((yVDef_z1A0C0H3_ReadHeading *)yPrdVarP)->
       z1A0C0H37_PointDeep2), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(10, 51791)
+    XBETWEEN_SYMBOLS_PRD(10, 51815)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -51833,7 +51857,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
       yNEqF_SDL_Integer(yPrdVarP->z1A0C0H37_PointDeep2,
       yPrdVarP->xPrdCallRes1_SDL_Integer))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 51836)
+      XBETWEEN_SYMBOLS_PRD(11, 51860)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -51856,7 +51880,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
         z1A0C0H30_ship)).Coordinates.y),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(12, 51859)
+      XBETWEEN_STMTS_PRD(12, 51883)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -51879,7 +51903,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
         z1A0C0H30_ship)).Coordinates.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 51882)
+      XBETWEEN_SYMBOLS_PRD(13, 51906)
 
 /*-----
 * RETURN
@@ -51890,7 +51914,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(14, 51893)
+      XBETWEEN_SYMBOLS_PRD(14, 51917)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -51935,7 +51959,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
         yEqF_SDL_Integer(yPrdVarP->z1A0C0H37_PointDeep2,
         yPrdVarP->xPrdCallRes1_SDL_Integer))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(15, 51938)
+        XBETWEEN_SYMBOLS_PRD(15, 51962)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -51958,7 +51982,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
           yPrdVarP)->z1A0C0H30_ship)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(16, 51961)
+        XBETWEEN_STMTS_PRD(16, 51985)
 
 /*-----
 * ASSIGNMENT speed := ...
@@ -51978,7 +52002,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
           ->StaticFather)->z1A0C0H7_speed), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(17, 51981)
+        XBETWEEN_SYMBOLS_PRD(17, 52005)
 
 /*-----
 * ASSIGNMENT Res := ...
@@ -52003,7 +52027,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
         xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0H38_Res),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(18, 52006)
+        XBETWEEN_SYMBOLS_PRD(18, 52030)
 
 /*-----
 * DECISION
@@ -52024,7 +52048,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
 #else
         if (xLT_SDL_Integer(yPrdVarP->z1A0C0H38_Res, SDL_INTEGER_LIT(0))) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(19, 52027)
+          XBETWEEN_SYMBOLS_PRD(19, 52051)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -52045,7 +52069,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
         } else {
-          XBETWEEN_SYMBOLS_PRD(20, 52048)
+          XBETWEEN_SYMBOLS_PRD(20, 52072)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -52067,7 +52091,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
         }
-        XBETWEEN_SYMBOLS_PRD(21, 52070)
+        XBETWEEN_SYMBOLS_PRD(21, 52094)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -52090,7 +52114,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
           yPrdVarP)->z1A0C0H30_ship)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(22, 52093)
+        XBETWEEN_STMTS_PRD(22, 52117)
 
 /*-----
 * ASSIGNMENT speed := ...
@@ -52109,7 +52133,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
         xMSCEAssign("speed := ", &(((yVDef_z1A0C0H_ChangeCoordinate *)yPrdVarP
           ->StaticFather)->z1A0C0H7_speed), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(23, 52112)
+        XBETWEEN_SYMBOLS_PRD(23, 52136)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -52132,7 +52156,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
           yPrdVarP)->z1A0C0H30_ship)).Coordinates.y),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(24, 52135)
+        XBETWEEN_STMTS_PRD(24, 52159)
 
 /*-----
 * ASSIGNMENT ship... := ...
@@ -52156,7 +52180,7 @@ YPRD_FUNCTION(z1A0C0H3_ReadHeading)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(25, 52159)
+      XBETWEEN_SYMBOLS_PRD(25, 52183)
 
 /*-----
 * RETURN
@@ -52338,7 +52362,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(13, 52341)
+    XBETWEEN_SYMBOLS_PRD(13, 52365)
 
 /*-----
 * ASSIGNMENT CoorXY := ...
@@ -52360,7 +52384,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       ->StaticFather)->z1A0C0H34_CoorXY),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_SYMBOLS_PRD(14, 52363)
+    XBETWEEN_SYMBOLS_PRD(14, 52387)
 
 /*-----
 * DECISION
@@ -52382,7 +52406,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
 #endif
     if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P0_NORTH)) {
-      XBETWEEN_SYMBOLS_PRD(15, 52385)
+      XBETWEEN_SYMBOLS_PRD(15, 52409)
 
 /*-----
 * DECISION
@@ -52406,7 +52430,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.y, z_BasicTypes_1L_MaxYCoordinate)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(16, 52409)
+        XBETWEEN_SYMBOLS_PRD(16, 52433)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52431,7 +52455,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(17, 52434)
+      XBETWEEN_SYMBOLS_PRD(17, 52458)
 
 /*-----
 * RETURN
@@ -52443,7 +52467,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P4_SOUTH)) {
-      XBETWEEN_SYMBOLS_PRD(18, 52446)
+      XBETWEEN_SYMBOLS_PRD(18, 52470)
 
 /*-----
 * DECISION
@@ -52467,7 +52491,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.y, SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(19, 52470)
+        XBETWEEN_SYMBOLS_PRD(19, 52494)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52492,7 +52516,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(20, 52495)
+      XBETWEEN_SYMBOLS_PRD(20, 52519)
 
 /*-----
 * RETURN
@@ -52504,7 +52528,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P6_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(21, 52507)
+      XBETWEEN_SYMBOLS_PRD(21, 52531)
 
 /*-----
 * DECISION
@@ -52528,7 +52552,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.x, SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(22, 52531)
+        XBETWEEN_SYMBOLS_PRD(22, 52555)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52553,7 +52577,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(23, 52556)
+      XBETWEEN_SYMBOLS_PRD(23, 52580)
 
 /*-----
 * RETURN
@@ -52565,7 +52589,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       SDL_RETURN
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P2_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(24, 52568)
+      XBETWEEN_SYMBOLS_PRD(24, 52592)
 
 /*-----
 * DECISION
@@ -52589,7 +52613,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.x, z_BasicTypes_1K_MaxXCoordinate)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(25, 52592)
+        XBETWEEN_SYMBOLS_PRD(25, 52616)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52614,7 +52638,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(26, 52617)
+      XBETWEEN_SYMBOLS_PRD(26, 52641)
 
 /*-----
 * RETURN
@@ -52667,7 +52691,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
 
   case 5:
   L_L1:;
-    XBETWEEN_SYMBOLS_PRD(27, 52670)
+    XBETWEEN_SYMBOLS_PRD(27, 52694)
 
 /*-----
 * DECISION
@@ -52694,7 +52718,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       z1A0C0H34_CoorXY.y, z_BasicTypes_1L_MaxYCoordinate))) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(28, 52697)
+      XBETWEEN_SYMBOLS_PRD(28, 52721)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52718,7 +52742,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(29, 52721)
+      XBETWEEN_STMTS_PRD(29, 52745)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52743,7 +52767,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(30, 52746)
+    XBETWEEN_SYMBOLS_PRD(30, 52770)
 
 /*-----
 * RETURN
@@ -52756,7 +52780,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
 
   case 7:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(31, 52759)
+    XBETWEEN_SYMBOLS_PRD(31, 52783)
 
 /*-----
 * DECISION
@@ -52783,7 +52807,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       z1A0C0H34_CoorXY.y, SDL_INTEGER_LIT(0)))) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(32, 52786)
+      XBETWEEN_SYMBOLS_PRD(32, 52810)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52807,7 +52831,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(33, 52810)
+      XBETWEEN_STMTS_PRD(33, 52834)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52832,7 +52856,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(34, 52835)
+    XBETWEEN_SYMBOLS_PRD(34, 52859)
 
 /*-----
 * RETURN
@@ -52845,7 +52869,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
 
   case 9:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(35, 52848)
+    XBETWEEN_SYMBOLS_PRD(35, 52872)
 
 /*-----
 * DECISION
@@ -52872,7 +52896,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       z1A0C0H34_CoorXY.y, z_BasicTypes_1L_MaxYCoordinate))) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(36, 52875)
+      XBETWEEN_SYMBOLS_PRD(36, 52899)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52896,7 +52920,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(37, 52899)
+      XBETWEEN_STMTS_PRD(37, 52923)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52921,7 +52945,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(38, 52924)
+    XBETWEEN_SYMBOLS_PRD(38, 52948)
 
 /*-----
 * RETURN
@@ -52934,7 +52958,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
 
   case 11:
   L_L4:;
-    XBETWEEN_SYMBOLS_PRD(39, 52937)
+    XBETWEEN_SYMBOLS_PRD(39, 52961)
 
 /*-----
 * DECISION
@@ -52961,7 +52985,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
       z1A0C0H34_CoorXY.y, SDL_INTEGER_LIT(0)))) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(40, 52964)
+      XBETWEEN_SYMBOLS_PRD(40, 52988)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -52985,7 +53009,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         ->StaticFather)->z1A0C0H34_CoorXY.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(41, 52988)
+      XBETWEEN_STMTS_PRD(41, 53012)
 
 /*-----
 * ASSIGNMENT CoorXY... := ...
@@ -53010,7 +53034,7 @@ YPRD_FUNCTION(z1A0C0H33_StepCoor)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(42, 53013)
+    XBETWEEN_SYMBOLS_PRD(42, 53037)
 
 /*-----
 * RETURN
@@ -53372,8 +53396,8 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
       (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 
   case 1:
-  L_grst30:;
-    XBETWEEN_SYMBOLS_PRD(12, 53376)
+  L_grst40:;
+    XBETWEEN_SYMBOLS_PRD(12, 53400)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -53392,7 +53416,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
     xMSCEAssign("i := ", &(((yVDef_z1A0C0I_CollisionShip *)yPrdVarP)->
       z1A0C0ID_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(13, 53395)
+    XBETWEEN_STMTS_PRD(13, 53419)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -53411,7 +53435,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
     xMSCEAssign("j := ", &(((yVDef_z1A0C0I_CollisionShip *)yPrdVarP)->
       z1A0C0IE_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(14, 53414)
+    XBETWEEN_STMTS_PRD(14, 53438)
 
 /*-----
 * ASSIGNMENT b := ...
@@ -53430,7 +53454,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
     xMSCEAssign("b := ", &(((yVDef_z1A0C0I_CollisionShip *)yPrdVarP)->
       z1A0C0IC_b), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_SYMBOLS_PRD(15, 53433)
+    XBETWEEN_SYMBOLS_PRD(15, 53457)
 
 /*-----
 * ASSIGNMENT lengship := ...
@@ -53453,7 +53477,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 
   case 2:
   L_L4:;
-    XBETWEEN_SYMBOLS_PRD(16, 53456)
+    XBETWEEN_SYMBOLS_PRD(16, 53480)
 
 /*-----
 * DECISION
@@ -53475,7 +53499,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0ID_i,
       xMinus_SDL_Integer(yPrdVarP->z1A0C0IB_lengship, SDL_INTEGER_LIT(1)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(19, 53478)
+      XBETWEEN_SYMBOLS_PRD(19, 53502)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -53498,7 +53522,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 
     case 4:
     L_L3:;
-      XBETWEEN_SYMBOLS_PRD(20, 53501)
+      XBETWEEN_SYMBOLS_PRD(20, 53525)
 
 /*-----
 * DECISION
@@ -53518,7 +53542,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 #else
       if (xLE_SDL_Integer(yPrdVarP->z1A0C0IE_j, yPrdVarP->z1A0C0IB_lengship)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(22, 53521)
+        XBETWEEN_SYMBOLS_PRD(22, 53545)
 
 /*-----
 * DECISION
@@ -53544,7 +53568,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
           &((*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
           yPrdVarP->z1A0C0IE_j)).Coordinates))) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(24, 53547)
+          XBETWEEN_SYMBOLS_PRD(24, 53571)
 
 /*-----
 * ASSIGNMENT b := ...
@@ -53562,7 +53586,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
           xMSCEAssign("b := ", &(yPrdVarP->z1A0C0IC_b),
             (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(25, 53565)
+          XBETWEEN_SYMBOLS_PRD(25, 53589)
 
 /*-----
 * CALL Collision
@@ -53588,7 +53612,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 ------*/
           goto L_L1;
         } else {
-          XBETWEEN_SYMBOLS_PRD(23, 53591)
+          XBETWEEN_SYMBOLS_PRD(23, 53615)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -53616,7 +53640,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 ------*/
         goto L_L3;
       } else {
-        XBETWEEN_SYMBOLS_PRD(21, 53619)
+        XBETWEEN_SYMBOLS_PRD(21, 53643)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -53644,7 +53668,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
         goto L_L4;
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(17, 53647)
+      XBETWEEN_SYMBOLS_PRD(17, 53671)
 
 /*-----
 * DECISION
@@ -53664,7 +53688,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 #else
       if (yEqF_SDL_Boolean(yPrdVarP->z1A0C0IC_b, SDL_True)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(18, 53667)
+        XBETWEEN_SYMBOLS_PRD(18, 53691)
 
 /*-----
 * RETURN
@@ -53678,15 +53702,15 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
       }
 
 /*-----
-* JOIN grst30
+* JOIN grst40
 * #SDTREF(SDL,C:\Battleships\Simulator\CollisionShip.spd(1),134(70,45),1)
 ------*/
-      goto L_grst30;
+      goto L_grst40;
     }
 
   case 6:
   L_L1:;
-    XBETWEEN_SYMBOLS_PRD(9, 53689)
+    XBETWEEN_SYMBOLS_PRD(9, 53713)
 
 /*-----
 * DECISION
@@ -53709,7 +53733,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
     if (yEqF_SDL_Integer((*yExtr_z1O_tStringShipParameters(&(yVarP->
       z1A0Q_gShips), yPrdVarP->z1A0C0ID_i)).Resource, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(26, 53712)
+      XBETWEEN_SYMBOLS_PRD(26, 53736)
 
 /*-----
 * OUTPUT DestroyShip
@@ -53736,7 +53760,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
         yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_08_DestroyShip),
         "DestroyShip")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(27, 53739)
+      XBETWEEN_SYMBOLS_PRD(27, 53763)
 
 /*-----
 * ASSIGNMENT St := ...
@@ -53757,7 +53781,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
       xMSCEAssign("St := ", &(yPrdVarP->z1A0C0IA_St),
         (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-      XBETWEEN_SYMBOLS_PRD(28, 53760)
+      XBETWEEN_SYMBOLS_PRD(28, 53784)
 
 /*-----
 * ASSIGNMENT gShips := ...
@@ -53780,7 +53804,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
       xMSCEAssign("gShips := ", &(yVarP->z1A0Q_gShips),
         (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-      XBETWEEN_SYMBOLS_PRD(29, 53783)
+      XBETWEEN_SYMBOLS_PRD(29, 53807)
 
 /*-----
 * ASSIGNMENT lengship := ...
@@ -53807,7 +53831,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 ------*/
       goto L_L4;
     } else {
-      XBETWEEN_SYMBOLS_PRD(30, 53810)
+      XBETWEEN_SYMBOLS_PRD(30, 53834)
 
 /*-----
 * CALL Heading
@@ -53823,7 +53847,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
         yPrdVarP->z1A0C0ID_i, XASS_MR_ASS_NF);
       CALL_PROCEDURE_IN_PRD(z1A0C0I9_Heading, yPrdN_z1A0C0I9_Heading, 0, 10)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(10, 53826)
+      XBETWEEN_SYMBOLS_PRD(10, 53850)
 
 /*-----
 * DECISION
@@ -53846,7 +53870,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
       if (yEqF_SDL_Integer((*yExtr_z1O_tStringShipParameters(&(yVarP->
         z1A0Q_gShips), yPrdVarP->z1A0C0IE_j)).Resource, SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(31, 53849)
+        XBETWEEN_SYMBOLS_PRD(31, 53873)
 
 /*-----
 * OUTPUT DestroyShip
@@ -53875,7 +53899,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
           yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_08_DestroyShip),
           "DestroyShip")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(32, 53878)
+        XBETWEEN_SYMBOLS_PRD(32, 53902)
 
 /*-----
 * ASSIGNMENT St := ...
@@ -53896,7 +53920,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
         xMSCEAssign("St := ", &(yPrdVarP->z1A0C0IA_St),
           (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-        XBETWEEN_SYMBOLS_PRD(33, 53899)
+        XBETWEEN_SYMBOLS_PRD(33, 53923)
 
 /*-----
 * ASSIGNMENT gShips := ...
@@ -53920,7 +53944,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
         xMSCEAssign("gShips := ", &(yVarP->z1A0Q_gShips),
           (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-        XBETWEEN_SYMBOLS_PRD(34, 53923)
+        XBETWEEN_SYMBOLS_PRD(34, 53947)
 
 /*-----
 * ASSIGNMENT lengship := ...
@@ -53940,7 +53964,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
         xMSCEAssign("lengship := ", &(yPrdVarP->z1A0C0IB_lengship),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(35, 53943)
+        XBETWEEN_SYMBOLS_PRD(35, 53967)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -53961,7 +53985,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(36, 53964)
+        XBETWEEN_SYMBOLS_PRD(36, 53988)
 
 /*-----
 * CALL Heading
@@ -53988,7 +54012,7 @@ YPRD_FUNCTION(z1A0C0I_CollisionShip)
 
   case 8:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(11, 53991)
+    XBETWEEN_SYMBOLS_PRD(11, 54015)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -54325,7 +54349,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(34, 54328)
+    XBETWEEN_SYMBOLS_PRD(34, 54352)
 
 /*-----
 * OPERATOR CALL h2i  (from EXPRESSION in next symbol)
@@ -54364,7 +54388,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("h1 := ", &(yPrdVarP->z1A0C0I8O_h1),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(35, 54367)
+    XBETWEEN_SYMBOLS_PRD(35, 54391)
 
 /*-----
 * OPERATOR CALL h2i  (from EXPRESSION in next symbol)
@@ -54403,7 +54427,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("h2 := ", &(yPrdVarP->z1A0C0I8P_h2),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(36, 54406)
+    XBETWEEN_SYMBOLS_PRD(36, 54430)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -54448,7 +54472,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
       goto L_L5;
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1)) ||
         yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(7))) {
-      XBETWEEN_SYMBOLS_PRD(37, 54451)
+      XBETWEEN_SYMBOLS_PRD(37, 54475)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -54513,7 +54537,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
       xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0I8Q_Res),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(38, 54516)
+      XBETWEEN_SYMBOLS_PRD(38, 54540)
 
 /*-----
 * DECISION
@@ -54534,7 +54558,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
       if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(39, 54537)
+        XBETWEEN_SYMBOLS_PRD(39, 54561)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -54558,7 +54582,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(40, 54561)
+        XBETWEEN_SYMBOLS_PRD(40, 54585)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -54582,7 +54606,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(41, 54585)
+      XBETWEEN_SYMBOLS_PRD(41, 54609)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -54686,7 +54710,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 
   case 2:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(42, 54689)
+    XBETWEEN_SYMBOLS_PRD(42, 54713)
 
 /*-----
 * OPERATOR CALL ns2i  (from EXPRESSION in next symbol)
@@ -54731,7 +54755,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0I8Q_Res),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(43, 54734)
+    XBETWEEN_SYMBOLS_PRD(43, 54758)
 
 /*-----
 * DECISION
@@ -54752,7 +54776,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(44, 54755)
+      XBETWEEN_SYMBOLS_PRD(44, 54779)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -54776,7 +54800,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(45, 54779)
+      XBETWEEN_SYMBOLS_PRD(45, 54803)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -54800,7 +54824,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(46, 54803)
+    XBETWEEN_SYMBOLS_PRD(46, 54827)
 
 /*-----
 * OPERATOR CALL ns2i  (from EXPRESSION in next symbol)
@@ -54854,7 +54878,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 
   case 4:
   L_L1:;
-    XBETWEEN_SYMBOLS_PRD(47, 54857)
+    XBETWEEN_SYMBOLS_PRD(47, 54881)
 
 /*-----
 * DECISION
@@ -54875,7 +54899,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(48, 54878)
+      XBETWEEN_SYMBOLS_PRD(48, 54902)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -54899,7 +54923,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(49, 54902)
+      XBETWEEN_SYMBOLS_PRD(49, 54926)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -54923,7 +54947,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(50, 54926)
+    XBETWEEN_SYMBOLS_PRD(50, 54950)
 
 /*-----
 * RETURN
@@ -54936,7 +54960,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 
   case 6:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(51, 54939)
+    XBETWEEN_SYMBOLS_PRD(51, 54963)
 
 /*-----
 * OPERATOR CALL ns2i  (from EXPRESSION in next symbol)
@@ -54981,7 +55005,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0I8Q_Res),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(52, 54984)
+    XBETWEEN_SYMBOLS_PRD(52, 55008)
 
 /*-----
 * DECISION
@@ -55002,7 +55026,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(53, 55005)
+      XBETWEEN_SYMBOLS_PRD(53, 55029)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55026,7 +55050,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(54, 55029)
+      XBETWEEN_SYMBOLS_PRD(54, 55053)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55050,7 +55074,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(55, 55053)
+    XBETWEEN_SYMBOLS_PRD(55, 55077)
 
 /*-----
 * OPERATOR CALL ns2i  (from EXPRESSION in next symbol)
@@ -55104,7 +55128,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 
   case 8:
   L_L4:;
-    XBETWEEN_SYMBOLS_PRD(56, 55107)
+    XBETWEEN_SYMBOLS_PRD(56, 55131)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -55169,7 +55193,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0I8Q_Res),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(57, 55172)
+    XBETWEEN_SYMBOLS_PRD(57, 55196)
 
 /*-----
 * DECISION
@@ -55190,7 +55214,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(58, 55193)
+      XBETWEEN_SYMBOLS_PRD(58, 55217)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55214,7 +55238,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(59, 55217)
+      XBETWEEN_SYMBOLS_PRD(59, 55241)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55238,7 +55262,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(60, 55241)
+    XBETWEEN_SYMBOLS_PRD(60, 55265)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -55312,7 +55336,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 
   case 10:
   L_L5:;
-    XBETWEEN_SYMBOLS_PRD(61, 55315)
+    XBETWEEN_SYMBOLS_PRD(61, 55339)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -55375,7 +55399,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0I8Q_Res),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(62, 55378)
+    XBETWEEN_SYMBOLS_PRD(62, 55402)
 
 /*-----
 * DECISION
@@ -55396,7 +55420,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(63, 55399)
+      XBETWEEN_SYMBOLS_PRD(63, 55423)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55420,7 +55444,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(64, 55423)
+      XBETWEEN_SYMBOLS_PRD(64, 55447)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55444,7 +55468,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(65, 55447)
+    XBETWEEN_SYMBOLS_PRD(65, 55471)
 
 /*-----
 * CALL abs  (from EXPRESSION in next symbol)
@@ -55507,7 +55531,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
     xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0I8Q_Res),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(66, 55510)
+    XBETWEEN_SYMBOLS_PRD(66, 55534)
 
 /*-----
 * DECISION
@@ -55528,7 +55552,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
 #else
     if (xLT_SDL_Integer(yPrdVarP->z1A0C0I8Q_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(67, 55531)
+      XBETWEEN_SYMBOLS_PRD(67, 55555)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55552,7 +55576,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(68, 55555)
+      XBETWEEN_SYMBOLS_PRD(68, 55579)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -55576,7 +55600,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_19_tSCMaxResource);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(69, 55579)
+    XBETWEEN_SYMBOLS_PRD(69, 55603)
 
 /*-----
 * DECISION
@@ -55601,7 +55625,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
       (*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
       yPrdVarP->z1A0C0I80_i)).Speed)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(70, 55604)
+      XBETWEEN_SYMBOLS_PRD(70, 55628)
 
 /*-----
 * CALL Heading
@@ -55618,7 +55642,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
       CALL_PROCEDURE_IN_PRD(z1A0C0I9_Heading, yPrdN_z1A0C0I9_Heading, 1, 33)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(71, 55621)
+      XBETWEEN_SYMBOLS_PRD(71, 55645)
 
 /*-----
 * CALL Heading
@@ -55635,7 +55659,7 @@ YPRD_FUNCTION(z1A0C0I8_Collision)
       CALL_PROCEDURE_IN_PRD(z1A0C0I9_Heading, yPrdN_z1A0C0I9_Heading, 1, 33)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(33, 55638)
+    XBETWEEN_SYMBOLS_PRD(33, 55662)
 
 /*-----
 * RETURN
@@ -55750,7 +55774,7 @@ YPRD_FUNCTION(z1A0C0I8F_abs)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 55753)
+    XBETWEEN_SYMBOLS_PRD(1, 55777)
 
 /*-----
 * DECISION
@@ -55770,7 +55794,7 @@ YPRD_FUNCTION(z1A0C0I8F_abs)
 #else
     if (xGE_SDL_Integer(yPrdVarP->z1A0C0I8F0_i, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(2, 55773)
+      XBETWEEN_SYMBOLS_PRD(2, 55797)
 
 /*-----
 * RETURN
@@ -55783,7 +55807,7 @@ YPRD_FUNCTION(z1A0C0I8F_abs)
         yPrdVarP->z1A0C0I8F0_i, XASS_MR_ASS_FR);
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(3, 55786)
+      XBETWEEN_SYMBOLS_PRD(3, 55810)
 
 /*-----
 * RETURN
@@ -56046,7 +56070,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(16, 56049)
+    XBETWEEN_SYMBOLS_PRD(16, 56073)
 
 /*-----
 * DECISION
@@ -56068,7 +56092,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
 #endif
     if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P0_NORTH)) {
-      XBETWEEN_SYMBOLS_PRD(17, 56071)
+      XBETWEEN_SYMBOLS_PRD(17, 56095)
 
 /*-----
 * DECISION
@@ -56093,7 +56117,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(18, 56096)
+        XBETWEEN_SYMBOLS_PRD(18, 56120)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56126,7 +56150,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       goto L_L2;
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P1_NORTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(19, 56129)
+      XBETWEEN_SYMBOLS_PRD(19, 56153)
 
 /*-----
 * DECISION
@@ -56151,7 +56175,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(20, 56154)
+        XBETWEEN_SYMBOLS_PRD(20, 56178)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56176,7 +56200,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(21, 56179)
+      XBETWEEN_SYMBOLS_PRD(21, 56203)
 
 /*-----
 * DECISION
@@ -56201,7 +56225,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(22, 56204)
+        XBETWEEN_SYMBOLS_PRD(22, 56228)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56234,7 +56258,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       goto L_L2;
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P2_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(23, 56237)
+      XBETWEEN_SYMBOLS_PRD(23, 56261)
 
 /*-----
 * DECISION
@@ -56259,7 +56283,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(24, 56262)
+        XBETWEEN_SYMBOLS_PRD(24, 56286)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56300,7 +56324,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       goto L_L3;
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P4_SOUTH)) {
-      XBETWEEN_SYMBOLS_PRD(25, 56303)
+      XBETWEEN_SYMBOLS_PRD(25, 56327)
 
 /*-----
 * DECISION
@@ -56325,7 +56349,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         z_BasicTypes_1L_MaxYCoordinate)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(26, 56328)
+        XBETWEEN_SYMBOLS_PRD(26, 56352)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56358,7 +56382,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       goto L_L2;
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P3_SOUTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(27, 56361)
+      XBETWEEN_SYMBOLS_PRD(27, 56385)
 
 /*-----
 * DECISION
@@ -56383,7 +56407,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         z_BasicTypes_1L_MaxYCoordinate)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(28, 56386)
+        XBETWEEN_SYMBOLS_PRD(28, 56410)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56408,7 +56432,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(29, 56411)
+      XBETWEEN_SYMBOLS_PRD(29, 56435)
 
 /*-----
 * DECISION
@@ -56433,7 +56457,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         SDL_INTEGER_LIT(0))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(30, 56436)
+        XBETWEEN_SYMBOLS_PRD(30, 56460)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56466,7 +56490,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       goto L_L2;
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P6_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(31, 56469)
+      XBETWEEN_SYMBOLS_PRD(31, 56493)
 
 /*-----
 * DECISION
@@ -56491,7 +56515,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         z_BasicTypes_1K_MaxXCoordinate)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(32, 56494)
+        XBETWEEN_SYMBOLS_PRD(32, 56518)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56541,7 +56565,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
 
   case 9:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(33, 56544)
+    XBETWEEN_SYMBOLS_PRD(33, 56568)
 
 /*-----
 * DECISION
@@ -56566,7 +56590,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       SDL_INTEGER_LIT(0))) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(34, 56569)
+      XBETWEEN_SYMBOLS_PRD(34, 56593)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56591,7 +56615,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(35, 56594)
+    XBETWEEN_SYMBOLS_PRD(35, 56618)
 
 /*-----
 * DECISION
@@ -56616,7 +56640,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       z_BasicTypes_1K_MaxXCoordinate)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(36, 56619)
+      XBETWEEN_SYMBOLS_PRD(36, 56643)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56650,7 +56674,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
 
   case 12:
   L_L4:;
-    XBETWEEN_SYMBOLS_PRD(37, 56653)
+    XBETWEEN_SYMBOLS_PRD(37, 56677)
 
 /*-----
 * DECISION
@@ -56675,7 +56699,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       z_BasicTypes_1L_MaxYCoordinate)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(38, 56678)
+      XBETWEEN_SYMBOLS_PRD(38, 56702)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56700,7 +56724,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
     }
-    XBETWEEN_SYMBOLS_PRD(39, 56703)
+    XBETWEEN_SYMBOLS_PRD(39, 56727)
 
 /*-----
 * DECISION
@@ -56725,7 +56749,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
       z_BasicTypes_1K_MaxXCoordinate)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(40, 56728)
+      XBETWEEN_SYMBOLS_PRD(40, 56752)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -56759,7 +56783,7 @@ YPRD_FUNCTION(z1A0C0I9_Heading)
 
   case 15:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(41, 56762)
+    XBETWEEN_SYMBOLS_PRD(41, 56786)
 
 /*-----
 * RETURN
@@ -57039,7 +57063,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
     GenericDefault((void *)&yPrdVarP->z1A0C0J8_St1,
       (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
-    XBETWEEN_SYMBOLS_PRD(8, 57042)
+    XBETWEEN_SYMBOLS_PRD(8, 57066)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -57058,7 +57082,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
     xMSCEAssign("i := ", &(((yVDef_z1A0C0J_UpdateShots *)yPrdVarP)->
       z1A0C0JA_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(9, 57061)
+    XBETWEEN_STMTS_PRD(9, 57085)
 
 /*-----
 * ASSIGNMENT Res := ...
@@ -57077,7 +57101,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
     xMSCEAssign("Res := ", &(((yVDef_z1A0C0J_UpdateShots *)yPrdVarP)->
       z1A0C0JC_Res), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(10, 57080)
+    XBETWEEN_STMTS_PRD(10, 57104)
 
 /*-----
 * ASSIGNMENT lenshot := ...
@@ -57100,7 +57124,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 
   case 1:
   L_L2:;
-    XBETWEEN_SYMBOLS_PRD(11, 57103)
+    XBETWEEN_SYMBOLS_PRD(11, 57127)
 
 /*-----
 * DECISION
@@ -57120,7 +57144,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0C0JA_i, yPrdVarP->z1A0C0JD_lenshot)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 57123)
+      XBETWEEN_SYMBOLS_PRD(13, 57147)
 
 /*-----
 * DECISION
@@ -57146,7 +57170,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         &((*yExtr_z1P_tStringShotParameters(&(yVarP->z1A0R_gShots),
         yPrdVarP->z1A0C0JA_i)).FinishCoordinates))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(14, 57149)
+        XBETWEEN_SYMBOLS_PRD(14, 57173)
 
 /*-----
 * ASSIGNMENT St := ...
@@ -57168,7 +57192,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         xMSCEAssign("St := ", &(((yVDef_z1A0C0J_UpdateShots *)yPrdVarP)->
           z1A0C0J7_St), (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
 #endif
-        XBETWEEN_STMTS_PRD(15, 57171)
+        XBETWEEN_STMTS_PRD(15, 57195)
 
 /*-----
 * ASSIGNMENT gShots := ...
@@ -57195,7 +57219,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         xMSCEAssign("gShots := ", &(yVarP->z1A0R_gShots),
           (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
 #endif
-        XBETWEEN_STMTS_PRD(16, 57198)
+        XBETWEEN_STMTS_PRD(16, 57222)
 
 /*-----
 * ASSIGNMENT lenshot := ...
@@ -57222,7 +57246,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 ------*/
         goto L_L2;
       } else {
-        XBETWEEN_SYMBOLS_PRD(17, 57225)
+        XBETWEEN_SYMBOLS_PRD(17, 57249)
 
 /*-----
 * ASSIGNMENT distance := ...
@@ -57248,7 +57272,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         xMSCEAssign("distance := ", &(yPrdVarP->z1A0C0J9_distance),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(18, 57251)
+        XBETWEEN_SYMBOLS_PRD(18, 57275)
 
 /*-----
 * DECISION
@@ -57273,7 +57297,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
           yPrdVarP->z1A0C0JA_i)).TypeWeaponry].Speed,
           yPrdVarP->z1A0C0J9_distance)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(20, 57276)
+          XBETWEEN_SYMBOLS_PRD(20, 57300)
 
 /*-----
 * ASSIGNMENT lenship := ...
@@ -57293,7 +57317,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
           xMSCEAssign("lenship := ", &(yPrdVarP->z1A0C0JE_lenship),
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-          XBETWEEN_SYMBOLS_PRD(21, 57296)
+          XBETWEEN_SYMBOLS_PRD(21, 57320)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -57314,8 +57338,8 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 #endif
 
         case 2:
-        L_grst29:;
-          XBETWEEN_SYMBOLS_PRD(22, 57318)
+        L_grst39:;
+          XBETWEEN_SYMBOLS_PRD(22, 57342)
 
 /*-----
 * DECISION
@@ -57338,7 +57362,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
           if (xLE_SDL_Integer(yPrdVarP->z1A0C0JB_j,
             yPrdVarP->z1A0C0JE_lenship)) {
 #endif
-            XBETWEEN_SYMBOLS_PRD(23, 57341)
+            XBETWEEN_SYMBOLS_PRD(23, 57365)
 
 /*-----
 * DECISION
@@ -57373,7 +57397,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 ------*/
               goto L_L1;
             } else {
-              XBETWEEN_SYMBOLS_PRD(24, 57376)
+              XBETWEEN_SYMBOLS_PRD(24, 57400)
 
 /*-----
 * ASSIGNMENT j := ...
@@ -57404,12 +57428,12 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
           }
 
 /*-----
-* JOIN grst29
+* JOIN grst39
 * #SDTREF(SDL,C:\Battleships\Simulator\UpdateShots.spd(1),1082(90,160),1)
 ------*/
-          goto L_grst29;
+          goto L_grst39;
         } else {
-          XBETWEEN_SYMBOLS_PRD(19, 57412)
+          XBETWEEN_SYMBOLS_PRD(19, 57436)
 
 /*-----
 * CALL SpeedCoor
@@ -57426,7 +57450,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
           CALL_PROCEDURE_IN_PRD(z1A0C0J6_SpeedCoor, yPrdN_z1A0C0J6_SpeedCoor,
             0, 7)
           PROCEDURE_ALLOC_ERROR_END
-          XBETWEEN_SYMBOLS_PRD(7, 57429)
+          XBETWEEN_SYMBOLS_PRD(7, 57453)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -57455,7 +57479,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         }
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(12, 57458)
+      XBETWEEN_SYMBOLS_PRD(12, 57482)
 
 /*-----
 * RETURN
@@ -57469,7 +57493,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 
   case 4:
   L_L1:;
-    XBETWEEN_SYMBOLS_PRD(25, 57472)
+    XBETWEEN_SYMBOLS_PRD(25, 57496)
 
 /*-----
 * DECISION
@@ -57493,7 +57517,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       &(yVarP->z1A0R_gShots), yPrdVarP->z1A0C0JA_i)).TypeWeaponry,
       z_BasicTypes_0R3_REPAIR)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(26, 57496)
+      XBETWEEN_SYMBOLS_PRD(26, 57520)
 
 /*-----
 * ASSIGNMENT Res := ...
@@ -57516,7 +57540,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0JC_Res),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(27, 57519)
+      XBETWEEN_SYMBOLS_PRD(27, 57543)
 
 /*-----
 * DECISION
@@ -57540,7 +57564,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         [(*yExtr_z1O_tStringShipParameters(&(yVarP->z1A0Q_gShips),
         yPrdVarP->z1A0C0JB_j)).TypeShip].MaxResource)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(28, 57543)
+        XBETWEEN_SYMBOLS_PRD(28, 57567)
 
 /*-----
 * ASSIGNMENT Res := ...
@@ -57563,7 +57587,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       } else {
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(29, 57566)
+      XBETWEEN_SYMBOLS_PRD(29, 57590)
 
 /*-----
 * ASSIGNMENT Res := ...
@@ -57586,7 +57610,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       xMSCEAssign("Res := ", &(yPrdVarP->z1A0C0JC_Res),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS_PRD(30, 57589)
+      XBETWEEN_SYMBOLS_PRD(30, 57613)
 
 /*-----
 * DECISION
@@ -57607,7 +57631,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 #else
       if (xLT_SDL_Integer(yPrdVarP->z1A0C0JC_Res, SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(31, 57610)
+        XBETWEEN_SYMBOLS_PRD(31, 57634)
 
 /*-----
 * ASSIGNMENT Res := ...
@@ -57629,7 +57653,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       } else {
       }
     }
-    XBETWEEN_SYMBOLS_PRD(32, 57632)
+    XBETWEEN_SYMBOLS_PRD(32, 57656)
 
 /*-----
 * DECISION
@@ -57650,7 +57674,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 #else
     if (yEqF_SDL_Integer(yPrdVarP->z1A0C0JC_Res, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(34, 57653)
+      XBETWEEN_SYMBOLS_PRD(34, 57677)
 
 /*-----
 * OUTPUT DestroyShip
@@ -57677,7 +57701,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
         yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_08_DestroyShip),
         "DestroyShip")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(35, 57680)
+      XBETWEEN_SYMBOLS_PRD(35, 57704)
 
 /*-----
 * ASSIGNMENT St1 := ...
@@ -57699,7 +57723,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       xMSCEAssign("St1 := ", &(((yVDef_z1A0C0J_UpdateShots *)yPrdVarP)->
         z1A0C0J8_St1), (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-      XBETWEEN_STMTS_PRD(36, 57702)
+      XBETWEEN_STMTS_PRD(36, 57726)
 
 /*-----
 * ASSIGNMENT gShips := ...
@@ -57731,7 +57755,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 ------*/
       goto L_L3;
     } else {
-      XBETWEEN_SYMBOLS_PRD(33, 57734)
+      XBETWEEN_SYMBOLS_PRD(33, 57758)
 
 /*-----
 * ASSIGNMENT gShips... := ...
@@ -57764,7 +57788,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 
   case 6:
   L_L3:;
-    XBETWEEN_SYMBOLS_PRD(37, 57767)
+    XBETWEEN_SYMBOLS_PRD(37, 57791)
 
 /*-----
 * ASSIGNMENT gShots... := ...
@@ -57788,7 +57812,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
       z1A0R_gShots), ((yVDef_z1A0C0J_UpdateShots *)yPrdVarP)->z1A0C0JA_i)).
       CurrentCoordinates), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(38, 57791)
+    XBETWEEN_STMTS_PRD(38, 57815)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -57905,7 +57929,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 57908)
+    XBETWEEN_SYMBOLS_PRD(1, 57932)
 
 /*-----
 * ASSIGNMENT cX := ...
@@ -57926,7 +57950,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("cX := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J63_cX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(2, 57929)
+    XBETWEEN_STMTS_PRD(2, 57953)
 
 /*-----
 * ASSIGNMENT fX := ...
@@ -57947,7 +57971,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("fX := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J64_fX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(3, 57950)
+    XBETWEEN_STMTS_PRD(3, 57974)
 
 /*-----
 * ASSIGNMENT cY := ...
@@ -57968,7 +57992,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("cY := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J65_cY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 57971)
+    XBETWEEN_STMTS_PRD(4, 57995)
 
 /*-----
 * ASSIGNMENT fY := ...
@@ -57989,7 +58013,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("fY := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J66_fY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(5, 57992)
+    XBETWEEN_STMTS_PRD(5, 58016)
 
 /*-----
 * ASSIGNMENT Dis := ...
@@ -58010,7 +58034,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("Dis := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J61_Dis), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(6, 58013)
+    XBETWEEN_STMTS_PRD(6, 58037)
 
 /*-----
 * ASSIGNMENT sqr := ...
@@ -58038,7 +58062,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("sqr := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J62_sqr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(7, 58041)
+    XBETWEEN_STMTS_PRD(7, 58065)
 
 /*-----
 * ASSIGNMENT cX := ...
@@ -58063,7 +58087,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("cX := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J63_cX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(8, 58066)
+    XBETWEEN_STMTS_PRD(8, 58090)
 
 /*-----
 * ASSIGNMENT cY := ...
@@ -58088,7 +58112,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
     xMSCEAssign("cY := ", &(((yVDef_z1A0C0J6_SpeedCoor *)yPrdVarP)->
       z1A0C0J65_cY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(9, 58091)
+    XBETWEEN_STMTS_PRD(9, 58115)
 
 /*-----
 * ASSIGNMENT gShots... := ...
@@ -58114,7 +58138,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
       CurrentCoordinates.x),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-    XBETWEEN_STMTS_PRD(10, 58117)
+    XBETWEEN_STMTS_PRD(10, 58141)
 
 /*-----
 * ASSIGNMENT gShots... := ...
@@ -58140,7 +58164,7 @@ YPRD_FUNCTION(z1A0C0J6_SpeedCoor)
       CurrentCoordinates.y),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-    XBETWEEN_SYMBOLS_PRD(11, 58143)
+    XBETWEEN_SYMBOLS_PRD(11, 58167)
 
 /*-----
 * RETURN
@@ -58635,7 +58659,7 @@ YPRD_FUNCTION(z1A0D_SetSI)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 58638)
+    XBETWEEN_SYMBOLS_PRD(3, 58662)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -58655,8 +58679,8 @@ YPRD_FUNCTION(z1A0D_SetSI)
 #endif
 
   case 1:
-  L_grst31:;
-    XBETWEEN_SYMBOLS_PRD(4, 58659)
+  L_grst41:;
+    XBETWEEN_SYMBOLS_PRD(4, 58683)
 
 /*-----
 * DECISION
@@ -58676,7 +58700,7 @@ YPRD_FUNCTION(z1A0D_SetSI)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0D3_i, z_BasicTypes_20_AmountStrategy)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(7, 58679)
+      XBETWEEN_SYMBOLS_PRD(7, 58703)
 
 /*-----
 * ASSIGNMENT gASI... := ...
@@ -58697,7 +58721,7 @@ YPRD_FUNCTION(z1A0D_SetSI)
         yPrdVarP)->z1A0D3_i - SDL_INTEGER_LIT(1)]),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(8, 58700)
+      XBETWEEN_STMTS_PRD(8, 58724)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -58718,7 +58742,7 @@ YPRD_FUNCTION(z1A0D_SetSI)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(5, 58721)
+      XBETWEEN_SYMBOLS_PRD(5, 58745)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -58737,7 +58761,7 @@ YPRD_FUNCTION(z1A0D_SetSI)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(6, 58740)
+      XBETWEEN_SYMBOLS_PRD(6, 58764)
 
 /*-----
 * RETURN
@@ -58752,10 +58776,10 @@ YPRD_FUNCTION(z1A0D_SetSI)
     }
 
 /*-----
-* JOIN grst31
+* JOIN grst41
 * #SDTREF(SDL,C:\Battleships\Simulator\SetSI.spd(1),128(70,55),1)
 ------*/
-    goto L_grst31;
+    goto L_grst41;
   }
   XEND_PRD
 }
@@ -58875,7 +58899,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 58878)
+    XBETWEEN_SYMBOLS_PRD(4, 58902)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -58895,8 +58919,8 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
 #endif
 
   case 1:
-  L_grst32:;
-    XBETWEEN_SYMBOLS_PRD(5, 58899)
+  L_grst42:;
+    XBETWEEN_SYMBOLS_PRD(5, 58923)
 
 /*-----
 * DECISION
@@ -58916,7 +58940,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0E4_i, z_BasicTypes_20_AmountStrategy)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 58919)
+      XBETWEEN_SYMBOLS_PRD(8, 58943)
 
 /*-----
 * DECISION
@@ -58936,7 +58960,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
 #else
       if (yVarP->z1A0S_gASI.A[yPrdVarP->z1A0E4_i - SDL_INTEGER_LIT(1)]) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 58939)
+        XBETWEEN_SYMBOLS_PRD(9, 58963)
 
 /*-----
 * OUTPUT StrategyLose
@@ -58959,7 +58983,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
         SIGNAL_ALLOC_ERROR_END
       } else {
       }
-      XBETWEEN_SYMBOLS_PRD(10, 58962)
+      XBETWEEN_SYMBOLS_PRD(10, 58986)
 
 /*-----
 * ASSIGNMENT gASI... := ...
@@ -58980,7 +59004,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
         [((yVDef_z1A0E_KillStrategy *)yPrdVarP)->
         z1A0E4_i - SDL_INTEGER_LIT(1)]), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(11, 58983)
+      XBETWEEN_STMTS_PRD(11, 59007)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -59001,7 +59025,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(6, 59004)
+      XBETWEEN_SYMBOLS_PRD(6, 59028)
 
 /*-----
 * ASSIGNMENT errname := ...
@@ -59020,7 +59044,7 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
       xMSCEAssign("errname := ", &(yVarP->z1A0U_errname),
         (tSDLTypeInfo *)&ySDL_z1A0G_tErrorName);
 #endif
-      XBETWEEN_SYMBOLS_PRD(7, 59023)
+      XBETWEEN_SYMBOLS_PRD(7, 59047)
 
 /*-----
 * RETURN
@@ -59035,10 +59059,10 @@ YPRD_FUNCTION(z1A0E_KillStrategy)
     }
 
 /*-----
-* JOIN grst32
+* JOIN grst42
 * #SDTREF(SDL,C:\Battleships\Simulator\KillStrategy.spd(1),128(90,60),1)
 ------*/
-    goto L_grst32;
+    goto L_grst42;
   }
   XEND_PRD
 }
@@ -59163,7 +59187,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 59166)
+    XBETWEEN_SYMBOLS_PRD(3, 59190)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -59182,7 +59206,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
     xMSCEAssign("i := ", &(((yVDef_z1A0F_IsWeaponry *)yPrdVarP)->z1A0F3_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 59185)
+    XBETWEEN_STMTS_PRD(4, 59209)
 
 /*-----
 * ASSIGNMENT n := ...
@@ -59204,8 +59228,8 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
 #endif
 
   case 1:
-  L_grst33:;
-    XBETWEEN_SYMBOLS_PRD(5, 59208)
+  L_grst43:;
+    XBETWEEN_SYMBOLS_PRD(5, 59232)
 
 /*-----
 * DECISION
@@ -59225,7 +59249,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
 #else
     if (xLE_SDL_Integer(yPrdVarP->z1A0F3_i, yPrdVarP->z1A0F4_n)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(9, 59228)
+      XBETWEEN_SYMBOLS_PRD(9, 59252)
 
 /*-----
 * DECISION
@@ -59261,7 +59285,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
         z1A0Q_gShips), yPrdVarP->z1A0F3_i)).Ammunition.A
         [z_BasicTypes_0R2_SHELL], SDL_INTEGER_LIT(0)))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(10, 59264)
+        XBETWEEN_SYMBOLS_PRD(10, 59288)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -59282,7 +59306,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(11, 59285)
+        XBETWEEN_SYMBOLS_PRD(11, 59309)
 
 /*-----
 * RETURN
@@ -59296,7 +59320,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
         SDL_RETURN
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(6, 59299)
+      XBETWEEN_SYMBOLS_PRD(6, 59323)
 
 /*-----
 * DECISION
@@ -59318,7 +59342,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
       if (yEqF_z1P_tStringShotParameters(&(yVarP->z1A0R_gShots),
         z1P0_empty(&yUVar.U6.Result1))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(7, 59321)
+        XBETWEEN_SYMBOLS_PRD(7, 59345)
 
 /*-----
 * RETURN
@@ -59331,7 +59355,7 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
           XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(8, 59334)
+        XBETWEEN_SYMBOLS_PRD(8, 59358)
 
 /*-----
 * RETURN
@@ -59347,10 +59371,10 @@ YPRD_FUNCTION(z1A0F_IsWeaponry)
     }
 
 /*-----
-* JOIN grst33
+* JOIN grst43
 * #SDTREF(SDL,C:\Battleships\Simulator\IsWeaponry.spd(1),128(65,55),1)
 ------*/
-    goto L_grst33;
+    goto L_grst43;
   }
   XEND_PRD
 }
@@ -59709,9 +59733,9 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     CALL_PROCEDURE_STARTUP
 #ifdef XBREAKBEFORE
     if (yVarP->ActivePrd != (xPrdNode)0 ) {
-      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 59712)
+      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 59736)
     } else {
-      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 59714)
+      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 59738)
     }
 #endif
   }
@@ -59731,7 +59755,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
       (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
     GenericDefault((void *)&yVarP->z1BN_impShots,
       (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
-    XBETWEEN_SYMBOLS(6, 59734)
+    XBETWEEN_SYMBOLS(6, 59758)
 
 /*-----
 * NEXTSTATE Listening
@@ -59774,7 +59798,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     goto L_toSendingData;
 
   L_fromInitSocket:;
-    XBETWEEN_SYMBOLS(7, 59777)
+    XBETWEEN_SYMBOLS(7, 59801)
 
 /*-----
 * NEXTSTATE -
@@ -59795,7 +59819,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     goto L_fromInitSocket;
 
   L_toSendingData:;
-    XBETWEEN_SYMBOLS(8, 59798)
+    XBETWEEN_SYMBOLS(8, 59822)
 
 /*-----
 * ASSIGNMENT impShips := ...
@@ -59814,7 +59838,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     xMSCEAssign("impShips := ", &(yVarP->z1BM_impShips),
       (tSDLTypeInfo *)&ySDL_z1O_tStringShipParameters);
 #endif
-    XBETWEEN_STMTS(9, 59817)
+    XBETWEEN_STMTS(9, 59841)
 
 /*-----
 * ASSIGNMENT impShots := ...
@@ -59833,7 +59857,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     xMSCEAssign("impShots := ", &(yVarP->z1BN_impShots),
       (tSDLTypeInfo *)&ySDL_z1P_tStringShotParameters);
 #endif
-    XBETWEEN_SYMBOLS(10, 59836)
+    XBETWEEN_SYMBOLS(10, 59860)
 
 /*-----
 * CALL PushShips  (from EXPRESSION in next symbol)
@@ -59868,7 +59892,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     xMSCEAssign("tmpRes := ", &(yVarP->z1BO_tmpRes),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS(11, 59871)
+    XBETWEEN_SYMBOLS(11, 59895)
 
 /*-----
 * DECISION
@@ -59885,7 +59909,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS(12, 59888)
+      XBETWEEN_SYMBOLS(12, 59912)
 
 /*-----
 * CALL PushShots  (from EXPRESSION in next symbol)
@@ -59920,7 +59944,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
       xMSCEAssign("tmpRes := ", &(yVarP->z1BO_tmpRes),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS(13, 59923)
+      XBETWEEN_SYMBOLS(13, 59947)
 
 /*-----
 * DECISION
@@ -59937,7 +59961,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
 #endif
 #endif
       if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-        XBETWEEN_SYMBOLS(14, 59940)
+        XBETWEEN_SYMBOLS(14, 59964)
 
 /*-----
 * OUTPUT SendDataComplete
@@ -59957,7 +59981,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
           "SendDataComplete")
         SIGNAL_ALLOC_ERROR_END
 
-      L_grst34:;
+      L_grst44:;
 
 /*-----
 * JOIN fromSendingData
@@ -59966,8 +59990,8 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
         goto L_fromSendingData;
       } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
 
-      L_grst35:;
-        XBETWEEN_SYMBOLS(15, 59970)
+      L_grst45:;
+        XBETWEEN_SYMBOLS(15, 59994)
 
 /*-----
 * OUTPUT SendDataComplete
@@ -59988,10 +60012,10 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
         SIGNAL_ALLOC_ERROR_END
 
 /*-----
-* JOIN grst34
+* JOIN grst44
 * #SDTREF(SDL,C:\Battleships\Simulator\DataSender.spr(3),629(25,215),1)
 ------*/
-        goto L_grst34;
+        goto L_grst44;
       }
 #ifdef XEDECISION
       else {
@@ -60002,10 +60026,10 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
 
 /*-----
-* JOIN grst35
+* JOIN grst45
 * #SDTREF(SDL,C:\Battleships\Simulator\DataSender.spr(3),782(105,180),1)
 ------*/
-      goto L_grst35;
+      goto L_grst45;
     }
 #ifdef XEDECISION
     else {
@@ -60015,7 +60039,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
 #endif
 
   L_toInitSocket:;
-    XBETWEEN_SYMBOLS(16, 60018)
+    XBETWEEN_SYMBOLS(16, 60042)
 
 /*-----
 * ASSIGNMENT tmpRes := ...
@@ -60033,7 +60057,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     xMSCEAssign("tmpRes := ", &(yVarP->z1BO_tmpRes),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS(17, 60036)
+    XBETWEEN_SYMBOLS(17, 60060)
 
 /*-----
 * DECISION
@@ -60050,7 +60074,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS(18, 60053)
+      XBETWEEN_SYMBOLS(18, 60077)
 
 /*-----
 * CALL PushParam
@@ -60066,7 +60090,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
       xMSCETask("CALL EXTERNAL PushParam");
 #endif
       PushParam(z_BasicTypes_20_AmountStrategy);
-      XBETWEEN_SYMBOLS(5, 60069)
+      XBETWEEN_SYMBOLS(5, 60093)
 
 /*-----
 * ASSIGNMENT tmpRes := ...
@@ -60084,7 +60108,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
       xMSCEAssign("tmpRes := ", &(yVarP->z1BO_tmpRes),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_SYMBOLS(19, 60087)
+      XBETWEEN_SYMBOLS(19, 60111)
 
 /*-----
 * DECISION
@@ -60101,7 +60125,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
 #endif
 #endif
       if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-        XBETWEEN_SYMBOLS(20, 60104)
+        XBETWEEN_SYMBOLS(20, 60128)
 
 /*-----
 * ASSIGNMENT tmpRes := ...
@@ -60119,7 +60143,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
         xMSCEAssign("tmpRes := ", &(yVarP->z1BO_tmpRes),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS(21, 60122)
+        XBETWEEN_SYMBOLS(21, 60146)
 
 /*-----
 * DECISION
@@ -60136,7 +60160,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
 #endif
 #endif
         if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-          XBETWEEN_SYMBOLS(22, 60139)
+          XBETWEEN_SYMBOLS(22, 60163)
 
 /*-----
 * OUTPUT InitSocketComplete
@@ -60156,7 +60180,7 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
             "InitSocketComplete")
           SIGNAL_ALLOC_ERROR_END
 
-        L_grst36:;
+        L_grst46:;
 
 /*-----
 * JOIN fromInitSocket
@@ -60165,8 +60189,8 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
           goto L_fromInitSocket;
         } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
 
-        L_grst37:;
-          XBETWEEN_SYMBOLS(23, 60169)
+        L_grst47:;
+          XBETWEEN_SYMBOLS(23, 60193)
 
 /*-----
 * OUTPUT InitSocketComplete
@@ -60187,10 +60211,10 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
           SIGNAL_ALLOC_ERROR_END
 
 /*-----
-* JOIN grst36
+* JOIN grst46
 * #SDTREF(SDL,C:\Battleships\Simulator\DataSender.spr(4),737(35,210),1)
 ------*/
-          goto L_grst36;
+          goto L_grst46;
         }
 #ifdef XEDECISION
         else {
@@ -60201,10 +60225,10 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
       } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
 
 /*-----
-* JOIN grst37
+* JOIN grst47
 * #SDTREF(SDL,C:\Battleships\Simulator\DataSender.spr(4),659(105,195),1)
 ------*/
-        goto L_grst37;
+        goto L_grst47;
       }
 #ifdef XEDECISION
       else {
@@ -60215,10 +60239,10 @@ YPAD_FUNCTION(yPAD_z1B_DataSender)
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
 
 /*-----
-* JOIN grst37
+* JOIN grst47
 * #SDTREF(SDL,C:\Battleships\Simulator\DataSender.spr(4),659(105,195),1)
 ------*/
-      goto L_grst37;
+      goto L_grst47;
     }
 #ifdef XEDECISION
     else {
@@ -60349,7 +60373,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(6, 60352)
+    XBETWEEN_SYMBOLS_PRD(6, 60376)
 
 /*-----
 * DECISION
@@ -60367,7 +60391,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #endif
 #endif
     if (xGT_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS_PRD(7, 60370)
+      XBETWEEN_SYMBOLS_PRD(7, 60394)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -60383,7 +60407,7 @@ YPRD_FUNCTION(z1BH_PushShips)
         yPrdVarP)->z1BH2_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(8, 60386)
+        XBETWEEN_STMTS_PRD(8, 60410)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -60398,7 +60422,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(10, 60401)
+        XBETWEEN_STMTS_PRD(10, 60425)
 
 /*-----
 * OPERATOR CALL ns2i  (from EXPRESSION in next symbol)
@@ -60478,7 +60502,7 @@ YPRD_FUNCTION(z1BH_PushShips)
           [z_BasicTypes_0R2_SHELL], (*yExtr_z1O_tStringShipParameters(&(yVarP->
           z1BM_impShips), ((yVDef_z1BH_PushShips *)yPrdVarP)->z1BH2_i)).
           Ammunition.A[z_BasicTypes_0R3_REPAIR]);
-        XBETWEEN_STMTS_PRD(4, 60481)
+        XBETWEEN_STMTS_PRD(4, 60505)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -60494,7 +60518,7 @@ YPRD_FUNCTION(z1BH_PushShips)
           yPrdVarP)->z1BH3_k), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         while (1) {
-          XBETWEEN_STMTS_PRD(11, 60497)
+          XBETWEEN_STMTS_PRD(11, 60521)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -60508,7 +60532,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #ifdef XTRACE
           xTraceAlg("LOOP test TRUE");
 #endif
-          XBETWEEN_STMTS_PRD(12, 60511)
+          XBETWEEN_STMTS_PRD(12, 60535)
 
 /*-----
 * IF
@@ -60524,7 +60548,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #ifdef XTRACE
             xTraceAlg("IF (true)");
 #endif
-            XBETWEEN_STMTS_PRD(13, 60527)
+            XBETWEEN_STMTS_PRD(13, 60551)
 
 /*-----
 * CALL PushVariableShipPart
@@ -60544,7 +60568,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #ifdef XTRACE
             xTraceAlg("IF (false)");
 #endif
-            XBETWEEN_STMTS_PRD(14, 60547)
+            XBETWEEN_STMTS_PRD(14, 60571)
 
 /*-----
 * CALL PushVariableShipPart
@@ -60561,7 +60585,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #endif
             PushVariableShipPart(SDL_INTEGER_LIT(0));
           }
-          XBETWEEN_STMTS_PRD(5, 60564)
+          XBETWEEN_STMTS_PRD(5, 60588)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -60582,7 +60606,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #ifdef XTRACE
         xTraceAlg("LOOP test FALSE");
 #endif
-        XBETWEEN_STMTS_PRD(9, 60585)
+        XBETWEEN_STMTS_PRD(9, 60609)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -60603,7 +60627,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_SYMBOLS_PRD(15, 60606)
+      XBETWEEN_SYMBOLS_PRD(15, 60630)
 
 /*-----
 * ASSIGNMENT tmpRes := ...
@@ -60622,7 +60646,7 @@ YPRD_FUNCTION(z1BH_PushShips)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS_PRD(16, 60625)
+      XBETWEEN_SYMBOLS_PRD(16, 60649)
 
 /*-----
 * ASSIGNMENT tmpRes := ...
@@ -60647,7 +60671,7 @@ YPRD_FUNCTION(z1BH_PushShips)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(17, 60650)
+    XBETWEEN_SYMBOLS_PRD(17, 60674)
 
 /*-----
 * DECISION
@@ -60664,7 +60688,7 @@ YPRD_FUNCTION(z1BH_PushShips)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS_PRD(18, 60667)
+      XBETWEEN_SYMBOLS_PRD(18, 60691)
 
 /*-----
 * RETURN
@@ -60677,7 +60701,7 @@ YPRD_FUNCTION(z1BH_PushShips)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
-      XBETWEEN_SYMBOLS_PRD(19, 60680)
+      XBETWEEN_SYMBOLS_PRD(19, 60704)
 
 /*-----
 * RETURN
@@ -60848,7 +60872,7 @@ YPRD_FUNCTION(z1BI_PushShots)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 60851)
+    XBETWEEN_SYMBOLS_PRD(4, 60875)
 
 /*-----
 * DECISION
@@ -60866,7 +60890,7 @@ YPRD_FUNCTION(z1BI_PushShots)
 #endif
 #endif
     if (xGT_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS_PRD(5, 60869)
+      XBETWEEN_SYMBOLS_PRD(5, 60893)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -60882,7 +60906,7 @@ YPRD_FUNCTION(z1BI_PushShots)
         yPrdVarP)->z1BI2_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(6, 60885)
+        XBETWEEN_STMTS_PRD(6, 60909)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -60897,7 +60921,7 @@ YPRD_FUNCTION(z1BI_PushShots)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(7, 60900)
+        XBETWEEN_STMTS_PRD(7, 60924)
 
 /*-----
 * OPERATOR CALL nw2i  (from EXPRESSION in next symbol)
@@ -60942,7 +60966,7 @@ YPRD_FUNCTION(z1BI_PushShots)
           ((yVDef_z1BI_PushShots *)yPrdVarP)->z1BI2_i)).FinishCoordinates.x,
           (*yExtr_z1P_tStringShotParameters(&(yVarP->z1BN_impShots),
           ((yVDef_z1BI_PushShots *)yPrdVarP)->z1BI2_i)).FinishCoordinates.y);
-        XBETWEEN_STMTS_PRD(3, 60945)
+        XBETWEEN_STMTS_PRD(3, 60969)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -60963,7 +60987,7 @@ YPRD_FUNCTION(z1BI_PushShots)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 60966)
+      XBETWEEN_SYMBOLS_PRD(8, 60990)
 
 /*-----
 * ASSIGNMENT tmp := ...
@@ -60983,7 +61007,7 @@ YPRD_FUNCTION(z1BI_PushShots)
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS_PRD(9, 60986)
+      XBETWEEN_SYMBOLS_PRD(9, 61010)
 
 /*-----
 * ASSIGNMENT tmp := ...
@@ -61009,7 +61033,7 @@ YPRD_FUNCTION(z1BI_PushShots)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(10, 61012)
+    XBETWEEN_SYMBOLS_PRD(10, 61036)
 
 /*-----
 * DECISION
@@ -61026,7 +61050,7 @@ YPRD_FUNCTION(z1BI_PushShots)
 #endif
 #endif
     if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(0))) {
-      XBETWEEN_SYMBOLS_PRD(11, 61029)
+      XBETWEEN_SYMBOLS_PRD(11, 61053)
 
 /*-----
 * RETURN
@@ -61039,7 +61063,7 @@ YPRD_FUNCTION(z1BI_PushShots)
         XASS_MR_ASS_FR);
       SDL_RETURN
     } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(-1))) {
-      XBETWEEN_SYMBOLS_PRD(12, 61042)
+      XBETWEEN_SYMBOLS_PRD(12, 61066)
 
 /*-----
 * RETURN
@@ -61820,9 +61844,9 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     CALL_PROCEDURE_STARTUP
 #ifdef XBREAKBEFORE
     if (yVarP->ActivePrd != (xPrdNode)0 ) {
-      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 61823)
+      XBETWEEN_SYMBOLS(yVarP->ActivePrd->RestartAddress, 61847)
     } else {
-      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 61825)
+      XBETWEEN_SYMBOLS(yVarP->RestartAddress, 61849)
     }
 #endif
   }
@@ -61845,7 +61869,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
       (tSDLTypeInfo *)&ySDL_z227_tArrayCommand);
     GenericDefault((void *)&yVarP->z22Y_EnemyShips,
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_14_tStringEnemyShip);
-    XBETWEEN_SYMBOLS(11, 61848)
+    XBETWEEN_SYMBOLS(11, 61872)
 
 /*-----
 * NEXTSTATE Idle
@@ -61865,7 +61889,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     XDEBUG_LABEL(Idle_InitDataComplete)
     XAT_FIRST_SYMBOL(1)
     XOS_TRACE_INPUT("InitDataComplete")
-    XBETWEEN_SYMBOLS(12, 61868)
+    XBETWEEN_SYMBOLS(12, 61892)
 
 /*-----
 * ASSIGNMENT WeaponryCharacter := ...
@@ -61886,7 +61910,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     xMSCEAssign("WeaponryCharacter := ", &(yVarP->z22L_WeaponryCharacter),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0Z_tArrayWeaponryCharacter);
 #endif
-    XBETWEEN_STMTS(13, 61889)
+    XBETWEEN_STMTS(13, 61913)
 
 /*-----
 * ASSIGNMENT ShipsCharacter := ...
@@ -61906,7 +61930,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     xMSCEAssign("ShipsCharacter := ", &(yVarP->z22M_ShipsCharacter),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_10_tArrayShipsCharacter);
 #endif
-    XBETWEEN_SYMBOLS(14, 61909)
+    XBETWEEN_SYMBOLS(14, 61933)
 
 /*-----
 * NEXTSTATE InitComplete
@@ -61940,8 +61964,8 @@ YPAD_FUNCTION(yPAD_z22_Main1)
       ySVarP)->Param2), XASS_AR_ASS_FR);
 #endif
 
-  L_grst38:;
-    XBETWEEN_SYMBOLS(15, 61944)
+  L_grst48:;
+    XBETWEEN_SYMBOLS(15, 61968)
 
 /*-----
 * CALL UpdateShipParams
@@ -61955,7 +61979,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z223_UpdateShipParams, yPrdN_z223_UpdateShipParams, 0, 8)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(8, 61958)
+    XBETWEEN_SYMBOLS(8, 61982)
 
 /*-----
 * NEXTSTATE IdleVisShips
@@ -61978,7 +62002,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     yAssF_SDL_Integer(yVarP->z22O_Tick,
       ((yPDef_z_BasicTypes_03_StartSimulation *)ySVarP)->Param1,
       XASS_AR_ASS_FR);
-    XBETWEEN_SYMBOLS(16, 61981)
+    XBETWEEN_SYMBOLS(16, 62005)
 
 /*-----
 * CALL StrategyStep
@@ -61994,7 +62018,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
       z22T_ShipsCurrentState);
     CALL_PROCEDURE(z221_StrategyStep, yPrdN_z221_StrategyStep, 0, 9)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(9, 61997)
+    XBETWEEN_SYMBOLS(9, 62021)
 
 /*-----
 * OUTPUT FinishSimulation
@@ -62017,7 +62041,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
       yPrsN_z19_Router), sizeof(yPDef_z_BasicTypes_04_FinishSimulation),
       "FinishSimulation")
     SIGNAL_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(17, 62020)
+    XBETWEEN_SYMBOLS(17, 62044)
 
 /*-----
 * NEXTSTATE IdleRes
@@ -62047,7 +62071,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     yAssF_z_BasicTypes_14_tStringEnemyShip(yVarP->z22Y_EnemyShips, &(
       ((yPDef_z_BasicTypes_0I_VisibleShip *)ySVarP)->Param2), XASS_AR_ASS_FR);
 #endif
-    XBETWEEN_SYMBOLS(18, 62050)
+    XBETWEEN_SYMBOLS(18, 62074)
 
 /*-----
 * CALL EnemyCenter
@@ -62061,7 +62085,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     PROCEDURE_ALLOC_ERROR
     CALL_PROCEDURE(z222_EnemyCenter, yPrdN_z222_EnemyCenter, 0, 10)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS(10, 62064)
+    XBETWEEN_SYMBOLS(10, 62088)
 
 /*-----
 * NEXTSTATE -
@@ -62096,10 +62120,10 @@ YPAD_FUNCTION(yPAD_z22_Main1)
 #endif
 
 /*-----
-* JOIN grst38
+* JOIN grst48
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\Main.spr(3),551(70,105),1)
 ------*/
-    goto L_grst38;
+    goto L_grst48;
 
 /*-----
 * INPUT OrderSpeedResponse, OrderSpeedReject, OrderTurnResponse, OrderTurnReject, OrderFireResponse, OrderFireReject, DestroyShip
@@ -62109,7 +62133,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
     XDEBUG_LABEL(IdleRes_OrderSpeedResponse)
     XAT_FIRST_SYMBOL(6)
     XOS_TRACE_INPUT("OrderSpeedResponse, OrderSpeedReject, OrderTurnResponse, OrderTurnReject, OrderFireResponse, OrderFireReject, DestroyShip")
-    XBETWEEN_SYMBOLS(19, 62112)
+    XBETWEEN_SYMBOLS(19, 62136)
 
 /*-----
 * NEXTSTATE -
@@ -62143,7 +62167,7 @@ YPAD_FUNCTION(yPAD_z22_Main1)
         ((yPDef_z_BasicTypes_0A_StrategyLose *)ySVarP)->Param1),
         XASS_AR_ASS_FR);
     }
-    XBETWEEN_SYMBOLS(20, 62146)
+    XBETWEEN_SYMBOLS(20, 62170)
 
 /*-----
 * STOP
@@ -62473,7 +62497,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     XAT_FIRST_SYMBOL(0)
     yAssF_SDL_Integer(yPrdVarP->z221O_index, SDL_INTEGER_LIT(1),
       XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(20, 62476)
+    XBETWEEN_SYMBOLS_PRD(20, 62500)
 
 /*-----
 * DECISION
@@ -62493,7 +62517,7 @@ YPRD_FUNCTION(z221_StrategyStep)
 #else
     if (yEqF_SDL_Integer(yVarP->z22X_NumVisibleShips, SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(23, 62496)
+      XBETWEEN_SYMBOLS_PRD(23, 62520)
 
 /*-----
 * IF
@@ -62506,7 +62530,7 @@ YPRD_FUNCTION(z221_StrategyStep)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(24, 62509)
+        XBETWEEN_STMTS_PRD(24, 62533)
 
 /*-----
 * ASSIGNMENT flagFight := ...
@@ -62524,7 +62548,7 @@ YPRD_FUNCTION(z221_StrategyStep)
         xMSCEAssign("flagFight := ", &(yVarP->z22R_flagFight),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_STMTS_PRD(25, 62527)
+        XBETWEEN_STMTS_PRD(25, 62551)
 
 /*-----
 * CALL FindStartPoint
@@ -62545,7 +62569,7 @@ YPRD_FUNCTION(z221_StrategyStep)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_SYMBOLS_PRD(10, 62548)
+      XBETWEEN_SYMBOLS_PRD(10, 62572)
 
 /*-----
 * DECISION
@@ -62579,7 +62603,7 @@ YPRD_FUNCTION(z221_StrategyStep)
         z22N_MyCenter.y, xMinus_SDL_Integer(yVarP->z22S_HeadingTarget.y,
         SDL_INTEGER_LIT(5))))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(26, 62582)
+        XBETWEEN_SYMBOLS_PRD(26, 62606)
 
 /*-----
 * CALL FindHeadingTarget
@@ -62603,7 +62627,7 @@ YPRD_FUNCTION(z221_StrategyStep)
 ------*/
       goto L_Step2;
     } else {
-      XBETWEEN_SYMBOLS_PRD(21, 62606)
+      XBETWEEN_SYMBOLS_PRD(21, 62630)
 
 /*-----
 * IF
@@ -62616,7 +62640,7 @@ YPRD_FUNCTION(z221_StrategyStep)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(22, 62619)
+        XBETWEEN_STMTS_PRD(22, 62643)
 
 /*-----
 * ASSIGNMENT flagFight := ...
@@ -62650,7 +62674,7 @@ YPRD_FUNCTION(z221_StrategyStep)
 
   case 2:
   L_Step1:;
-    XBETWEEN_SYMBOLS_PRD(27, 62653)
+    XBETWEEN_SYMBOLS_PRD(27, 62677)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -62703,7 +62727,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       &((*(yPrdVarP->z2210_ShipsCurrState))), yPrdVarP->z221O_index)).
       Coordinates.y)), yPrdVarP->xPrdCallRes1_SDL_Integer)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(28, 62706)
+      XBETWEEN_SYMBOLS_PRD(28, 62730)
 
 /*-----
 * CALL OnLand
@@ -62724,7 +62748,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       CALL_PROCEDURE_IN_PRD(z221L_OnLand, yPrdN_z221L_OnLand, 0, 13)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(29, 62727)
+      XBETWEEN_SYMBOLS_PRD(29, 62751)
 
 /*-----
 * CALL EnemyFound
@@ -62744,7 +62768,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       CALL_PROCEDURE_IN_PRD(z221A_EnemyFound, yPrdN_z221A_EnemyFound, 0, 13)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(13, 62747)
+    XBETWEEN_SYMBOLS_PRD(13, 62771)
 
 /*-----
 * CALL isCollision  (from EXPRESSION in next symbol)
@@ -62780,7 +62804,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     xMSCEAssign("CollisionType := ", &(((yVDef_z221_StrategyStep *)yPrdVarP)->
       z221P_CollisionType), (tSDLTypeInfo *)&ySDL_z221N_tCollision);
 #endif
-    XBETWEEN_SYMBOLS_PRD(30, 62783)
+    XBETWEEN_SYMBOLS_PRD(30, 62807)
 
 /*-----
 * DECISION
@@ -62804,7 +62828,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     if (yEqF_z221N_tCollision(yPrdVarP->z221P_CollisionType,
       z221N0_NO_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(31, 62807)
+      XBETWEEN_SYMBOLS_PRD(31, 62831)
 
 /*-----
 * CALL OutputOrder
@@ -62819,7 +62843,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       CALL_PROCEDURE_IN_PRD(z221I_OutputOrder, yPrdN_z221I_OutputOrder, 0, 15)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(32, 62822)
+      XBETWEEN_SYMBOLS_PRD(32, 62846)
 
 /*-----
 * CALL SolveCollision
@@ -62835,7 +62859,7 @@ YPRD_FUNCTION(z221_StrategyStep)
         0, 15)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(15, 62838)
+    XBETWEEN_SYMBOLS_PRD(15, 62862)
 
 /*-----
 * ASSIGNMENT index := ...
@@ -62855,7 +62879,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     xMSCEAssign("index := ", &(((yVDef_z221_StrategyStep *)yPrdVarP)->
       z221O_index), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(33, 62858)
+    XBETWEEN_SYMBOLS_PRD(33, 62882)
 
 /*-----
 * DECISION
@@ -62876,7 +62900,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     if (xLE_SDL_Integer(yPrdVarP->z221O_index, yVarP->z22P_NumMyShips)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(34, 62879)
+      XBETWEEN_SYMBOLS_PRD(34, 62903)
 
 /*-----
 * RETURN
@@ -62896,7 +62920,7 @@ YPRD_FUNCTION(z221_StrategyStep)
 
   case 6:
   L_Step2:;
-    XBETWEEN_SYMBOLS_PRD(11, 62899)
+    XBETWEEN_SYMBOLS_PRD(11, 62923)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -62949,7 +62973,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       &((*(yPrdVarP->z2210_ShipsCurrState))), yPrdVarP->z221O_index)).
       Coordinates.y)), yPrdVarP->xPrdCallRes1_SDL_Integer)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(35, 62952)
+      XBETWEEN_SYMBOLS_PRD(35, 62976)
 
 /*-----
 * CALL OnLand
@@ -62970,7 +62994,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       CALL_PROCEDURE_IN_PRD(z221L_OnLand, yPrdN_z221L_OnLand, 0, 17)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(36, 62973)
+      XBETWEEN_SYMBOLS_PRD(36, 62997)
 
 /*-----
 * CALL EnemyNotFound
@@ -62991,7 +63015,7 @@ YPRD_FUNCTION(z221_StrategyStep)
         17)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(17, 62994)
+    XBETWEEN_SYMBOLS_PRD(17, 63018)
 
 /*-----
 * CALL isCollision  (from EXPRESSION in next symbol)
@@ -63027,7 +63051,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     xMSCEAssign("CollisionType := ", &(((yVDef_z221_StrategyStep *)yPrdVarP)->
       z221P_CollisionType), (tSDLTypeInfo *)&ySDL_z221N_tCollision);
 #endif
-    XBETWEEN_SYMBOLS_PRD(37, 63030)
+    XBETWEEN_SYMBOLS_PRD(37, 63054)
 
 /*-----
 * DECISION
@@ -63051,7 +63075,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     if (yEqF_z221N_tCollision(yPrdVarP->z221P_CollisionType,
       z221N0_NO_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(38, 63054)
+      XBETWEEN_SYMBOLS_PRD(38, 63078)
 
 /*-----
 * CALL OutputOrder
@@ -63066,7 +63090,7 @@ YPRD_FUNCTION(z221_StrategyStep)
       CALL_PROCEDURE_IN_PRD(z221I_OutputOrder, yPrdN_z221I_OutputOrder, 0, 19)
       PROCEDURE_ALLOC_ERROR_END
     } else {
-      XBETWEEN_SYMBOLS_PRD(39, 63069)
+      XBETWEEN_SYMBOLS_PRD(39, 63093)
 
 /*-----
 * CALL SolveCollision
@@ -63082,7 +63106,7 @@ YPRD_FUNCTION(z221_StrategyStep)
         0, 19)
       PROCEDURE_ALLOC_ERROR_END
     }
-    XBETWEEN_SYMBOLS_PRD(19, 63085)
+    XBETWEEN_SYMBOLS_PRD(19, 63109)
 
 /*-----
 * ASSIGNMENT index := ...
@@ -63102,7 +63126,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     xMSCEAssign("index := ", &(((yVDef_z221_StrategyStep *)yPrdVarP)->
       z221O_index), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(40, 63105)
+    XBETWEEN_SYMBOLS_PRD(40, 63129)
 
 /*-----
 * DECISION
@@ -63123,7 +63147,7 @@ YPRD_FUNCTION(z221_StrategyStep)
     if (xLE_SDL_Integer(yPrdVarP->z221O_index, yVarP->z22P_NumMyShips)) {
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(41, 63126)
+      XBETWEEN_SYMBOLS_PRD(41, 63150)
 
 /*-----
 * RETURN
@@ -63489,7 +63513,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
     GenericDefault((void *)&yPrdVarP->z221AN_ShootList,
       (tSDLTypeInfo *)&ySDL_z221AC_tStringShootList);
     yAssF_SDL_Boolean(yPrdVarP->z221AP_DestroyFlag, SDL_False, XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(13, 63492)
+    XBETWEEN_SYMBOLS_PRD(13, 63516)
 
 /*-----
 * DECISION
@@ -63513,7 +63537,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
     if (yEqF_z_BasicTypes_0S_tNameShip((*(yPrdVarP->z221A0_ShCurrSt)).TypeShip,
       z_BasicTypes_0S4_REPAIR_BOAT)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(14, 63516)
+      XBETWEEN_SYMBOLS_PRD(14, 63540)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -63529,7 +63553,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         yPrdVarP)->z221AF_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(15, 63532)
+        XBETWEEN_STMTS_PRD(15, 63556)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -63543,7 +63567,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(17, 63546)
+        XBETWEEN_STMTS_PRD(17, 63570)
 
 /*-----
 * IF
@@ -63563,7 +63587,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(18, 63566)
+          XBETWEEN_STMTS_PRD(18, 63590)
 
 /*-----
 * ASSIGNMENT DestroyFlag := ...
@@ -63582,7 +63606,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           xMSCEAssign("DestroyFlag := ", &(((yVDef_z221A_EnemyFound *)
             yPrdVarP)->z221AP_DestroyFlag), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_STMTS_PRD(19, 63585)
+          XBETWEEN_STMTS_PRD(19, 63609)
 
 /*-----
 * BREAK
@@ -63601,7 +63625,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(16, 63604)
+        XBETWEEN_STMTS_PRD(16, 63628)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -63623,7 +63647,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
       xTraceAlg("LOOP test FALSE");
 #endif
       xBreak_14: ;
-      XBETWEEN_SYMBOLS_PRD(20, 63626)
+      XBETWEEN_SYMBOLS_PRD(20, 63650)
 
 /*-----
 * DECISION
@@ -63650,7 +63674,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         yEqF_SDL_Boolean(yPrdVarP->z221AP_DestroyFlag, SDL_True)),
         xGT_SDL_Integer(yVarP->z22P_NumMyShips, SDL_INTEGER_LIT(1)))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(21, 63653)
+        XBETWEEN_SYMBOLS_PRD(21, 63677)
 
 /*-----
 * CALL ActivateREPAIR
@@ -63665,7 +63689,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         CALL_PROCEDURE_IN_PRD(z221A7_ActivateREPAIR,
           yPrdN_z221A7_ActivateREPAIR, 0, 6)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(6, 63668)
+        XBETWEEN_SYMBOLS_PRD(6, 63692)
 
 /*-----
 * RETURN
@@ -63676,7 +63700,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(22, 63679)
+        XBETWEEN_SYMBOLS_PRD(22, 63703)
 
 /*-----
 * DECISION
@@ -63696,7 +63720,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #else
         if (yEqF_SDL_Integer(yVarP->z22P_NumMyShips, SDL_INTEGER_LIT(1))) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(24, 63699)
+          XBETWEEN_SYMBOLS_PRD(24, 63723)
 
 /*-----
 * CALL NewHeadingChange  (from EXPRESSION in next symbol)
@@ -63737,7 +63761,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
             (tSDLTypeInfo *)&ySDL_z221M_tTurnDirection);
 #endif
         } else {
-          XBETWEEN_SYMBOLS_PRD(23, 63740)
+          XBETWEEN_SYMBOLS_PRD(23, 63764)
 
 /*-----
 * CALL NewHeadingChange  (from EXPRESSION in next symbol)
@@ -63786,7 +63810,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         goto L_F2;
       }
     } else {
-      XBETWEEN_SYMBOLS_PRD(25, 63789)
+      XBETWEEN_SYMBOLS_PRD(25, 63813)
 
 /*-----
 * CALL CanShootEnemyCenter  (from EXPRESSION in next symbol)
@@ -63824,7 +63848,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
       xMSCEAssign("CanShootWeaponry := ", &(yPrdVarP->z221AJ_CanShootWeaponry),
         (tSDLTypeInfo *)&ySDL_z221AA_tShootWeaponry);
 #endif
-      XBETWEEN_SYMBOLS_PRD(26, 63827)
+      XBETWEEN_SYMBOLS_PRD(26, 63851)
 
 /*-----
 * DECISION
@@ -63851,7 +63875,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 ------*/
         goto L_F1;
       } else {
-        XBETWEEN_SYMBOLS_PRD(27, 63854)
+        XBETWEEN_SYMBOLS_PRD(27, 63878)
 
 /*-----
 * CALL NewHeadingChange  (from EXPRESSION in next symbol)
@@ -63902,7 +63926,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 
   case 2:
   L_F2:;
-    XBETWEEN_SYMBOLS_PRD(28, 63905)
+    XBETWEEN_SYMBOLS_PRD(28, 63929)
 
 /*-----
 * DECISION
@@ -63923,7 +63947,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #endif
     if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
           z221M1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(29, 63926)
+      XBETWEEN_SYMBOLS_PRD(29, 63950)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -63945,7 +63969,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(30, 63948)
+      XBETWEEN_STMTS_PRD(30, 63972)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -63969,7 +63993,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #endif
     } else if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
           z221M2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(31, 63972)
+      XBETWEEN_SYMBOLS_PRD(31, 63996)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -63991,7 +64015,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(32, 63994)
+      XBETWEEN_STMTS_PRD(32, 64018)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64014,7 +64038,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         isSet), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(33, 64017)
+      XBETWEEN_SYMBOLS_PRD(33, 64041)
 
 /*-----
 * DECISION
@@ -64039,7 +64063,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         MaxSpeed)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(34, 64042)
+        XBETWEEN_SYMBOLS_PRD(34, 64066)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64061,7 +64085,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
           OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(35, 64064)
+        XBETWEEN_STMTS_PRD(35, 64088)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64085,7 +64109,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
           Accel), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(36, 64088)
+        XBETWEEN_STMTS_PRD(36, 64112)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64108,7 +64132,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           isSet), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(37, 64111)
+      XBETWEEN_SYMBOLS_PRD(37, 64135)
 
 /*-----
 * RETURN
@@ -64119,7 +64143,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #endif
       SDL_RETURN
     }
-    XBETWEEN_SYMBOLS_PRD(38, 64122)
+    XBETWEEN_SYMBOLS_PRD(38, 64146)
 
 /*-----
 * RETURN
@@ -64132,7 +64156,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 
   case 5:
   L_F1:;
-    XBETWEEN_SYMBOLS_PRD(39, 64135)
+    XBETWEEN_SYMBOLS_PRD(39, 64159)
 
 /*-----
 * DECISION
@@ -64154,7 +64178,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
     if (yEqF_SDL_Integer((*(yPrdVarP->z221A0_ShCurrSt)).Speed,
       SDL_INTEGER_LIT(0))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(44, 64157)
+      XBETWEEN_SYMBOLS_PRD(44, 64181)
 
 /*-----
 * ASSIGNMENT BestWeaponry := ...
@@ -64176,7 +64200,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         z221AK_BestWeaponry),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(45, 64179)
+      XBETWEEN_STMTS_PRD(45, 64203)
 
 /*-----
 * IF
@@ -64194,7 +64218,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(46, 64197)
+        XBETWEEN_STMTS_PRD(46, 64221)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -64222,7 +64246,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(47, 64225)
+        XBETWEEN_STMTS_PRD(47, 64249)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -64246,7 +64270,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       }
-      XBETWEEN_STMTS_PRD(48, 64249)
+      XBETWEEN_STMTS_PRD(48, 64273)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -64262,7 +64286,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         yPrdVarP)->z221AF_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(49, 64265)
+        XBETWEEN_STMTS_PRD(49, 64289)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -64276,7 +64300,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(51, 64279)
+        XBETWEEN_STMTS_PRD(51, 64303)
 
 /*-----
 * ASSIGNMENT DistBetweenShips := ...
@@ -64304,7 +64328,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           yPrdVarP)->z221AH_DistBetweenShips),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(52, 64307)
+        XBETWEEN_STMTS_PRD(52, 64331)
 
 /*-----
 * IF
@@ -64319,7 +64343,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(53, 64322)
+          XBETWEEN_STMTS_PRD(53, 64346)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -64342,7 +64366,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
             yPrdVarP)->z221AL_ShootPoint.SortParam),
             (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-          XBETWEEN_STMTS_PRD(54, 64345)
+          XBETWEEN_STMTS_PRD(54, 64369)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -64364,7 +64388,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
             yPrdVarP)->z221AL_ShootPoint.Number),
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-          XBETWEEN_STMTS_PRD(55, 64367)
+          XBETWEEN_STMTS_PRD(55, 64391)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -64393,7 +64417,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(50, 64396)
+        XBETWEEN_STMTS_PRD(50, 64420)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -64414,7 +64438,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(56, 64417)
+      XBETWEEN_STMTS_PRD(56, 64441)
 
 /*-----
 * CALL SortShootList
@@ -64429,7 +64453,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
       CALL_PROCEDURE_IN_PRD(z221A9_SortShootList, yPrdN_z221A9_SortShootList,
         0, 11)
       PROCEDURE_ALLOC_ERROR_END
-      XBETWEEN_STMTS_PRD(11, 64432)
+      XBETWEEN_STMTS_PRD(11, 64456)
 
 /*-----
 * IF
@@ -64444,7 +64468,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(57, 64447)
+        XBETWEEN_STMTS_PRD(57, 64471)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -64470,7 +64494,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(58, 64473)
+        XBETWEEN_STMTS_PRD(58, 64497)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -64494,7 +64518,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       }
-      XBETWEEN_STMTS_PRD(59, 64497)
+      XBETWEEN_STMTS_PRD(59, 64521)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64516,7 +64540,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(60, 64519)
+      XBETWEEN_STMTS_PRD(60, 64543)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64539,7 +64563,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         Fire.Weapon), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(61, 64542)
+      XBETWEEN_STMTS_PRD(61, 64566)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -64555,7 +64579,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         yPrdVarP)->z221AF_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(62, 64558)
+        XBETWEEN_STMTS_PRD(62, 64582)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -64570,7 +64594,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(64, 64573)
+        XBETWEEN_STMTS_PRD(64, 64597)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -64631,7 +64655,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           z221AO_PointToOrder),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-        XBETWEEN_STMTS_PRD(65, 64634)
+        XBETWEEN_STMTS_PRD(65, 64658)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64658,7 +64682,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
           [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
           Fire.List), (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
 #endif
-        XBETWEEN_STMTS_PRD(63, 64661)
+        XBETWEEN_STMTS_PRD(63, 64685)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -64679,7 +64703,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(66, 64682)
+      XBETWEEN_STMTS_PRD(66, 64706)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64701,7 +64725,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         isSet), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(67, 64704)
+      XBETWEEN_SYMBOLS_PRD(67, 64728)
 
 /*-----
 * RETURN
@@ -64712,7 +64736,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(40, 64715)
+      XBETWEEN_SYMBOLS_PRD(40, 64739)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64734,7 +64758,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(41, 64737)
+      XBETWEEN_STMTS_PRD(41, 64761)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64758,7 +64782,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         Accel), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-      XBETWEEN_STMTS_PRD(42, 64761)
+      XBETWEEN_STMTS_PRD(42, 64785)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -64780,7 +64804,7 @@ YPRD_FUNCTION(z221A_EnemyFound)
         [((yVDef_z221A_EnemyFound *)yPrdVarP)->z221A1_k - SDL_INTEGER_LIT(1)].
         isSet), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(43, 64783)
+      XBETWEEN_SYMBOLS_PRD(43, 64807)
 
 /*-----
 * RETURN
@@ -65029,7 +65053,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(9, 65032)
+    XBETWEEN_SYMBOLS_PRD(9, 65056)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -65045,7 +65069,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
       ->StaticFather)->z221AF_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(10, 65048)
+      XBETWEEN_STMTS_PRD(10, 65072)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -65059,7 +65083,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(12, 65062)
+      XBETWEEN_STMTS_PRD(12, 65086)
 
 /*-----
 * ASSIGNMENT DistBetweenShips := ...
@@ -65091,7 +65115,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         ->StaticFather)->z221AH_DistBetweenShips),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(13, 65094)
+      XBETWEEN_STMTS_PRD(13, 65118)
 
 /*-----
 * IF
@@ -65114,7 +65138,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(14, 65117)
+        XBETWEEN_STMTS_PRD(14, 65141)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -65145,7 +65169,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           ->StaticFather)->z221AL_ShootPoint.SortParam),
           (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(15, 65148)
+        XBETWEEN_STMTS_PRD(15, 65172)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -65167,7 +65191,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           ->StaticFather)->z221AL_ShootPoint.Number),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(16, 65170)
+        XBETWEEN_STMTS_PRD(16, 65194)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -65199,7 +65223,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(11, 65202)
+      XBETWEEN_STMTS_PRD(11, 65226)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -65220,7 +65244,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(17, 65223)
+    XBETWEEN_SYMBOLS_PRD(17, 65247)
 
 /*-----
 * DECISION
@@ -65251,7 +65275,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 ------*/
       goto L_R1;
     } else {
-      XBETWEEN_SYMBOLS_PRD(18, 65254)
+      XBETWEEN_SYMBOLS_PRD(18, 65278)
 
 /*-----
 * DECISION
@@ -65273,7 +65297,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
       if (yEqF_SDL_Integer((*(((yVDef_z221A_EnemyFound *)yPrdVarP
         ->StaticFather)->z221A0_ShCurrSt)).Speed, SDL_INTEGER_LIT(0))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(23, 65276)
+        XBETWEEN_SYMBOLS_PRD(23, 65300)
 
 /*-----
 * CALL SortShootList
@@ -65288,7 +65312,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         CALL_PROCEDURE_IN_PRD(z221A9_SortShootList, yPrdN_z221A9_SortShootList,
           1, 5)
         PROCEDURE_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(5, 65291)
+        XBETWEEN_SYMBOLS_PRD(5, 65315)
 
 /*-----
 * IF
@@ -65305,7 +65329,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(24, 65308)
+          XBETWEEN_STMTS_PRD(24, 65332)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -65332,7 +65356,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(25, 65335)
+          XBETWEEN_STMTS_PRD(25, 65359)
 
 /*-----
 * ASSIGNMENT MaxPointsToShoot := ...
@@ -65356,7 +65380,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         }
-        XBETWEEN_STMTS_PRD(26, 65359)
+        XBETWEEN_STMTS_PRD(26, 65383)
 
 /*-----
 * IF
@@ -65372,7 +65396,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(27, 65375)
+          XBETWEEN_STMTS_PRD(27, 65399)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -65398,7 +65422,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(28, 65401)
+          XBETWEEN_STMTS_PRD(28, 65425)
 
 /*-----
 * ASSIGNMENT NumPointsToShoot := ...
@@ -65422,7 +65446,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
             (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         }
-        XBETWEEN_STMTS_PRD(29, 65425)
+        XBETWEEN_STMTS_PRD(29, 65449)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65447,7 +65471,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(30, 65450)
+        XBETWEEN_STMTS_PRD(30, 65474)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65472,7 +65496,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].Fire.Weapon),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-        XBETWEEN_STMTS_PRD(31, 65475)
+        XBETWEEN_STMTS_PRD(31, 65499)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -65489,7 +65513,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
         while (1) {
-          XBETWEEN_STMTS_PRD(32, 65492)
+          XBETWEEN_STMTS_PRD(32, 65516)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -65504,7 +65528,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
           xTraceAlg("LOOP test TRUE");
 #endif
-          XBETWEEN_STMTS_PRD(34, 65507)
+          XBETWEEN_STMTS_PRD(34, 65531)
 
 /*-----
 * CALL NextShipState  (from EXPRESSION in next symbol)
@@ -65549,7 +65573,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
             yPrdVarP)->z221A74_NextShipSt),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0X_tShipCurrentState);
 #endif
-          XBETWEEN_STMTS_PRD(35, 65552)
+          XBETWEEN_STMTS_PRD(35, 65576)
 
 /*-----
 * ASSIGNMENT PointToOrder := ...
@@ -65572,7 +65596,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
             ->StaticFather)->z221AO_PointToOrder),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-          XBETWEEN_STMTS_PRD(36, 65575)
+          XBETWEEN_STMTS_PRD(36, 65599)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65603,7 +65627,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
             z221A1_k - SDL_INTEGER_LIT(1)].Fire.List),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
 #endif
-          XBETWEEN_STMTS_PRD(33, 65606)
+          XBETWEEN_STMTS_PRD(33, 65630)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -65625,7 +65649,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
         xTraceAlg("LOOP test FALSE");
 #endif
-        XBETWEEN_STMTS_PRD(37, 65628)
+        XBETWEEN_STMTS_PRD(37, 65652)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65656,7 +65680,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 ------*/
         goto L_R2;
       } else {
-        XBETWEEN_SYMBOLS_PRD(19, 65659)
+        XBETWEEN_SYMBOLS_PRD(19, 65683)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65681,7 +65705,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(20, 65684)
+        XBETWEEN_STMTS_PRD(20, 65708)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65707,7 +65731,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(21, 65710)
+        XBETWEEN_STMTS_PRD(21, 65734)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -65731,7 +65755,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].isSet),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(22, 65734)
+        XBETWEEN_SYMBOLS_PRD(22, 65758)
 
 /*-----
 * RETURN
@@ -65746,7 +65770,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 
   case 1:
   L_R2:;
-    XBETWEEN_SYMBOLS_PRD(38, 65749)
+    XBETWEEN_SYMBOLS_PRD(38, 65773)
 
 /*-----
 * RETURN
@@ -65759,7 +65783,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 
   case 2:
   L_R1:;
-    XBETWEEN_SYMBOLS_PRD(39, 65762)
+    XBETWEEN_SYMBOLS_PRD(39, 65786)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -65781,7 +65805,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
       ->StaticFather)->z221AN_ShootList),
       (tSDLTypeInfo *)&ySDL_z221AC_tStringShootList);
 #endif
-    XBETWEEN_STMTS_PRD(40, 65784)
+    XBETWEEN_STMTS_PRD(40, 65808)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -65797,7 +65821,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
       ->StaticFather)->z221AF_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(41, 65800)
+      XBETWEEN_STMTS_PRD(41, 65824)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -65811,7 +65835,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(43, 65814)
+      XBETWEEN_STMTS_PRD(43, 65838)
 
 /*-----
 * ASSIGNMENT DistBetweenShips := ...
@@ -65843,7 +65867,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         ->StaticFather)->z221AH_DistBetweenShips),
         (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(44, 65846)
+      XBETWEEN_STMTS_PRD(44, 65870)
 
 /*-----
 * IF
@@ -65863,7 +65887,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(45, 65866)
+        XBETWEEN_STMTS_PRD(45, 65890)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -65894,7 +65918,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           ->StaticFather)->z221AL_ShootPoint.SortParam),
           (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(46, 65897)
+        XBETWEEN_STMTS_PRD(46, 65921)
 
 /*-----
 * ASSIGNMENT ShootPoint... := ...
@@ -65916,7 +65940,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           ->StaticFather)->z221AL_ShootPoint.Number),
           (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(47, 65919)
+        XBETWEEN_STMTS_PRD(47, 65943)
 
 /*-----
 * ASSIGNMENT ShootList := ...
@@ -65948,7 +65972,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(42, 65951)
+      XBETWEEN_STMTS_PRD(42, 65975)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -65969,7 +65993,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(48, 65972)
+    XBETWEEN_SYMBOLS_PRD(48, 65996)
 
 /*-----
 * CALL SortShootList
@@ -65984,7 +66008,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
     CALL_PROCEDURE_IN_PRD(z221A9_SortShootList, yPrdN_z221A9_SortShootList, 1,
       7)
     PROCEDURE_ALLOC_ERROR_END
-    XBETWEEN_SYMBOLS_PRD(7, 65987)
+    XBETWEEN_SYMBOLS_PRD(7, 66011)
 
 /*-----
 * CALL NewHeadingChange  (from EXPRESSION in next symbol)
@@ -66032,7 +66056,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
       ->StaticFather)->z221AI_NextHeading),
       (tSDLTypeInfo *)&ySDL_z221M_tTurnDirection);
 #endif
-    XBETWEEN_SYMBOLS_PRD(49, 66035)
+    XBETWEEN_SYMBOLS_PRD(49, 66059)
 
 /*-----
 * DECISION
@@ -66054,7 +66078,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #endif
     if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
           z221M1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(50, 66057)
+      XBETWEEN_SYMBOLS_PRD(50, 66081)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66078,7 +66102,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         z221A1_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(51, 66081)
+      XBETWEEN_STMTS_PRD(51, 66105)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66104,7 +66128,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 #endif
     } else if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
           z221M2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(52, 66107)
+      XBETWEEN_SYMBOLS_PRD(52, 66131)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66128,7 +66152,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         z221A1_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(53, 66131)
+      XBETWEEN_STMTS_PRD(53, 66155)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66153,7 +66177,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(54, 66156)
+      XBETWEEN_SYMBOLS_PRD(54, 66180)
 
 /*-----
 * DECISION
@@ -66178,7 +66202,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
         [z_BasicTypes_0S4_REPAIR_BOAT].MaxSpeed)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(55, 66181)
+        XBETWEEN_SYMBOLS_PRD(55, 66205)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66203,7 +66227,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(56, 66206)
+        XBETWEEN_STMTS_PRD(56, 66230)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66229,7 +66253,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
           z221A1_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(57, 66232)
+        XBETWEEN_STMTS_PRD(57, 66256)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -66261,7 +66285,7 @@ YPRD_FUNCTION(z221A7_ActivateREPAIR)
 ------*/
       goto L_R2;
     }
-    XBETWEEN_SYMBOLS_PRD(58, 66264)
+    XBETWEEN_SYMBOLS_PRD(58, 66288)
 
 /*-----
 * RETURN
@@ -66429,7 +66453,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 66432)
+    XBETWEEN_SYMBOLS_PRD(1, 66456)
 
 /*-----
 * ASSIGNMENT Dist := ...
@@ -66451,7 +66475,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
     xMSCEAssign("Dist := ", &(yPrdVarP->z221A81_Dist),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(2, 66454)
+    XBETWEEN_SYMBOLS_PRD(2, 66478)
 
 /*-----
 * DECISION
@@ -66479,7 +66503,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
       z22L_WeaponryCharacter.A[z_BasicTypes_0R0_MISSILE].Range,
       yPrdVarP->z221A81_Dist))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 66482)
+      XBETWEEN_SYMBOLS_PRD(3, 66506)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66501,7 +66525,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
         yPrdVarP)->z221A80_Weapon)).TypeWeaponry),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-      XBETWEEN_STMTS_PRD(4, 66504)
+      XBETWEEN_STMTS_PRD(4, 66528)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66522,7 +66546,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
         yPrdVarP)->z221A80_Weapon)).isWeaponry),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(5, 66525)
+      XBETWEEN_SYMBOLS_PRD(5, 66549)
 
 /*-----
 * RETURN
@@ -66533,7 +66557,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(6, 66536)
+      XBETWEEN_SYMBOLS_PRD(6, 66560)
 
 /*-----
 * DECISION
@@ -66561,7 +66585,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
         z22L_WeaponryCharacter.A[z_BasicTypes_0R1_TORPEDO].Range,
         yPrdVarP->z221A81_Dist))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(7, 66564)
+        XBETWEEN_SYMBOLS_PRD(7, 66588)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66583,7 +66607,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
           yPrdVarP)->z221A80_Weapon)).TypeWeaponry),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-        XBETWEEN_STMTS_PRD(8, 66586)
+        XBETWEEN_STMTS_PRD(8, 66610)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66604,7 +66628,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
           yPrdVarP)->z221A80_Weapon)).isWeaponry),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 66607)
+        XBETWEEN_SYMBOLS_PRD(9, 66631)
 
 /*-----
 * RETURN
@@ -66615,7 +66639,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(10, 66618)
+        XBETWEEN_SYMBOLS_PRD(10, 66642)
 
 /*-----
 * DECISION
@@ -66643,7 +66667,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
           z22L_WeaponryCharacter.A[z_BasicTypes_0R2_SHELL].Range,
           yPrdVarP->z221A81_Dist))) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(11, 66646)
+          XBETWEEN_SYMBOLS_PRD(11, 66670)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66667,7 +66691,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
             z221A80_Weapon)).TypeWeaponry),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_0R_tNameWeaponry);
 #endif
-          XBETWEEN_STMTS_PRD(12, 66670)
+          XBETWEEN_STMTS_PRD(12, 66694)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66688,7 +66712,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
             &((*(((yVDef_z221A8_CanShootEnemyCenter *)yPrdVarP)->
             z221A80_Weapon)).isWeaponry), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(13, 66691)
+          XBETWEEN_SYMBOLS_PRD(13, 66715)
 
 /*-----
 * RETURN
@@ -66699,7 +66723,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
 #endif
           SDL_RETURN
         } else {
-          XBETWEEN_SYMBOLS_PRD(14, 66702)
+          XBETWEEN_SYMBOLS_PRD(14, 66726)
 
 /*-----
 * ASSIGNMENT Weapon... := ...
@@ -66720,7 +66744,7 @@ YPRD_FUNCTION(z221A8_CanShootEnemyCenter)
             &((*(((yVDef_z221A8_CanShootEnemyCenter *)yPrdVarP)->
             z221A80_Weapon)).isWeaponry), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_SYMBOLS_PRD(15, 66723)
+          XBETWEEN_SYMBOLS_PRD(15, 66747)
 
 /*-----
 * RETURN
@@ -66868,7 +66892,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 66871)
+    XBETWEEN_SYMBOLS_PRD(1, 66895)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -66884,7 +66908,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
       ->StaticFather)->z221AF_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(2, 66887)
+      XBETWEEN_STMTS_PRD(2, 66911)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -66901,7 +66925,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(4, 66904)
+      XBETWEEN_STMTS_PRD(4, 66928)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -66918,7 +66942,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
         yPrdVarP->StaticFather)->z221AG_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(5, 66921)
+        XBETWEEN_STMTS_PRD(5, 66945)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -66934,7 +66958,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(7, 66937)
+        XBETWEEN_STMTS_PRD(7, 66961)
 
 /*-----
 * IF
@@ -66954,7 +66978,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(8, 66957)
+          XBETWEEN_STMTS_PRD(8, 66981)
 
 /*-----
 * ASSIGNMENT Temp := ...
@@ -66979,7 +67003,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
             ->StaticFather)->z221AM_Temp),
             (tSDLTypeInfo *)&ySDL_z221AB_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(9, 66982)
+          XBETWEEN_STMTS_PRD(9, 67006)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -67009,7 +67033,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
             yPrdVarP->StaticFather)->z221AG_j, SDL_INTEGER_LIT(1))))),
             (tSDLTypeInfo *)&ySDL_z221AB_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(10, 67012)
+          XBETWEEN_STMTS_PRD(10, 67036)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -67043,7 +67067,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(6, 67046)
+        XBETWEEN_STMTS_PRD(6, 67070)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -67065,7 +67089,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(11, 67068)
+      XBETWEEN_STMTS_PRD(11, 67092)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -67082,7 +67106,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
         yPrdVarP->StaticFather)->z221AG_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(12, 67085)
+        XBETWEEN_STMTS_PRD(12, 67109)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -67099,7 +67123,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(14, 67102)
+        XBETWEEN_STMTS_PRD(14, 67126)
 
 /*-----
 * IF
@@ -67119,7 +67143,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(15, 67122)
+          XBETWEEN_STMTS_PRD(15, 67146)
 
 /*-----
 * ASSIGNMENT Temp := ...
@@ -67144,7 +67168,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
             ->StaticFather)->z221AM_Temp),
             (tSDLTypeInfo *)&ySDL_z221AB_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(16, 67147)
+          XBETWEEN_STMTS_PRD(16, 67171)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -67174,7 +67198,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
             yPrdVarP->StaticFather)->z221AG_j, SDL_INTEGER_LIT(1))))),
             (tSDLTypeInfo *)&ySDL_z221AB_tShootList);
 #endif
-          XBETWEEN_STMTS_PRD(17, 67177)
+          XBETWEEN_STMTS_PRD(17, 67201)
 
 /*-----
 * ASSIGNMENT ShootList... := ...
@@ -67208,7 +67232,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(13, 67211)
+        XBETWEEN_STMTS_PRD(13, 67235)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -67230,7 +67254,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
       xTraceAlg("LOOP test FALSE");
 #endif
-      XBETWEEN_STMTS_PRD(3, 67233)
+      XBETWEEN_STMTS_PRD(3, 67257)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -67251,7 +67275,7 @@ YPRD_FUNCTION(z221A9_SortShootList)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(18, 67254)
+    XBETWEEN_SYMBOLS_PRD(18, 67278)
 
 /*-----
 * RETURN
@@ -67627,7 +67651,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(3, 67630)
+    XBETWEEN_SYMBOLS_PRD(3, 67654)
 
 /*-----
 * CALL NewHeadingChange  (from EXPRESSION in next symbol)
@@ -67671,7 +67695,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
       yPrdVarP)->z221B3_ChangeDirection),
       (tSDLTypeInfo *)&ySDL_z221M_tTurnDirection);
 #endif
-    XBETWEEN_STMTS_PRD(4, 67674)
+    XBETWEEN_STMTS_PRD(4, 67698)
 
 /*-----
 * ASSIGNMENT ShipName := ...
@@ -67691,7 +67715,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
     xMSCEAssign("ShipName := ", &(((yVDef_z221B_EnemyNotFound *)yPrdVarP)->
       z221B5_ShipName), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(5, 67694)
+    XBETWEEN_SYMBOLS_PRD(5, 67718)
 
 /*-----
 * DECISION
@@ -67712,7 +67736,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #endif
     if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
           z221M2_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(6, 67715)
+      XBETWEEN_SYMBOLS_PRD(6, 67739)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -67736,7 +67760,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
         z221B1_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(7, 67739)
+      XBETWEEN_STMTS_PRD(7, 67763)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -67760,7 +67784,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
         z221B1_k - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 67763)
+      XBETWEEN_SYMBOLS_PRD(8, 67787)
 
 /*-----
 * RETURN
@@ -67772,7 +67796,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
       SDL_RETURN
     } else if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
           z221M1_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(9, 67775)
+      XBETWEEN_SYMBOLS_PRD(9, 67799)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -67796,7 +67820,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
         z221B1_k - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(10, 67799)
+      XBETWEEN_STMTS_PRD(10, 67823)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -67820,7 +67844,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
         z221B1_k - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 67823)
+      XBETWEEN_SYMBOLS_PRD(11, 67847)
 
 /*-----
 * RETURN
@@ -67831,7 +67855,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(12, 67834)
+      XBETWEEN_SYMBOLS_PRD(12, 67858)
 
 /*-----
 * DECISION
@@ -67854,7 +67878,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
         z22Q_minSpeed)) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(13, 67857)
+        XBETWEEN_SYMBOLS_PRD(13, 67881)
 
 /*-----
 * ASSIGNMENT MaxAccel := ...
@@ -67878,7 +67902,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
           z221B6_MaxAccel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_18_tSCMaxAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(14, 67881)
+        XBETWEEN_STMTS_PRD(14, 67905)
 
 /*-----
 * ASSIGNMENT accel := ...
@@ -67899,7 +67923,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
         xMSCEAssign("accel := ", &(((yVDef_z221B_EnemyNotFound *)yPrdVarP)->
           z221B4_accel), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(15, 67902)
+        XBETWEEN_STMTS_PRD(15, 67926)
 
 /*-----
 * IF
@@ -67915,7 +67939,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(16, 67918)
+          XBETWEEN_STMTS_PRD(16, 67942)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -67942,7 +67966,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(17, 67945)
+          XBETWEEN_STMTS_PRD(17, 67969)
 
 /*-----
 * IF
@@ -67958,7 +67982,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #ifdef XTRACE
             xTraceAlg("IF (true)");
 #endif
-            XBETWEEN_STMTS_PRD(18, 67961)
+            XBETWEEN_STMTS_PRD(18, 67985)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -67985,7 +68009,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #ifdef XTRACE
             xTraceAlg("IF (false)");
 #endif
-            XBETWEEN_STMTS_PRD(19, 67988)
+            XBETWEEN_STMTS_PRD(19, 68012)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -68012,7 +68036,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
 #endif
           }
         }
-        XBETWEEN_STMTS_PRD(20, 68015)
+        XBETWEEN_STMTS_PRD(20, 68039)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -68037,7 +68061,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
           z221O_index - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(21, 68040)
+        XBETWEEN_STMTS_PRD(21, 68064)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -68063,7 +68087,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
           z221B1_k - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(22, 68066)
+        XBETWEEN_STMTS_PRD(22, 68090)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -68088,7 +68112,7 @@ YPRD_FUNCTION(z221B_EnemyNotFound)
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(23, 68091)
+      XBETWEEN_SYMBOLS_PRD(23, 68115)
 
 /*-----
 * RETURN
@@ -68380,7 +68404,7 @@ YPRD_FUNCTION(z221C_NextPosition)
     yAssF_SDL_Real(yPrdVarP->z221CC_flag, SDL_REAL_LIT(1.0, 1, 0),
       XASS_MR_ASS_NF);
     yAssF_SDL_Integer(yPrdVarP->z221CD_i, SDL_INTEGER_LIT(1), XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(5, 68383)
+    XBETWEEN_SYMBOLS_PRD(5, 68407)
 
 /*-----
 * DECISION
@@ -68401,7 +68425,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P0_NORTH)) {
-      XBETWEEN_SYMBOLS_PRD(6, 68404)
+      XBETWEEN_SYMBOLS_PRD(6, 68428)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68420,7 +68444,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(7, 68423)
+      XBETWEEN_STMTS_PRD(7, 68447)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68441,7 +68465,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P7_NORTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(8, 68444)
+      XBETWEEN_SYMBOLS_PRD(8, 68468)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68460,7 +68484,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(9, 68463)
+      XBETWEEN_STMTS_PRD(9, 68487)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68479,7 +68503,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncY := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(10, 68482)
+      XBETWEEN_STMTS_PRD(10, 68506)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -68500,7 +68524,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P2_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(11, 68503)
+      XBETWEEN_SYMBOLS_PRD(11, 68527)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68519,7 +68543,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(12, 68522)
+      XBETWEEN_STMTS_PRD(12, 68546)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68540,7 +68564,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P5_SOUTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(13, 68543)
+      XBETWEEN_SYMBOLS_PRD(13, 68567)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68559,7 +68583,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(14, 68562)
+      XBETWEEN_STMTS_PRD(14, 68586)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68578,7 +68602,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncY := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(15, 68581)
+      XBETWEEN_STMTS_PRD(15, 68605)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -68599,7 +68623,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P6_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(16, 68602)
+      XBETWEEN_SYMBOLS_PRD(16, 68626)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68618,7 +68642,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(17, 68621)
+      XBETWEEN_STMTS_PRD(17, 68645)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68639,7 +68663,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P1_NORTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(18, 68642)
+      XBETWEEN_SYMBOLS_PRD(18, 68666)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68658,7 +68682,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(19, 68661)
+      XBETWEEN_STMTS_PRD(19, 68685)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68677,7 +68701,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncY := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(20, 68680)
+      XBETWEEN_STMTS_PRD(20, 68704)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -68698,7 +68722,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P4_SOUTH)) {
-      XBETWEEN_SYMBOLS_PRD(21, 68701)
+      XBETWEEN_SYMBOLS_PRD(21, 68725)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68717,7 +68741,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(22, 68720)
+      XBETWEEN_STMTS_PRD(22, 68744)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68738,7 +68762,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P3_SOUTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(23, 68741)
+      XBETWEEN_SYMBOLS_PRD(23, 68765)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -68757,7 +68781,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncX := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C8_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(24, 68760)
+      XBETWEEN_STMTS_PRD(24, 68784)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -68776,7 +68800,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xMSCEAssign("IncY := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
         z221C9_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(25, 68779)
+      XBETWEEN_STMTS_PRD(25, 68803)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -68803,7 +68827,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(26, 68806)
+    XBETWEEN_SYMBOLS_PRD(26, 68830)
 
 /*-----
 * ASSIGNMENT onLand := ...
@@ -68822,7 +68846,7 @@ YPRD_FUNCTION(z221C_NextPosition)
     xMSCEAssign("onLand := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
       z221CE_onLand), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(27, 68825)
+    XBETWEEN_STMTS_PRD(27, 68849)
 
 /*-----
 * ASSIGNMENT NextPos := ...
@@ -68842,7 +68866,7 @@ YPRD_FUNCTION(z221C_NextPosition)
     xMSCEAssign("NextPos := ", &((*(((yVDef_z221C_NextPosition *)yPrdVarP)->
       z221C4_NextPos))), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(28, 68845)
+    XBETWEEN_STMTS_PRD(28, 68869)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -68881,7 +68905,7 @@ YPRD_FUNCTION(z221C_NextPosition)
     xMSCEAssign("maxDeep := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
       z221CB_maxDeep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(29, 68884)
+    XBETWEEN_STMTS_PRD(29, 68908)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -68904,7 +68928,7 @@ YPRD_FUNCTION(z221C_NextPosition)
     xMSCEAssign("Deep := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
       z221CA_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(30, 68907)
+    XBETWEEN_STMTS_PRD(30, 68931)
 
 /*-----
 * IF
@@ -68918,7 +68942,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(31, 68921)
+      XBETWEEN_STMTS_PRD(31, 68945)
 
 /*-----
 * ASSIGNMENT onLand := ...
@@ -68945,8 +68969,8 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
 
   case 2:
-  L_grst44:;
-    XBETWEEN_SYMBOLS_PRD(32, 68949)
+  L_grst54:;
+    XBETWEEN_SYMBOLS_PRD(32, 68973)
 
 /*-----
 * DECISION
@@ -68969,7 +68993,7 @@ YPRD_FUNCTION(z221C_NextPosition)
       xDiv_SDL_Real(xFloat_SDL_Integer(yPrdVarP->z221C2_Speed),
       yPrdVarP->z221CC_flag)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(33, 68972)
+      XBETWEEN_SYMBOLS_PRD(33, 68996)
 
 /*-----
 * DECISION
@@ -69011,8 +69035,8 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
 
       case 3:
-      L_grst45:;
-        XBETWEEN_SYMBOLS_PRD(34, 69015)
+      L_grst55:;
+        XBETWEEN_SYMBOLS_PRD(34, 69039)
 
 /*-----
 * RETURN
@@ -69023,7 +69047,7 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(35, 69026)
+        XBETWEEN_SYMBOLS_PRD(35, 69050)
 
 /*-----
 * ASSIGNMENT NextPos... := ...
@@ -69047,7 +69071,7 @@ YPRD_FUNCTION(z221C_NextPosition)
           yPrdVarP)->z221C4_NextPos)).x),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(36, 69050)
+        XBETWEEN_STMTS_PRD(36, 69074)
 
 /*-----
 * ASSIGNMENT NextPos... := ...
@@ -69071,7 +69095,7 @@ YPRD_FUNCTION(z221C_NextPosition)
           yPrdVarP)->z221C4_NextPos)).y),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(37, 69074)
+        XBETWEEN_STMTS_PRD(37, 69098)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -69094,7 +69118,7 @@ YPRD_FUNCTION(z221C_NextPosition)
         xMSCEAssign("Deep := ", &(((yVDef_z221C_NextPosition *)yPrdVarP)->
           z221CA_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(38, 69097)
+        XBETWEEN_SYMBOLS_PRD(38, 69121)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -69116,18 +69140,18 @@ YPRD_FUNCTION(z221C_NextPosition)
 #endif
 
 /*-----
-* JOIN grst44
+* JOIN grst54
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NextPosition.spd(1),626(70,135),1)
 ------*/
-        goto L_grst44;
+        goto L_grst54;
       }
     } else {
 
 /*-----
-* JOIN grst45
+* JOIN grst55
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NextPosition.spd(1),449(45,160),1)
 ------*/
-      goto L_grst45;
+      goto L_grst55;
     }
   }
   XEND_PRD
@@ -69421,7 +69445,7 @@ YPRD_FUNCTION(z221D_NextDirection)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 69424)
+    XBETWEEN_SYMBOLS_PRD(4, 69448)
 
 /*-----
 * OPERATOR CALL h2i  (from EXPRESSION in next symbol)
@@ -69460,7 +69484,7 @@ YPRD_FUNCTION(z221D_NextDirection)
     xMSCEAssign("Numbr := ", &(((yVDef_z221D_NextDirection *)yPrdVarP)->
       z221D4_Numbr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(5, 69463)
+    XBETWEEN_SYMBOLS_PRD(5, 69487)
 
 /*-----
 * DECISION
@@ -69481,7 +69505,7 @@ YPRD_FUNCTION(z221D_NextDirection)
 #endif
     if (yEqF_z_BasicTypes_0T_tHeadingChange(yPrdVarP->yDcn_z_BasicTypes_0T_tHeadingChange,
           z_BasicTypes_0T1_RIGHT)) {
-      XBETWEEN_SYMBOLS_PRD(6, 69484)
+      XBETWEEN_SYMBOLS_PRD(6, 69508)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -69501,7 +69525,7 @@ YPRD_FUNCTION(z221D_NextDirection)
       xMSCEAssign("Numbr := ", &(((yVDef_z221D_NextDirection *)yPrdVarP)->
         z221D4_Numbr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(7, 69504)
+      XBETWEEN_STMTS_PRD(7, 69528)
 
 /*-----
 * IF
@@ -69515,7 +69539,7 @@ YPRD_FUNCTION(z221D_NextDirection)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(8, 69518)
+        XBETWEEN_STMTS_PRD(8, 69542)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -69542,7 +69566,7 @@ YPRD_FUNCTION(z221D_NextDirection)
 #endif
     } else if (yEqF_z_BasicTypes_0T_tHeadingChange(yPrdVarP->yDcn_z_BasicTypes_0T_tHeadingChange,
           z_BasicTypes_0T0_LEFT)) {
-      XBETWEEN_SYMBOLS_PRD(9, 69545)
+      XBETWEEN_SYMBOLS_PRD(9, 69569)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -69562,7 +69586,7 @@ YPRD_FUNCTION(z221D_NextDirection)
       xMSCEAssign("Numbr := ", &(((yVDef_z221D_NextDirection *)yPrdVarP)->
         z221D4_Numbr), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(10, 69565)
+      XBETWEEN_STMTS_PRD(10, 69589)
 
 /*-----
 * IF
@@ -69576,7 +69600,7 @@ YPRD_FUNCTION(z221D_NextDirection)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(11, 69579)
+        XBETWEEN_STMTS_PRD(11, 69603)
 
 /*-----
 * ASSIGNMENT Numbr := ...
@@ -69609,7 +69633,7 @@ YPRD_FUNCTION(z221D_NextDirection)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(12, 69612)
+    XBETWEEN_SYMBOLS_PRD(12, 69636)
 
 /*-----
 * OPERATOR CALL i2h  (from EXPRESSION in next symbol)
@@ -69649,7 +69673,7 @@ YPRD_FUNCTION(z221D_NextDirection)
     xMSCEAssign("NewHeading := ", &((*(((yVDef_z221D_NextDirection *)yPrdVarP)->
       z221D2_NewHeading))), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_SYMBOLS_PRD(13, 69652)
+    XBETWEEN_SYMBOLS_PRD(13, 69676)
 
 /*-----
 * RETURN
@@ -69942,7 +69966,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     XAT_FIRST_SYMBOL(0)
     GenericDefault((void *)&yPrdVarP->z221EC_Cos,
       (tSDLTypeInfo *)&ySDL_z221E4_tCos);
-    XBETWEEN_SYMBOLS_PRD(9, 69945)
+    XBETWEEN_SYMBOLS_PRD(9, 69969)
 
 /*-----
 * ASSIGNMENT CurrSpeed := ...
@@ -69963,7 +69987,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("CurrSpeed := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221ED_CurrSpeed), (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(10, 69966)
+    XBETWEEN_STMTS_PRD(10, 69990)
 
 /*-----
 * IF
@@ -69977,7 +70001,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(11, 69980)
+      XBETWEEN_STMTS_PRD(11, 70004)
 
 /*-----
 * ASSIGNMENT CurrSpeed := ...
@@ -70006,7 +70030,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
       xTraceAlg("IF (false)");
     }
 #endif
-    XBETWEEN_STMTS_PRD(12, 70009)
+    XBETWEEN_STMTS_PRD(12, 70033)
 
 /*-----
 * CALL NextDirection  (from EXPRESSION in next symbol)
@@ -70047,7 +70071,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("NextHding := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221E5_NextHding), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(13, 70050)
+    XBETWEEN_STMTS_PRD(13, 70074)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -70096,7 +70120,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("RightPoint := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221E6_RightPoint), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(14, 70099)
+    XBETWEEN_STMTS_PRD(14, 70123)
 
 /*-----
 * CALL NextDirection  (from EXPRESSION in next symbol)
@@ -70137,7 +70161,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("NextHding := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221E5_NextHding), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(15, 70140)
+    XBETWEEN_STMTS_PRD(15, 70164)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -70185,7 +70209,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("LeftPoint := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221E7_LeftPoint), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(16, 70188)
+    XBETWEEN_STMTS_PRD(16, 70212)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -70235,7 +70259,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
       yPrdVarP)->z221E8_StraightPoint),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_SYMBOLS_PRD(17, 70238)
+    XBETWEEN_SYMBOLS_PRD(17, 70262)
 
 /*-----
 * CALL CosBetweenVectors  (from EXPRESSION in next symbol)
@@ -70285,7 +70309,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U6.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(18, 70288)
+    XBETWEEN_STMTS_PRD(18, 70312)
 
 /*-----
 * CALL CosBetweenVectors  (from EXPRESSION in next symbol)
@@ -70335,7 +70359,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U7.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(19, 70338)
+    XBETWEEN_STMTS_PRD(19, 70362)
 
 /*-----
 * CALL CosBetweenVectors  (from EXPRESSION in next symbol)
@@ -70385,7 +70409,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U8.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_SYMBOLS_PRD(20, 70388)
+    XBETWEEN_SYMBOLS_PRD(20, 70412)
 
 /*-----
 * ASSIGNMENT min := ...
@@ -70406,7 +70430,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("min := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221EB_min), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(21, 70409)
+    XBETWEEN_STMTS_PRD(21, 70433)
 
 /*-----
 * ASSIGNMENT indx := ...
@@ -70425,7 +70449,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
     xMSCEAssign("indx := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
       z221EA_indx), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(22, 70428)
+    XBETWEEN_STMTS_PRD(22, 70452)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -70441,7 +70465,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
       yPrdVarP)->z221E9_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(23, 70444)
+      XBETWEEN_STMTS_PRD(23, 70468)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -70455,7 +70479,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(25, 70458)
+      XBETWEEN_STMTS_PRD(25, 70482)
 
 /*-----
 * IF
@@ -70471,7 +70495,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(26, 70474)
+        XBETWEEN_STMTS_PRD(26, 70498)
 
 /*-----
 * ASSIGNMENT min := ...
@@ -70492,7 +70516,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
         xMSCEAssign("min := ", &(((yVDef_z221E_NewHeadingChange *)yPrdVarP)->
           z221EB_min), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(27, 70495)
+        XBETWEEN_STMTS_PRD(27, 70519)
 
 /*-----
 * ASSIGNMENT indx := ...
@@ -70518,7 +70542,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(24, 70521)
+      XBETWEEN_STMTS_PRD(24, 70545)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -70539,7 +70563,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(28, 70542)
+    XBETWEEN_SYMBOLS_PRD(28, 70566)
 
 /*-----
 * IF
@@ -70553,7 +70577,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(29, 70556)
+      XBETWEEN_STMTS_PRD(29, 70580)
 
 /*-----
 * ASSIGNMENT ReturnDirect := ...
@@ -70578,7 +70602,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
       xTraceAlg("IF (false)");
 #endif
-      XBETWEEN_STMTS_PRD(30, 70581)
+      XBETWEEN_STMTS_PRD(30, 70605)
 
 /*-----
 * IF
@@ -70592,7 +70616,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(31, 70595)
+        XBETWEEN_STMTS_PRD(31, 70619)
 
 /*-----
 * ASSIGNMENT ReturnDirect := ...
@@ -70617,7 +70641,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(32, 70620)
+        XBETWEEN_STMTS_PRD(32, 70644)
 
 /*-----
 * ASSIGNMENT ReturnDirect := ...
@@ -70640,7 +70664,7 @@ YPRD_FUNCTION(z221E_NewHeadingChange)
 #endif
       }
     }
-    XBETWEEN_SYMBOLS_PRD(33, 70643)
+    XBETWEEN_SYMBOLS_PRD(33, 70667)
 
 /*-----
 * RETURN
@@ -70794,7 +70818,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(2, 70797)
+    XBETWEEN_SYMBOLS_PRD(2, 70821)
 
 /*-----
 * DECISION
@@ -70820,7 +70844,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
       yEqF_z_BasicTypes_0U_tCoordinates(&(yPrdVarP->z221E30_StartPoint),
       &(yPrdVarP->z221E32_EndPoint2)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 70823)
+      XBETWEEN_SYMBOLS_PRD(3, 70847)
 
 /*-----
 * ASSIGNMENT Cos := ...
@@ -70840,7 +70864,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
       xMSCEAssign("Cos := ", &((*(((yVDef_z221E3_CosBetweenVectors *)yPrdVarP)->
         z221E33_Cos))), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_SYMBOLS_PRD(4, 70843)
+      XBETWEEN_SYMBOLS_PRD(4, 70867)
 
 /*-----
 * RETURN
@@ -70851,7 +70875,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(5, 70854)
+      XBETWEEN_SYMBOLS_PRD(5, 70878)
 
 /*-----
 * DECISION
@@ -70886,7 +70910,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
         yPrdVarP->z221E30_StartPoint.y)), SDL_INTEGER_LIT(0)))) {
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(6, 70889)
+        XBETWEEN_SYMBOLS_PRD(6, 70913)
 
 /*-----
 * DECISION
@@ -70922,7 +70946,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
           yPrdVarP->z221E30_StartPoint.x)), SDL_INTEGER_LIT(0)))) {
 #endif
         } else {
-          XBETWEEN_SYMBOLS_PRD(7, 70925)
+          XBETWEEN_SYMBOLS_PRD(7, 70949)
 
 /*-----
 * DECISION
@@ -70993,7 +71017,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
             yPrdVarP->z221E30_StartPoint.y)), SDL_INTEGER_LIT(0))))) {
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(8, 70996)
+            XBETWEEN_SYMBOLS_PRD(8, 71020)
 
 /*-----
 * ASSIGNMENT Cos := ...
@@ -71037,7 +71061,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
             xMSCEAssign("Cos := ", &((*(((yVDef_z221E3_CosBetweenVectors *)
               yPrdVarP)->z221E33_Cos))), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-            XBETWEEN_SYMBOLS_PRD(9, 71040)
+            XBETWEEN_SYMBOLS_PRD(9, 71064)
 
 /*-----
 * RETURN
@@ -71050,7 +71074,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
           }
         }
       }
-      XBETWEEN_SYMBOLS_PRD(10, 71053)
+      XBETWEEN_SYMBOLS_PRD(10, 71077)
 
 /*-----
 * ASSIGNMENT Cos := ...
@@ -71069,7 +71093,7 @@ YPRD_FUNCTION(z221E3_CosBetweenVectors)
       xMSCEAssign("Cos := ", &((*(((yVDef_z221E3_CosBetweenVectors *)yPrdVarP)->
         z221E33_Cos))), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 71072)
+      XBETWEEN_SYMBOLS_PRD(11, 71096)
 
 /*-----
 * RETURN
@@ -71524,7 +71548,7 @@ YPRD_FUNCTION(z221F_isCollision)
     XAT_FIRST_SYMBOL(0)
     yAssF_SDL_Real(yPrdVarP->z221F0K_flag, SDL_REAL_LIT(1.0, 1, 0),
       XASS_MR_ASS_NF);
-    XBETWEEN_SYMBOLS_PRD(15, 71527)
+    XBETWEEN_SYMBOLS_PRD(15, 71551)
 
 /*-----
 * CALL NextShipState  (from EXPRESSION in next symbol)
@@ -71566,7 +71590,7 @@ YPRD_FUNCTION(z221F_isCollision)
       z221F0B_MyShipNextState),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_0X_tShipCurrentState);
 #endif
-    XBETWEEN_STMTS_PRD(16, 71569)
+    XBETWEEN_STMTS_PRD(16, 71593)
 
 /*-----
 * ASSIGNMENT NextHead := ...
@@ -71586,7 +71610,7 @@ YPRD_FUNCTION(z221F_isCollision)
     xMSCEAssign("NextHead := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
       z221F0E_NextHead), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(17, 71589)
+    XBETWEEN_STMTS_PRD(17, 71613)
 
 /*-----
 * ASSIGNMENT MyShipType := ...
@@ -71608,7 +71632,7 @@ YPRD_FUNCTION(z221F_isCollision)
     xMSCEAssign("MyShipType := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
       z221F0L_MyShipType), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(18, 71611)
+    XBETWEEN_SYMBOLS_PRD(18, 71635)
 
 /*-----
 * DECISION
@@ -71629,7 +71653,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P0_NORTH)) {
-      XBETWEEN_SYMBOLS_PRD(19, 71632)
+      XBETWEEN_SYMBOLS_PRD(19, 71656)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71648,7 +71672,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(20, 71651)
+      XBETWEEN_STMTS_PRD(20, 71675)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71669,7 +71693,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P7_NORTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(21, 71672)
+      XBETWEEN_SYMBOLS_PRD(21, 71696)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71688,7 +71712,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(22, 71691)
+      XBETWEEN_STMTS_PRD(22, 71715)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71707,7 +71731,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncY := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(23, 71710)
+      XBETWEEN_STMTS_PRD(23, 71734)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -71728,7 +71752,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P2_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(24, 71731)
+      XBETWEEN_SYMBOLS_PRD(24, 71755)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71747,7 +71771,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(25, 71750)
+      XBETWEEN_STMTS_PRD(25, 71774)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71768,7 +71792,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P5_SOUTH_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(26, 71771)
+      XBETWEEN_SYMBOLS_PRD(26, 71795)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71787,7 +71811,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(27, 71790)
+      XBETWEEN_STMTS_PRD(27, 71814)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71806,7 +71830,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncY := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(28, 71809)
+      XBETWEEN_STMTS_PRD(28, 71833)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -71827,7 +71851,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P6_WEST)) {
-      XBETWEEN_SYMBOLS_PRD(29, 71830)
+      XBETWEEN_SYMBOLS_PRD(29, 71854)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71846,7 +71870,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(30, 71849)
+      XBETWEEN_STMTS_PRD(30, 71873)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71867,7 +71891,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P1_NORTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(31, 71870)
+      XBETWEEN_SYMBOLS_PRD(31, 71894)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71886,7 +71910,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(32, 71889)
+      XBETWEEN_STMTS_PRD(32, 71913)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71905,7 +71929,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncY := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(33, 71908)
+      XBETWEEN_STMTS_PRD(33, 71932)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -71926,7 +71950,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P4_SOUTH)) {
-      XBETWEEN_SYMBOLS_PRD(34, 71929)
+      XBETWEEN_SYMBOLS_PRD(34, 71953)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71945,7 +71969,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(35, 71948)
+      XBETWEEN_STMTS_PRD(35, 71972)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -71966,7 +71990,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
     } else if (yEqF_z_BasicTypes_0P_tHeading(yPrdVarP->yDcn_z_BasicTypes_0P_tHeading,
           z_BasicTypes_0P3_SOUTH_EAST)) {
-      XBETWEEN_SYMBOLS_PRD(36, 71969)
+      XBETWEEN_SYMBOLS_PRD(36, 71993)
 
 /*-----
 * ASSIGNMENT IncX := ...
@@ -71985,7 +72009,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncX := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0F_IncX), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(37, 71988)
+      XBETWEEN_STMTS_PRD(37, 72012)
 
 /*-----
 * ASSIGNMENT IncY := ...
@@ -72004,7 +72028,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("IncY := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0G_IncY), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-      XBETWEEN_STMTS_PRD(38, 72007)
+      XBETWEEN_STMTS_PRD(38, 72031)
 
 /*-----
 * ASSIGNMENT flag := ...
@@ -72031,7 +72055,7 @@ YPRD_FUNCTION(z221F_isCollision)
       return 1;
     }
 #endif
-    XBETWEEN_SYMBOLS_PRD(39, 72034)
+    XBETWEEN_SYMBOLS_PRD(39, 72058)
 
 /*-----
 * ASSIGNMENT NextPoint := ...
@@ -72053,7 +72077,7 @@ YPRD_FUNCTION(z221F_isCollision)
     xMSCEAssign("NextPoint := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
       z221F0D_NextPoint), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(40, 72056)
+    XBETWEEN_STMTS_PRD(40, 72080)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -72072,7 +72096,7 @@ YPRD_FUNCTION(z221F_isCollision)
     xMSCEAssign("i := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->z221F0H_i),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(41, 72075)
+    XBETWEEN_STMTS_PRD(41, 72099)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -72113,8 +72137,8 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 
   case 2:
-  L_grst39:;
-    XBETWEEN_SYMBOLS_PRD(42, 72117)
+  L_grst49:;
+    XBETWEEN_SYMBOLS_PRD(42, 72141)
 
 /*-----
 * DECISION
@@ -72138,7 +72162,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xDiv_SDL_Real(xMult_SDL_Real(SDL_REAL_LIT(2.0, 2, 0), xFloat_SDL_Integer(
       yPrdVarP->z221F0B_MyShipNextState.Speed)), yPrdVarP->z221F0K_flag)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(43, 72141)
+      XBETWEEN_SYMBOLS_PRD(43, 72165)
 
 /*-----
 * DECISION
@@ -72175,7 +72199,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 
       case 3:
-      L_grst40:;
+      L_grst50:;
 
 /*-----
 * JOIN P1
@@ -72183,7 +72207,7 @@ YPRD_FUNCTION(z221F_isCollision)
 ------*/
         goto L_P1;
       } else {
-        XBETWEEN_SYMBOLS_PRD(44, 72186)
+        XBETWEEN_SYMBOLS_PRD(44, 72210)
 
 /*-----
 * ASSIGNMENT NextPoint... := ...
@@ -72207,7 +72231,7 @@ YPRD_FUNCTION(z221F_isCollision)
           yPrdVarP)->z221F0D_NextPoint.x),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(45, 72210)
+        XBETWEEN_STMTS_PRD(45, 72234)
 
 /*-----
 * ASSIGNMENT NextPoint... := ...
@@ -72231,7 +72255,7 @@ YPRD_FUNCTION(z221F_isCollision)
           yPrdVarP)->z221F0D_NextPoint.y),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(46, 72234)
+        XBETWEEN_STMTS_PRD(46, 72258)
 
 /*-----
 * ASSIGNMENT Deep := ...
@@ -72254,7 +72278,7 @@ YPRD_FUNCTION(z221F_isCollision)
         xMSCEAssign("Deep := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
           z221F0I_Deep), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(47, 72257)
+        XBETWEEN_SYMBOLS_PRD(47, 72281)
 
 /*-----
 * DECISION
@@ -72276,7 +72300,7 @@ YPRD_FUNCTION(z221F_isCollision)
         if (xLT_SDL_Integer(yPrdVarP->z221F0I_Deep,
           yPrdVarP->z221F0J_maxDeep)) {
 #endif
-          XBETWEEN_SYMBOLS_PRD(48, 72279)
+          XBETWEEN_SYMBOLS_PRD(48, 72303)
 
 /*-----
 * RETURN
@@ -72289,7 +72313,7 @@ YPRD_FUNCTION(z221F_isCollision)
             z221N1_LAND_COLLISION, XASS_MR_ASS_FR);
           SDL_RETURN
         } else {
-          XBETWEEN_SYMBOLS_PRD(49, 72292)
+          XBETWEEN_SYMBOLS_PRD(49, 72316)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -72312,23 +72336,23 @@ YPRD_FUNCTION(z221F_isCollision)
         }
 
 /*-----
-* JOIN grst39
+* JOIN grst49
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(1),2012(75,140),1)
 ------*/
-        goto L_grst39;
+        goto L_grst49;
       }
     } else {
 
 /*-----
-* JOIN grst40
+* JOIN grst50
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(1),1709(45,165),1)
 ------*/
-      goto L_grst40;
+      goto L_grst50;
     }
 
   case 5:
   L_P1:;
-    XBETWEEN_SYMBOLS_PRD(50, 72331)
+    XBETWEEN_SYMBOLS_PRD(50, 72355)
 
 /*-----
 * DECISION
@@ -72350,12 +72374,12 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 
 /*-----
-* JOIN grst42
+* JOIN grst52
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(2),1919(70,115),1)
 ------*/
-      goto L_grst42;
+      goto L_grst52;
     } else {
-      XBETWEEN_SYMBOLS_PRD(51, 72358)
+      XBETWEEN_SYMBOLS_PRD(51, 72382)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -72376,8 +72400,8 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 
     case 6:
-    L_grst41:;
-      XBETWEEN_SYMBOLS_PRD(52, 72380)
+    L_grst51:;
+      XBETWEEN_SYMBOLS_PRD(52, 72404)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -72429,7 +72453,7 @@ YPRD_FUNCTION(z221F_isCollision)
       xMSCEAssign("NextPoint := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
         z221F0D_NextPoint), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-      XBETWEEN_SYMBOLS_PRD(53, 72432)
+      XBETWEEN_SYMBOLS_PRD(53, 72456)
 
 /*-----
 * DECISION
@@ -72451,7 +72475,7 @@ YPRD_FUNCTION(z221F_isCollision)
       if (yEqF_z_BasicTypes_0U_tCoordinates(&(yPrdVarP->z221F0D_NextPoint),
         &(yPrdVarP->z221F0B_MyShipNextState.Coordinates))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(54, 72454)
+        XBETWEEN_SYMBOLS_PRD(54, 72478)
 
 /*-----
 * RETURN
@@ -72464,7 +72488,7 @@ YPRD_FUNCTION(z221F_isCollision)
           z221N2_ENEMY_SHIP_COLLISION, XASS_MR_ASS_FR);
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(55, 72467)
+        XBETWEEN_SYMBOLS_PRD(55, 72491)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -72484,7 +72508,7 @@ YPRD_FUNCTION(z221F_isCollision)
         xMSCEAssign("i := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
           z221F0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_SYMBOLS_PRD(56, 72487)
+        XBETWEEN_SYMBOLS_PRD(56, 72511)
 
 /*-----
 * DECISION
@@ -72507,15 +72531,15 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 
 /*-----
-* JOIN grst41
+* JOIN grst51
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(2),533(70,50),1)
 ------*/
-          goto L_grst41;
+          goto L_grst51;
         } else {
 
         case 7:
-        L_grst42:;
-          XBETWEEN_SYMBOLS_PRD(57, 72518)
+        L_grst52:;
+          XBETWEEN_SYMBOLS_PRD(57, 72542)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -72536,8 +72560,8 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 
         case 8:
-        L_grst43:;
-          XBETWEEN_SYMBOLS_PRD(58, 72540)
+        L_grst53:;
+          XBETWEEN_SYMBOLS_PRD(58, 72564)
 
 /*-----
 * DECISION
@@ -72561,7 +72585,7 @@ YPRD_FUNCTION(z221F_isCollision)
             ->StaticFather)->z221O_index, yPrdVarP->z221F0H_i)) {
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(59, 72564)
+            XBETWEEN_SYMBOLS_PRD(59, 72588)
 
 /*-----
 * CALL NextShipState  (from EXPRESSION in next symbol)
@@ -72604,7 +72628,7 @@ YPRD_FUNCTION(z221F_isCollision)
               yPrdVarP)->z221F0C_OtherShipNextState),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_0X_tShipCurrentState);
 #endif
-            XBETWEEN_SYMBOLS_PRD(60, 72607)
+            XBETWEEN_SYMBOLS_PRD(60, 72631)
 
 /*-----
 * DECISION
@@ -72629,7 +72653,7 @@ YPRD_FUNCTION(z221F_isCollision)
             if (yEqF_z_BasicTypes_0U_tCoordinates(&(yPrdVarP->z221F0C_OtherShipNextState.
               Coordinates), &(yPrdVarP->z221F0B_MyShipNextState.Coordinates))) {
 #endif
-              XBETWEEN_SYMBOLS_PRD(61, 72632)
+              XBETWEEN_SYMBOLS_PRD(61, 72656)
 
 /*-----
 * RETURN
@@ -72644,7 +72668,7 @@ YPRD_FUNCTION(z221F_isCollision)
             } else {
             }
           }
-          XBETWEEN_SYMBOLS_PRD(62, 72647)
+          XBETWEEN_SYMBOLS_PRD(62, 72671)
 
 /*-----
 * ASSIGNMENT i := ...
@@ -72664,7 +72688,7 @@ YPRD_FUNCTION(z221F_isCollision)
           xMSCEAssign("i := ", &(((yVDef_z221F_isCollision *)yPrdVarP)->
             z221F0H_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-          XBETWEEN_SYMBOLS_PRD(63, 72667)
+          XBETWEEN_SYMBOLS_PRD(63, 72691)
 
 /*-----
 * DECISION
@@ -72687,7 +72711,7 @@ YPRD_FUNCTION(z221F_isCollision)
           if (xLE_SDL_Integer(yPrdVarP->z221F0H_i, yVarP->z22P_NumMyShips)) {
 #endif
           } else {
-            XBETWEEN_SYMBOLS_PRD(64, 72690)
+            XBETWEEN_SYMBOLS_PRD(64, 72714)
 
 /*-----
 * RETURN
@@ -72702,10 +72726,10 @@ YPRD_FUNCTION(z221F_isCollision)
           }
 
 /*-----
-* JOIN grst43
+* JOIN grst53
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(2),1916(70,130),1)
 ------*/
-          goto L_grst43;
+          goto L_grst53;
         }
       }
     }
@@ -73070,7 +73094,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(7, 73073)
+    XBETWEEN_SYMBOLS_PRD(7, 73097)
 
 /*-----
 * DECISION
@@ -73095,7 +73119,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
     if (yEqF_z221N_tCollision(((yVDef_z221_StrategyStep *)yPrdVarP
       ->StaticFather)->z221P_CollisionType, z221N2_ENEMY_SHIP_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(8, 73098)
+      XBETWEEN_SYMBOLS_PRD(8, 73122)
 
 /*-----
 * DECISION
@@ -73153,7 +73177,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         ->StaticFather)->z221O_index)).Ammunition.A[z_BasicTypes_0R3_REPAIR],
         SDL_INTEGER_LIT(0)))) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(9, 73156)
+        XBETWEEN_SYMBOLS_PRD(9, 73180)
 
 /*-----
 * RETURN
@@ -73167,7 +73191,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       }
     } else {
     }
-    XBETWEEN_SYMBOLS_PRD(10, 73170)
+    XBETWEEN_SYMBOLS_PRD(10, 73194)
 
 /*-----
 * DECISION
@@ -73203,7 +73227,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       yPrdVarP->StaticFather)->z221O_index - SDL_INTEGER_LIT(1)].Accel,
       SDL_REAL_LIT(0.0, 0, 0)))) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(11, 73206)
+      XBETWEEN_SYMBOLS_PRD(11, 73230)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73227,7 +73251,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         z221O_index - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(12, 73230)
+      XBETWEEN_STMTS_PRD(12, 73254)
 
 /*-----
 * CALL isCollision  (from EXPRESSION in next symbol)
@@ -73265,7 +73289,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         ->StaticFather)->z221P_CollisionType),
         (tSDLTypeInfo *)&ySDL_z221N_tCollision);
 #endif
-      XBETWEEN_SYMBOLS_PRD(13, 73268)
+      XBETWEEN_SYMBOLS_PRD(13, 73292)
 
 /*-----
 * DECISION
@@ -73288,7 +73312,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       if (yEqF_z221N_tCollision(((yVDef_z221_StrategyStep *)yPrdVarP
         ->StaticFather)->z221P_CollisionType, z221N0_NO_COLLISION)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(14, 73291)
+        XBETWEEN_SYMBOLS_PRD(14, 73315)
 
 /*-----
 * RETURN
@@ -73311,7 +73335,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
 
   case 3:
   L_Solv1:;
-    XBETWEEN_SYMBOLS_PRD(15, 73314)
+    XBETWEEN_SYMBOLS_PRD(15, 73338)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73336,7 +73360,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       z221O_index - SDL_INTEGER_LIT(1)].OrderType),
       (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-    XBETWEEN_STMTS_PRD(16, 73339)
+    XBETWEEN_STMTS_PRD(16, 73363)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73360,7 +73384,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       z221O_index - SDL_INTEGER_LIT(1)].isSet),
       (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(17, 73363)
+    XBETWEEN_STMTS_PRD(17, 73387)
 
 /*-----
 * CALL isCollision  (from EXPRESSION in next symbol)
@@ -73398,7 +73422,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       ->StaticFather)->z221P_CollisionType),
       (tSDLTypeInfo *)&ySDL_z221N_tCollision);
 #endif
-    XBETWEEN_SYMBOLS_PRD(18, 73401)
+    XBETWEEN_SYMBOLS_PRD(18, 73425)
 
 /*-----
 * DECISION
@@ -73421,7 +73445,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
     if (yEqF_z221N_tCollision(((yVDef_z221_StrategyStep *)yPrdVarP
       ->StaticFather)->z221P_CollisionType, z221N0_NO_COLLISION)) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(19, 73424)
+      XBETWEEN_SYMBOLS_PRD(19, 73448)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -73449,7 +73473,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         TO_PROCESS(Router, yPrsN_z19_Router),
         sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
       SIGNAL_ALLOC_ERROR_END
-      XBETWEEN_SYMBOLS_PRD(20, 73452)
+      XBETWEEN_SYMBOLS_PRD(20, 73476)
 
 /*-----
 * RETURN
@@ -73460,7 +73484,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(21, 73463)
+      XBETWEEN_SYMBOLS_PRD(21, 73487)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73485,7 +73509,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         z221O_index - SDL_INTEGER_LIT(1)].OrderType),
         (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-      XBETWEEN_STMTS_PRD(22, 73488)
+      XBETWEEN_STMTS_PRD(22, 73512)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73509,7 +73533,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         z221O_index - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(23, 73512)
+      XBETWEEN_STMTS_PRD(23, 73536)
 
 /*-----
 * CALL isCollision  (from EXPRESSION in next symbol)
@@ -73547,7 +73571,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
         ->StaticFather)->z221P_CollisionType),
         (tSDLTypeInfo *)&ySDL_z221N_tCollision);
 #endif
-      XBETWEEN_SYMBOLS_PRD(24, 73550)
+      XBETWEEN_SYMBOLS_PRD(24, 73574)
 
 /*-----
 * DECISION
@@ -73570,7 +73594,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
       if (yEqF_z221N_tCollision(((yVDef_z221_StrategyStep *)yPrdVarP
         ->StaticFather)->z221P_CollisionType, z221N0_NO_COLLISION)) {
 #endif
-        XBETWEEN_SYMBOLS_PRD(25, 73573)
+        XBETWEEN_SYMBOLS_PRD(25, 73597)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -73598,7 +73622,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(26, 73601)
+        XBETWEEN_SYMBOLS_PRD(26, 73625)
 
 /*-----
 * RETURN
@@ -73609,7 +73633,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
 #endif
         SDL_RETURN
       } else {
-        XBETWEEN_SYMBOLS_PRD(27, 73612)
+        XBETWEEN_SYMBOLS_PRD(27, 73636)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73634,7 +73658,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
           z221O_index - SDL_INTEGER_LIT(1)].OrderType),
           (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(28, 73637)
+        XBETWEEN_STMTS_PRD(28, 73661)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73660,7 +73684,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
           z221O_index - SDL_INTEGER_LIT(1)].Accel),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(29, 73663)
+        XBETWEEN_STMTS_PRD(29, 73687)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -73684,7 +73708,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
           z221O_index - SDL_INTEGER_LIT(1)].isSet),
           (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-        XBETWEEN_SYMBOLS_PRD(30, 73687)
+        XBETWEEN_SYMBOLS_PRD(30, 73711)
 
 /*-----
 * OUTPUT OrderSpeedRequest
@@ -73713,7 +73737,7 @@ YPRD_FUNCTION(z221G_SolveCollision)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_05_OrderSpeedRequest), "OrderSpeedRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(31, 73716)
+        XBETWEEN_SYMBOLS_PRD(31, 73740)
 
 /*-----
 * RETURN
@@ -73896,7 +73920,7 @@ YPRD_FUNCTION(z221H_NextShipState)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(9, 73899)
+    XBETWEEN_SYMBOLS_PRD(9, 73923)
 
 /*-----
 * ASSIGNMENT OldSpeed := ...
@@ -73919,7 +73943,7 @@ YPRD_FUNCTION(z221H_NextShipState)
     xMSCEAssign("OldSpeed := ", &(((yVDef_z221H_NextShipState *)yPrdVarP)->
       z221H4_OldSpeed), (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-    XBETWEEN_STMTS_PRD(10, 73922)
+    XBETWEEN_STMTS_PRD(10, 73946)
 
 /*-----
 * ASSIGNMENT OldHeading := ...
@@ -73941,7 +73965,7 @@ YPRD_FUNCTION(z221H_NextShipState)
     xMSCEAssign("OldHeading := ", &(((yVDef_z221H_NextShipState *)yPrdVarP)->
       z221H5_OldHeading), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-    XBETWEEN_STMTS_PRD(11, 73944)
+    XBETWEEN_STMTS_PRD(11, 73968)
 
 /*-----
 * ASSIGNMENT OldCoords := ...
@@ -73963,7 +73987,7 @@ YPRD_FUNCTION(z221H_NextShipState)
     xMSCEAssign("OldCoords := ", &(((yVDef_z221H_NextShipState *)yPrdVarP)->
       z221H6_OldCoords), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0U_tCoordinates);
 #endif
-    XBETWEEN_STMTS_PRD(12, 73966)
+    XBETWEEN_STMTS_PRD(12, 73990)
 
 /*-----
 * ASSIGNMENT TypeShp := ...
@@ -73985,7 +74009,7 @@ YPRD_FUNCTION(z221H_NextShipState)
     xMSCEAssign("TypeShp := ", &(((yVDef_z221H_NextShipState *)yPrdVarP)->
       z221H7_TypeShp), (tSDLTypeInfo *)&ySDL_z_BasicTypes_0S_tNameShip);
 #endif
-    XBETWEEN_SYMBOLS_PRD(13, 73988)
+    XBETWEEN_SYMBOLS_PRD(13, 74012)
 
 /*-----
 * DECISION
@@ -74006,7 +74030,7 @@ YPRD_FUNCTION(z221H_NextShipState)
     if (yVarP->z22U_CommandToShip.A
       [yPrdVarP->z221H0_ShipIndex - SDL_INTEGER_LIT(1)].isSet) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(14, 74009)
+      XBETWEEN_SYMBOLS_PRD(14, 74033)
 
 /*-----
 * DECISION
@@ -74027,7 +74051,7 @@ YPRD_FUNCTION(z221H_NextShipState)
 #endif
 #endif
       if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType, z2243__ACCEL)) {
-        XBETWEEN_SYMBOLS_PRD(15, 74030)
+        XBETWEEN_SYMBOLS_PRD(15, 74054)
 
 /*-----
 * ASSIGNMENT TempSpeed := ...
@@ -74052,7 +74076,7 @@ YPRD_FUNCTION(z221H_NextShipState)
         xMSCEAssign("TempSpeed := ", &(((yVDef_z221H_NextShipState *)yPrdVarP)->
           z221H8_TempSpeed), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(16, 74055)
+        XBETWEEN_STMTS_PRD(16, 74079)
 
 /*-----
 * IF
@@ -74066,7 +74090,7 @@ YPRD_FUNCTION(z221H_NextShipState)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(17, 74069)
+          XBETWEEN_STMTS_PRD(17, 74093)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74097,7 +74121,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(18, 74100)
+        XBETWEEN_STMTS_PRD(18, 74124)
 
 /*-----
 * IF
@@ -74112,7 +74136,7 @@ YPRD_FUNCTION(z221H_NextShipState)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(19, 74115)
+          XBETWEEN_STMTS_PRD(19, 74139)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74144,7 +74168,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(20, 74147)
+        XBETWEEN_STMTS_PRD(20, 74171)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74167,7 +74191,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(21, 74170)
+        XBETWEEN_STMTS_PRD(21, 74194)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -74221,8 +74245,8 @@ YPRD_FUNCTION(z221H_NextShipState)
 #endif
 
       case 1:
-      L_grst46:;
-        XBETWEEN_SYMBOLS_PRD(22, 74225)
+      L_grst56:;
+        XBETWEEN_SYMBOLS_PRD(22, 74249)
 
 /*-----
 * RETURN
@@ -74234,7 +74258,7 @@ YPRD_FUNCTION(z221H_NextShipState)
         SDL_RETURN
       } else if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType,
             z2240__RIGHT)) {
-        XBETWEEN_SYMBOLS_PRD(23, 74237)
+        XBETWEEN_SYMBOLS_PRD(23, 74261)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74257,7 +74281,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(24, 74260)
+        XBETWEEN_STMTS_PRD(24, 74284)
 
 /*-----
 * CALL NextDirection  (from EXPRESSION in next symbol)
@@ -74301,7 +74325,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(25, 74304)
+        XBETWEEN_STMTS_PRD(25, 74328)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -74355,13 +74379,13 @@ YPRD_FUNCTION(z221H_NextShipState)
 #endif
 
 /*-----
-* JOIN grst46
+* JOIN grst56
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NextShipState.spd(1),215(80,205),1)
 ------*/
-        goto L_grst46;
+        goto L_grst56;
       } else if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType,
             z2241__LEFT)) {
-        XBETWEEN_SYMBOLS_PRD(26, 74364)
+        XBETWEEN_SYMBOLS_PRD(26, 74388)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74384,7 +74408,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(27, 74387)
+        XBETWEEN_STMTS_PRD(27, 74411)
 
 /*-----
 * CALL NextDirection  (from EXPRESSION in next symbol)
@@ -74428,7 +74452,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(28, 74431)
+        XBETWEEN_STMTS_PRD(28, 74455)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -74482,15 +74506,15 @@ YPRD_FUNCTION(z221H_NextShipState)
 #endif
 
 /*-----
-* JOIN grst46
+* JOIN grst56
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NextShipState.spd(1),215(80,205),1)
 ------*/
-        goto L_grst46;
+        goto L_grst56;
       } else {
 
       case 2:
-      L_grst47:;
-        XBETWEEN_SYMBOLS_PRD(29, 74493)
+      L_grst57:;
+        XBETWEEN_SYMBOLS_PRD(29, 74517)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74513,7 +74537,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Speed),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_17_tSCMaxSpeed);
 #endif
-        XBETWEEN_STMTS_PRD(30, 74516)
+        XBETWEEN_STMTS_PRD(30, 74540)
 
 /*-----
 * ASSIGNMENT ShipNextState... := ...
@@ -74536,7 +74560,7 @@ YPRD_FUNCTION(z221H_NextShipState)
           yPrdVarP)->z221H1_ShipNextState)).Heading),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_0P_tHeading);
 #endif
-        XBETWEEN_STMTS_PRD(31, 74539)
+        XBETWEEN_STMTS_PRD(31, 74563)
 
 /*-----
 * CALL NextPosition  (from EXPRESSION in next symbol)
@@ -74590,18 +74614,18 @@ YPRD_FUNCTION(z221H_NextShipState)
 #endif
 
 /*-----
-* JOIN grst46
+* JOIN grst56
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NextShipState.spd(1),215(80,205),1)
 ------*/
-        goto L_grst46;
+        goto L_grst56;
       }
     } else {
 
 /*-----
-* JOIN grst47
+* JOIN grst57
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NextShipState.spd(1),125(30,185),1)
 ------*/
-      goto L_grst47;
+      goto L_grst57;
     }
   }
   XEND_PRD
@@ -74840,7 +74864,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 74843)
+    XBETWEEN_SYMBOLS_PRD(1, 74867)
 
 /*-----
 * DECISION
@@ -74862,7 +74886,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
     if (yVarP->z22U_CommandToShip.A[((yVDef_z221_StrategyStep *)yPrdVarP
       ->StaticFather)->z221O_index - SDL_INTEGER_LIT(1)].isSet) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(3, 74865)
+      XBETWEEN_SYMBOLS_PRD(3, 74889)
 
 /*-----
 * DECISION
@@ -74884,7 +74908,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
 #endif
 #endif
       if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType, z2241__LEFT)) {
-        XBETWEEN_SYMBOLS_PRD(4, 74887)
+        XBETWEEN_SYMBOLS_PRD(4, 74911)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -74912,7 +74936,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(5, 74915)
+        XBETWEEN_SYMBOLS_PRD(5, 74939)
 
 /*-----
 * RETURN
@@ -74924,7 +74948,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
         SDL_RETURN
       } else if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType,
             z2240__RIGHT)) {
-        XBETWEEN_SYMBOLS_PRD(6, 74927)
+        XBETWEEN_SYMBOLS_PRD(6, 74951)
 
 /*-----
 * OUTPUT OrderTurnRequest
@@ -74952,7 +74976,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_06_OrderTurnRequest), "OrderTurnRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(7, 74955)
+        XBETWEEN_SYMBOLS_PRD(7, 74979)
 
 /*-----
 * RETURN
@@ -74964,7 +74988,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
         SDL_RETURN
       } else if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType,
             z2243__ACCEL)) {
-        XBETWEEN_SYMBOLS_PRD(8, 74967)
+        XBETWEEN_SYMBOLS_PRD(8, 74991)
 
 /*-----
 * OUTPUT OrderSpeedRequest
@@ -74994,7 +75018,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_05_OrderSpeedRequest), "OrderSpeedRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(9, 74997)
+        XBETWEEN_SYMBOLS_PRD(9, 75021)
 
 /*-----
 * RETURN
@@ -75006,7 +75030,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
         SDL_RETURN
       } else if (yEqF_z224_tOrderType(yPrdVarP->yDcn_z224_tOrderType,
             z2242__FIRE)) {
-        XBETWEEN_SYMBOLS_PRD(10, 75009)
+        XBETWEEN_SYMBOLS_PRD(10, 75033)
 
 /*-----
 * OUTPUT OrderFireRequest
@@ -75040,7 +75064,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
           TO_PROCESS(Router, yPrsN_z19_Router),
           sizeof(yPDef_z_BasicTypes_07_OrderFireRequest), "OrderFireRequest")
         SIGNAL_ALLOC_ERROR_END
-        XBETWEEN_SYMBOLS_PRD(11, 75043)
+        XBETWEEN_SYMBOLS_PRD(11, 75067)
 
 /*-----
 * RETURN
@@ -75059,7 +75083,7 @@ YPRD_FUNCTION(z221I_OutputOrder)
       }
 #endif
     } else {
-      XBETWEEN_SYMBOLS_PRD(2, 75062)
+      XBETWEEN_SYMBOLS_PRD(2, 75086)
 
 /*-----
 * RETURN
@@ -75178,7 +75202,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 75181)
+    XBETWEEN_SYMBOLS_PRD(1, 75205)
 
 /*-----
 * IF
@@ -75193,7 +75217,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
       xTraceAlg("IF (true)");
 #endif
-      XBETWEEN_STMTS_PRD(2, 75196)
+      XBETWEEN_STMTS_PRD(2, 75220)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75212,7 +75236,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
       xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(3, 75215)
+      XBETWEEN_STMTS_PRD(3, 75239)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75235,7 +75259,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
       xTraceAlg("IF (false)");
 #endif
-      XBETWEEN_STMTS_PRD(4, 75238)
+      XBETWEEN_STMTS_PRD(4, 75262)
 
 /*-----
 * IF
@@ -75250,7 +75274,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(5, 75253)
+        XBETWEEN_STMTS_PRD(5, 75277)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75270,7 +75294,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
         xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
           (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-        XBETWEEN_STMTS_PRD(6, 75273)
+        XBETWEEN_STMTS_PRD(6, 75297)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75294,7 +75318,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
         xTraceAlg("IF (false)");
 #endif
-        XBETWEEN_STMTS_PRD(7, 75297)
+        XBETWEEN_STMTS_PRD(7, 75321)
 
 /*-----
 * IF
@@ -75309,7 +75333,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(8, 75312)
+          XBETWEEN_STMTS_PRD(8, 75336)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75329,7 +75353,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
           xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-          XBETWEEN_STMTS_PRD(9, 75332)
+          XBETWEEN_STMTS_PRD(9, 75356)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75353,7 +75377,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
           xTraceAlg("IF (false)");
 #endif
-          XBETWEEN_STMTS_PRD(10, 75356)
+          XBETWEEN_STMTS_PRD(10, 75380)
 
 /*-----
 * IF
@@ -75368,7 +75392,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 #ifdef XTRACE
             xTraceAlg("IF (true)");
 #endif
-            XBETWEEN_STMTS_PRD(11, 75371)
+            XBETWEEN_STMTS_PRD(11, 75395)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75388,7 +75412,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
             xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
               (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-            XBETWEEN_STMTS_PRD(12, 75391)
+            XBETWEEN_STMTS_PRD(12, 75415)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
@@ -75417,7 +75441,7 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
         }
       }
     }
-    XBETWEEN_SYMBOLS_PRD(13, 75420)
+    XBETWEEN_SYMBOLS_PRD(13, 75444)
 
 /*-----
 * RETURN
@@ -75439,22 +75463,22 @@ YPRD_FUNCTION(z221J_FindHeadingTarget)
 ******/
 
 /* *** Dist *** */
-tSDLGArrayInfo ySDL_z221K1_Dist = {type_SDL_GArray, 15,
-  (xptrint)sizeof(z221K1_Dist) T_SDL_OPFUNCS(0) T_SDL_EXTRA_VALUE
+tSDLGArrayInfo ySDL_z221K0_Dist = {type_SDL_GArray, 15,
+  (xptrint)sizeof(z221K0_Dist) T_SDL_OPFUNCS(0) T_SDL_EXTRA_VALUE
   T_SDL_Names("Dist") xRaWF((xIdNode)&yPrdR_z221K_FindStartPoint)
-  xRaWF(&ySrtR_z221K1_Dist), (tSDLTypeInfo *)&ySDL_SDL_Integer,
-  (tSDLTypeInfo *)&ySDL_SDL_Integer, (xptrint)sizeof(z221K1_Dist_yrec),
-  xOffsetOf(z221K1_Dist_yrec, Index), xOffsetOf(z221K1_Dist_yrec, Data),
-  xOffsetOf(z221K1_Dist, Data)};
+  xRaWF(&ySrtR_z221K0_Dist), (tSDLTypeInfo *)&ySDL_SDL_Integer,
+  (tSDLTypeInfo *)&ySDL_SDL_Integer, (xptrint)sizeof(z221K0_Dist_yrec),
+  xOffsetOf(z221K0_Dist_yrec, Index), xOffsetOf(z221K0_Dist_yrec, Data),
+  xOffsetOf(z221K0_Dist, Data)};
 #ifndef XOPTSORT
-XCONST struct xSortIdStruct ySrtR_z221K1_Dist = {xSortEC xSymbTLink((xIdNode)0,
+XCONST struct xSortIdStruct ySrtR_z221K0_Dist = {xSortEC xSymbTLink((xIdNode)0,
   (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint xIdNames("Dist")
-  XCOMMON_EXTRAS xFreF(0) xAssF(yAss_z221K1_Dist) xEqF(yEq_z221K1_Dist)
-  xTestF(0), (xptrint)sizeof(z221K1_Dist), xGArray, &xSrtR_SDL_Integer,
-  &xSrtR_SDL_Integer, (long int)xOffsetOf(z221K1_Dist_yrec, Data),
-  (long int)sizeof(z221K1_Dist_yrec), (long int)xOffsetOf(
-  z221K1_Dist_yrec, Index), (long int)xOffsetOf(z221K1_Dist, Data)
-  xRaWF((tSDLTypeInfo *)&ySDL_z221K1_Dist) XSRT_EXTRAS};
+  XCOMMON_EXTRAS xFreF(0) xAssF(yAss_z221K0_Dist) xEqF(yEq_z221K0_Dist)
+  xTestF(0), (xptrint)sizeof(z221K0_Dist), xGArray, &xSrtR_SDL_Integer,
+  &xSrtR_SDL_Integer, (long int)xOffsetOf(z221K0_Dist_yrec, Data),
+  (long int)sizeof(z221K0_Dist_yrec), (long int)xOffsetOf(
+  z221K0_Dist_yrec, Index), (long int)xOffsetOf(z221K0_Dist, Data)
+  xRaWF((tSDLTypeInfo *)&ySDL_z221K0_Dist) XSRT_EXTRAS};
 #endif
 
 /*****
@@ -75477,7 +75501,9 @@ XCONST struct xPrdIdStruct yPrdR_z221K_FindStartPoint = {xProcedureEC
   (xPrdIdNode *)0 XPRD_EXTRAS};
 void yFree_z221K_FindStartPoint(void *yVarP)
 {
-  yFree_z221K1_Dist((void **)&((yVDef_z221K_FindStartPoint *)yVarP)->z221K2_d);
+  yFree_z221K0_Dist((void **)&((yVDef_z221K_FindStartPoint *)yVarP)->z221K6_ys);
+  yFree_z221K0_Dist((void **)&((yVDef_z221K_FindStartPoint *)yVarP)->z221K5_xs);
+  yFree_z221K0_Dist((void **)&((yVDef_z221K_FindStartPoint *)yVarP)->z221K1_d);
 }
 
 /*+++++
@@ -75490,51 +75516,143 @@ extern char * yRef_z221K_FindStartPoint (int SymbolNo, xSymbolType *SymbolType)
   switch (SymbolNo) {
     case 0: *SymbolType = xsStart;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),128(30,25),1)";
-    case 1: *SymbolType = xsLabel;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),287(15,135),0)";
-    case 2: *SymbolType = xsAssignmentStatement;
+    case 1: *SymbolType = xsAssignmentStatement;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),2,1)";
+    case 2: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),2,13)";
     case 3: *SymbolType = xsAssignmentStatement;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),3,1)";
     case 4: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),4,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),3,13)";
     case 5: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),5,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),4,1)";
     case 6: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),6,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),4,13)";
     case 7: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),6,14)";
-    case 8: *SymbolType = xsLoop;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),2,6)";
-    case 9: *SymbolType = xsLoop;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),2,11)";
-    case 10: *SymbolType = xsLoop;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),2,16)";
-    case 11: *SymbolType = xsIf;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),3,2)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),5,1)";
+    case 8: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),5,13)";
+    case 9: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),6,1)";
+    case 10: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),6,13)";
+    case 11: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),7,1)";
     case 12: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),4,4)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),7,13)";
     case 13: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),5,4)";
-    case 14: *SymbolType = xsDecision;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),308(30,80),1,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),8,1)";
+    case 14: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),8,12)";
     case 15: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),305(60,90),2,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),9,1)";
     case 16: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),305(60,90),3,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),9,12)";
     case 17: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),299(45,105),2,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),10,1)";
     case 18: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),299(45,105),3,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),10,13)";
     case 19: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),293(30,120),2,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),11,1)";
     case 20: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),293(30,120),3,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),11,14)";
     case 21: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),287(15,135),2,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),12,1)";
     case 22: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),287(15,135),3,1)";
-    case 23: *SymbolType = xsReturn;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),12,14)";
+    case 23: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),13,1)";
+    case 24: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),13,15)";
+    case 25: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),14,1)";
+    case 26: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),14,15)";
+    case 27: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),15,1)";
+    case 28: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),15,15)";
+    case 29: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),16,1)";
+    case 30: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),16,15)";
+    case 31: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),17,1)";
+    case 32: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),17,14)";
+    case 33: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),18,1)";
+    case 34: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),18,14)";
+    case 35: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),19,1)";
+    case 36: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),19,14)";
+    case 37: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),20,1)";
+    case 38: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),20,13)";
+    case 39: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),21,1)";
+    case 40: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),21,13)";
+    case 41: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),23,1)";
+    case 42: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),24,1)";
+    case 43: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),25,1)";
+    case 44: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),26,1)";
+    case 45: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),27,1)";
+    case 46: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),28,1)";
+    case 47: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),29,1)";
+    case 48: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),30,1)";
+    case 49: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),31,1)";
+    case 50: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),32,1)";
+    case 51: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),33,1)";
+    case 52: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),34,1)";
+    case 53: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),35,1)";
+    case 54: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),36,1)";
+    case 55: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),37,1)";
+    case 56: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),38,1)";
+    case 57: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),39,1)";
+    case 58: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),40,1)";
+    case 59: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),41,1)";
+    case 60: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),125(30,40),42,1)";
+    case 61: *SymbolType = xsLoop;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),2,6)";
+    case 62: *SymbolType = xsLoop;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),2,11)";
+    case 63: *SymbolType = xsLoop;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),2,16)";
+    case 64: *SymbolType = xsIf;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),3,2)";
+    case 65: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),4,4)";
+    case 66: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),353(30,60),5,4)";
+    case 67: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),287(30,110),2,1)";
+    case 68: *SymbolType = xsAssignmentStatement;
+      return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),287(30,110),3,1)";
+    case 69: *SymbolType = xsReturn;
       return "#SDTREF(SDL,C:\\Battleships\\BattleShips\\Strategy1\\FindStartPoint.spd(1),245(35,150),1,1)";
     default : *SymbolType = xsNoSuchSymbolType; return "";
   }
@@ -75551,8 +75669,10 @@ YPRD_FUNCTION(z221K_FindStartPoint)
   YPRD_YVARP(yVDef_z22_Main1)
   yVDef_z221K_FindStartPoint * yPrdVarP;
   YPRD_TEMP_VARS
-  SDL_Integer yDcn_SDL_Integer;
   union {
+    struct {
+      SDL_Integer Result1;
+    } U1;
     struct {
       SDL_Integer Result1;
     } U2;
@@ -75568,6 +75688,168 @@ YPRD_FUNCTION(z221K_FindStartPoint)
     struct {
       SDL_Integer Result1;
     } U6;
+    struct {
+      SDL_Integer Result1;
+    } U7;
+    struct {
+      SDL_Integer Result1;
+    } U8;
+    struct {
+      SDL_Integer Result1;
+    } U9;
+    struct {
+      SDL_Integer Result1;
+    } U10;
+    struct {
+      SDL_Integer Result1;
+    } U11;
+    struct {
+      SDL_Integer Result1;
+    } U12;
+    struct {
+      SDL_Integer Result1;
+    } U13;
+    struct {
+      SDL_Integer Result1;
+    } U14;
+    struct {
+      SDL_Integer Result1;
+    } U15;
+    struct {
+      SDL_Integer Result1;
+    } U16;
+    struct {
+      SDL_Integer Result1;
+    } U17;
+    struct {
+      SDL_Integer Result1;
+    } U18;
+    struct {
+      SDL_Integer Result1;
+    } U19;
+    struct {
+      SDL_Integer Result1;
+    } U20;
+    struct {
+      SDL_Integer Result1;
+    } U21;
+    struct {
+      SDL_Integer Result1;
+    } U22;
+    struct {
+      SDL_Integer Result1;
+    } U23;
+    struct {
+      SDL_Integer Result1;
+    } U24;
+    struct {
+      SDL_Integer Result1;
+    } U25;
+    struct {
+      SDL_Integer Result1;
+    } U26;
+    struct {
+      SDL_Integer Result1;
+    } U27;
+    struct {
+      SDL_Integer Result1;
+    } U28;
+    struct {
+      SDL_Integer Result1;
+    } U29;
+    struct {
+      SDL_Integer Result1;
+    } U30;
+    struct {
+      SDL_Integer Result1;
+    } U31;
+    struct {
+      SDL_Integer Result1;
+    } U32;
+    struct {
+      SDL_Integer Result1;
+    } U33;
+    struct {
+      SDL_Integer Result1;
+    } U34;
+    struct {
+      SDL_Integer Result1;
+    } U35;
+    struct {
+      SDL_Integer Result1;
+    } U36;
+    struct {
+      SDL_Integer Result1;
+    } U37;
+    struct {
+      SDL_Integer Result1;
+    } U38;
+    struct {
+      SDL_Integer Result1;
+    } U39;
+    struct {
+      SDL_Integer Result1;
+    } U40;
+    struct {
+      SDL_Integer Result1;
+    } U41;
+    struct {
+      SDL_Integer Result1;
+    } U42;
+    struct {
+      SDL_Integer Result1;
+    } U43;
+    struct {
+      SDL_Integer Result1;
+    } U44;
+    struct {
+      SDL_Integer Result1;
+    } U45;
+    struct {
+      SDL_Integer Result1;
+    } U46;
+    struct {
+      SDL_Integer Result1;
+    } U47;
+    struct {
+      SDL_Integer Result1;
+    } U48;
+    struct {
+      SDL_Integer Result1;
+    } U49;
+    struct {
+      SDL_Integer Result1;
+    } U50;
+    struct {
+      SDL_Integer Result1;
+    } U51;
+    struct {
+      SDL_Integer Result1;
+    } U52;
+    struct {
+      SDL_Integer Result1;
+    } U53;
+    struct {
+      SDL_Integer Result1;
+    } U54;
+    struct {
+      SDL_Integer Result1;
+    } U55;
+    struct {
+      SDL_Integer Result1;
+    } U56;
+    struct {
+      SDL_Integer Result1;
+    } U57;
+    struct {
+      SDL_Integer Result1;
+    } U58;
+    struct {
+      SDL_Integer Result1;
+    } U59;
+    struct {
+      SDL_Integer Result1;
+    } U60;
   } yUVar;
   YPRDNAME_VAR("FindStartPoint")
 #ifndef XNOUSEOFSERVICE
@@ -75586,234 +75868,1578 @@ YPRD_FUNCTION(z221K_FindStartPoint)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    GenericDefault((void *)&yPrdVarP->z221K2_d,
-      (tSDLTypeInfo *)&ySDL_z221K1_Dist);
-    XBETWEEN_SYMBOLS_PRD(2, 75591)
+    GenericDefault((void *)&yPrdVarP->z221K1_d,
+      (tSDLTypeInfo *)&ySDL_z221K0_Dist);
+    GenericDefault((void *)&yPrdVarP->z221K5_xs,
+      (tSDLTypeInfo *)&ySDL_z221K0_Dist);
+    GenericDefault((void *)&yPrdVarP->z221K6_ys,
+      (tSDLTypeInfo *)&ySDL_z221K0_Dist);
+    XBETWEEN_SYMBOLS_PRD(1, 75877)
 
 /*-----
-* ASSIGNMENT d... := ...
+* ASSIGNMENT xs... := ...
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),2,1)
+------*/
+#ifdef XCASELABELS
+  case 1:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1),
+      &yUVar.U1.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U1.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U1.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(2, 75901)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),2,13)
 ------*/
 #ifdef XCASELABELS
   case 2:
 #endif
-    yAssF_SDL_Integer((* yAddr_z221K1_Dist(&(((yVDef_z221K_FindStartPoint *)
-      yPrdVarP)->z221K2_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1),
-      &yUVar.U2.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
-      z22N_MyCenter.y, z22D_FirstQuaterX, z22E_FirstQuaterY), XASS_MR_ASS_FR);
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1),
+      &yUVar.U2.Result1))), SDL_INTEGER_LIT(90), XASS_MR_ASS_FR);
 #ifdef XTRACE
-    xTraceAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U2.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
-    xMSCEAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U2.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(3, 75616)
+    XBETWEEN_STMTS_PRD(3, 75925)
 
 /*-----
-* ASSIGNMENT d... := ...
+* ASSIGNMENT xs... := ...
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),3,1)
 ------*/
 #ifdef XCASELABELS
   case 3:
 #endif
-    yAssF_SDL_Integer((* yAddr_z221K1_Dist(&(((yVDef_z221K_FindStartPoint *)
-      yPrdVarP)->z221K2_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2),
-      &yUVar.U3.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
-      z22N_MyCenter.y, z22F_SecondQuaterX, z22G_SecondQuaterY), XASS_MR_ASS_FR);
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2),
+      &yUVar.U3.Result1))), SDL_INTEGER_LIT(30), XASS_MR_ASS_FR);
 #ifdef XTRACE
-    xTraceAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U3.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
-    xMSCEAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
       yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U3.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 75641)
+    XBETWEEN_STMTS_PRD(4, 75949)
 
 /*-----
-* ASSIGNMENT d... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),4,1)
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),3,13)
 ------*/
 #ifdef XCASELABELS
   case 4:
 #endif
-    yAssF_SDL_Integer((* yAddr_z221K1_Dist(&(((yVDef_z221K_FindStartPoint *)
-      yPrdVarP)->z221K2_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3),
-      &yUVar.U4.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
-      z22N_MyCenter.y, z22H_ThirdQuaterX, z22I_ThirdQuaterY), XASS_MR_ASS_FR);
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2),
+      &yUVar.U4.Result1))), SDL_INTEGER_LIT(90), XASS_MR_ASS_FR);
 #ifdef XTRACE
-    xTraceAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
-      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U4.Result1)))),
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U4.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
-    xMSCEAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
-      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U4.Result1)))),
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U4.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(5, 75666)
+    XBETWEEN_STMTS_PRD(5, 75973)
 
 /*-----
-* ASSIGNMENT d... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),5,1)
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),4,1)
 ------*/
 #ifdef XCASELABELS
   case 5:
 #endif
-    yAssF_SDL_Integer((* yAddr_z221K1_Dist(&(((yVDef_z221K_FindStartPoint *)
-      yPrdVarP)->z221K2_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4),
-      &yUVar.U5.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
-      z22N_MyCenter.y, z22J_FourthQuaterX, z22K_FourthQuaterY), XASS_MR_ASS_FR);
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3),
+      &yUVar.U5.Result1))), SDL_INTEGER_LIT(42), XASS_MR_ASS_FR);
 #ifdef XTRACE
-    xTraceAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
-      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U5.Result1)))),
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U5.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
-    xMSCEAssign("d... := ", &((* yAddr_z221K1_Dist(
-      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
-      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U5.Result1)))),
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U5.Result1)))),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(6, 75691)
+    XBETWEEN_STMTS_PRD(6, 75997)
 
 /*-----
-* ASSIGNMENT min := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),6,1)
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),4,13)
 ------*/
 #ifdef XCASELABELS
   case 6:
 #endif
-    yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_min,
-      *(SDL_Integer *)(yExtr_z221K1_Dist(&(((yVDef_z221K_FindStartPoint *)
-      yPrdVarP)->z221K2_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1),
-      &yUVar.U6.Result1))), XASS_MR_ASS_FR);
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3),
+      &yUVar.U6.Result1))), SDL_INTEGER_LIT(78), XASS_MR_ASS_FR);
 #ifdef XTRACE
-    xTraceAssign("min := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-      z221K5_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U6.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
-    xMSCEAssign("min := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-      z221K5_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U6.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(7, 75712)
+    XBETWEEN_STMTS_PRD(7, 76021)
 
 /*-----
-* ASSIGNMENT count := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),6,14)
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),5,1)
 ------*/
 #ifdef XCASELABELS
   case 7:
 #endif
-    yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K3_count,
-      SDL_INTEGER_LIT(1), XASS_MR_ASS_FR);
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4),
+      &yUVar.U7.Result1))), SDL_INTEGER_LIT(42), XASS_MR_ASS_FR);
 #ifdef XTRACE
-    xTraceAssign("count := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-      z221K3_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U7.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
-    xMSCEAssign("count := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-      z221K3_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U7.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_SYMBOLS_PRD(8, 75731)
+    XBETWEEN_STMTS_PRD(8, 76045)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),5,13)
+------*/
+#ifdef XCASELABELS
+  case 8:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4),
+      &yUVar.U8.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U8.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U8.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(9, 76069)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),6,1)
+------*/
+#ifdef XCASELABELS
+  case 9:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5),
+      &yUVar.U9.Result1))), SDL_INTEGER_LIT(30), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5), &yUVar.U9.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5), &yUVar.U9.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(10, 76093)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),6,13)
+------*/
+#ifdef XCASELABELS
+  case 10:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5),
+      &yUVar.U10.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5), &yUVar.U10.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5), &yUVar.U10.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(11, 76117)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),7,1)
+------*/
+#ifdef XCASELABELS
+  case 11:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6),
+      &yUVar.U11.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6), &yUVar.U11.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6), &yUVar.U11.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(12, 76141)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),7,13)
+------*/
+#ifdef XCASELABELS
+  case 12:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6),
+      &yUVar.U12.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6), &yUVar.U12.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6), &yUVar.U12.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(13, 76165)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),8,1)
+------*/
+#ifdef XCASELABELS
+  case 13:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7),
+      &yUVar.U13.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7), &yUVar.U13.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7), &yUVar.U13.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(14, 76189)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),8,12)
+------*/
+#ifdef XCASELABELS
+  case 14:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7),
+      &yUVar.U14.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7), &yUVar.U14.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7), &yUVar.U14.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(15, 76213)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),9,1)
+------*/
+#ifdef XCASELABELS
+  case 15:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8),
+      &yUVar.U15.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8), &yUVar.U15.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8), &yUVar.U15.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(16, 76237)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),9,12)
+------*/
+#ifdef XCASELABELS
+  case 16:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8),
+      &yUVar.U16.Result1))), SDL_INTEGER_LIT(30), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8), &yUVar.U16.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8), &yUVar.U16.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(17, 76261)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),10,1)
+------*/
+#ifdef XCASELABELS
+  case 17:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9),
+      &yUVar.U17.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9), &yUVar.U17.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9), &yUVar.U17.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(18, 76285)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),10,13)
+------*/
+#ifdef XCASELABELS
+  case 18:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9),
+      &yUVar.U18.Result1))), SDL_INTEGER_LIT(42), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9), &yUVar.U18.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9), &yUVar.U18.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(19, 76309)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),11,1)
+------*/
+#ifdef XCASELABELS
+  case 19:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10),
+      &yUVar.U19.Result1))), SDL_INTEGER_LIT(54), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10), &yUVar.U19.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10), &yUVar.U19.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(20, 76333)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),11,14)
+------*/
+#ifdef XCASELABELS
+  case 20:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10),
+      &yUVar.U20.Result1))), SDL_INTEGER_LIT(42), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10), &yUVar.U20.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10), &yUVar.U20.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(21, 76357)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),12,1)
+------*/
+#ifdef XCASELABELS
+  case 21:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11),
+      &yUVar.U21.Result1))), SDL_INTEGER_LIT(90), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11), &yUVar.U21.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11), &yUVar.U21.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(22, 76381)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),12,14)
+------*/
+#ifdef XCASELABELS
+  case 22:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11),
+      &yUVar.U22.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11), &yUVar.U22.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11), &yUVar.U22.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(23, 76405)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),13,1)
+------*/
+#ifdef XCASELABELS
+  case 23:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12),
+      &yUVar.U23.Result1))), SDL_INTEGER_LIT(102), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12), &yUVar.U23.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12), &yUVar.U23.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(24, 76429)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),13,15)
+------*/
+#ifdef XCASELABELS
+  case 24:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12),
+      &yUVar.U24.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12), &yUVar.U24.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12), &yUVar.U24.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(25, 76453)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),14,1)
+------*/
+#ifdef XCASELABELS
+  case 25:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13),
+      &yUVar.U25.Result1))), SDL_INTEGER_LIT(114), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13), &yUVar.U25.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13), &yUVar.U25.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(26, 76477)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),14,15)
+------*/
+#ifdef XCASELABELS
+  case 26:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13),
+      &yUVar.U26.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13), &yUVar.U26.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13), &yUVar.U26.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(27, 76501)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),15,1)
+------*/
+#ifdef XCASELABELS
+  case 27:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14),
+      &yUVar.U27.Result1))), SDL_INTEGER_LIT(114), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14), &yUVar.U27.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14), &yUVar.U27.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(28, 76525)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),15,15)
+------*/
+#ifdef XCASELABELS
+  case 28:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14),
+      &yUVar.U28.Result1))), SDL_INTEGER_LIT(78), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14), &yUVar.U28.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14), &yUVar.U28.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(29, 76549)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),16,1)
+------*/
+#ifdef XCASELABELS
+  case 29:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15),
+      &yUVar.U29.Result1))), SDL_INTEGER_LIT(102), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15), &yUVar.U29.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15), &yUVar.U29.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(30, 76573)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),16,15)
+------*/
+#ifdef XCASELABELS
+  case 30:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15),
+      &yUVar.U30.Result1))), SDL_INTEGER_LIT(90), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15), &yUVar.U30.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15), &yUVar.U30.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(31, 76597)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),17,1)
+------*/
+#ifdef XCASELABELS
+  case 31:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16),
+      &yUVar.U31.Result1))), SDL_INTEGER_LIT(90), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16), &yUVar.U31.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16), &yUVar.U31.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(32, 76621)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),17,14)
+------*/
+#ifdef XCASELABELS
+  case 32:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16),
+      &yUVar.U32.Result1))), SDL_INTEGER_LIT(90), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16), &yUVar.U32.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16), &yUVar.U32.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(33, 76645)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),18,1)
+------*/
+#ifdef XCASELABELS
+  case 33:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17),
+      &yUVar.U33.Result1))), SDL_INTEGER_LIT(54), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17), &yUVar.U33.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17), &yUVar.U33.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(34, 76669)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),18,14)
+------*/
+#ifdef XCASELABELS
+  case 34:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17),
+      &yUVar.U34.Result1))), SDL_INTEGER_LIT(54), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17), &yUVar.U34.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17), &yUVar.U34.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(35, 76693)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),19,1)
+------*/
+#ifdef XCASELABELS
+  case 35:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18),
+      &yUVar.U35.Result1))), SDL_INTEGER_LIT(18), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18), &yUVar.U35.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18), &yUVar.U35.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(36, 76717)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),19,14)
+------*/
+#ifdef XCASELABELS
+  case 36:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18),
+      &yUVar.U36.Result1))), SDL_INTEGER_LIT(54), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18), &yUVar.U36.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18), &yUVar.U36.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(37, 76741)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),20,1)
+------*/
+#ifdef XCASELABELS
+  case 37:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19),
+      &yUVar.U37.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19), &yUVar.U37.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19), &yUVar.U37.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(38, 76765)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),20,13)
+------*/
+#ifdef XCASELABELS
+  case 38:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19),
+      &yUVar.U38.Result1))), SDL_INTEGER_LIT(66), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19), &yUVar.U38.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19), &yUVar.U38.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(39, 76789)
+
+/*-----
+* ASSIGNMENT xs... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),21,1)
+------*/
+#ifdef XCASELABELS
+  case 39:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K5_xs), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20),
+      &yUVar.U39.Result1))), SDL_INTEGER_LIT(6), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20), &yUVar.U39.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("xs... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20), &yUVar.U39.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(40, 76813)
+
+/*-----
+* ASSIGNMENT ys... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),21,13)
+------*/
+#ifdef XCASELABELS
+  case 40:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K6_ys), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20),
+      &yUVar.U40.Result1))), SDL_INTEGER_LIT(78), XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20), &yUVar.U40.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("ys... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20), &yUVar.U40.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(41, 76837)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),23,1)
+------*/
+#ifdef XCASELABELS
+  case 41:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1),
+      &yUVar.U41.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(18), SDL_INTEGER_LIT(90)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U41.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(1), &yUVar.U41.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(42, 76863)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),24,1)
+------*/
+#ifdef XCASELABELS
+  case 42:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2),
+      &yUVar.U42.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(30), SDL_INTEGER_LIT(90)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U42.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(2), &yUVar.U42.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(43, 76889)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),25,1)
+------*/
+#ifdef XCASELABELS
+  case 43:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3),
+      &yUVar.U43.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(42), SDL_INTEGER_LIT(78)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U43.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(3), &yUVar.U43.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(44, 76915)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),26,1)
+------*/
+#ifdef XCASELABELS
+  case 44:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4),
+      &yUVar.U44.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(42), SDL_INTEGER_LIT(18)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U44.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(4), &yUVar.U44.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(45, 76941)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),27,1)
+------*/
+#ifdef XCASELABELS
+  case 45:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5),
+      &yUVar.U45.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(30), SDL_INTEGER_LIT(6)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5), &yUVar.U45.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(5), &yUVar.U45.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(46, 76967)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),28,1)
+------*/
+#ifdef XCASELABELS
+  case 46:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6),
+      &yUVar.U46.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(18), SDL_INTEGER_LIT(6)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6), &yUVar.U46.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(6), &yUVar.U46.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(47, 76993)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),29,1)
+------*/
+#ifdef XCASELABELS
+  case 47:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7),
+      &yUVar.U47.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(6), SDL_INTEGER_LIT(18)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7), &yUVar.U47.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(7), &yUVar.U47.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(48, 77019)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),30,1)
+------*/
+#ifdef XCASELABELS
+  case 48:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8),
+      &yUVar.U48.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(6), SDL_INTEGER_LIT(30)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8), &yUVar.U48.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(8), &yUVar.U48.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(49, 77045)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),31,1)
+------*/
+#ifdef XCASELABELS
+  case 49:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9),
+      &yUVar.U49.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(18), SDL_INTEGER_LIT(42)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9), &yUVar.U49.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(9), &yUVar.U49.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(50, 77071)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),32,1)
+------*/
+#ifdef XCASELABELS
+  case 50:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10),
+      &yUVar.U50.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(54), SDL_INTEGER_LIT(42)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10), &yUVar.U50.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(10), &yUVar.U50.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(51, 77097)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),33,1)
+------*/
+#ifdef XCASELABELS
+  case 51:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11),
+      &yUVar.U51.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(90), SDL_INTEGER_LIT(6)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11), &yUVar.U51.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(11), &yUVar.U51.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(52, 77123)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),34,1)
+------*/
+#ifdef XCASELABELS
+  case 52:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12),
+      &yUVar.U52.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(102), SDL_INTEGER_LIT(6)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12), &yUVar.U52.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(12), &yUVar.U52.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(53, 77149)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),35,1)
+------*/
+#ifdef XCASELABELS
+  case 53:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13),
+      &yUVar.U53.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(114), SDL_INTEGER_LIT(18)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13), &yUVar.U53.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(13), &yUVar.U53.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(54, 77175)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),36,1)
+------*/
+#ifdef XCASELABELS
+  case 54:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14),
+      &yUVar.U54.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(114), SDL_INTEGER_LIT(78)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14), &yUVar.U54.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(14), &yUVar.U54.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(55, 77201)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),37,1)
+------*/
+#ifdef XCASELABELS
+  case 55:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15),
+      &yUVar.U55.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(102), SDL_INTEGER_LIT(90)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15), &yUVar.U55.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(15), &yUVar.U55.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(56, 77227)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),38,1)
+------*/
+#ifdef XCASELABELS
+  case 56:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16),
+      &yUVar.U56.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(90), SDL_INTEGER_LIT(90)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16), &yUVar.U56.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(16), &yUVar.U56.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(57, 77253)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),39,1)
+------*/
+#ifdef XCASELABELS
+  case 57:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17),
+      &yUVar.U57.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(54), SDL_INTEGER_LIT(54)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17), &yUVar.U57.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(17), &yUVar.U57.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(58, 77279)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),40,1)
+------*/
+#ifdef XCASELABELS
+  case 58:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18),
+      &yUVar.U58.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(18), SDL_INTEGER_LIT(54)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18), &yUVar.U58.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(18), &yUVar.U58.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(59, 77305)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),41,1)
+------*/
+#ifdef XCASELABELS
+  case 59:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19),
+      &yUVar.U59.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(6), SDL_INTEGER_LIT(66)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19), &yUVar.U59.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(19), &yUVar.U59.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_STMTS_PRD(60, 77331)
+
+/*-----
+* ASSIGNMENT d... := ...
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),125(30,40),42,1)
+------*/
+#ifdef XCASELABELS
+  case 60:
+#endif
+    yAssF_SDL_Integer((* yAddr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+      yPrdVarP)->z221K1_d), yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20),
+      &yUVar.U60.Result1))), getDistance(yVarP->z22N_MyCenter.x, yVarP->
+      z22N_MyCenter.y, SDL_INTEGER_LIT(6), SDL_INTEGER_LIT(78)),
+      XASS_MR_ASS_FR);
+#ifdef XTRACE
+    xTraceAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20), &yUVar.U60.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+#ifdef XMSCE
+    xMSCEAssign("d... := ", &((* yAddr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+      yMkAddr_SDL_Integer(SDL_INTEGER_LIT(20), &yUVar.U60.Result1)))),
+      (tSDLTypeInfo *)&ySDL_SDL_Integer);
+#endif
+    XBETWEEN_SYMBOLS_PRD(61, 77357)
 
 /*-----
 * LOOP VARIABLE INIT
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60),2,6)
 ------*/
 #ifdef XCASELABELS
-  case 8:
+  case 61:
 #endif
-    yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_i,
+    yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K3_i,
       SDL_INTEGER_LIT(2), XASS_MR_ASS_FR);
 #ifdef XTRACE
     xTraceAlgValue("LOOP variable i := ", &(((yVDef_z221K_FindStartPoint *)
-      yPrdVarP)->z221K4_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+      yPrdVarP)->z221K3_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(9, 75747)
+      XBETWEEN_STMTS_PRD(62, 77373)
 
 /*-----
 * LOOP VARIABLE TEST
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60),2,11)
 ------*/
 #ifdef XCASELABELS
-    case 9:
+    case 62:
 #endif
       if ( !(xLE_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-        z221K4_i, SDL_INTEGER_LIT(4))) ) goto xLoop_8;
+        z221K3_i, SDL_INTEGER_LIT(4))) ) goto xLoop_61;
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(11, 75761)
+      XBETWEEN_STMTS_PRD(64, 77387)
 
 /*-----
 * IF
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60),3,2)
 ------*/
 #ifdef XCASELABELS
-    case 11:
+    case 64:
 #endif
-      if (xLE_SDL_Integer(*(SDL_Integer *)(yExtr_z221K1_Dist(
-        &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_d),
-        &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_i))),
-        ((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_min)) {
+      if (xLE_SDL_Integer(*(SDL_Integer *)(yExtr_z221K0_Dist(
+        &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K1_d),
+        &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K3_i))),
+        ((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_min)) {
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(12, 75777)
+        XBETWEEN_STMTS_PRD(65, 77403)
 
 /*-----
 * ASSIGNMENT min := ...
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60),4,4)
 ------*/
 #ifdef XCASELABELS
-      case 12:
+      case 65:
 #endif
-        yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_min,
-          *(SDL_Integer *)(yExtr_z221K1_Dist(&(((yVDef_z221K_FindStartPoint *)
-          yPrdVarP)->z221K2_d), &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-          z221K4_i))), XASS_MR_ASS_FR);
+        yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_min,
+          *(SDL_Integer *)(yExtr_z221K0_Dist(&(((yVDef_z221K_FindStartPoint *)
+          yPrdVarP)->z221K1_d), &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
+          z221K3_i))), XASS_MR_ASS_FR);
 #ifdef XTRACE
         xTraceAssign("min := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-          z221K5_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+          z221K4_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
         xMSCEAssign("min := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-          z221K5_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+          z221K4_min), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-        XBETWEEN_STMTS_PRD(13, 75798)
+        XBETWEEN_STMTS_PRD(66, 77424)
 
 /*-----
 * ASSIGNMENT count := ...
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60),5,4)
 ------*/
 #ifdef XCASELABELS
-      case 13:
+      case 66:
 #endif
         yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-          z221K3_count, ((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_i,
+          z221K2_count, ((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K3_i,
           XASS_MR_ASS_FR);
 #ifdef XTRACE
         xTraceAssign("count := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-          z221K3_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+          z221K2_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
 #ifdef XMSCE
         xMSCEAssign("count := ", &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->
-          z221K3_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+          z221K2_count), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       }
 #ifdef XTRACE
@@ -75821,214 +77447,79 @@ YPRD_FUNCTION(z221K_FindStartPoint)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(10, 75824)
+      XBETWEEN_STMTS_PRD(63, 77450)
 
 /*-----
 * LOOP VARIABLE UPDATE
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),353(30,60),2,16)
 ------*/
 #ifdef XCASELABELS
-    case 10:
+    case 63:
 #endif
-      yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_i,
-        xPlus_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K4_i,
+      yAssF_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K3_i,
+        xPlus_SDL_Integer(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K3_i,
         SDL_INTEGER_LIT(1)), XASS_MR_ASS_FR);
 #ifdef XTRACE
       xTraceAlgValue("LOOP variable i := ", &(((yVDef_z221K_FindStartPoint *)
-        yPrdVarP)->z221K4_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
+        yPrdVarP)->z221K3_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     }
-    xLoop_8: ;
+    xLoop_61: ;
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_SYMBOLS_PRD(14, 75845)
-
-/*-----
-* DECISION
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),308(30,80),1,1)
-------*/
-#ifdef XCASELABELS
-  case 14:
-#endif
-    yAssF_SDL_Integer(yDcn_SDL_Integer, yPrdVarP->z221K3_count, XASS_MR_ASS_FR);
-#ifdef XTRACE
-    xTraceDecision(&(yDcn_SDL_Integer), (tSDLTypeInfo *)&ySDL_SDL_Integer);
-#ifdef XMSCE
-    xMSCEDecision(&(yDcn_SDL_Integer), (tSDLTypeInfo *)&ySDL_SDL_Integer);
-#endif
-#endif
-    if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(4))) {
-      XBETWEEN_SYMBOLS_PRD(15, 75862)
+    XBETWEEN_SYMBOLS_PRD(67, 77471)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),305(60,90),2,1)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),287(30,110),2,1)
 ------*/
 #ifdef XCASELABELS
-    case 15:
+  case 67:
 #endif
-      yAssF_z_BasicTypes_1F_tXCoordinate(yVarP->z22S_HeadingTarget.x,
-        yTstA_z_BasicTypes_1F_tXCoordinate(z22J_FourthQuaterX), XASS_MR_ASS_FR);
+    yAssF_z_BasicTypes_1F_tXCoordinate(yVarP->z22S_HeadingTarget.x,
+      yTstA_z_BasicTypes_1F_tXCoordinate(*(SDL_Integer *)(yExtr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K5_xs),
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_count)))),
+      XASS_MR_ASS_FR);
 #ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
+    xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
+      (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
 #ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
+    xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
+      (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-      XBETWEEN_STMTS_PRD(16, 75881)
+    XBETWEEN_STMTS_PRD(68, 77493)
 
 /*-----
 * ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),305(60,90),3,1)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),287(30,110),3,1)
 ------*/
 #ifdef XCASELABELS
-    case 16:
+  case 68:
 #endif
-      yAssF_z_BasicTypes_1G_tYCoordinate(yVarP->z22S_HeadingTarget.y,
-        yTstA_z_BasicTypes_1G_tYCoordinate(z22K_FourthQuaterY), XASS_MR_ASS_FR);
+    yAssF_z_BasicTypes_1G_tYCoordinate(yVarP->z22S_HeadingTarget.y,
+      yTstA_z_BasicTypes_1G_tYCoordinate(*(SDL_Integer *)(yExtr_z221K0_Dist(
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K6_ys),
+      &(((yVDef_z221K_FindStartPoint *)yPrdVarP)->z221K2_count)))),
+      XASS_MR_ASS_FR);
 #ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
+    xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
+      (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
 #ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
+    xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
+      (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-    } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(3))) {
-      XBETWEEN_SYMBOLS_PRD(17, 75901)
-
-/*-----
-* ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),299(45,105),2,1)
-------*/
-#ifdef XCASELABELS
-    case 17:
-#endif
-      yAssF_z_BasicTypes_1F_tXCoordinate(yVarP->z22S_HeadingTarget.x,
-        yTstA_z_BasicTypes_1F_tXCoordinate(z22H_ThirdQuaterX), XASS_MR_ASS_FR);
-#ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
-#endif
-#ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
-#endif
-      XBETWEEN_STMTS_PRD(18, 75920)
-
-/*-----
-* ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),299(45,105),3,1)
-------*/
-#ifdef XCASELABELS
-    case 18:
-#endif
-      yAssF_z_BasicTypes_1G_tYCoordinate(yVarP->z22S_HeadingTarget.y,
-        yTstA_z_BasicTypes_1G_tYCoordinate(z22I_ThirdQuaterY), XASS_MR_ASS_FR);
-#ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
-#endif
-#ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
-#endif
-    } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(2))) {
-      XBETWEEN_SYMBOLS_PRD(19, 75940)
-
-/*-----
-* ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),293(30,120),2,1)
-------*/
-#ifdef XCASELABELS
-    case 19:
-#endif
-      yAssF_z_BasicTypes_1F_tXCoordinate(yVarP->z22S_HeadingTarget.x,
-        yTstA_z_BasicTypes_1F_tXCoordinate(z22F_SecondQuaterX), XASS_MR_ASS_FR);
-#ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
-#endif
-#ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
-#endif
-      XBETWEEN_STMTS_PRD(20, 75959)
-
-/*-----
-* ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),293(30,120),3,1)
-------*/
-#ifdef XCASELABELS
-    case 20:
-#endif
-      yAssF_z_BasicTypes_1G_tYCoordinate(yVarP->z22S_HeadingTarget.y,
-        yTstA_z_BasicTypes_1G_tYCoordinate(z22G_SecondQuaterY), XASS_MR_ASS_FR);
-#ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
-#endif
-#ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
-#endif
-    } else if (yEqF_SDL_Integer(yDcn_SDL_Integer, SDL_INTEGER_LIT(1))) {
-      XBETWEEN_SYMBOLS_PRD(21, 75979)
-
-/*-----
-* ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),287(15,135),2,1)
-------*/
-#ifdef XCASELABELS
-    case 21:
-#endif
-      yAssF_z_BasicTypes_1F_tXCoordinate(yVarP->z22S_HeadingTarget.x,
-        yTstA_z_BasicTypes_1F_tXCoordinate(z22D_FirstQuaterX), XASS_MR_ASS_FR);
-#ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
-#endif
-#ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.x),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
-#endif
-      XBETWEEN_STMTS_PRD(22, 75998)
-
-/*-----
-* ASSIGNMENT HeadingTarget... := ...
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),287(15,135),3,1)
-------*/
-#ifdef XCASELABELS
-    case 22:
-#endif
-      yAssF_z_BasicTypes_1G_tYCoordinate(yVarP->z22S_HeadingTarget.y,
-        yTstA_z_BasicTypes_1G_tYCoordinate(z22E_FirstQuaterY), XASS_MR_ASS_FR);
-#ifdef XTRACE
-      xTraceAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
-#endif
-#ifdef XMSCE
-      xMSCEAssign("HeadingTarget... := ", &(yVarP->z22S_HeadingTarget.y),
-        (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
-#endif
-    }
-#ifdef XEDECISION
-    else {
-      xErrorDecision((tSDLTypeInfo *)&ySDL_SDL_Integer, &yDcn_SDL_Integer);
-      return 1;
-    }
-#endif
-    XBETWEEN_SYMBOLS_PRD(23, 76024)
+    XBETWEEN_SYMBOLS_PRD(69, 77515)
 
 /*-----
 * RETURN
 * #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),245(35,150),1,1)
 ------*/
 #ifdef XCASELABELS
-  case 23:
+  case 69:
 #endif
     SDL_RETURN
   }
@@ -76039,27 +77530,27 @@ YPRD_FUNCTION(z221K_FindStartPoint)
 * DCL d
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),2,4)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),2,4)
 ******/
 #ifndef XOPTDCL
-XCONST struct xVarIdStruct yVarR_z221K2_d = {xVariableEC xSymbTLink((xIdNode)0,
+XCONST struct xVarIdStruct yVarR_z221K1_d = {xVariableEC xSymbTLink((xIdNode)0,
   (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint xIdNames("d")
-  XCOMMON_EXTRAS, &ySrtR_z221K1_Dist, (tSDLTypeInfo *)&ySDL_z221K1_Dist,
-  xOffsetOf(yVDef_z221K_FindStartPoint, z221K2_d), (xptrint)0, 0 XVAR_EXTRAS};
+  XCOMMON_EXTRAS, &ySrtR_z221K0_Dist, (tSDLTypeInfo *)&ySDL_z221K0_Dist,
+  xOffsetOf(yVDef_z221K_FindStartPoint, z221K1_d), (xptrint)0, 0 XVAR_EXTRAS};
 #endif
 
 /*****
 * DCL count
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,4)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,4)
 ******/
 #ifndef XOPTDCL
-XCONST struct xVarIdStruct yVarR_z221K3_count = {xVariableEC
+XCONST struct xVarIdStruct yVarR_z221K2_count = {xVariableEC
   xSymbTLink((xIdNode)0, (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint
   xIdNames("count") XCOMMON_EXTRAS, &xSrtR_SDL_Integer,
   (tSDLTypeInfo *)&ySDL_SDL_Integer,
-  xOffsetOf(yVDef_z221K_FindStartPoint, z221K3_count), (xptrint)0, 0
+  xOffsetOf(yVDef_z221K_FindStartPoint, z221K2_count), (xptrint)0, 0
   XVAR_EXTRAS};
 #endif
 
@@ -76067,27 +77558,55 @@ XCONST struct xVarIdStruct yVarR_z221K3_count = {xVariableEC
 * DCL i
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,11)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,11)
 ******/
 #ifndef XOPTDCL
-XCONST struct xVarIdStruct yVarR_z221K4_i = {xVariableEC xSymbTLink((xIdNode)0,
+XCONST struct xVarIdStruct yVarR_z221K3_i = {xVariableEC xSymbTLink((xIdNode)0,
   (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint xIdNames("i")
   XCOMMON_EXTRAS, &xSrtR_SDL_Integer, (tSDLTypeInfo *)&ySDL_SDL_Integer,
-  xOffsetOf(yVDef_z221K_FindStartPoint, z221K4_i), (xptrint)0, 0 XVAR_EXTRAS};
+  xOffsetOf(yVDef_z221K_FindStartPoint, z221K3_i), (xptrint)0, 0 XVAR_EXTRAS};
 #endif
 
 /*****
 * DCL min
 * <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
 *     /PROCEDURE FindStartPoint>>
-* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(135,20),3,14)
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),3,14)
 ******/
 #ifndef XOPTDCL
-XCONST struct xVarIdStruct yVarR_z221K5_min = {xVariableEC
+XCONST struct xVarIdStruct yVarR_z221K4_min = {xVariableEC
   xSymbTLink((xIdNode)0, (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint
   xIdNames("min") XCOMMON_EXTRAS, &xSrtR_SDL_Integer,
   (tSDLTypeInfo *)&ySDL_SDL_Integer,
-  xOffsetOf(yVDef_z221K_FindStartPoint, z221K5_min), (xptrint)0, 0 XVAR_EXTRAS};
+  xOffsetOf(yVDef_z221K_FindStartPoint, z221K4_min), (xptrint)0, 0 XVAR_EXTRAS};
+#endif
+
+/*****
+* DCL xs
+* <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
+*     /PROCEDURE FindStartPoint>>
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),4,4)
+******/
+#ifndef XOPTDCL
+XCONST struct xVarIdStruct yVarR_z221K5_xs = {xVariableEC
+  xSymbTLink((xIdNode)0, (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint
+  xIdNames("xs") XCOMMON_EXTRAS, &ySrtR_z221K0_Dist,
+  (tSDLTypeInfo *)&ySDL_z221K0_Dist,
+  xOffsetOf(yVDef_z221K_FindStartPoint, z221K5_xs), (xptrint)0, 0 XVAR_EXTRAS};
+#endif
+
+/*****
+* DCL ys
+* <<SYSTEM BattleShips/BLOCK Strategy1/PROCESS Main1/PROCEDURE StrategyStep
+*     /PROCEDURE FindStartPoint>>
+* #SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),143(105,5),4,8)
+******/
+#ifndef XOPTDCL
+XCONST struct xVarIdStruct yVarR_z221K6_ys = {xVariableEC
+  xSymbTLink((xIdNode)0, (xIdNode)0), (xIdNode)&yPrdR_z221K_FindStartPoint
+  xIdNames("ys") XCOMMON_EXTRAS, &ySrtR_z221K0_Dist,
+  (tSDLTypeInfo *)&ySDL_z221K0_Dist,
+  xOffsetOf(yVDef_z221K_FindStartPoint, z221K6_ys), (xptrint)0, 0 XVAR_EXTRAS};
 #endif
 
 /*****
@@ -76224,7 +77743,7 @@ YPRD_FUNCTION(z221L_OnLand)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(4, 76227)
+    XBETWEEN_SYMBOLS_PRD(4, 77746)
 
 /*-----
 * ASSIGNMENT flagPath := ...
@@ -76243,7 +77762,7 @@ YPRD_FUNCTION(z221L_OnLand)
     xMSCEAssign("flagPath := ", &(((yVDef_z221L_OnLand *)yPrdVarP)->
       z221L7_flagPath), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-    XBETWEEN_STMTS_PRD(5, 76246)
+    XBETWEEN_STMTS_PRD(5, 77765)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -76260,7 +77779,7 @@ YPRD_FUNCTION(z221L_OnLand)
       z221L3_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(6, 76263)
+      XBETWEEN_STMTS_PRD(6, 77782)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -76275,7 +77794,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(8, 76278)
+      XBETWEEN_STMTS_PRD(8, 77797)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -76292,7 +77811,7 @@ YPRD_FUNCTION(z221L_OnLand)
         z221L4_j), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
       while (1) {
-        XBETWEEN_STMTS_PRD(9, 76295)
+        XBETWEEN_STMTS_PRD(9, 77814)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -76307,7 +77826,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #ifdef XTRACE
         xTraceAlg("LOOP test TRUE");
 #endif
-        XBETWEEN_STMTS_PRD(11, 76310)
+        XBETWEEN_STMTS_PRD(11, 77829)
 
 /*-----
 * IF
@@ -76326,7 +77845,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(12, 76329)
+          XBETWEEN_STMTS_PRD(12, 77848)
 
 /*-----
 * CONTINUE
@@ -76345,7 +77864,7 @@ YPRD_FUNCTION(z221L_OnLand)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(13, 76348)
+        XBETWEEN_STMTS_PRD(13, 77867)
 
 /*-----
 * OPERATOR CALL d2i  (from EXPRESSION in next symbol)
@@ -76381,7 +77900,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(14, 76384)
+          XBETWEEN_STMTS_PRD(14, 77903)
 
 /*-----
 * ASSIGNMENT PathCoord... := ...
@@ -76404,7 +77923,7 @@ YPRD_FUNCTION(z221L_OnLand)
             z221L5_PathCoord.x),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-          XBETWEEN_STMTS_PRD(15, 76407)
+          XBETWEEN_STMTS_PRD(15, 77926)
 
 /*-----
 * ASSIGNMENT PathCoord... := ...
@@ -76427,7 +77946,7 @@ YPRD_FUNCTION(z221L_OnLand)
             z221L5_PathCoord.y),
             (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-          XBETWEEN_STMTS_PRD(16, 76430)
+          XBETWEEN_STMTS_PRD(16, 77949)
 
 /*-----
 * ASSIGNMENT flagPath := ...
@@ -76446,7 +77965,7 @@ YPRD_FUNCTION(z221L_OnLand)
           xMSCEAssign("flagPath := ", &(((yVDef_z221L_OnLand *)yPrdVarP)->
             z221L7_flagPath), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-          XBETWEEN_STMTS_PRD(17, 76449)
+          XBETWEEN_STMTS_PRD(17, 77968)
 
 /*-----
 * BREAK
@@ -76466,7 +77985,7 @@ YPRD_FUNCTION(z221L_OnLand)
         }
 #endif
         xContinue_8: ;
-        XBETWEEN_STMTS_PRD(10, 76469)
+        XBETWEEN_STMTS_PRD(10, 77988)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -76488,7 +78007,7 @@ YPRD_FUNCTION(z221L_OnLand)
       xTraceAlg("LOOP test FALSE");
 #endif
       xBreak_8: ;
-      XBETWEEN_STMTS_PRD(18, 76491)
+      XBETWEEN_STMTS_PRD(18, 78010)
 
 /*-----
 * IF
@@ -76502,7 +78021,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(19, 76505)
+        XBETWEEN_STMTS_PRD(19, 78024)
 
 /*-----
 * BREAK
@@ -76521,7 +78040,7 @@ YPRD_FUNCTION(z221L_OnLand)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(7, 76524)
+      XBETWEEN_STMTS_PRD(7, 78043)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -76543,7 +78062,7 @@ YPRD_FUNCTION(z221L_OnLand)
     xTraceAlg("LOOP test FALSE");
 #endif
     xBreak_5: ;
-    XBETWEEN_SYMBOLS_PRD(20, 76546)
+    XBETWEEN_SYMBOLS_PRD(20, 78065)
 
 /*-----
 * DECISION
@@ -76563,7 +78082,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #else
     if (yPrdVarP->z221L7_flagPath) {
 #endif
-      XBETWEEN_SYMBOLS_PRD(22, 76566)
+      XBETWEEN_SYMBOLS_PRD(22, 78085)
 
 /*-----
 * CALL NewHeadingChange  (from EXPRESSION in next symbol)
@@ -76604,7 +78123,7 @@ YPRD_FUNCTION(z221L_OnLand)
       xMSCEAssign("Direct := ", &(((yVDef_z221L_OnLand *)yPrdVarP)->
         z221L6_Direct), (tSDLTypeInfo *)&ySDL_z221M_tTurnDirection);
 #endif
-      XBETWEEN_SYMBOLS_PRD(23, 76607)
+      XBETWEEN_SYMBOLS_PRD(23, 78126)
 
 /*-----
 * DECISION
@@ -76625,7 +78144,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #endif
       if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
             z221M1_LEFT)) {
-        XBETWEEN_SYMBOLS_PRD(24, 76628)
+        XBETWEEN_SYMBOLS_PRD(24, 78147)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76647,7 +78166,7 @@ YPRD_FUNCTION(z221L_OnLand)
           [((yVDef_z221L_OnLand *)yPrdVarP)->z221L1_k - SDL_INTEGER_LIT(1)].
           OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(25, 76650)
+        XBETWEEN_STMTS_PRD(25, 78169)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76671,7 +78190,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #endif
       } else if (yEqF_z221M_tTurnDirection(yPrdVarP->yDcn_z221M_tTurnDirection,
             z221M2_RIGHT)) {
-        XBETWEEN_SYMBOLS_PRD(26, 76674)
+        XBETWEEN_SYMBOLS_PRD(26, 78193)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76693,7 +78212,7 @@ YPRD_FUNCTION(z221L_OnLand)
           [((yVDef_z221L_OnLand *)yPrdVarP)->z221L1_k - SDL_INTEGER_LIT(1)].
           OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(27, 76696)
+        XBETWEEN_STMTS_PRD(27, 78215)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76716,7 +78235,7 @@ YPRD_FUNCTION(z221L_OnLand)
           isSet), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       } else {
-        XBETWEEN_SYMBOLS_PRD(28, 76719)
+        XBETWEEN_SYMBOLS_PRD(28, 78238)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76738,7 +78257,7 @@ YPRD_FUNCTION(z221L_OnLand)
           [((yVDef_z221L_OnLand *)yPrdVarP)->z221L1_k - SDL_INTEGER_LIT(1)].
           OrderType), (tSDLTypeInfo *)&ySDL_z224_tOrderType);
 #endif
-        XBETWEEN_STMTS_PRD(29, 76741)
+        XBETWEEN_STMTS_PRD(29, 78260)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -76759,7 +78278,7 @@ YPRD_FUNCTION(z221L_OnLand)
         xMSCEAssign("factorAccel := ", &(((yVDef_z221L_OnLand *)yPrdVarP)->
           z221L8_factorAccel), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-        XBETWEEN_STMTS_PRD(30, 76762)
+        XBETWEEN_STMTS_PRD(30, 78281)
 
 /*-----
 * IF
@@ -76773,7 +78292,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #ifdef XTRACE
           xTraceAlg("IF (true)");
 #endif
-          XBETWEEN_STMTS_PRD(31, 76776)
+          XBETWEEN_STMTS_PRD(31, 78295)
 
 /*-----
 * ASSIGNMENT factorAccel := ...
@@ -76798,7 +78317,7 @@ YPRD_FUNCTION(z221L_OnLand)
           xTraceAlg("IF (false)");
         }
 #endif
-        XBETWEEN_STMTS_PRD(32, 76801)
+        XBETWEEN_STMTS_PRD(32, 78320)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76822,7 +78341,7 @@ YPRD_FUNCTION(z221L_OnLand)
           [((yVDef_z221L_OnLand *)yPrdVarP)->z221L1_k - SDL_INTEGER_LIT(1)].
           Accel), (tSDLTypeInfo *)&ySDL_z_BasicTypes_1H_tFactorAcceleration);
 #endif
-        XBETWEEN_STMTS_PRD(33, 76825)
+        XBETWEEN_STMTS_PRD(33, 78344)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -76845,7 +78364,7 @@ YPRD_FUNCTION(z221L_OnLand)
           isSet), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
       }
-      XBETWEEN_SYMBOLS_PRD(34, 76848)
+      XBETWEEN_SYMBOLS_PRD(34, 78367)
 
 /*-----
 * RETURN
@@ -76856,7 +78375,7 @@ YPRD_FUNCTION(z221L_OnLand)
 #endif
       SDL_RETURN
     } else {
-      XBETWEEN_SYMBOLS_PRD(21, 76859)
+      XBETWEEN_SYMBOLS_PRD(21, 78378)
 
 /*-----
 * RETURN
@@ -77164,7 +78683,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 77167)
+    XBETWEEN_SYMBOLS_PRD(1, 78686)
 
 /*-----
 * ASSIGNMENT TempCenterX := ...
@@ -77183,7 +78702,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
     xMSCEAssign("TempCenterX := ", &(((yVDef_z222_EnemyCenter *)yPrdVarP)->
       z2220_TempCenterX), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(2, 77186)
+    XBETWEEN_STMTS_PRD(2, 78705)
 
 /*-----
 * ASSIGNMENT TempCenterY := ...
@@ -77202,7 +78721,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
     xMSCEAssign("TempCenterY := ", &(((yVDef_z222_EnemyCenter *)yPrdVarP)->
       z2221_TempCenterY), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(3, 77205)
+    XBETWEEN_STMTS_PRD(3, 78724)
 
 /*-----
 * ASSIGNMENT NumVisibleShips := ...
@@ -77222,7 +78741,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
     xMSCEAssign("NumVisibleShips := ", &(yVarP->z22X_NumVisibleShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(4, 77225)
+    XBETWEEN_STMTS_PRD(4, 78744)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -77238,7 +78757,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
       yPrdVarP)->z2222_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(5, 77241)
+      XBETWEEN_STMTS_PRD(5, 78760)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -77252,7 +78771,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(7, 77255)
+      XBETWEEN_STMTS_PRD(7, 78774)
 
 /*-----
 * ASSIGNMENT TempCenterX := ...
@@ -77275,7 +78794,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
       xMSCEAssign("TempCenterX := ", &(((yVDef_z222_EnemyCenter *)yPrdVarP)->
         z2220_TempCenterX), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_STMTS_PRD(8, 77278)
+      XBETWEEN_STMTS_PRD(8, 78797)
 
 /*-----
 * ASSIGNMENT TempCenterY := ...
@@ -77298,7 +78817,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
       xMSCEAssign("TempCenterY := ", &(((yVDef_z222_EnemyCenter *)yPrdVarP)->
         z2221_TempCenterY), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_STMTS_PRD(6, 77301)
+      XBETWEEN_STMTS_PRD(6, 78820)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -77319,7 +78838,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_STMTS_PRD(9, 77322)
+    XBETWEEN_STMTS_PRD(9, 78841)
 
 /*-----
 * ASSIGNMENT EnemyCenter... := ...
@@ -77340,7 +78859,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
     xMSCEAssign("EnemyCenter... := ", &(yVarP->z22W_EnemyCenter.x),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-    XBETWEEN_STMTS_PRD(10, 77343)
+    XBETWEEN_STMTS_PRD(10, 78862)
 
 /*-----
 * ASSIGNMENT EnemyCenter... := ...
@@ -77361,7 +78880,7 @@ YPRD_FUNCTION(z222_EnemyCenter)
     xMSCEAssign("EnemyCenter... := ", &(yVarP->z22W_EnemyCenter.y),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-    XBETWEEN_SYMBOLS_PRD(11, 77364)
+    XBETWEEN_SYMBOLS_PRD(11, 78883)
 
 /*-----
 * RETURN
@@ -77518,7 +79037,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
 ------*/
   case 0:
     XAT_FIRST_SYMBOL(0)
-    XBETWEEN_SYMBOLS_PRD(1, 77521)
+    XBETWEEN_SYMBOLS_PRD(1, 79040)
 
 /*-----
 * ASSIGNMENT NumVisibleShips := ...
@@ -77537,7 +79056,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("NumVisibleShips := ", &(yVarP->z22X_NumVisibleShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(2, 77540)
+    XBETWEEN_STMTS_PRD(2, 79059)
 
 /*-----
 * ASSIGNMENT NumMyShips := ...
@@ -77557,7 +79076,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("NumMyShips := ", &(yVarP->z22P_NumMyShips),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(3, 77560)
+    XBETWEEN_STMTS_PRD(3, 79079)
 
 /*-----
 * ASSIGNMENT TempCenterX := ...
@@ -77576,7 +79095,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("TempCenterX := ", &(((yVDef_z223_UpdateShipParams *)yPrdVarP)->
       z2230_TempCenterX), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(4, 77579)
+    XBETWEEN_STMTS_PRD(4, 79098)
 
 /*-----
 * ASSIGNMENT TempCenterY := ...
@@ -77595,7 +79114,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("TempCenterY := ", &(((yVDef_z223_UpdateShipParams *)yPrdVarP)->
       z2231_TempCenterY), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-    XBETWEEN_STMTS_PRD(5, 77598)
+    XBETWEEN_STMTS_PRD(5, 79117)
 
 /*-----
 * ASSIGNMENT minSpeed := ...
@@ -77616,7 +79135,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("minSpeed := ", &(yVarP->z22Q_minSpeed),
       (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
-    XBETWEEN_STMTS_PRD(6, 77619)
+    XBETWEEN_STMTS_PRD(6, 79138)
 
 /*-----
 * LOOP VARIABLE INIT
@@ -77632,7 +79151,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
       yPrdVarP)->z2232_i), (tSDLTypeInfo *)&ySDL_SDL_Integer);
 #endif
     while (1) {
-      XBETWEEN_STMTS_PRD(7, 77635)
+      XBETWEEN_STMTS_PRD(7, 79154)
 
 /*-----
 * LOOP VARIABLE TEST
@@ -77646,7 +79165,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
 #ifdef XTRACE
       xTraceAlg("LOOP test TRUE");
 #endif
-      XBETWEEN_STMTS_PRD(9, 77649)
+      XBETWEEN_STMTS_PRD(9, 79168)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -77670,7 +79189,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
         z2232_i - SDL_INTEGER_LIT(1)].isSet),
         (tSDLTypeInfo *)&ySDL_SDL_Boolean);
 #endif
-      XBETWEEN_STMTS_PRD(10, 77673)
+      XBETWEEN_STMTS_PRD(10, 79192)
 
 /*-----
 * ASSIGNMENT CommandToShip... := ...
@@ -77695,7 +79214,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
         z2232_i - SDL_INTEGER_LIT(1)].Fire.List),
         (tSDLTypeInfo *)&ySDL_z_BasicTypes_15_tStringShotsList);
 #endif
-      XBETWEEN_STMTS_PRD(11, 77698)
+      XBETWEEN_STMTS_PRD(11, 79217)
 
 /*-----
 * ASSIGNMENT TempCenterX := ...
@@ -77719,7 +79238,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
       xMSCEAssign("TempCenterX := ", &(((yVDef_z223_UpdateShipParams *)
         yPrdVarP)->z2230_TempCenterX), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_STMTS_PRD(12, 77722)
+      XBETWEEN_STMTS_PRD(12, 79241)
 
 /*-----
 * ASSIGNMENT TempCenterY := ...
@@ -77743,7 +79262,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
       xMSCEAssign("TempCenterY := ", &(((yVDef_z223_UpdateShipParams *)
         yPrdVarP)->z2231_TempCenterY), (tSDLTypeInfo *)&ySDL_SDL_Real);
 #endif
-      XBETWEEN_STMTS_PRD(13, 77746)
+      XBETWEEN_STMTS_PRD(13, 79265)
 
 /*-----
 * IF
@@ -77759,7 +79278,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
 #ifdef XTRACE
         xTraceAlg("IF (true)");
 #endif
-        XBETWEEN_STMTS_PRD(14, 77762)
+        XBETWEEN_STMTS_PRD(14, 79281)
 
 /*-----
 * ASSIGNMENT minSpeed := ...
@@ -77786,7 +79305,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
         xTraceAlg("IF (false)");
       }
 #endif
-      XBETWEEN_STMTS_PRD(8, 77789)
+      XBETWEEN_STMTS_PRD(8, 79308)
 
 /*-----
 * LOOP VARIABLE UPDATE
@@ -77807,7 +79326,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
 #ifdef XTRACE
     xTraceAlg("LOOP test FALSE");
 #endif
-    XBETWEEN_STMTS_PRD(15, 77810)
+    XBETWEEN_STMTS_PRD(15, 79329)
 
 /*-----
 * ASSIGNMENT MyCenter... := ...
@@ -77828,7 +79347,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("MyCenter... := ", &(yVarP->z22N_MyCenter.x),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1F_tXCoordinate);
 #endif
-    XBETWEEN_STMTS_PRD(16, 77831)
+    XBETWEEN_STMTS_PRD(16, 79350)
 
 /*-----
 * ASSIGNMENT MyCenter... := ...
@@ -77849,7 +79368,7 @@ YPRD_FUNCTION(z223_UpdateShipParams)
     xMSCEAssign("MyCenter... := ", &(yVarP->z22N_MyCenter.y),
       (tSDLTypeInfo *)&ySDL_z_BasicTypes_1G_tYCoordinate);
 #endif
-    XBETWEEN_SYMBOLS_PRD(17, 77852)
+    XBETWEEN_SYMBOLS_PRD(17, 79371)
 
 /*-----
 * RETURN
@@ -80320,19 +81839,25 @@ extern void yInit_BattleShips (void)
   xInsertIdNode((xIdNode)&yPrdR_z221J_FindHeadingTarget);
   xInsertIdNode((xIdNode)&yPrdR_z221K_FindStartPoint);
 #ifndef XOPTSORT
-  xInsertIdNode((xIdNode)&ySrtR_z221K1_Dist);
+  xInsertIdNode((xIdNode)&ySrtR_z221K0_Dist);
 #endif
 #ifndef XOPTDCL
-  xInsertIdNode((xIdNode)&yVarR_z221K2_d);
+  xInsertIdNode((xIdNode)&yVarR_z221K1_d);
 #endif
 #ifndef XOPTDCL
-  xInsertIdNode((xIdNode)&yVarR_z221K3_count);
+  xInsertIdNode((xIdNode)&yVarR_z221K2_count);
 #endif
 #ifndef XOPTDCL
-  xInsertIdNode((xIdNode)&yVarR_z221K4_i);
+  xInsertIdNode((xIdNode)&yVarR_z221K3_i);
 #endif
 #ifndef XOPTDCL
-  xInsertIdNode((xIdNode)&yVarR_z221K5_min);
+  xInsertIdNode((xIdNode)&yVarR_z221K4_min);
+#endif
+#ifndef XOPTDCL
+  xInsertIdNode((xIdNode)&yVarR_z221K5_xs);
+#endif
+#ifndef XOPTDCL
+  xInsertIdNode((xIdNode)&yVarR_z221K6_ys);
 #endif
   xInsertIdNode((xIdNode)&yPrdR_z221L_OnLand);
 #ifndef XOPTFPAR

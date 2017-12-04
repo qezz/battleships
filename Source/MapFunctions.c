@@ -82,8 +82,9 @@ int getDeepXY(int x, int y)
 		return -1;
 	// return Map->MapVal[Map->MaxX * (y - 1) + x - 1];
 
-        // NOTE: return the maximum depth to make no collisions with land surface
-        return 4;
+    // NOTE: return the maximum depth to make no collisions with land surface
+    return 4;
+
 }
 
 int generatePoints(int Radius, int Deep, int NumOfStrat)
@@ -194,4 +195,49 @@ void FreeAll()
 			free(Map->MapVal);
 		free(Map);
 	}
+}
+
+
+
+
+// Custom functions
+
+
+int approxDist(int ships_x, int ships_y, int target_x, int target_y) {
+    return floor(
+            sqrt(pow((target_x - ships_x),2)
+                    + pow((target_y - ships_y),2)));
+}
+
+int getNearestPoint(int ships_x, int ships_y)
+{
+    int a[3][4] = {  
+        {0, 1, 2, 3} ,   /*  initializers for row indexed by 0 */
+        {4, 5, 6, 7} ,   /*  initializers for row indexed by 1 */
+        {8, 9, 10, 11}   /*  initializers for row indexed by 2 */
+    };
+    
+    int length = 20;
+    int points[4][2] = {
+        { 0, 0 },
+        { 0, length },
+        { length, length },
+        { length, 0 }
+    };
+    int total_points = 4;
+
+    int min_dist = approxDist(ships_x, ships_y, points[0][0], points[0][1]);
+
+    int point_number;
+    for (point_number = 0; point_number < total_points; point_number++) {
+        int new_dist = approxDist(
+                ships_x, ships_y,
+                points[point_number][0], points[point_number][1]);
+        if (new_dist < min_dist) {
+            min_dist = new_dist;
+        }
+    }
+
+    return min_dist;
+
 }
