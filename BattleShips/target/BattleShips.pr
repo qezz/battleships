@@ -8744,13 +8744,12 @@ newtype tCos
 endnewtype;
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(1),326(10,55))*/
  dcl
-   NextHding, ForcedHeading tHeading,
-   RightPoint, LeftPoint,  StraightPoint, NextShipsPosition, CurrentHeading tCoordinates,
+   NextHding tHeading,
+   RightPoint, LeftPoint,  StraightPoint tCoordinates,
    i, indx  Integer,
    min Real,
    Cos tCos,
-   CurrSpeed tSCMaxSpeed,
- CurrentState tShipCurrentState;
+   CurrSpeed tSCMaxSpeed;
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(1),329(100,35))*/
 procedure CosBetweenVectors referenced 
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(1),335(150,35))*/
@@ -8764,81 +8763,46 @@ start /*#E*/
 task {/*#E*/ 
  
 CurrSpeed := OurShCurrState!Speed;
-if (CurrSpeed = 0) {
-         CurrSpeed :=  CurrSpeed+2;
-}
-
-
-/*CurrentState := OurShCurrState;*/
-/* CurrentHeading := call NextDirection(OurShCurrState!Heading,0); */
-/*CurrentHeading := CurrentState!Heading!Coordinates;*/
-
-NextHding := call NextDirection(OurShCurrState!Heading,RIGHT);
-RightPoint := call NextPosition(OurShCurrState!Coordinates, NextHding, CurrSpeed, OurShCurrState!TypeShip);
-
-NextHding := call NextDirection(OurShCurrState!Heading,LEFT);
-LeftPoint := call NextPosition(OurShCurrState!Coordinates, NextHding, CurrSpeed, OurShCurrState!TypeShip);
-
-StraightPoint :=call NextPosition(OurShCurrState!Coordinates, OurShCurrState!Heading, CurrSpeed, OurShCurrState!TypeShip);
-/*CurrentHeading := OurShCurrState!Coordinates;*/
-NextShipsPosition := call NextPosition(OurShCurrState!Coordinates, OurShCurrState!Heading, CurrSpeed, OurShCurrState!TypeShip);
-
-
-
-/* Calculating next position */
-
-/*ReturnDirect := STRAIGHT;*/
-
-/*
-if ( (
-        ( TargetPoint!x < OurShCurrState!Coordinates!x) AND ( TargetPoint!x > NextShipsPosition!x)
-      ) OR (
-        ( TargetPoint!x <  NextShipsPosition!x) AND ( TargetPoint!x > OurShCurrState!Coordinates!x)
-    ) )
-{
-     ReturnDirect := STRAIGHT;
-} 
-else
-{
-          Cos(1) := call CosBetweenVectors(OurShCurrState!Coordinates, RightPoint, TargetPoint);
-          Cos(2) := call CosBetweenVectors(OurShCurrState!Coordinates, LeftPoint, TargetPoint);
-          Cos(3) := call CosBetweenVectors(OurShCurrState!Coordinates, StraightPoint, TargetPoint);
-
-     min := Cos(1);
-     indx := 1;
-     for( i :=2, i<=3, i+1){
-       if (Cos(i) > min) {
-          min := Cos(i);
-          indx := i;
-       }
-     } 
-
-     if (indx = 1) 
-     {
-          ReturnDirect:=RIGHT;
-     }
-     else 
-     {   
-          if (indx = 2) 
-          { 
-               ReturnDirect:=LEFT; 
-          }
-          else 
-          {
-               ReturnDirect:=STRAIGHT;
-          }
-     }
-}
-*/
-
-
-ForcedHeading := NORTH; /* 0 is North? */
-
+if (CurrSpeed = 0) CurrSpeed :=  CurrSpeed+2;
+NextHding := call NextDirection(
+OurShCurrState!Heading,RIGHT);
+RightPoint := call NextPosition(
+OurShCurrState!Coordinates, NextHding, CurrSpeed, OurShCurrState!TypeShip);
+ NextHding := call NextDirection(OurShCurrState!Heading,LEFT);
+LeftPoint := call NextPosition(
+OurShCurrState!Coordinates, NextHding, CurrSpeed, OurShCurrState!TypeShip);
+StraightPoint :=call NextPosition
+(OurShCurrState!Coordinates, OurShCurrState!Heading, CurrSpeed, OurShCurrState!TypeShip);
 };
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(2),233(25,165))*/
-task /*#E*/ 
-'';
-/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(2),119(30,195))*/
+/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(2),146(25,100))*/
+task {/*#E*/ 
+ 
+Cos(1) := call CosBetweenVectors(OurShCurrState!Coordinates, RightPoint, TargetPoint);
+Cos(2) := call CosBetweenVectors(OurShCurrState!Coordinates, LeftPoint, TargetPoint);
+Cos(3) := call CosBetweenVectors(OurShCurrState!Coordinates, StraightPoint, TargetPoint);
+};
+/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(2),164(25,115))*/
+task {/*#E*/ 
+ 
+min := Cos(1);
+indx := 1;
+for( i :=2, i<=3, i+1){
+  if (Cos(i) > min) {
+     min := Cos(i);
+     indx := i;
+  }
+} 
+};
+/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(2),233(25,145))*/
+task {/*#E*/ 
+ 
+if (indx = 1) ReturnDirect:=RIGHT;
+else {
+if (indx = 2) ReturnDirect:=LEFT;
+ else ReturnDirect:=STRAIGHT;
+}
+};
+/*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd(2),119(30,165))*/
 return /*#E*/ 
 ReturnDirect;
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\NewHeading.spd,4)*/
@@ -10064,6 +10028,8 @@ task {/*#E*/
  
 HeadingTarget !x:= xs(count);
 HeadingTarget !y:= ys(count);
+
+/* DoFindStartPoint := True; */
 };
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\FindStartPoint.spd(1),245(35,150))*/
 return /*#E*/ 
