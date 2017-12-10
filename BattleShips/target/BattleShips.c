@@ -56989,7 +56989,7 @@ extern char * yRef_z1A0C0J_UpdateShots (int SymbolNo, xSymbolType *SymbolType)
     case 28: *SymbolType = xsAssignmentStatement;
       return "#SDTREF(SDL,C:\\Battleships\\Simulator\\UpdateShots.spd(2),857(15,80),2,1)";
     case 29: *SymbolType = xsAssignmentStatement;
-      return "#SDTREF(SDL,C:\\Battleships\\Simulator\\UpdateShots.spd(2),524(100,40),6,1)";
+      return "#SDTREF(SDL,C:\\Battleships\\Simulator\\UpdateShots.spd(2),524(100,40),11,1)";
     case 30: *SymbolType = xsDecision;
       return "#SDTREF(SDL,C:\\Battleships\\Simulator\\UpdateShots.spd(2),737(100,60),2,1)";
     case 31: *SymbolType = xsAssignmentStatement;
@@ -57594,7 +57594,7 @@ YPRD_FUNCTION(z1A0C0J_UpdateShots)
 
 /*-----
 * ASSIGNMENT Res := ...
-* #SDTREF(SDL,C:\Battleships\Simulator\UpdateShots.spd(2),524(100,40),6,1)
+* #SDTREF(SDL,C:\Battleships\Simulator\UpdateShots.spd(2),524(100,40),11,1)
 ------*/
 #ifdef XCASELABELS
     case 29:

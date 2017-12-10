@@ -6069,6 +6069,11 @@ task {/*#E*/
   gWeaponryCharacter( gShots(i)!
   TypeWeaponry )!Power */
 
+/* Ship's income damage depends on its speed
+So, the more ship gains speed, the less it takes damage
+
+incomeDamage = ShipHP - WeaponPower * 1 / (ShipSpeed + 1)
+*/
 Res := gShips(j)!Resource - gWeaponryCharacter( gShots(i)!TypeWeaponry )!Power * 1 / (gShips(j)!Speed + 1);
 
 };
