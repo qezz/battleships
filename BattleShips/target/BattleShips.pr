@@ -8561,8 +8561,8 @@ grst39:
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(1),2012(75,140))*/
 decision /*#E*/ 
  
-/* ѕроверка посадки на мель на 2 такта вперед*/
- i<=fix(2*float(MyShipNextState!Speed)/flag)
+/* ѕроверка посадки на мель на 3 (changed) такта вперед*/
+ i<=fix(3*float(MyShipNextState!Speed)/flag)
 ;
 /*#SDTREF(SDL,C:\Battleships\BattleShips\Strategy1\isCollision.spd(1),2048(87,150))*/
 (true):

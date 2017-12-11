@@ -72156,7 +72156,7 @@ YPRD_FUNCTION(z221F_isCollision)
 #endif
 #ifdef XTRACE
     yAssF_SDL_Boolean(yDcn_SDL_Boolean, xLE_SDL_Integer(yPrdVarP->z221F0H_i,
-      xFix_SDL_Integer(xDiv_SDL_Real(xMult_SDL_Real(SDL_REAL_LIT(2.0, 2, 0),
+      xFix_SDL_Integer(xDiv_SDL_Real(xMult_SDL_Real(SDL_REAL_LIT(3.0, 3, 0),
       xFloat_SDL_Integer(yPrdVarP->z221F0B_MyShipNextState.Speed)),
       yPrdVarP->z221F0K_flag))), XASS_MR_ASS_FR);
     xTraceDecision(&(yDcn_SDL_Boolean), (tSDLTypeInfo *)&ySDL_SDL_Boolean);
@@ -72166,7 +72166,7 @@ YPRD_FUNCTION(z221F_isCollision)
     if (yDcn_SDL_Boolean) {
 #else
     if (xLE_SDL_Integer(yPrdVarP->z221F0H_i, xFix_SDL_Integer(
-      xDiv_SDL_Real(xMult_SDL_Real(SDL_REAL_LIT(2.0, 2, 0), xFloat_SDL_Integer(
+      xDiv_SDL_Real(xMult_SDL_Real(SDL_REAL_LIT(3.0, 3, 0), xFloat_SDL_Integer(
       yPrdVarP->z221F0B_MyShipNextState.Speed)), yPrdVarP->z221F0K_flag)))) {
 #endif
       XBETWEEN_SYMBOLS_PRD(43, 72172)
